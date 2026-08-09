@@ -1,1 +1,1 @@
-Me nome é Marco Tulio Moraes Korehisa, nasci em pirassununga em 17/09/1981
+Meu nome é Marco Tulio Moraes Korehisa, nasci em pirassununga em 17/09/1981
