@@ -27,7 +27,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tulio.md",
+                "file": "Profile/Tulio.md",
                 "mode": "source",
                 "source": false
               },
@@ -204,10 +204,12 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "58a85d4286a706a5",
+  "active": "7979d0b1fc809aa1",
   "lastOpenFiles": [
+    "Sem título.md",
+    "Profile/Tulio.md",
+    "Sem título.base",
     "Welcome.md",
-    "Tulio.md",
     "Profile"
   ]
 }
