@@ -1,0 +1,1 @@
+Conjunto de anotações pessoais para uso nos agentes de IA.
