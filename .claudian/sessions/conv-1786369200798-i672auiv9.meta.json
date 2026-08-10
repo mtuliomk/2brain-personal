@@ -1,0 +1,28 @@
+{
+  "id": "conv-1786369200798-i672auiv9",
+  "providerId": "codex",
+  "title": "complete meu profile",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1786369200804,
+  "lastActivityAt": 1786369236978,
+  "sessionId": "019febe6-d3af-78c3-87e6-6925041b2923",
+  "selectedModel": "gpt-5.6-luna",
+  "providerState": {
+    "threadId": "019febe6-d3af-78c3-87e6-6925041b2923",
+    "nativeConversationContextEstablished": true,
+    "sessionFilePath": "/home/tulio/.codex/sessions/2026/08/10/rollout-2026-08-10T10-40-01-019febe6-d3af-78c3-87e6-6925041b2923.jsonl",
+    "transcriptRootPath": "/home/tulio/.codex/sessions",
+    "workspaceDependencyToolVersion": 1
+  },
+  "currentNote": "Profile/Me.md",
+  "usage": {
+    "inputTokens": 26374,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 25344,
+    "contextWindow": 258400,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 26374,
+    "percentage": 10,
+    "model": "gpt-5.6-luna"
+  }
+}

@@ -184,13 +184,23 @@
               "icon": "lucide-list",
               "title": "Outline"
             }
+          },
+          {
+            "id": "8e7c699d605b1ea8",
+            "type": "leaf",
+            "state": {
+              "type": "claudian-view",
+              "state": {},
+              "icon": "bot",
+              "title": "Claudian"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 575.37109375
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -201,10 +211,11 @@
       "templates:Inserir modelo": false,
       "command-palette:Abrir paleta de comandos": false,
       "bases:Criar nova base": false,
-      "github-sync:Sync with Remote": false
+      "github-sync:Sync with Remote": false,
+      "realclaudian:Open Claudian": false
     }
   },
-  "active": "58a85d4286a706a5",
+  "active": "8e7c699d605b1ea8",
   "lastOpenFiles": [
     "Welcome.md",
     "Profile/Me.md",

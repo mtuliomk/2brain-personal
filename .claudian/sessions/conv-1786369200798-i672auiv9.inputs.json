@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1786369200798-i672auiv9",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786369200837-q9ug4ix",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1786369200792-q5gjaej",
+      "timestamp": 1786369200792,
+      "rawDisplayText": "complete meu profile",
+      "canonicalText": "complete meu profile",
+      "context": {
+        "currentNote": {
+          "path": "Profile/Me.md"
+        }
+      },
+      "images": [],
+      "contentDigest": "1284d1931d6f565234b9633476be2d25da5c98156ee4645c02c4ac6a2078b3a1",
+      "providerUserMessageId": "019febe6-dd23-7d91-b00d-613638bf103c",
+      "providerAssistantMessageId": "msg_0a294ff1f8127ffe016a79d4d478dc8191b5680f364cbe5b3c"
+    }
+  ]
+}
