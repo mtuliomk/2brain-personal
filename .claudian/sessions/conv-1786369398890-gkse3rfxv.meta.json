@@ -1,0 +1,28 @@
+{
+  "id": "conv-1786369398890-gkse3rfxv",
+  "providerId": "codex",
+  "title": "ajuste esse profile, adequando para descrever minh...",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1786369398895,
+  "lastActivityAt": 1786369629385,
+  "sessionId": "019febe9-d961-7ba3-8761-6648eaa64291",
+  "selectedModel": "gpt-5.6-luna",
+  "providerState": {
+    "threadId": "019febe9-d961-7ba3-8761-6648eaa64291",
+    "nativeConversationContextEstablished": true,
+    "sessionFilePath": "/home/tulio/.codex/sessions/2026/08/10/rollout-2026-08-10T10-43-19-019febe9-d961-7ba3-8761-6648eaa64291.jsonl",
+    "transcriptRootPath": "/home/tulio/.codex/sessions",
+    "workspaceDependencyToolVersion": 1
+  },
+  "currentNote": "Profile/Maya Onese.md",
+  "usage": {
+    "inputTokens": 14918,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 14080,
+    "contextWindow": 258400,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 14918,
+    "percentage": 6,
+    "model": "gpt-5.6-luna"
+  }
+}

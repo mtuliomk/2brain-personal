@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1786369398890-gkse3rfxv",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786369398908-vi9jdat",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1786369398884-qv6ans4",
+      "timestamp": 1786369398884,
+      "rawDisplayText": "ajuste esse profile, adequando para descrever minha cachorra",
+      "canonicalText": "ajuste esse profile, adequando para descrever minha cachorra",
+      "context": {
+        "currentNote": {
+          "path": "Profile/Maya Onese.md"
+        }
+      },
+      "images": [],
+      "contentDigest": "7148e345bc6ee2dbc777693c4f95983b6984c5997f0b80be40cee5264b1c221d",
+      "providerUserMessageId": "019febe9-e3f1-7183-afac-cbf5a83efdfb",
+      "providerAssistantMessageId": "msg_0195dc4b576b02b6016a79d589e2688191adc6b7ebb6e984c5"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786369571846-1c0y18e",
+      "userTurnOrdinal": 2,
+      "state": "accepted",
+      "localMessageId": "msg-1786369571842-ts04q6n",
+      "timestamp": 1786369571842,
+      "rawDisplayText": "revise minhas atualizações",
+      "canonicalText": "revise minhas atualizações",
+      "images": [],
+      "contentDigest": "7051aba48b3d466816b88d8eda4af4c1c7f2ecd4c4de14fb7beb259efc6bcd71",
+      "providerUserMessageId": "019febec-7c6c-7680-9d09-d45697c10799",
+      "providerAssistantMessageId": "msg_0195dc4b576b02b6016a79d63304e08191884d6f3749e0c24f"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786369620548-uc9uj99",
+      "userTurnOrdinal": 3,
+      "state": "accepted",
+      "localMessageId": "msg-1786369620539-tec1bpx",
+      "timestamp": 1786369620539,
+      "rawDisplayText": "os dados de propredades estão sendo repetidos no restante do documento",
+      "canonicalText": "os dados de propredades estão sendo repetidos no restante do documento",
+      "images": [],
+      "contentDigest": "56cc76c73f7998ae986c0f2762b019540906cc30bade684a098e8248a0ad532b",
+      "providerUserMessageId": "019febed-3aa4-7613-b36c-ef74006eb864",
+      "providerAssistantMessageId": "msg_0195dc4b576b02b6016a79d65ce0ec8191858f5a2215ea6842"
+    }
+  ]
+}

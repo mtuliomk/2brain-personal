@@ -1,0 +1,28 @@
+{
+  "id": "conv-1786369649936-gsbidvuz3",
+  "providerId": "codex",
+  "title": "revise esse documento, com o que eu esccrevi",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1786369649940,
+  "lastActivityAt": 1786369687458,
+  "sessionId": "019febed-ae19-70e0-ad3e-c60f30f4a913",
+  "selectedModel": "gpt-5.6-luna",
+  "providerState": {
+    "threadId": "019febed-ae19-70e0-ad3e-c60f30f4a913",
+    "nativeConversationContextEstablished": true,
+    "sessionFilePath": "/home/tulio/.codex/sessions/2026/08/10/rollout-2026-08-10T10-47-30-019febed-ae19-70e0-ad3e-c60f30f4a913.jsonl",
+    "transcriptRootPath": "/home/tulio/.codex/sessions",
+    "workspaceDependencyToolVersion": 1
+  },
+  "currentNote": "Profile/Me.md",
+  "usage": {
+    "inputTokens": 13112,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 12032,
+    "contextWindow": 258400,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 13112,
+    "percentage": 5,
+    "model": "gpt-5.6-luna"
+  }
+}

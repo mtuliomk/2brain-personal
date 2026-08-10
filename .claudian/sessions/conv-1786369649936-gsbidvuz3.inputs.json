@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1786369649936-gsbidvuz3",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786369649956-fk0m3q9",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1786369649933-9wv4c0g",
+      "timestamp": 1786369649933,
+      "rawDisplayText": "revise esse documento, com o que eu esccrevi",
+      "canonicalText": "revise esse documento, com o que eu esccrevi",
+      "context": {
+        "currentNote": {
+          "path": "Profile/Me.md"
+        }
+      },
+      "images": [],
+      "contentDigest": "392a02fce36b1bd3c5957b661d82a7ccbba67cbef5791d1a2567263f2e0d7e7a",
+      "providerUserMessageId": "019febed-b988-7e10-a3b5-7eff6fdecdec",
+      "providerAssistantMessageId": "msg_0002077a2c41493f016a79d68207e0819195800ab55060a836"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786369679823-sihwvo1",
+      "userTurnOrdinal": 2,
+      "state": "accepted",
+      "localMessageId": "msg-1786369679816-erj8feg",
+      "timestamp": 1786369679816,
+      "rawDisplayText": "nao quero dados duplicados",
+      "canonicalText": "nao quero dados duplicados",
+      "images": [],
+      "contentDigest": "84c3188a7fcd2fde06501836fb1df4c7be1780c2152fa4d974eed0ae209238bb",
+      "providerUserMessageId": "019febee-2239-7c43-bdad-e733e88f4256",
+      "providerAssistantMessageId": "msg_0002077a2c41493f016a79d696fee88191a6d7755e9a0d006f"
+    }
+  ]
+}

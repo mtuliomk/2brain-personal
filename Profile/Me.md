@@ -7,24 +7,17 @@ idioma_preferido: Português (Brasil)
 
 # Perfil
 
-## Identificação
+## Informações pessoais e profissionais
 
-- **Nome completo:** Marco Tulio Moraes Korehisa
-- **Data de nascimento:** 17 de setembro de 1981
-- **Local de nascimento:** Pirassununga, São Paulo, Brasil
-- **Idioma preferido:** Português (Brasil)
-
-## A completar
-
-- Nome pelo qual prefere ser chamado: Tulio
-- Cidade onde mora: São Paulo
-- Profissão e área de atuação: CTO e Cofounder
-- Formação: Graduado em Engenharia de computação
-- Família e relacionamentos importantes: Esposa e filha
-- Interesses e hobbies:
-- Projetos atuais:
-- Objetivos pessoais e profissionais:
-- Valores e prioridades:
+- **Nome pelo qual prefere ser chamado:** Tulio
+- **Cidade onde mora:** São Paulo
+- **Profissão e área de atuação:** CTO e cofundador
+- **Formação:** Graduado em Engenharia de Computação
+- **Família e relacionamentos importantes:** Esposa e filha
+- **Interesses e hobbies:**
+- **Projetos atuais:**
+- **Objetivos pessoais e profissionais:**
+- **Valores e prioridades:**
 
 ## Preferências para assistentes
 
