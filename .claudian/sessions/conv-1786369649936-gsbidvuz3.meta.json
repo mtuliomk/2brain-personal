@@ -4,7 +4,7 @@
   "title": "revise esse documento, com o que eu esccrevi",
   "titleGenerationStatus": "failed",
   "createdAt": 1786369649940,
-  "lastActivityAt": 1786369687458,
+  "lastActivityAt": 1786371260561,
   "sessionId": "019febed-ae19-70e0-ad3e-c60f30f4a913",
   "selectedModel": "gpt-5.6-luna",
   "providerState": {
@@ -14,7 +14,6 @@
     "transcriptRootPath": "/home/tulio/.codex/sessions",
     "workspaceDependencyToolVersion": 1
   },
-  "currentNote": "Profile/Me.md",
   "usage": {
     "inputTokens": 13112,
     "cacheCreationInputTokens": 0,

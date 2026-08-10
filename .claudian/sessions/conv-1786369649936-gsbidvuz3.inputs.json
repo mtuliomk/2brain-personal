@@ -18,7 +18,7 @@
       },
       "images": [],
       "contentDigest": "392a02fce36b1bd3c5957b661d82a7ccbba67cbef5791d1a2567263f2e0d7e7a",
-      "providerUserMessageId": "019febed-b988-7e10-a3b5-7eff6fdecdec",
+      "providerUserMessageId": "019febed-ae82-7e53-958c-3844877cb8d6",
       "providerAssistantMessageId": "msg_0002077a2c41493f016a79d68207e0819195800ab55060a836"
     },
     {
@@ -32,8 +32,21 @@
       "canonicalText": "nao quero dados duplicados",
       "images": [],
       "contentDigest": "84c3188a7fcd2fde06501836fb1df4c7be1780c2152fa4d974eed0ae209238bb",
-      "providerUserMessageId": "019febee-2239-7c43-bdad-e733e88f4256",
+      "providerUserMessageId": "019febee-21d9-75a2-95ae-4957fab26a29",
       "providerAssistantMessageId": "msg_0002077a2c41493f016a79d696fee88191a6d7755e9a0d006f"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786371091507-v0yuwo7",
+      "userTurnOrdinal": 3,
+      "state": "accepted",
+      "localMessageId": "msg-1786371091494-eyir90r",
+      "timestamp": 1786371091494,
+      "rawDisplayText": "ajuste esse arquivo pra ser uma skill",
+      "canonicalText": "ajuste esse arquivo pra ser uma skill",
+      "images": [],
+      "contentDigest": "16e11445db1afeb2de9f9eddf85c28a9b9235fe46124af155100aa8c1251f95e",
+      "providerUserMessageId": "019fec03-acf2-7190-8549-17d4d28f177c"
     }
   ]
 }

@@ -1,0 +1,27 @@
+{
+  "id": "conv-1786371292962-xdhu4uj8w",
+  "providerId": "codex",
+  "title": "trasforme esse arquivo em um template de skill",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1786371292969,
+  "lastActivityAt": 1786371649089,
+  "sessionId": "019fec06-c02e-73b2-938a-502de54a1edd",
+  "selectedModel": "gpt-5.6-luna",
+  "providerState": {
+    "threadId": "019fec06-c02e-73b2-938a-502de54a1edd",
+    "nativeConversationContextEstablished": true,
+    "sessionFilePath": "/home/tulio/.codex/sessions/2026/08/10/rollout-2026-08-10T11-14-53-019fec06-c02e-73b2-938a-502de54a1edd.jsonl",
+    "transcriptRootPath": "/home/tulio/.codex/sessions",
+    "workspaceDependencyToolVersion": 1
+  },
+  "usage": {
+    "inputTokens": 25783,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 22272,
+    "contextWindow": 258400,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 25783,
+    "percentage": 10,
+    "model": "gpt-5.6-luna"
+  }
+}
