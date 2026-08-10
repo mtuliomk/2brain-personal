@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1786389363406-61t6n4l0o",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786389363433-npzu37k",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1786389363398-58zj163",
+      "timestamp": 1786389363398,
+      "rawDisplayText": "dentro da pasta de DevSkills, crie uma skill de Commit baseada no modelo das que já existem",
+      "canonicalText": "dentro da pasta de DevSkills, crie uma skill de Commit baseada no modelo das que já existem",
+      "context": {
+        "currentNote": {
+          "path": "DevSkills/dev-frontend-nodejs/SKILL.md"
+        }
+      },
+      "images": [],
+      "contentDigest": "86c0ef8b9b2774b5d1752eba1d90768b8894f7c35de0c148dba287a22de7cb1a",
+      "providerUserMessageId": "019fed1a-8538-79a2-8c9d-8a1f7b55f183",
+      "providerAssistantMessageId": "msg_0a3a372b2accbe08016a7a23a5607481918eab5ec0604199f0"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786389512493-u241icc",
+      "userTurnOrdinal": 2,
+      "state": "accepted",
+      "localMessageId": "msg-1786389512488-j76ehxh",
+      "timestamp": 1786389512489,
+      "rawDisplayText": "porque tem a pasta agents?",
+      "canonicalText": "porque tem a pasta agents?",
+      "images": [],
+      "contentDigest": "85d406c37004649b3c1ea48b28a831633f81b9593f54baedf3007680efe230d9",
+      "providerUserMessageId": "019fed1c-c19d-70b1-abcf-60b1facdcbec",
+      "providerAssistantMessageId": "msg_0a3a372b2accbe08016a7a240ae4d0819198624860898fb344"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786389596701-q8ta2la",
+      "userTurnOrdinal": 3,
+      "state": "accepted",
+      "localMessageId": "msg-1786389596696-fw6jaw4",
+      "timestamp": 1786389596696,
+      "rawDisplayText": "tem como configurar que uma skill executara como um agente independente?",
+      "canonicalText": "tem como configurar que uma skill executara como um agente independente?",
+      "images": [],
+      "contentDigest": "76782a29473c34b330754b0d3d211b3e8c33438d2528ebe17c46a6d951f41925",
+      "providerUserMessageId": "019fed1e-0a94-73d3-969e-8e846b125b82",
+      "providerAssistantMessageId": "msg_0a3a372b2accbe08016a7a246d8a188191955311db97d23ad3"
+    }
+  ]
+}
