@@ -1,4 +1,0 @@
-interface:
-  display_name: "Convenções de commit"
-  short_description: "Criar commits claros, seguros e consistentes"
-  default_prompt: "Aplicar as convenções de commit ao revisar alterações e preparar um commit."
