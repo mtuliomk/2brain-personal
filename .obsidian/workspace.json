@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevSkills/dev-backend-nodejs/Skill.md",
+                "file": "DevSkills/dev-frontend-nodejs/SKILL.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Skill"
+              "title": "SKILL"
             }
           }
         ],
@@ -245,8 +245,13 @@
   },
   "active": "86c2ecc5140134f6",
   "lastOpenFiles": [
+    "DevSkills/dev-backend-nodejs/SKILL.md",
+    "DevSkills/dev-frontend-nodejs/SKILL.md",
+    "DevSkills/dev-frontend-nodejs/examples.md",
+    "DevSkills/dev-frontend-nodejs/agents/openai.yaml",
+    "DevSkills/dev-frontend-nodejs/agents",
+    "DevSkills/dev-frontend-nodejs",
     "DevSkills/dev-backend-nodejs/examples.md",
-    "DevSkills/dev-backend-nodejs/Skill.md",
     "DevSkills/Backend - NodeJS.md",
     "DevSkills/dev-backend-nodejs",
     "Profile/Me.md",

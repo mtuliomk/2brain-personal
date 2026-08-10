@@ -1,6 +1,6 @@
 # Exemplos de código
 
-Exemplos de referência para as convenções descritas em [Skill.md](Skill.md).
+Exemplos de referência para as convenções descritas em [Skill.md](DevSkills/dev-backend-nodejs/SKILL.md).
 
 ## Tipagem
 

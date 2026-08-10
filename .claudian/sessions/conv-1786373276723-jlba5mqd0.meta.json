@@ -1,0 +1,27 @@
+{
+  "id": "conv-1786373276723-jlba5mqd0",
+  "providerId": "codex",
+  "title": "baseado na skill de dev-backend-nodejs, crie uma n...",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1786373276735,
+  "lastActivityAt": 1786373344584,
+  "sessionId": "019fec25-059f-7b63-abc6-e8374b0a6172",
+  "selectedModel": "gpt-5.6-luna",
+  "providerState": {
+    "threadId": "019fec25-059f-7b63-abc6-e8374b0a6172",
+    "nativeConversationContextEstablished": true,
+    "sessionFilePath": "/home/tulio/.codex/sessions/2026/08/10/rollout-2026-08-10T11-47-57-019fec25-059f-7b63-abc6-e8374b0a6172.jsonl",
+    "transcriptRootPath": "/home/tulio/.codex/sessions",
+    "workspaceDependencyToolVersion": 1
+  },
+  "usage": {
+    "inputTokens": 22917,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 22272,
+    "contextWindow": 258400,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 22917,
+    "percentage": 9,
+    "model": "gpt-5.6-luna"
+  }
+}

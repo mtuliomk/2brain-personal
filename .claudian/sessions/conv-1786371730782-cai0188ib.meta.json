@@ -4,7 +4,7 @@
   "title": "atualize esse arquivo de skill com os dados abaixo...",
   "titleGenerationStatus": "failed",
   "createdAt": 1786371730792,
-  "lastActivityAt": 1786372727310,
+  "lastActivityAt": 1786373091052,
   "sessionId": "019fec0d-6e88-7c70-b5f0-ecbca9562163",
   "selectedModel": "gpt-5.6-luna",
   "providerState": {
@@ -14,15 +14,15 @@
     "transcriptRootPath": "/home/tulio/.codex/sessions",
     "workspaceDependencyToolVersion": 1
   },
-  "currentNote": "DevSkills/dev-backend-nodejs/Skill.md",
+  "currentNote": "DevSkills/dev-backend-nodejs/SKILL.md",
   "usage": {
-    "inputTokens": 39200,
+    "inputTokens": 54060,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 37632,
+    "cacheReadInputTokens": 52992,
     "contextWindow": 258400,
     "contextWindowIsAuthoritative": true,
-    "contextTokens": 39200,
-    "percentage": 15,
+    "contextTokens": 54060,
+    "percentage": 21,
     "model": "gpt-5.6-luna"
   }
 }

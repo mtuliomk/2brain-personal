@@ -3,6 +3,7 @@ name: dev-backend-nodejs
 description: Convenções de código para qualquer projeto backend em Node.js com TypeScript, incluindo APIs, BFFs de aplicações web, serviços, workers, jobs, consumers, scripts e utilitários. Abrange nomenclatura, tipagem, tratamento de erros, logs, concorrência, organização de arquivos e formatação, independentemente do framework ou stack. Use ao escrever, revisar ou refatorar esse código. Não cobre arquitetura de projeto nem código frontend.
 ---
 
+
 # Convenções de código
 
 Aplicar estas convenções ao escrever ou revisar código backend em Node.js com TypeScript, independentemente do framework utilizado (Express, Fastify, NestJS etc.).
@@ -15,6 +16,7 @@ Esta skill trata apenas de estilo, nomenclatura, tipagem, erros, organização d
 - [ ] Inspecionar `package.json`, `tsconfig`, ESLint, Prettier e scripts relevantes.
 - [ ] Identificar os padrões existentes no módulo relacionado.
 - [ ] Confirmar tipos de entrada, saída e erros esperados.
+- [ ] Identificar o padrão de testes unitários do projeto: framework, localização, nomenclatura, configuração e convenções de mocks.
 - [ ] Localizar funções, utilitários, serviços e validações compartilhados antes de criar uma implementação nova.
 - [ ] Verificar se a reutilização evita duplicação sem introduzir acoplamento ou comportamento inesperado.
 - [ ] Confirmar se novas abstrações têm responsabilidade clara.
@@ -29,6 +31,7 @@ Esta skill trata apenas de estilo, nomenclatura, tipagem, erros, organização d
 | Variáveis e funções | camelCase | `const userAccount = ...` / `calculateTotal()` |
 | Classes | PascalCase | `class UserRepository {}` |
 | Interfaces de contratos de classes | PascalCase com prefixo `I` | `interface IUserRepository {}` |
+| Constantes globais ou de configuração | UPPER_SNAKE_CASE | `MAX_RETRY_ATTEMPTS` |
 | Propriedades vindas do banco | snake_case | `created_at`, `user_id` |
 | Arquivos | conforme a seção [Organização de arquivos](#organização-de-arquivos) | `user.ts`, `user-types.ts` |
 
@@ -41,6 +44,8 @@ Esta skill trata apenas de estilo, nomenclatura, tipagem, erros, organização d
 - Evite non-null assertions (`!`) e type assertions (`as`) sem justificativa; prefira narrowing explícito e validação em runtime.
 - Declare tipos de retorno em funções públicas, métodos de classes e callbacks complexos.
 - Use `import type` para imports utilizados exclusivamente como tipos.
+- Reutilize utility types nativos, como `Partial`, `Pick`, `Omit` e `Record`, antes de duplicar estruturas de tipos.
+- Respeite as regras de qualidade habilitadas no projeto, como `noUnusedLocals`, `noUnusedParameters`, `noImplicitReturns` e `forceConsistentCasingInFileNames`.
 
 Consulte [Exemplos de código](examples.md#tipagem) quando precisar de uma implementação de referência.
 
@@ -50,6 +55,7 @@ Consulte [Exemplos de código](examples.md#tipagem) quando precisar de uma imple
 - Nunca registre tokens, senhas, credenciais, documentos, dados pessoais ou payloads sensíveis; redija esses campos antes do log.
 - Prefira erros específicos do domínio, como `NotFoundError`, `ValidationError` e `ConflictError`, quando houver contexto suficiente.
 - Não capture um erro apenas para relançá-lo sem adicionar contexto, tratamento ou logging útil.
+- Use o logger estruturado já adotado pelo projeto. Não use `console.log` em código de produção, salvo quando o projeto determinar explicitamente.
 
 Consulte [Exemplos de código](examples.md#tratamento-de-erros-e-logs) quando precisar de uma implementação de referência.
 
@@ -65,6 +71,7 @@ Consulte [Exemplos de código](examples.md#tratamento-de-erros-e-logs) quando pr
 - Para lógica de negócio e serviços, prefira classes com dependências recebidas pelo construtor. Não instancie dependências internamente nem as importe diretamente dentro dos métodos.
 - Reserve funções soltas para utilitários puros e pequenos.
 - Prefira `const`, propriedades `readonly` e imutabilidade. Evite alterar objetos recebidos como parâmetros sem deixar isso explícito.
+- Documente decisões e comportamentos não óbvios; evite comentários que apenas repitam o código.
 
 Consulte [Exemplos de código](examples.md#estilo-e-implementação) quando precisar de uma implementação de referência.
 
@@ -73,6 +80,12 @@ Consulte [Exemplos de código](examples.md#estilo-e-implementação) quando prec
 - Trate dados de APIs, filas, banco, variáveis de ambiente, entrada HTTP e `JSON.parse` como `unknown` até validá-los.
 - Valide dados na borda da aplicação com a biblioteca já adotada pelo projeto.
 - Não confie apenas nos tipos TypeScript para garantir validação em runtime.
+
+## Handlers e BFFs
+
+- Mantenha handlers finos: valide entradas, aplique autenticação/autorização quando aplicável, delegue a lógica de negócio e converta erros em respostas consistentes.
+- Não coloque regras de negócio, consultas ao banco ou integrações extensas diretamente em handlers.
+- Não exponha detalhes internos, stack traces ou dados sensíveis nas respostas ao cliente.
 
 ## Organização de arquivos
 
@@ -90,13 +103,25 @@ Não crie essa separação para módulos triviais que cabem adequadamente em um 
 - Não sugira alterar a configuração de lint ou formatação sem solicitação explícita.
 - Evite imports não utilizados e dependências circulares.
 
+## Testes
+
+- Cubra o comportamento esperado, entradas inválidas, falhas de dependências e casos de borda relevantes.
+- Prefira testes próximos ao código quando esse for o padrão do projeto.
+- Teste comportamento observável em vez de detalhes internos da implementação.
+- Não ignore ou desative testes sem justificativa explícita.
+- Obrigatoriamente, siga o padrão de construção de testes unitários do projeto.
+
 ## Checklist final
 
 - [ ] A implementação segue os padrões existentes do repositório.
 - [ ] Tipos de entrada, saída e retornos estão claros e não há usos injustificados de `any`, `as` ou `!`.
+- [ ] Constantes, imports e utility types seguem as convenções do projeto.
 - [ ] Dados externos foram validados antes do uso.
 - [ ] Erros foram tratados com contexto e logs sem dados sensíveis.
+- [ ] Handlers permanecem finos e não expõem detalhes internos ao cliente.
 - [ ] Operações assíncronas usam paralelismo e limites de concorrência adequados.
 - [ ] Não há duplicação evitável nem mutações desnecessárias.
 - [ ] Funções e classes mantêm responsabilidades focadas.
+- [ ] Comentários explicam apenas decisões ou comportamentos não óbvios.
+- [ ] Testes cobrem cenários relevantes e não foram ignorados sem justificativa.
 - [ ] ESLint, typecheck, testes e build foram executados quando disponíveis.
