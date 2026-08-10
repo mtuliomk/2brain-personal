@@ -4,7 +4,7 @@
   "title": "dentro da pasta de DevSkills, crie uma skill de Co...",
   "titleGenerationStatus": "failed",
   "createdAt": 1786389363414,
-  "lastActivityAt": 1786389618264,
+  "lastActivityAt": 1786389898603,
   "sessionId": "019fed1a-7be5-7e43-b0c9-db54c4d0dbe9",
   "selectedModel": "gpt-5.6-luna",
   "providerState": {
@@ -16,13 +16,13 @@
   },
   "currentNote": "DevSkills/dev-frontend-nodejs/SKILL.md",
   "usage": {
-    "inputTokens": 38636,
+    "inputTokens": 40292,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 30464,
+    "cacheReadInputTokens": 38656,
     "contextWindow": 258400,
     "contextWindowIsAuthoritative": true,
-    "contextTokens": 38636,
-    "percentage": 15,
+    "contextTokens": 40292,
+    "percentage": 16,
     "model": "gpt-5.6-luna"
   }
 }

@@ -48,6 +48,20 @@
       "contentDigest": "76782a29473c34b330754b0d3d211b3e8c33438d2528ebe17c46a6d951f41925",
       "providerUserMessageId": "019fed1e-0a94-73d3-969e-8e846b125b82",
       "providerAssistantMessageId": "msg_0a3a372b2accbe08016a7a246d8a188191955311db97d23ad3"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786389884039-swgzqlc",
+      "userTurnOrdinal": 4,
+      "state": "accepted",
+      "localMessageId": "msg-1786389884035-8uqhlt0",
+      "timestamp": 1786389884035,
+      "rawDisplayText": "nessa skill, quero que ela verifique se existe alteracoes que nao perntence a tarefa. se existir, solicite se o usuário deseja ou nao incluilas no commit",
+      "canonicalText": "nessa skill, quero que ela verifique se existe alteracoes que nao perntence a tarefa. se existir, solicite se o usuário deseja ou nao incluilas no commit",
+      "images": [],
+      "contentDigest": "ff6071403194ba09d565ba367a7261360f02f4290c737f2438a7ab116a64792f",
+      "providerUserMessageId": "019fed22-6cfc-7af3-8d03-6ad8bd2fb33b",
+      "providerAssistantMessageId": "msg_0a3a372b2accbe08016a7a25892e0c819198f2379e58adb289"
     }
   ]
 }

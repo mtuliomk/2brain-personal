@@ -13,6 +13,8 @@ Esta skill trata da preparação, revisão, agrupamento e mensagem de commits. N
 - [ ] Entender o objetivo da alteração e o comportamento esperado.
 - [ ] Inspecionar o estado e o diff: `git status --short`, `git diff` e, quando necessário, `git diff --cached`.
 - [ ] Verificar o padrão de mensagens no histórico com `git log -n 10 --oneline`.
+- [ ] Comparar as alterações encontradas com o pedido atual e identificar mudanças que não pertencem à tarefa.
+- [ ] Se houver alterações não relacionadas, perguntar explicitamente ao usuário se deseja incluí-las no commit antes de adicioná-las ao staging.
 - [ ] Confirmar que não há arquivos gerados, temporários, dependências, credenciais ou segredos no staging.
 - [ ] Separar alterações não relacionadas em commits independentes quando isso melhorar revisão e reversão.
 - [ ] Executar os testes, lint, typecheck ou build relevantes, conforme scripts e instruções do projeto.
@@ -77,6 +79,8 @@ Refs: #123
 
 - Revisar cada arquivo antes de adicioná-lo: `git diff -- path/to/file`.
 - Adicionar arquivos explicitamente ou por partes com `git add -p` quando houver mudanças misturadas.
+- Nunca incluir automaticamente alterações não relacionadas. Se o usuário optar por incluí-las, confirmar que são intencionais e agrupá-las em um commit separado quando tiverem objetivo próprio.
+- Quando um mesmo arquivo misturar mudanças da tarefa e mudanças externas, mostrar essa situação e perguntar se deve incluir o arquivo inteiro, selecionar apenas hunks relevantes ou deixar as mudanças fora do commit.
 - Manter cada commit coeso, compilável quando possível e fácil de reverter.
 - Não remover mudanças do usuário nem reformatar arquivos não relacionados para “limpar” o commit.
 - Não incluir `.env`, chaves privadas, tokens, dumps, logs ou artefatos de build; se já estiverem rastreados, orientar a remoção segura sem expor o conteúdo.
@@ -85,6 +89,7 @@ Refs: #123
 ## Validação final
 
 - [ ] O diff staged contém somente o objetivo do commit.
+- [ ] Alterações fora do escopo foram excluídas ou incluídas somente após confirmação explícita do usuário.
 - [ ] A mensagem explica a mudança em uma linha e segue o padrão detectado.
 - [ ] Testes e verificações relevantes passaram ou a falha foi informada explicitamente.
 - [ ] Não há segredo, dado pessoal ou arquivo sensível no commit.
