@@ -95,10 +95,14 @@ Refs: #123
 - [ ] Não há segredo, dado pessoal ou arquivo sensível no commit.
 - [ ] O commit não combina correção funcional com refatoração ou formatação sem relação.
 - [ ] Após criar o commit, confirmar o resultado com `git show --stat --oneline HEAD` e `git status --short`.
+- [ ] Ao final do commit, perguntar sempre se o usuário deseja fazer `push`; nunca executar o push sem confirmação.
+- [ ] Se o usuário quiser fazer push, perguntar se deseja publicar na branch atual ou em outra branch com abertura de pull request.
 
 ## Segurança operacional
 
-- Nunca publicar, fazer push, alterar histórico remoto ou criar tag apenas por iniciativa própria; executar somente se solicitado.
+- Nunca publicar, fazer push, alterar histórico remoto ou criar tag apenas por iniciativa própria; depois de todo commit, solicitar a decisão do usuário sobre o push.
+- Se o usuário escolher a branch atual, confirmar a branch e o remoto antes de executar o push.
+- Se o usuário escolher outra branch com pull request, confirmar o nome da nova branch, criar ou trocar para ela conforme necessário, publicar a branch e abrir o pull request somente após confirmar o destino e o título/descrição quando aplicável.
 - Antes de `--amend`, rebase, reset ou force-push, verificar o histórico e confirmar o escopo da operação.
 - Se o commit falhar por hook, corrigir a causa e tentar novamente; não ignorar o hook automaticamente.
 - Se houver conflito entre esta skill e a documentação do projeto, seguir a documentação local e registrar a exceção quando relevante.
