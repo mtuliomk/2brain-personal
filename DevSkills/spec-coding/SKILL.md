@@ -35,6 +35,26 @@ executar os gates. Não inventar comandos, critérios ou ferramentas ausentes.
 Registrar a ausência de um gate obrigatório como falha e escalar conforme o
 loop de correção.
 
+## Skills auxiliares
+
+Antes de alterar código, consultar as skills disponíveis e identificar quais
+são aplicáveis ao domínio, linguagem, tipo de mudança e artefatos afetados.
+Dar preferência às skills cujo nome começa com `dev-`, por serem as convenções
+de desenvolvimento do workspace. Ler e seguir integralmente as instruções das
+skills selecionadas.
+
+Selecionar apenas skills relevantes; não carregar uma skill sem relação com a
+mudança. Exemplos: usar `dev-backend-nodejs` para alterações de backend Node.js
+com TypeScript, `dev-frontend-nodejs` para frontend Node.js com TypeScript e
+`dev-commit` somente quando a tarefa incluir preparar ou criar commit. Se não
+houver skill `dev-` aplicável, considerar as demais skills disponíveis que
+atendam diretamente à necessidade, respeitando suas condições de uso.
+
+Registrar em `implementacao-log.md` as skills auxiliares consultadas e o motivo
+da seleção. Quando nenhuma for aplicável, registrar essa conclusão e a fonte da
+análise. As skills auxiliares complementam esta skill; não podem ampliar o
+escopo definido na spec técnica nem substituir seus gates obrigatórios.
+
 ## Implementação por classificação
 
 - **Nova**: seguir integralmente a abordagem da spec técnica e criar apenas os
@@ -46,6 +66,31 @@ loop de correção.
 Registrar uma melhoria identificada, mas fora do escopo, em `Decisões e
 observações` como **Fora de escopo — não implementado**. Não converter essa
 sugestão em código não solicitado.
+
+## Plano de implementação
+
+Antes de alterar código, criar em `tasks/TAK-XXXX/implementacao-log.md` a seção
+`## Plano de implementação`. Decompor a abordagem ou o delta aprovado da spec
+técnica em um checklist de itens verificáveis, incluindo criação ou alteração de
+código, dados, contratos, integrações e testes quando aplicáveis. Incluir também
+os gates e a geração do resumo final.
+
+O plano apenas detalha a execução; não redefine a abordagem, classificação ou
+escopo da spec técnica. Marcar cada item como concluído somente após a execução
+correspondente. Registrar qualquer desvio ou melhoria identificada em `Decisões
+e observações`, sem incluir trabalho fora de escopo no checklist. Relacionar os
+itens de testes aos `CE-XX` e `CA-XX` aplicáveis.
+
+Exemplo:
+
+```markdown
+## Plano de implementação
+- [ ] Alterar o módulo responsável por ...
+- [ ] Atualizar dados, contratos ou integrações afetados
+- [ ] Criar ou ajustar testes para CA-01 e CA-02
+- [ ] Executar todos os gates automáticos
+- [ ] Gerar `implementacao-resumo.md`
+```
 
 ## Gates automáticos
 

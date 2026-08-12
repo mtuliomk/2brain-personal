@@ -4,7 +4,7 @@
   "title": "Crie o documento de skill funcional, baseada no te...",
   "titleGenerationStatus": "failed",
   "createdAt": 1786546251109,
-  "lastActivityAt": 1786548052900,
+  "lastActivityAt": 1786548368919,
   "sessionId": "019ff674-66fa-79d0-8547-b0c8e848eab1",
   "selectedModel": "gpt-5.6-terra",
   "providerState": {
@@ -15,13 +15,13 @@
     "workspaceDependencyToolVersion": 1
   },
   "usage": {
-    "inputTokens": 44958,
+    "inputTokens": 51570,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 42752,
+    "cacheReadInputTokens": 48896,
     "contextWindow": 258400,
     "contextWindowIsAuthoritative": true,
-    "contextTokens": 44958,
-    "percentage": 17,
+    "contextTokens": 51570,
+    "percentage": 20,
     "model": "gpt-5.6-terra"
   }
 }
