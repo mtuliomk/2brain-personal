@@ -24,10 +24,10 @@ Ler sempre, nesta ordem:
    decidido, conforme a classificação `Nova` ou `Modificação`.
 2. `tasks/TAK-XXXX/spec-funcional.md`: validar ao final que os comportamentos e
    critérios de aceite observáveis foram atendidos.
-3. `context/conventions.md`: obrigatório; aplicar convenções e identificar os
+3. `.taloren_context/conventions.md`: obrigatório; aplicar convenções e identificar os
    comandos ou critérios de padrão de código definidos.
-4. `context/testing.md`: identificar cobertura e comandos de teste exigidos.
-5. `context/architecture.md`: usar como referência de padrão geral; a spec
+4. `.taloren_context/testing.md`: identificar cobertura e comandos de teste exigidos.
+5. `.taloren_context/architecture.md`: usar como referência de padrão geral; a spec
    técnica já deve ter resolvido conflitos arquiteturais.
 
 Ler também os demais arquivos Markdown do projeto diretamente relacionados à
@@ -109,18 +109,18 @@ Exemplo:
 
 Antes de executar cada gate, identificar seu comando ou procedimento oficial no
 projeto. Consultar, conforme aplicável, scripts e configurações do repositório,
-CI/CD, `README.md`, `CONTRIBUTING.md`, `context/testing.md` e
-`context/conventions.md`. Não pressupor linguagem, gerenciador de pacotes,
+CI/CD, `README.md`, `CONTRIBUTING.md`, `.taloren_context/testing.md` e
+`.taloren_context/conventions.md`. Não pressupor linguagem, gerenciador de pacotes,
 ferramenta ou sintaxe de comando. Registrar em `implementacao-log.md`, para cada
 gate, o procedimento executado, sua fonte e o resultado.
 
 Após implementar, executar os gates nesta ordem, usando os comandos e critérios
 definidos no projeto:
 
-1. testes exigidos por `context/testing.md`, incluindo unitários e, quando
+1. testes exigidos por `.taloren_context/testing.md`, incluindo unitários e, quando
    aplicável, integração, contrato, E2E e regressão;
 2. lint;
-3. padrão de código, conforme `context/conventions.md`;
+3. padrão de código, conforme `.taloren_context/conventions.md`;
 4. review automatizado.
 
 O review automatizado deve avaliar o diff da TAK quanto à aderência à spec

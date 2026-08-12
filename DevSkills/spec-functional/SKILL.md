@@ -14,14 +14,14 @@ posteriormente a partir deste documento.
 
 Ler sempre, nesta ordem:
 
-1. `context/product.md`: entender o produto, suas regras, personas e fronteiras de escopo.
-2. `context/glossary.md`: usar a terminologia oficial, sem inventar sinônimos.
+1. `.taloren_context/product.md`: entender o produto, suas regras, personas e fronteiras de escopo.
+2. `.taloren_context/glossary.md`: usar a terminologia oficial, sem inventar sinônimos.
 3. `tasks/TAK-XXXX/tak.md`, a TAK original completa, incluindo seus
    campos de **objetivo** e **descrição**. Usar o objetivo como fonte primária de `## Objetivo` e a
    descrição como fonte primária de `## Contexto`, `## Comportamento esperado`
    e `## Fora de escopo`.
 
-Depois das entradas obrigatórias, procurar em `tasks/`, `context/` e nos demais
+Depois das entradas obrigatórias, procurar em `tasks/`, `.taloren_context/` e nos demais
 arquivos Markdown do projeto os documentos relacionados ao mesmo assunto da
 TAK. Priorizar decisões, regras de negócio, fluxos e precedentes diretamente
 relevantes; não consultar código para verificar se a feature já existe.
@@ -97,8 +97,8 @@ limites de escopo, especialmente quando a TAK for ambígua.
 Entregar uma spec completa; não parar por causa de ambiguidades. Resolver cada
 ponto usando esta ordem de prioridade:
 
-1. `context/decisions.md`;
-2. `context/product.md` ou `context/glossary.md`;
+1. `.taloren_context/decisions.md`;
+2. `.taloren_context/product.md` ou `.taloren_context/glossary.md`;
 3. precedente de TAKs semelhantes em `tasks/`;
 4. raciocínio próprio, explicitando a lógica.
 

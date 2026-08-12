@@ -14,9 +14,9 @@ implementação.
 
 Antes de escrever ou alterar a TAK, ler nesta ordem, quando existirem:
 
-1. `context/product.md`: produto, personas, regras e fronteiras de escopo;
-2. `context/glossary.md`: terminologia oficial;
-3. `context/decisions.md`: decisões de produto aplicáveis;
+1. `.taloren_context/product.md`: produto, personas, regras e fronteiras de escopo;
+2. `.taloren_context/glossary.md`: terminologia oficial;
+3. `.taloren_context/decisions.md`: decisões de produto aplicáveis;
 4. TAKs, decisões e outros arquivos Markdown do projeto diretamente
    relacionados ao mesmo assunto.
 
@@ -103,7 +103,7 @@ da solicitação. A definição de formato, permissões detalhadas e demais regr
 será refinada na spec funcional.
 
 ## Contexto adicional
-- [[context/product]] — regras de acesso a relatórios.
+- [[.taloren_context/product]] — regras de acesso a relatórios.
 - Sugestão técnica da solicitação: gerar o arquivo no backend; avaliar na spec
   técnica, não tratar como requisito.
 

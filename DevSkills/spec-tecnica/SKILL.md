@@ -24,13 +24,13 @@ Ler sempre, nesta ordem:
    spec funcional; não redefinir o escopo a partir dela.
 3. Código-fonte relevante: procurar a feature, equivalentes e pontos de
    integração existentes.
-4. `context/architecture.md`: aplicar os padrões arquiteturais estabelecidos.
-5. `context/conventions.md`: aplicar convenções de código, nomenclatura e
+4. `.taloren_context/architecture.md`: aplicar os padrões arquiteturais estabelecidos.
+5. `.taloren_context/conventions.md`: aplicar convenções de código, nomenclatura e
    estrutura.
-6. `context/decisions.md`: recuperar decisões técnicas aplicáveis.
-7. `context/testing.md`: identificar a cobertura de testes exigida.
+6. `.taloren_context/decisions.md`: recuperar decisões técnicas aplicáveis.
+7. `.taloren_context/testing.md`: identificar a cobertura de testes exigida.
 
-Depois das entradas obrigatórias, procurar em `tasks/`, `context/` e nos demais
+Depois das entradas obrigatórias, procurar em `tasks/`, `.taloren_context/` e nos demais
 arquivos Markdown do projeto documentos relacionados ao mesmo assunto da TAK,
 como ADRs, contratos, documentação de integrações e guias operacionais. Usar
 esse material como contexto complementar à análise do código.
@@ -211,8 +211,8 @@ esclarecer uma diferença funcional.
 Não parar por causa de uma decisão técnica em aberto. Decidir usando esta ordem
 de prioridade:
 
-1. decisão técnica aplicável em `context/decisions.md`;
-2. padrão de `context/architecture.md` ou `context/conventions.md`;
+1. decisão técnica aplicável em `.taloren_context/decisions.md`;
+2. padrão de `.taloren_context/architecture.md` ou `.taloren_context/conventions.md`;
 3. outro documento Markdown relevante do projeto;
 4. precedente direto no código;
 5. raciocínio próprio, explicitando a lógica.
