@@ -18,7 +18,7 @@
       },
       "images": [],
       "contentDigest": "86c0ef8b9b2774b5d1752eba1d90768b8894f7c35de0c148dba287a22de7cb1a",
-      "providerUserMessageId": "019fed1a-8538-79a2-8c9d-8a1f7b55f183",
+      "providerUserMessageId": "019fed1a-7c69-7f70-8eac-3451d148aff2",
       "providerAssistantMessageId": "msg_0a3a372b2accbe08016a7a23a5607481918eab5ec0604199f0"
     },
     {
@@ -32,7 +32,7 @@
       "canonicalText": "porque tem a pasta agents?",
       "images": [],
       "contentDigest": "85d406c37004649b3c1ea48b28a831633f81b9593f54baedf3007680efe230d9",
-      "providerUserMessageId": "019fed1c-c19d-70b1-abcf-60b1facdcbec",
+      "providerUserMessageId": "019fed1c-c136-7420-8cfa-1b94861ce342",
       "providerAssistantMessageId": "msg_0a3a372b2accbe08016a7a240ae4d0819198624860898fb344"
     },
     {
@@ -46,7 +46,7 @@
       "canonicalText": "tem como configurar que uma skill executara como um agente independente?",
       "images": [],
       "contentDigest": "76782a29473c34b330754b0d3d211b3e8c33438d2528ebe17c46a6d951f41925",
-      "providerUserMessageId": "019fed1e-0a94-73d3-969e-8e846b125b82",
+      "providerUserMessageId": "019fed1e-0a23-7333-aba6-e4e70cd40edf",
       "providerAssistantMessageId": "msg_0a3a372b2accbe08016a7a246d8a188191955311db97d23ad3"
     },
     {
@@ -60,7 +60,7 @@
       "canonicalText": "nessa skill, quero que ela verifique se existe alteracoes que nao perntence a tarefa. se existir, solicite se o usuário deseja ou nao incluilas no commit",
       "images": [],
       "contentDigest": "ff6071403194ba09d565ba367a7261360f02f4290c737f2438a7ab116a64792f",
-      "providerUserMessageId": "019fed22-6cfc-7af3-8d03-6ad8bd2fb33b",
+      "providerUserMessageId": "019fed22-6c98-79a0-94f5-4fa125b9e8b9",
       "providerAssistantMessageId": "msg_0a3a372b2accbe08016a7a25892e0c819198f2379e58adb289"
     },
     {
@@ -74,7 +74,7 @@
       "canonicalText": "no final do commit, pergunte sempre se deseja fazer o push. Se sim, pergunte se deseja fazer na branch em uso ou em outra banch com PR",
       "images": [],
       "contentDigest": "d3e8b0133b03fad864d8380b066a8e31484bdc3e8dc72bee53fff9f2b7d3f55e",
-      "providerUserMessageId": "019fed23-bc86-7ca0-a053-c508e86c9642",
+      "providerUserMessageId": "019fed23-bc0e-78b0-92d7-0b6e2c9ffe25",
       "providerAssistantMessageId": "msg_0a3a372b2accbe08016a7a25dd1cc881919655df93a4d093da"
     }
   ]

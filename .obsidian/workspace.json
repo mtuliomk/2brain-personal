@@ -4,58 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "a1a68c2d119cdf9b",
+        "id": "0286bc807055eb58",
         "type": "tabs",
         "children": [
           {
-            "id": "a8adc8e5f694b01e",
+            "id": "3eab0947d4ef8543",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Welcome.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Welcome"
-            }
-          },
-          {
-            "id": "58a85d4286a706a5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Profile/Me.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Me"
-            }
-          },
-          {
-            "id": "03ef9dc411dbada6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Welcome.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Welcome"
-            }
-          },
-          {
-            "id": "86c2ecc5140134f6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DevSkills/dev-commit/SKILL.md",
+                "file": "DevSkills/spec-tecnica/SKILL.md",
                 "mode": "source",
                 "source": false
               },
@@ -63,8 +21,7 @@
               "title": "SKILL"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -243,10 +200,14 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "86c2ecc5140134f6",
+  "active": "3eab0947d4ef8543",
   "lastOpenFiles": [
-    "DevSkills/dev-backend-nodejs/SKILL.md",
+    "DevSkills/spec-functional/SKILL.md",
+    "DevSkills/spec-tecnica/SKILL.md",
+    "DevSkills/spec-tecnica",
+    "DevSkills/spec-functional",
     "DevSkills/dev-commit/SKILL.md",
+    "DevSkills/dev-backend-nodejs/SKILL.md",
     "DevSkills/dev-frontend-nodejs/SKILL.md",
     "DevSkills/dev-commit/agents/openai.yaml",
     "DevSkills/dev-commit/agents",
@@ -261,8 +222,6 @@
     "Profile/Me.md",
     "Welcome.md",
     "DevSkills",
-    "Profile/Maya Onese.md",
-    "Sem título.base",
-    "Profile"
+    "Profile/Maya Onese.md"
   ]
 }
