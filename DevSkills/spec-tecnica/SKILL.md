@@ -17,29 +17,55 @@ implementação, não repetir o comportamento esperado.
 Ler sempre, nesta ordem:
 
 1. `tasks/TAK-XXXX/spec-funcional.md`: identificar o que deve ser verdadeiro
-   depois da mudança; não questionar o *quê*, apenas decidir o *como*.
-2. Código-fonte relevante: procurar a feature, equivalentes e pontos de
+   depois da mudança; esta é a fonte de escopo funcional.
+2. A TAK original, completa, incluindo seus campos de **objetivo** e
+   **descrição**: usar apenas como referência secundária para preservar o
+   contexto e identificar eventual perda de informação na transição para a
+   spec funcional; não redefinir o escopo a partir dela.
+3. Código-fonte relevante: procurar a feature, equivalentes e pontos de
    integração existentes.
-3. `context/architecture.md`: aplicar os padrões arquiteturais estabelecidos.
-4. `context/conventions.md`: aplicar convenções de código, nomenclatura e
+4. `context/architecture.md`: aplicar os padrões arquiteturais estabelecidos.
+5. `context/conventions.md`: aplicar convenções de código, nomenclatura e
    estrutura.
-5. `context/decisions.md`: recuperar decisões técnicas aplicáveis.
-6. `context/testing.md`: identificar a cobertura de testes exigida.
+6. `context/decisions.md`: recuperar decisões técnicas aplicáveis.
+7. `context/testing.md`: identificar a cobertura de testes exigida.
 
-Se algum documento de contexto não existir, registrar essa ausência em
-"Decisões assumidas" e seguir com as demais fontes disponíveis.
+Depois das entradas obrigatórias, procurar em `tasks/`, `context/` e nos demais
+arquivos Markdown do projeto documentos relacionados ao mesmo assunto da TAK,
+como ADRs, contratos, documentação de integrações e guias operacionais. Usar
+esse material como contexto complementar à análise do código.
+
+Se algum documento de contexto obrigatório não existir, registrar sua ausência
+em `Decisões assumidas` e seguir com as fontes disponíveis.
+
+## Investigação no código
+
+Antes de classificar a TAK, pesquisar sistematicamente os termos da TAK e da
+spec funcional e inspecionar, quando aplicável:
+
+- fluxos, telas, rotas, serviços e integrações equivalentes;
+- modelos, persistência, migrações e contratos de API;
+- testes, configurações e permissões relacionados;
+- pontos de entrada e módulos que chamam ou expõem o comportamento.
+
+Não concluir que uma mudança é **Nova** apenas porque não há evidência no ponto
+inicial da busca. Registrar as evidências relevantes na classificação.
 
 ## Classificação obrigatória
 
 Abrir toda spec técnica com uma classificação, resultado da busca no código:
 
-- **Nova**: não existir nada equivalente; a mudança criar algo novo.
-- **Modificação**: existir uma feature relacionada; a mudança alterar ou
-  estender o que já existe.
-- **Duplicada**: a spec funcional descrever, essencialmente, algo que já existe.
+- **Nova**: não existir implementação que entregue o comportamento funcional
+  solicitado.
+- **Modificação**: existir uma feature relacionada, ou o sistema já entregar
+  apenas parte dos comportamentos ou critérios de aceite; a mudança altera ou
+  estende o que existe.
+- **Duplicada**: o sistema já entregar todos os comportamentos e critérios de
+  aceite relevantes da spec funcional, sem diferença funcional material.
 
 Justificar a classificação com referências precisas a arquivos, módulos,
-classes, funções ou rotas.
+classes, funções ou rotas. Incluir uma tabela de evidências que relacione cada
+`CE-XX` ou `CA-XX` relevante à evidência encontrada e à conclusão.
 
 ## Fluxo por classificação
 
@@ -57,12 +83,28 @@ Escrever em `tasks/TAK-XXXX/spec-tecnica.md`:
 # Spec técnica — TAK-XXXX
 
 ## Classificação
-Nova — justificar por que não há nada equivalente no código.
+Nova — justificar a classificação e incluir uma tabela:
+
+| Referência funcional | Evidência no código | Conclusão |
+| --- | --- | --- |
+| CE-01 / CA-01 | Arquivos, módulos, funções ou rotas investigados | Não existe equivalente |
 
 ## Abordagem
-Descrever como implementar a mudança, com detalhe suficiente para orientar a
-implementação sem ambiguidade: módulos afetados, pontos de integração e
-decisões principais de design.
+
+### Componentes e módulos afetados
+...
+
+### Fluxo principal
+...
+
+### Dados e contratos
+...
+
+### Integrações
+...
+
+### Compatibilidade e migração
+Descrever quando aplicável; caso contrário, indicar que não há impacto identificado.
 
 ## Trade-offs
 Registrar alternativas razoáveis consideradas e por que a abordagem escolhida
@@ -70,16 +112,31 @@ foi preferida, quando aplicável.
 
 ## Impacto
 Descrever efeitos fora do módulo principal: dados, contratos de API,
-dependências e comportamento de outras features.
+dependências e comportamento de outras features. Avaliar explicitamente, quando
+aplicável, permissões e segurança, observabilidade, desempenho, dados
+existentes, compatibilidade e rollout.
+
+## Fora do escopo técnico
+Se necessário, registrar alterações técnicas relacionadas que foram
+consideradas, mas não fazem parte desta TAK.
+
+## Divergências com a spec funcional
+Incluir somente se a análise revelar perda de informação, conflito,
+inviabilidade ou diferença de interpretação. Não alterar a spec funcional:
+descrever o impacto e recomendar retorno à revisão de refinamento.
 
 ## Decisões assumidas
-Registrar toda decisão técnica não coberta explicitamente por
-architecture.md, conventions.md ou decisions.md. Usar o formato:
-ambiguidade, decisão e fonte — ou raciocínio próprio quando não houver fonte.
+Registrar cada decisão técnica ou ausência de contexto que não esteja coberta
+explicitamente pelos documentos de contexto, usando:
+
+- **Ambiguidade:** ...
+- **Decisão:** ...
+- **Fonte:** `architecture.md` / `conventions.md` / `decisions.md` / código /
+outro documento Markdown relevante / raciocínio próprio.
 
 ## Plano de testes
-Aplicar a esta mudança o que testing.md exigir, especificando os cenários e
-níveis de teste relevantes.
+Aplicar o que `testing.md` exigir. Relacionar cada cenário aos `CE-XX` e
+`CA-XX` da spec funcional e especificar os níveis de teste relevantes.
 ```
 
 ## Formato de saída: modificação
@@ -90,21 +147,32 @@ Não reconstruir o que já existe. Escrever apenas o delta:
 # Spec técnica — TAK-XXXX
 
 ## Classificação
-Modificação — indicar exatamente o código existente que será alterado
-(arquivo, módulo, classe, função ou rota).
+Modificação — indicar exatamente o código existente que será alterado e incluir
+a tabela de evidências por `CE-XX` ou `CA-XX`.
+
+| Referência funcional | Evidência no código | Conclusão |
+| --- | --- | --- |
+| CE-01 / CA-01 | Arquivos, módulos, funções ou rotas investigados | Alterar ou estender |
 
 ## O que muda
-Descrever somente a alteração sobre o comportamento ou código atual. Incluir,
-em uma linha, impactos em contratos de API, dados persistidos ou outras
-features, quando houver.
+Descrever somente a alteração sobre o comportamento ou código atual. Incluir
+impactos em contratos de API, dados persistidos, integrações, permissões,
+segurança, observabilidade, desempenho, compatibilidade ou rollout, quando
+houver.
+
+## Fora do escopo técnico
+Incluir somente se houver exclusões técnicas relevantes.
+
+## Divergências com a spec funcional
+Incluir somente quando aplicável, sem alterar a spec funcional silenciosamente.
 
 ## Decisões assumidas
-Registrar apenas as decisões relevantes para o delta, no mesmo formato da
-spec técnica de uma mudança nova.
+Registrar apenas as decisões e ausências de contexto relevantes para o delta,
+no formato: ambiguidade, decisão e fonte.
 
 ## Plano de testes
-Listar somente a cobertura do delta. Não repetir testes existentes que
-continuam válidos.
+Listar somente a cobertura do delta e relacionar cada cenário aos `CE-XX` e
+`CA-XX` afetados. Não repetir testes existentes que continuam válidos.
 ```
 
 ## Formato de saída: duplicada
@@ -113,30 +181,44 @@ continuam válidos.
 # Spec técnica — TAK-XXXX
 
 ## Classificação
-Duplicada
+Duplicada — incluir uma tabela de evidências demonstrando que todos os `CE-XX`
+e `CA-XX` relevantes já são atendidos.
+
+| Referência funcional | Evidência no código | Conclusão |
+| --- | --- | --- |
+| CE-01 / CA-01 | Arquivo, módulo, função ou rota existente | Já atendido |
 
 ## Onde já existe
-Indicar a referência exata no código — arquivo, módulo, classe, função ou
-rota — que já entrega o comportamento descrito na spec funcional.
+Indicar a referência exata no código que entrega cada comportamento descrito na
+spec funcional.
 
 ## Observação
 Registrar diferenças sutis entre a spec funcional e o comportamento existente,
-se houver, para a revisão humana decidir entre encerrar a TAK ou fazer um
-ajuste pontual.
+se houver. Havendo diferença funcional material ou algum critério não atendido,
+reclassificar como `Modificação`.
+
+## Decisões assumidas
+Registrar decisões de classificação, ausências de contexto ou interpretações
+necessárias, no formato: ambiguidade, decisão e fonte.
+
+## Recomendação
+Indicar claramente se a TAK deve ser encerrada ou devolvida ao refinamento para
+esclarecer uma diferença funcional.
 ```
 
 ## Autonomia e decisões
 
-Não parar por causa de uma decisão técnica em aberto. Decidir usando esta
-ordem de prioridade:
+Não parar por causa de uma decisão técnica em aberto. Decidir usando esta ordem
+de prioridade:
 
 1. decisão técnica aplicável em `context/decisions.md`;
 2. padrão de `context/architecture.md` ou `context/conventions.md`;
-3. precedente direto no código;
-4. raciocínio próprio, explicitando a lógica.
+3. outro documento Markdown relevante do projeto;
+4. precedente direto no código;
+5. raciocínio próprio, explicitando a lógica.
 
-Registrar em "Decisões assumidas" toda decisão tomada por qualquer desses
-caminhos, sem exceção.
+Registrar em `Decisões assumidas` toda decisão tomada por qualquer desses
+caminhos, sem exceção, no formato `Ambiguidade` / `Decisão` / `Fonte`.
 
 ### Contradições com o contexto
 
@@ -157,13 +239,17 @@ não a preferência de implementação. Registrar o conflito em destaque:
 
 Considerar a spec pronta para revisão humana quando:
 
-- a classificação estiver definida, justificada e apoiada por referências;
+- a classificação estiver definida, justificada e apoiada pela tabela de
+  evidências;
 - uma mudança **Nova** tiver todas as seções do formato completo preenchidas;
 - uma **Modificação** descrever o delta com precisão;
-- uma **Duplicada** identificar o código existente com precisão suficiente
-  para verificação rápida;
-- o plano de testes cobrir o que muda e o que `testing.md` exigir;
-- toda decisão técnica não coberta pelo contexto estiver registrada.
+- uma **Duplicada** demonstrar que todos os critérios relevantes já são
+  atendidos e trouxer uma recomendação clara;
+- o plano de testes cobrir os `CE-XX` e `CA-XX` afetados e o que `testing.md`
+  exigir;
+- toda decisão técnica, ausência de contexto ou divergência funcional estiver
+  registrada;
+- nenhuma mudança de escopo funcional tiver sido feita silenciosamente.
 
 A revisão humana continua obrigatória na etapa 2 do pipeline. Não aprovar a
 própria saída nem iniciar implementação.
@@ -186,4 +272,3 @@ Exemplo de contradição:
 > código de adaptação.  
 > **Ação recomendada**: avaliar a adoção de uma nova biblioteca em uma
 > alteração separada de convenções, não nesta TAK.
-
