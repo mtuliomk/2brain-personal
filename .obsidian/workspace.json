@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "0286bc807055eb58",
+        "id": "74bd0922847c1b4d",
         "type": "tabs",
         "children": [
           {
-            "id": "3eab0947d4ef8543",
+            "id": "4cac4820443a3e5d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DevSkills/spec-tecnica/SKILL.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "SKILL"
+              "title": "Nova aba"
             }
           }
         ]
@@ -200,10 +196,10 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "3eab0947d4ef8543",
+  "active": "4cac4820443a3e5d",
   "lastOpenFiles": [
-    "DevSkills/spec-functional/SKILL.md",
     "DevSkills/spec-tecnica/SKILL.md",
+    "DevSkills/spec-functional/SKILL.md",
     "DevSkills/spec-tecnica",
     "DevSkills/spec-functional",
     "DevSkills/dev-commit/SKILL.md",
