@@ -89,6 +89,34 @@
       "images": [],
       "contentDigest": "99941e2e8341e2ff36f1d294d05c24739750b9c530d5d1fa88b8b586ecfd6c42",
       "providerUserMessageId": "019ff689-ce5d-7770-8d5f-12e25fad2911"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786547815620-u05nf0c",
+      "userTurnOrdinal": 7,
+      "state": "accepted",
+      "localMessageId": "msg-1786547815604-lmk63mk",
+      "timestamp": 1786547815604,
+      "rawDisplayText": "continue",
+      "canonicalText": "continue",
+      "images": [],
+      "contentDigest": "61b00692723054a5a149bf4fbe7176ccd6af5efb8445c87903bfb287b52a662a",
+      "providerUserMessageId": "019ff68c-5142-7143-b638-076039c307f4",
+      "providerAssistantMessageId": "msg_005b08b36169520d016a7c8e8a9f488191b5627898da5f2689"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786548049935-1s7lpwx",
+      "userTurnOrdinal": 8,
+      "state": "accepted",
+      "localMessageId": "msg-1786548049916-75999vt",
+      "timestamp": 1786548049916,
+      "rawDisplayText": "eu fiz algumas alteracoes nesse arquivo",
+      "canonicalText": "eu fiz algumas alteracoes nesse arquivo",
+      "images": [],
+      "contentDigest": "404e110b009aadf8f740830b37b44720baba4bfbb97c739bd52a15a3a578c232",
+      "providerUserMessageId": "019ff68f-d8b0-7813-a537-fc437c4e7d2f",
+      "providerAssistantMessageId": "msg_005b08b36169520d016a7c8f5472188191aef8ffdde249d397"
     }
   ]
 }

@@ -11,10 +11,14 @@
             "id": "4cac4820443a3e5d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "DevSkills/spec-coding/SKILL.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nova aba"
+              "title": "SKILL"
             }
           }
         ]
@@ -198,8 +202,10 @@
   },
   "active": "4cac4820443a3e5d",
   "lastOpenFiles": [
-    "DevSkills/spec-tecnica/SKILL.md",
     "DevSkills/spec-functional/SKILL.md",
+    "DevSkills/spec-coding/SKILL.md",
+    "DevSkills/spec-coding",
+    "DevSkills/spec-tecnica/SKILL.md",
     "DevSkills/spec-tecnica",
     "DevSkills/spec-functional",
     "DevSkills/dev-commit/SKILL.md",
@@ -217,7 +223,6 @@
     "DevSkills/dev-backend-nodejs",
     "Profile/Me.md",
     "Welcome.md",
-    "DevSkills",
     "Profile/Maya Onese.md"
   ]
 }
