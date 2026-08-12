@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevSkills/spec-coding/SKILL.md",
+                "file": "DevSkills/plan-tak/SKILL.md",
                 "mode": "source",
                 "source": false
               },
@@ -202,8 +202,10 @@
   },
   "active": "4cac4820443a3e5d",
   "lastOpenFiles": [
-    "DevSkills/spec-functional/SKILL.md",
     "DevSkills/spec-coding/SKILL.md",
+    "DevSkills/plan-tak/SKILL.md",
+    "DevSkills/plan-tak",
+    "DevSkills/spec-functional/SKILL.md",
     "DevSkills/spec-coding",
     "DevSkills/spec-tecnica/SKILL.md",
     "DevSkills/spec-tecnica",
@@ -220,7 +222,6 @@
     "DevSkills/dev-frontend-nodejs",
     "DevSkills/dev-backend-nodejs/examples.md",
     "DevSkills/Backend - NodeJS.md",
-    "DevSkills/dev-backend-nodejs",
     "Profile/Me.md",
     "Welcome.md",
     "Profile/Maya Onese.md"

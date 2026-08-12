@@ -185,7 +185,92 @@
       "canonicalText": "implemete todas as sugestoes, exceto o item 1",
       "images": [],
       "contentDigest": "74c593e338d2c9390c426687073716651be21a3e9d137dc3b26d607b08a8532c",
-      "providerUserMessageId": "019ff694-b6c3-7fb0-9da6-08ce3119e56d"
+      "providerUserMessageId": "019ff694-b6c3-7fb0-9da6-08ce3119e56d",
+      "providerAssistantMessageId": "msg_005b08b36169520d016a7c90ad33e081919106e3dbc7bc2575"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786548411722-zxtvct1",
+      "userTurnOrdinal": 14,
+      "state": "accepted",
+      "localMessageId": "msg-1786548411703-7biln0r",
+      "timestamp": 1786548411703,
+      "rawDisplayText": "me explique melhor o item 1",
+      "canonicalText": "me explique melhor o item 1",
+      "images": [],
+      "contentDigest": "cd642c530dc3d3461851544d785d23d7dd875f94212d0db17a4e4e66170bb4d7",
+      "providerUserMessageId": "019ff695-5de2-7bf0-a55c-db6181a86f06",
+      "providerAssistantMessageId": "msg_005b08b36169520d016a7c90bcff208191875d25cc8974258b"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786548430013-wl228sc",
+      "userTurnOrdinal": 15,
+      "state": "accepted",
+      "localMessageId": "msg-1786548429992-idwwwtg",
+      "timestamp": 1786548429992,
+      "rawDisplayText": "e se o projeto nao tiver esses comandos com essa sintaxe",
+      "canonicalText": "e se o projeto nao tiver esses comandos com essa sintaxe",
+      "images": [],
+      "contentDigest": "0e5e01e2ebe8d7cf494de3886fab7df26fa4c5a567e1e0879e288a802923f960",
+      "providerUserMessageId": "019ff695-a561-7840-b790-7e30c0f3d7aa",
+      "providerAssistantMessageId": "msg_005b08b36169520d016a7c90cf54b48191bfba28afcbee4eec"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786548468048-s4la7gc",
+      "userTurnOrdinal": 16,
+      "state": "accepted",
+      "localMessageId": "msg-1786548468027-5drk1yb",
+      "timestamp": 1786548468027,
+      "rawDisplayText": "pode implementar",
+      "canonicalText": "pode implementar",
+      "images": [],
+      "contentDigest": "6018a5407218ea027e2c8a6007c5c6fa8606d192a1cbfaad18b038925540288e",
+      "providerUserMessageId": "019ff696-39d7-7f23-a11a-a08886dd5f0a",
+      "providerAssistantMessageId": "msg_005b08b36169520d016a7c90ff3bc08191b7354c3143009f60"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786548483742-crk3ahp",
+      "userTurnOrdinal": 17,
+      "state": "accepted",
+      "localMessageId": "msg-1786548483721-6pywik4",
+      "timestamp": 1786548483721,
+      "rawDisplayText": "e se outras skills já realizarem esses gates?",
+      "canonicalText": "e se outras skills já realizarem esses gates?",
+      "images": [],
+      "contentDigest": "1c75458d9e970bf98276d7905a953c8016ffc21afe632eb55d307dd9ccbbe7ad",
+      "providerUserMessageId": "019ff696-7730-7a12-a525-291ab35acf1a",
+      "providerAssistantMessageId": "msg_005b08b36169520d016a7c9107d57c819180679beb8a3031d3"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786548521733-2clx2vl",
+      "userTurnOrdinal": 18,
+      "state": "accepted",
+      "localMessageId": "msg-1786548521711-utvlxjj",
+      "timestamp": 1786548521711,
+      "rawDisplayText": "garanta que seja dessa forma",
+      "canonicalText": "garanta que seja dessa forma",
+      "images": [],
+      "contentDigest": "ef4e2bbf159e494ccc6e67264da8f1a2aee78b577f9d4fd2a9c0071a29ab6436",
+      "providerUserMessageId": "019ff697-0b8f-7922-991a-b5df31abdc3d",
+      "providerAssistantMessageId": "msg_005b08b36169520d016a7c9132f4708191a2a9a561433edf8d"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786548583354-t6a42r4",
+      "userTurnOrdinal": 19,
+      "state": "accepted",
+      "localMessageId": "msg-1786548583316-9y1bnqt",
+      "timestamp": 1786548583316,
+      "rawDisplayText": "crie uma skill chamada plan-tak com o objetivo de ajudar o usuário a escrever uma tak que será usada pelas skills de spec",
+      "canonicalText": "crie uma skill chamada plan-tak com o objetivo de ajudar o usuário a escrever uma tak que será usada pelas skills de spec",
+      "images": [],
+      "contentDigest": "881d5078a4a492bc3bc41826c4a72409415a56e0e616554105f5cb28e2c3c612",
+      "providerUserMessageId": "019ff697-fc56-7250-b24c-1d895f79f455",
+      "providerAssistantMessageId": "msg_005b08b36169520d016a7c917fe1dc81918c7341eb93800bd6"
     }
   ]
 }

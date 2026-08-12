@@ -12,9 +12,11 @@ escopo, classificação ou arquitetura.
 
 ## Pré-condição e entradas
 
-Usar somente após a aprovação humana de `tasks/TAK-XXXX/spec-tecnica.md`. Não
-iniciar se a classificação for `Duplicada`: esse caso encerra o fluxo antes da
-implementação.
+Usar somente após a aprovação humana de `tasks/TAK-XXXX/spec-tecnica.md`.
+Confirmar a aprovação pelo status, marcação ou evidência definida pelo pipeline.
+Se não houver evidência verificável, não iniciar: registrar o bloqueio e pedir a
+regularização da etapa 2. Não iniciar se a classificação for `Duplicada`: esse
+caso encerra o fluxo antes da implementação.
 
 Ler sempre, nesta ordem:
 
@@ -55,6 +57,17 @@ da seleção. Quando nenhuma for aplicável, registrar essa conclusão e a fonte
 análise. As skills auxiliares complementam esta skill; não podem ampliar o
 escopo definido na spec técnica nem substituir seus gates obrigatórios.
 
+## Linha de base
+
+Antes de alterar código, registrar em `implementacao-log.md`:
+
+- o estado inicial do repositório, incluindo alterações preexistentes;
+- os resultados dos gates que puderem ser executados sem a implementação;
+- falhas preexistentes ou limitações do ambiente, com evidência.
+
+Não atribuir à TAK uma falha comprovadamente preexistente. Se ela impedir a
+validação obrigatória, tratá-la como bloqueio externo e escalar.
+
 ## Implementação por classificação
 
 - **Nova**: seguir integralmente a abordagem da spec técnica e criar apenas os
@@ -94,36 +107,76 @@ Exemplo:
 
 ## Gates automáticos
 
+Antes de executar cada gate, identificar seu comando ou procedimento oficial no
+projeto. Consultar, conforme aplicável, scripts e configurações do repositório,
+CI/CD, `README.md`, `CONTRIBUTING.md`, `context/testing.md` e
+`context/conventions.md`. Não pressupor linguagem, gerenciador de pacotes,
+ferramenta ou sintaxe de comando. Registrar em `implementacao-log.md`, para cada
+gate, o procedimento executado, sua fonte e o resultado.
+
 Após implementar, executar os gates nesta ordem, usando os comandos e critérios
 definidos no projeto:
 
-1. testes unitários, conforme `context/testing.md`;
+1. testes exigidos por `context/testing.md`, incluindo unitários e, quando
+   aplicável, integração, contrato, E2E e regressão;
 2. lint;
 3. padrão de código, conforme `context/conventions.md`;
 4. review automatizado.
 
-Todos os gates são obrigatórios. Só sinalizar a TAK como pronta para UAT humano
-quando todos passarem. Registrar o comando executado, o resultado e um resumo
-da saída de cada gate em `implementacao-log.md`.
+O review automatizado deve avaliar o diff da TAK quanto à aderência à spec
+técnica, alterações fora de escopo, segurança, tratamento de erros, regressões
+e cobertura de testes. Todos os gates são obrigatórios. Só sinalizar a TAK como
+pronta para UAT humano quando todos passarem.
+
+Quando uma skill auxiliar executar um gate, aceitar seu resultado sem duplicar a
+execução somente se o gate tiver sido concluído após a última alteração de código
+e houver evidência suficiente. Registrar em `implementacao-log.md` o gate, a
+skill responsável, o procedimento, a fonte, o resultado e o estado do código
+validado. Qualquer alteração posterior invalida essa evidência para os gates
+afetados, que devem ser executados novamente antes do UAT. A `spec-coding`
+continua responsável por conferir a cobertura de todos os gates e pelo status
+final da TAK.
 
 ## Loop de correção
 
 Criar ou atualizar `tasks/TAK-XXXX/implementacao-log.md` desde a primeira
 implementação. Uma tentativa corresponde a uma rodada completa de implementar
-ou corrigir e executar todos os gates, na ordem definida.
+ou corrigir e executar todos os gates na ordem definida.
 
 Quando qualquer gate falhar:
 
-1. registrar o número da tentativa, o gate, o comando, a causa e a alteração
-   realizada para correção;
+1. registrar o número da tentativa, o gate, a causa e a alteração realizada
+   para correção;
 2. corrigir somente o necessário, respeitando a spec técnica;
-3. executar novamente todos os gates, começando pelos testes unitários.
+3. durante o diagnóstico, executar primeiro o gate afetado quando isso reduzir
+   o tempo de feedback; antes de concluir a tentativa, executar todos os gates
+   novamente, na ordem definida.
 
 Permitir no máximo cinco tentativas por rodada de implementação, incluindo a
 primeira. Se a quinta tentativa ainda falhar, parar: não executar uma sexta,
-não avançar para UAT e gerar o resumo com status `Bloqueado`. Escalar para
-revisão humana com o log completo. A revisão humana decide entre nova direção
+não avançar para UAT e gerar o resumo com status `Bloqueado`.
+
+Se a falha for externa ou de configuração — por exemplo, credencial ausente,
+ambiente indisponível, dependência externa indisponível, gate não configurado
+ou falha preexistente que impeça validação — registrar como **Bloqueio externo**
+com evidências e escalar imediatamente; não consumir tentativas repetindo uma
+execução que não pode ser corrigida no código. Nos demais casos, escalar após a
+quinta tentativa com o log completo. A revisão humana decide entre nova direção
 na etapa 3 ou retorno à etapa 2 via `spec-correcao`.
+
+## Validação de critérios de aceite
+
+Registrar no log, após os testes e antes de gerar o resumo, a evidência de
+implementação de cada critério aplicável:
+
+```markdown
+## Validação de critérios de aceite
+- [x] CA-01 / CE-01 — evidência: teste, fluxo ou artefato correspondente.
+- [ ] CA-02 / CE-02 — pendente ou bloqueado: motivo.
+```
+
+Não marcar um critério como atendido sem evidência verificável. Critério pendente
+ou bloqueado impede o status `Pronto para UAT`.
 
 ## Decisões e observações
 
@@ -148,12 +201,23 @@ uma nova rodada de spec técnica: ler suas instruções, implementar o delta e
 reiniciar o limite de cinco tentativas para essa rodada. Não escrever a spec de
 correção nesta skill.
 
+## Revisão final do diff
+
+Antes de gerar o resumo, revisar as alterações efetivas para confirmar que não
+há arquivos acidentais, segredos, artefatos gerados indevidos ou mudanças sem
+relação com o plano e a spec técnica. Remover ou reverter o que não pertencer à
+TAK e registrar qualquer exceção justificada no log.
+
 ## Artefatos de saída
 
 Além do código, sempre produzir:
 
-- `tasks/TAK-XXXX/implementacao-log.md`: tentativas, execução dos gates,
-  decisões e observações;
+- `tasks/TAK-XXXX/implementacao-log.md`: usar, nesta ordem, as seções
+  `Skills auxiliares`, `Linha de base`, `Plano de implementação`, `Tentativas e
+  gates`, `Validação de critérios de aceite`, `Decisões e observações` e
+  `Bloqueios e escalonamento`; em `Tentativas e gates`, registrar para cada
+  gate o procedimento executado, a fonte que o definiu, o resultado e as
+  evidências relevantes;
 - `tasks/TAK-XXXX/implementacao-resumo.md`: ponto único de partida para o UAT
   humano, inclusive quando a implementação estiver bloqueada.
 
@@ -170,8 +234,9 @@ Todos passaram na tentativa N | Listar falhas corrigidas, com referência às
 respectivas tentativas em [[implementacao-log.md]].
 
 ## Critérios de aceite
-Checklist copiada fielmente de `spec-funcional.md`, com um item por linha e as
-referências `CA-XX` e `CE-XX`. Não reescrever os critérios.
+Copiar literalmente os critérios de aceite de `spec-funcional.md`, com um item
+por linha e as referências `CA-XX` e `CE-XX`. Não resumir, reinterpretar ou
+criar critérios novos.
 
 ## Alterações fora do escopo original
 Listar os itens marcados como **Fora de escopo — não implementado** no log.
@@ -187,8 +252,10 @@ Considerar a TAK pronta para Human UAT somente quando:
 
 - o código estiver conforme a abordagem ou delta da spec técnica;
 - todos os gates automáticos tiverem passado;
-- os comportamentos e critérios de aceite da spec funcional tiverem sido
-  verificados contra a implementação e os testes executados;
+- os comportamentos e critérios de aceite da spec funcional tiverem evidência
+  registrada na seção `Validação de critérios de aceite`;
+- o diff final tiver sido revisado e contiver somente alterações pertinentes à
+  TAK, sem segredos ou artefatos indevidos;
 - `implementacao-log.md` registrar decisões e todas as tentativas realizadas;
 - `implementacao-resumo.md` existir com status `Pronto para UAT`;
 - nenhuma alteração fora do escopo da spec técnica tiver sido implementada.
