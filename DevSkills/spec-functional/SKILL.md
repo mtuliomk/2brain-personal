@@ -16,8 +16,8 @@ Ler sempre, nesta ordem:
 
 1. `context/product.md`: entender o produto, suas regras, personas e fronteiras de escopo.
 2. `context/glossary.md`: usar a terminologia oficial, sem inventar sinônimos.
-3. A TAK original, completa, incluindo seus campos de **objetivo** e
-   **descrição**. Usar o objetivo como fonte primária de `## Objetivo` e a
+3. `tasks/TAK-XXXX/tak.md`, a TAK original completa, incluindo seus
+   campos de **objetivo** e **descrição**. Usar o objetivo como fonte primária de `## Objetivo` e a
    descrição como fonte primária de `## Contexto`, `## Comportamento esperado`
    e `## Fora de escopo`.
 

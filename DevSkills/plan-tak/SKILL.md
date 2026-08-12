@@ -44,8 +44,9 @@ necessária antes do refinamento.
 
 ## Formato da TAK
 
-Criar ou atualizar a TAK no local definido pelo workspace, preservando
-frontmatter e campos existentes. Garantir, no mínimo, esta estrutura:
+Criar ou atualizar a TAK em `tasks/TAK-XXXX/tak.md`, preservando
+frontmatter e campos existentes. Criar a pasta `tasks/TAK-XXXX/` quando ela não
+existir. Garantir, no mínimo, esta estrutura:
 
 ```markdown
 # TAK-XXXX — Título objetivo

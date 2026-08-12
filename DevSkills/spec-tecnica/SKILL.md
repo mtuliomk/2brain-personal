@@ -18,8 +18,8 @@ Ler sempre, nesta ordem:
 
 1. `tasks/TAK-XXXX/spec-funcional.md`: identificar o que deve ser verdadeiro
    depois da mudança; esta é a fonte de escopo funcional.
-2. A TAK original, completa, incluindo seus campos de **objetivo** e
-   **descrição**: usar apenas como referência secundária para preservar o
+2. `tasks/TAK-XXXX/tak.md`, a TAK original completa, incluindo seus
+   campos de **objetivo** e **descrição**: usar apenas como referência secundária para preservar o
    contexto e identificar eventual perda de informação na transição para a
    spec funcional; não redefinir o escopo a partir dela.
 3. Código-fonte relevante: procurar a feature, equivalentes e pontos de
