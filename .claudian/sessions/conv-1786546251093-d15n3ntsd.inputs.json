@@ -18,7 +18,22 @@
       },
       "images": [],
       "contentDigest": "ea17fd0e7049dcf6399db4677fb8139724487dd6a3b5f326611c0129d3c44935",
-      "providerUserMessageId": "019ff674-71b5-7631-904c-e927fab8fd56"
+      "providerUserMessageId": "019ff674-71b5-7631-904c-e927fab8fd56",
+      "providerAssistantMessageId": "msg_005b08b36169520d016a7c887192308191a1f4cf9c15a501d6"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786546455868-hqj1npk",
+      "userTurnOrdinal": 2,
+      "state": "accepted",
+      "localMessageId": "msg-1786546455855-6zgt1lg",
+      "timestamp": 1786546455855,
+      "rawDisplayText": "revise a skill de spec funcional. veja em relacao a coerencia e completude. considere que ela será usada em uma TAK (task) que tem objetivo e descricao.\n\nme diga o que vc sugere melhorar nessa skil",
+      "canonicalText": "revise a skill de spec funcional. veja em relacao a coerencia e completude. considere que ela será usada em uma TAK (task) que tem objetivo e descricao.\n\nme diga o que vc sugere melhorar nessa skil",
+      "images": [],
+      "contentDigest": "60487da1796393fd0837d08e39d55c5864afeb76e1a5e1c61bb25321ee1578db",
+      "providerUserMessageId": "019ff677-85e9-7923-b624-454e49960f2d",
+      "providerAssistantMessageId": "msg_005b08b36169520d016a7c89222bf88191913160485aacb3f6"
     }
   ]
 }

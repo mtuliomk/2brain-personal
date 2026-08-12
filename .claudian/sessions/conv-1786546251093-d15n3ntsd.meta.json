@@ -4,9 +4,9 @@
   "title": "Crie o documento de skill funcional, baseada no te...",
   "titleGenerationStatus": "failed",
   "createdAt": 1786546251109,
-  "lastActivityAt": 1786546251109,
+  "lastActivityAt": 1786546477613,
   "sessionId": "019ff674-66fa-79d0-8547-b0c8e848eab1",
-  "selectedModel": "gpt-5.6-luna",
+  "selectedModel": "gpt-5.6-terra",
   "providerState": {
     "threadId": "019ff674-66fa-79d0-8547-b0c8e848eab1",
     "nativeConversationContextEstablished": true,
@@ -14,5 +14,15 @@
     "transcriptRootPath": "/home/tulio/.codex/sessions",
     "workspaceDependencyToolVersion": 1
   },
-  "currentNote": "DevSkills/spec-functional/SKILL.md"
+  "currentNote": "DevSkills/spec-functional/SKILL.md",
+  "usage": {
+    "inputTokens": 28786,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 25344,
+    "contextWindow": 258400,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 28786,
+    "percentage": 11,
+    "model": "gpt-5.6-terra"
+  }
 }
