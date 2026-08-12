@@ -34,6 +34,34 @@
       "contentDigest": "60487da1796393fd0837d08e39d55c5864afeb76e1a5e1c61bb25321ee1578db",
       "providerUserMessageId": "019ff677-85e9-7923-b624-454e49960f2d",
       "providerAssistantMessageId": "msg_005b08b36169520d016a7c89222bf88191913160485aacb3f6"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786546705487-g03mpp2",
+      "userTurnOrdinal": 3,
+      "state": "accepted",
+      "localMessageId": "msg-1786546705470-59mogeb",
+      "timestamp": 1786546705470,
+      "rawDisplayText": "2. implemente sua sugestão. de a instrucao de tambem considerar outros MD do projeto referentes a esse mesmo assunto\n\n3. siga com sua sugestao\n\n4. siga com sua sugestao\n\n5. siga com sua sugest\n\n6. siga com sua sugestao\n\n7. siga com sua sugestao\n\n8. siga com sua sugestao",
+      "canonicalText": "2. implemente sua sugestão. de a instrucao de tambem considerar outros MD do projeto referentes a esse mesmo assunto\n\n3. siga com sua sugestao\n\n4. siga com sua sugestao\n\n5. siga com sua sugest\n\n6. siga com sua sugestao\n\n7. siga com sua sugestao\n\n8. siga com sua sugestao",
+      "images": [],
+      "contentDigest": "de2eefa2e0910fd7cf13e6f25d8a355771b3d0bef6466950470f49af5794e3d0",
+      "providerUserMessageId": "019ff67b-54f3-77a3-9136-18ec62596d64",
+      "providerAssistantMessageId": "msg_005b08b36169520d016a7c8a2406688191b92d49f55522511f"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786546780680-8sp0b7d",
+      "userTurnOrdinal": 4,
+      "state": "accepted",
+      "localMessageId": "msg-1786546780667-b155z49",
+      "timestamp": 1786546780667,
+      "rawDisplayText": "faca tambem uma revisao, com o mesmo objetivo, na skill de espec tecnica",
+      "canonicalText": "faca tambem uma revisao, com o mesmo objetivo, na skill de espec tecnica",
+      "images": [],
+      "contentDigest": "aa5fb5afabf903a6b1318842a839f4a1c841c7bc77097132e8b77504ef31fcf6",
+      "providerUserMessageId": "019ff67c-7a97-7a53-9fc8-7c48dd5cc1c0",
+      "providerAssistantMessageId": "msg_005b08b36169520d016a7c8a6b77dc8191b08814286c1cc5b2"
     }
   ]
 }

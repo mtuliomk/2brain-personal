@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevSkills/spec-functional/SKILL.md",
+                "file": "DevSkills/spec-tecnica/SKILL.md",
                 "mode": "source",
                 "source": false
               },
@@ -202,8 +202,8 @@
   },
   "active": "3eab0947d4ef8543",
   "lastOpenFiles": [
-    "DevSkills/spec-tecnica/SKILL.md",
     "DevSkills/spec-functional/SKILL.md",
+    "DevSkills/spec-tecnica/SKILL.md",
     "DevSkills/spec-tecnica",
     "DevSkills/spec-functional",
     "DevSkills/dev-commit/SKILL.md",
