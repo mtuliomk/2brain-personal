@@ -4,7 +4,7 @@
   "title": "a spec-coding está exigindo que a spec tecnica est...",
   "titleGenerationStatus": "failed",
   "createdAt": 1786624072912,
-  "lastActivityAt": 1786624131692,
+  "lastActivityAt": 1786624822953,
   "sessionId": "019ffb17-df22-79a2-a064-04f88d058ba9",
   "selectedModel": "gpt-5.6-luna",
   "providerState": {
@@ -16,13 +16,13 @@
   },
   "currentNote": "DevSkills/spec-coding/SKILL.md",
   "usage": {
-    "inputTokens": 18595,
+    "inputTokens": 23366,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 17152,
+    "cacheReadInputTokens": 22272,
     "contextWindow": 258400,
     "contextWindowIsAuthoritative": true,
-    "contextTokens": 18595,
-    "percentage": 7,
+    "contextTokens": 23366,
+    "percentage": 9,
     "model": "gpt-5.6-luna"
   }
 }

@@ -34,6 +34,34 @@
       "contentDigest": "5ebe6c0a41f8c16101afbdfe4b0cd123365bfd7941befb3171006d3148b00deb",
       "providerUserMessageId": "019ffb18-944d-7f32-ad4a-0f6c8db549d0",
       "providerAssistantMessageId": "msg_00f9c8bd78404da8016a7db8810b3c81918f70ce58cb50c594"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786624748142-i385xtz",
+      "userTurnOrdinal": 3,
+      "state": "accepted",
+      "localMessageId": "msg-1786624748110-55c2jef",
+      "timestamp": 1786624748110,
+      "rawDisplayText": "a skill de codiing está reporvando a tarefa com a justificativa abaixo\nyarn format:check falha em 71 arquivos preexistentes, fora do escopo da TAK.\n\n\nisso faz sentido?",
+      "canonicalText": "a skill de codiing está reporvando a tarefa com a justificativa abaixo\nyarn format:check falha em 71 arquivos preexistentes, fora do escopo da TAK.\n\n\nisso faz sentido?",
+      "images": [],
+      "contentDigest": "b25c2d254cd2cf752004cd09a567d9ebf908515a3e493bf82b85e86716be9a21",
+      "providerUserMessageId": "019ffb22-2bf2-7ca3-b2a1-1b80fcf6a0c8",
+      "providerAssistantMessageId": "msg_00f9c8bd78404da8016a7dbaefcc9c8191926295e7d309a67c"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786624802565-zmp4vfb",
+      "userTurnOrdinal": 4,
+      "state": "accepted",
+      "localMessageId": "msg-1786624802555-4jkhb5u",
+      "timestamp": 1786624802555,
+      "rawDisplayText": "quero que ela considere apenas suas alteracoes nesses gates",
+      "canonicalText": "quero que ela considere apenas suas alteracoes nesses gates",
+      "images": [],
+      "contentDigest": "7adf553fdea40c79e2ed5f72d4e7eaa391ef2bfcd77e99a872445f2d54bef6f5",
+      "providerUserMessageId": "019ffb22-ffa0-7002-8709-4ba30477e969",
+      "providerAssistantMessageId": "msg_00f9c8bd78404da8016a7dbb34b05c8191b939958e8484dc63"
     }
   ]
 }

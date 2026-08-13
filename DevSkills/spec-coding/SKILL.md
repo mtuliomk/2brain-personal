@@ -107,6 +107,31 @@ Exemplo:
 
 ## Gates automáticos
 
+### Escopo dos gates
+
+Os gates devem avaliar a alteração efetivamente produzida pela TAK, e não
+reprovar a implementação por problemas preexistentes e fora do escopo. Antes
+de cada gate, determinar o conjunto de arquivos alterados pela TAK usando o
+diff da implementação e, quando aplicável, os arquivos diretamente afetados
+por ela.
+
+- **Formatação, lint e padrão de código:** executar preferencialmente no
+  conjunto de arquivos alterados. Se o projeto só oferecer um comando global,
+  executá-lo, mas separar no resultado as falhas nos arquivos da TAK das falhas
+  preexistentes fora do escopo.
+- **Testes:** executar os testes exigidos e relacionados aos critérios de
+  aceite e, quando o projeto exigir, a suíte completa. Falhas em testes ou
+  componentes fora do escopo que já existiam antes da TAK devem ser registradas
+  como preexistentes, sem serem atribuídas à implementação.
+- **Review automatizado:** revisar somente o diff da TAK, verificando aderência
+  à spec técnica, escopo, segurança, regressões e cobertura aplicável.
+
+Uma falha preexistente fora do escopo não deve consumir uma tentativa nem ser
+registrada como falha da TAK. Se ela impedir a execução ou a interpretação de
+um gate obrigatório, registrar como **Bloqueio externo/preexistente**, com a
+evidência da linha de base, e escalar para decisão humana. Nunca corrigir
+arquivos fora do escopo apenas para fazer um gate global passar.
+
 Antes de executar cada gate, identificar seu comando ou procedimento oficial no
 projeto. Consultar, conforme aplicável, scripts e configurações do repositório,
 CI/CD, `README.md`, `CONTRIBUTING.md`, `.taloren_context/testing.md` e
