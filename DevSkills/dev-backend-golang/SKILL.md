@@ -2,7 +2,6 @@
 name: dev-backend-golang
 description: Convenções de código para qualquer projeto backend em Go (Golang), incluindo APIs HTTP, gRPC, workers, jobs, consumers, CLIs e serviços. Abrange nomenclatura, packages, tipos, erros, contexto, concorrência, I/O, persistência, observabilidade, segurança, testes e ferramentas do ecossistema Go. Use ao escrever, revisar ou refatorar código backend em Go. Não cobre arquitetura de produto nem código frontend.
 ---
-
 # Convenções de código
 
 Aplicar estas convenções ao escrever ou revisar backend em Go, independentemente do framework. Priorizar os padrões já existentes no repositório; esta skill complementa, mas não substitui, as decisões do projeto.

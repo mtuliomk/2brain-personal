@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1786637701537-8pz7mn9ds",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786637701625-4ny1pz8",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1786637701531-ua1x6ac",
+      "timestamp": 1786637701531,
+      "rawDisplayText": "analise todas as skills de spec. elas dependem de arquivos de contexto?",
+      "canonicalText": "analise todas as skills de spec. elas dependem de arquivos de contexto?",
+      "context": {
+        "currentNote": {
+          "path": "DevSkills/dev-backend-golang/SKILL.md"
+        }
+      },
+      "images": [],
+      "contentDigest": "273a00abe1338b6bb41a23ffb87c5abd1d5fe1b9d08e35359b110380bcc972b6",
+      "providerUserMessageId": "019ffbe7-de7a-7ec0-9814-a7a1df6ec5fd",
+      "providerAssistantMessageId": "msg_02d63ac5fe42c328016a7dedaa5b40819196a28671f1eaa9d4"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "conv-1786637701537-8pz7mn9ds",
+  "providerId": "codex",
+  "title": "analise todas as skills de spec",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1786637701585,
+  "lastActivityAt": 1786637743251,
+  "sessionId": "019ffbe7-d35e-7f43-acb1-d02652f740cf",
+  "selectedModel": "gpt-5.6-luna",
+  "providerState": {
+    "threadId": "019ffbe7-d35e-7f43-acb1-d02652f740cf",
+    "nativeConversationContextEstablished": true,
+    "sessionFilePath": "/home/tulio/.codex/sessions/2026/08/13/rollout-2026-08-13T13-15-01-019ffbe7-d35e-7f43-acb1-d02652f740cf.jsonl",
+    "transcriptRootPath": "/home/tulio/.codex/sessions",
+    "workspaceDependencyToolVersion": 1
+  },
+  "currentNote": "DevSkills/dev-backend-golang/SKILL.md",
+  "usage": {
+    "inputTokens": 24973,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 23296,
+    "contextWindow": 258400,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 24973,
+    "percentage": 10,
+    "model": "gpt-5.6-luna"
+  }
+}

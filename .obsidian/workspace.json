@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevSkills/spec-coding/SKILL.md",
+                "file": "DevSkills/dev-backend-golang/SKILL.md",
                 "mode": "source",
                 "source": false
               },
@@ -202,6 +202,9 @@
   },
   "active": "4cac4820443a3e5d",
   "lastOpenFiles": [
+    "DevSkills/dev-backend-nodejs/SKILL.md",
+    "DevSkills/dev-backend-nodejs/examples.md",
+    "DevSkills/spec-coding/SKILL.md",
     "DevSkills/dev-backend-golang/agents/openai.yaml",
     "DevSkills/dev-backend-golang/agents",
     "DevSkills/dev-backend-golang/SKILL.md",
@@ -210,7 +213,6 @@
     "DevSkills/dev-backend-golan/agents",
     "DevSkills/dev-backend-golan/SKILL.md",
     "DevSkills/dev-backend-golan",
-    "DevSkills/spec-coding/SKILL.md",
     "DevSkills/plan-tak/SKILL.md",
     "DevSkills/plan-tak",
     "DevSkills/spec-functional/SKILL.md",
@@ -219,11 +221,8 @@
     "DevSkills/spec-tecnica",
     "DevSkills/spec-functional",
     "DevSkills/dev-commit/SKILL.md",
-    "DevSkills/dev-backend-nodejs/SKILL.md",
     "DevSkills/dev-frontend-nodejs/SKILL.md",
-    "DevSkills/dev-commit/agents/openai.yaml",
     "DevSkills/dev-frontend-nodejs/examples.md",
-    "DevSkills/dev-backend-nodejs/examples.md",
     "DevSkills/Backend - NodeJS.md",
     "Profile/Me.md",
     "Welcome.md",
