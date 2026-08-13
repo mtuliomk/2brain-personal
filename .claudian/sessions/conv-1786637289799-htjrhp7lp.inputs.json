@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1786637289799-htjrhp7lp",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786637289863-k3kr44q",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1786637289771-275c365",
+      "timestamp": 1786637289771,
+      "rawDisplayText": "baseada nas specs existentes de backend-nodejs, crie uma nova spec dev-backend-golan. ela deve seguir o mesmo padrão, mas adaptada para a linguagem golang. inclua as bestpractices de mercado dessa linguagem",
+      "canonicalText": "baseada nas specs existentes de backend-nodejs, crie uma nova spec dev-backend-golan. ela deve seguir o mesmo padrão, mas adaptada para a linguagem golang. inclua as bestpractices de mercado dessa linguagem",
+      "context": {
+        "currentNote": {
+          "path": "DevSkills/spec-coding/SKILL.md"
+        }
+      },
+      "images": [],
+      "contentDigest": "bb86ea77c5c407bcf68c7c9fba8bcd5c32e52c68d0d5d9f1a523c168dac3bf7c",
+      "providerUserMessageId": "019ffbe1-9603-71b2-899c-0b9208058d61",
+      "providerAssistantMessageId": "msg_07e681efae654ac2016a7dec9120ec8191ab07b84e9fd0a221"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786637460112-pqeu2mh",
+      "userTurnOrdinal": 2,
+      "state": "accepted",
+      "localMessageId": "msg-1786637460086-ddee556",
+      "timestamp": 1786637460086,
+      "rawDisplayText": "renomeie a spec paga golang",
+      "canonicalText": "renomeie a spec paga golang",
+      "images": [],
+      "contentDigest": "dd78327768aa79818d0ac3dd5611325a17d27873e31de8e83c96a373186d1f1d",
+      "providerUserMessageId": "019ffbe4-2318-71a1-b397-9bada433fbce",
+      "providerAssistantMessageId": "msg_07e681efae654ac2016a7dec9f7e888191b30848afc14a7d7c"
+    }
+  ]
+}

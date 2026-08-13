@@ -1,0 +1,28 @@
+{
+  "id": "conv-1786637289799-htjrhp7lp",
+  "providerId": "codex",
+  "title": "baseada nas specs existentes de backend-nodejs, cr...",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1786637289841,
+  "lastActivityAt": 1786637472711,
+  "sessionId": "019ffbe1-8c46-70b1-862a-7d117d5ca3c8",
+  "selectedModel": "gpt-5.6-luna",
+  "providerState": {
+    "threadId": "019ffbe1-8c46-70b1-862a-7d117d5ca3c8",
+    "nativeConversationContextEstablished": true,
+    "sessionFilePath": "/home/tulio/.codex/sessions/2026/08/13/rollout-2026-08-13T13-08-10-019ffbe1-8c46-70b1-862a-7d117d5ca3c8.jsonl",
+    "transcriptRootPath": "/home/tulio/.codex/sessions",
+    "workspaceDependencyToolVersion": 1
+  },
+  "currentNote": "DevSkills/spec-coding/SKILL.md",
+  "usage": {
+    "inputTokens": 51531,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 50944,
+    "contextWindow": 258400,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 51531,
+    "percentage": 20,
+    "model": "gpt-5.6-luna"
+  }
+}
