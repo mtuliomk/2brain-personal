@@ -1,0 +1,28 @@
+{
+  "id": "conv-1786624072864-d920lhovr",
+  "providerId": "codex",
+  "title": "a spec-coding está exigindo que a spec tecnica est...",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1786624072912,
+  "lastActivityAt": 1786624131692,
+  "sessionId": "019ffb17-df22-79a2-a064-04f88d058ba9",
+  "selectedModel": "gpt-5.6-luna",
+  "providerState": {
+    "threadId": "019ffb17-df22-79a2-a064-04f88d058ba9",
+    "nativeConversationContextEstablished": true,
+    "sessionFilePath": "/home/tulio/.codex/sessions/2026/08/13/rollout-2026-08-13T09-27-53-019ffb17-df22-79a2-a064-04f88d058ba9.jsonl",
+    "transcriptRootPath": "/home/tulio/.codex/sessions",
+    "workspaceDependencyToolVersion": 1
+  },
+  "currentNote": "DevSkills/spec-coding/SKILL.md",
+  "usage": {
+    "inputTokens": 18595,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 17152,
+    "contextWindow": 258400,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 18595,
+    "percentage": 7,
+    "model": "gpt-5.6-luna"
+  }
+}

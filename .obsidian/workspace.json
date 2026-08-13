@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevSkills/plan-tak/SKILL.md",
+                "file": "DevSkills/spec-coding/SKILL.md",
                 "mode": "source",
                 "source": false
               },
@@ -202,8 +202,8 @@
   },
   "active": "4cac4820443a3e5d",
   "lastOpenFiles": [
-    "DevSkills/spec-coding/SKILL.md",
     "DevSkills/plan-tak/SKILL.md",
+    "DevSkills/spec-coding/SKILL.md",
     "DevSkills/plan-tak",
     "DevSkills/spec-functional/SKILL.md",
     "DevSkills/spec-coding",

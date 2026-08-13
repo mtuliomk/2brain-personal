@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1786624072864-d920lhovr",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786624072944-d402m4x",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1786624072828-cga3vts",
+      "timestamp": 1786624072828,
+      "rawDisplayText": "a spec-coding está exigindo que a spec tecnica esteja aprovada por um humano. isso é verdade?",
+      "canonicalText": "a spec-coding está exigindo que a spec tecnica esteja aprovada por um humano. isso é verdade?",
+      "context": {
+        "currentNote": {
+          "path": "DevSkills/spec-coding/SKILL.md"
+        }
+      },
+      "images": [],
+      "contentDigest": "26e263d71db50dc92aa37cf761658e09d33076e602308a2cfd0ed0ba6ff998ab",
+      "providerUserMessageId": "019ffb17-ea73-7b11-a6bf-5361b5fb0254",
+      "providerAssistantMessageId": "msg_00f9c8bd78404da8016a7db852e1d881918d4b136ff611d150"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786624119694-4gyzm8s",
+      "userTurnOrdinal": 2,
+      "state": "accepted",
+      "localMessageId": "msg-1786624119680-irvvd91",
+      "timestamp": 1786624119680,
+      "rawDisplayText": "como faco essa aprovacao?",
+      "canonicalText": "como faco essa aprovacao?",
+      "images": [],
+      "contentDigest": "5ebe6c0a41f8c16101afbdfe4b0cd123365bfd7941befb3171006d3148b00deb",
+      "providerUserMessageId": "019ffb18-944d-7f32-ad4a-0f6c8db549d0",
+      "providerAssistantMessageId": "msg_00f9c8bd78404da8016a7db8810b3c81918f70ce58cb50c594"
+    }
+  ]
+}
