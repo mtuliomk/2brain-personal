@@ -4,7 +4,7 @@
   "title": "analise o arquivo /home/tulio/Downloads/posicao-20...",
   "titleGenerationStatus": "failed",
   "createdAt": 1786730525537,
-  "lastActivityAt": 1786733058212,
+  "lastActivityAt": 1786733295559,
   "sessionId": "01a00170-371d-7701-80ca-9411c2f18452",
   "selectedModel": "gpt-5.6-terra",
   "providerState": {
@@ -15,13 +15,13 @@
     "workspaceDependencyToolVersion": 1
   },
   "usage": {
-    "inputTokens": 71216,
+    "inputTokens": 92473,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 68352,
+    "cacheReadInputTokens": 90880,
     "contextWindow": 258400,
     "contextWindowIsAuthoritative": true,
-    "contextTokens": 71216,
-    "percentage": 28,
+    "contextTokens": 92473,
+    "percentage": 36,
     "model": "gpt-5.6-terra"
   }
 }

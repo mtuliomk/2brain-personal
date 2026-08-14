@@ -223,7 +223,22 @@
       "canonicalText": "analise novamente os papeis detratores, se eles tiveram pagamentos na movimentacao",
       "images": [],
       "contentDigest": "2123876cf4ff21d40869f98e5a7ffc8fe5534ca04049ea8ec500c60992ba49dc",
-      "providerUserMessageId": "01a00196-da0c-7143-adce-6a1f7e97024d"
+      "providerUserMessageId": "01a00196-da0c-7143-adce-6a1f7e97024d",
+      "providerAssistantMessageId": "msg_0e2d8e9023cc2957016a7f622c454c819180ad192614a15387"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786733224732-khx4ejr",
+      "userTurnOrdinal": 17,
+      "state": "accepted",
+      "localMessageId": "msg-1786733224714-uh0zb6i",
+      "timestamp": 1786733224714,
+      "rawDisplayText": "faca uma analise sobre os FIIs que tenho na carteira",
+      "canonicalText": "faca uma analise sobre os FIIs que tenho na carteira",
+      "images": [],
+      "contentDigest": "5321ef3da9073a95749bc506376562bf57314893db7541e14ef6ed6713c3e4d3",
+      "providerUserMessageId": "01a00199-63bc-78c3-b9d4-525978169883",
+      "providerAssistantMessageId": "msg_0e2d8e9023cc2957016a7f62e4fb248191b1bffd156a257a40"
     }
   ]
 }
