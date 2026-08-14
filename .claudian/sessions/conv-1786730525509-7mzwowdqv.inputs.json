@@ -295,6 +295,34 @@
       "contentDigest": "150ca1ddcb0115d91e446bb7ab4ce30d8f6f7f216b4e5687d8fb354c3236d666",
       "providerUserMessageId": "01a001a8-a80e-7721-ac22-29bd35140235",
       "providerAssistantMessageId": "msg_0e2d8e9023cc2957016a7f6698d970819185698daf8b09890a"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786734306452-qpuxk8b",
+      "userTurnOrdinal": 22,
+      "state": "accepted",
+      "localMessageId": "msg-1786734306445-79tba8a",
+      "timestamp": 1786734306445,
+      "rawDisplayText": "e se houve a compra de novos papeis no mes, como isso reflete na tabela",
+      "canonicalText": "e se houve a compra de novos papeis no mes, como isso reflete na tabela",
+      "images": [],
+      "contentDigest": "40671b9562a004b81f3e88ddb7acd9a94997bd1bef1d0af9decbc5b62090ac2f",
+      "providerUserMessageId": "01a001a9-e63d-7981-904f-65d01b8b1492",
+      "providerAssistantMessageId": "msg_0e2d8e9023cc2957016a7f66f06ab08191a7bc025dcd7ef0a5"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786734496224-rfycds8",
+      "userTurnOrdinal": 23,
+      "state": "accepted",
+      "localMessageId": "msg-1786734496215-lzzy6yd",
+      "timestamp": 1786734496215,
+      "rawDisplayText": "volte a tabela inicial entao, com \nclasse, valor no fim do mes, Rendimento $ r % no mes, sendo o rendimento a valorizacao total da classe (valorizacao, rendimentos, amortizacao, etc...)",
+      "canonicalText": "volte a tabela inicial entao, com \nclasse, valor no fim do mes, Rendimento $ r % no mes, sendo o rendimento a valorizacao total da classe (valorizacao, rendimentos, amortizacao, etc...)",
+      "images": [],
+      "contentDigest": "fd0d89ef52e039d75700cbd0471f37728a6ba4e0ba03cd9cd82249ce47784c49",
+      "providerUserMessageId": "01a001ac-cac1-7502-98bc-c843555426b8",
+      "providerAssistantMessageId": "msg_0e2d8e9023cc2957016a7f67d8b2f881918e1e815e46037ca8"
     }
   ]
 }
