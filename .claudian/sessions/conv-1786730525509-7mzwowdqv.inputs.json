@@ -267,6 +267,34 @@
       "contentDigest": "77be764df68957f0595234c26cd853dcb564952f945d49db831354e99415c0f7",
       "providerUserMessageId": "01a001a2-ef37-7301-9c9e-c5e3f71cdbf0",
       "providerAssistantMessageId": "msg_0e2d8e9023cc2957016a7f6556ac988191ad8951f271ea7013"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786734114284-uda4nki",
+      "userTurnOrdinal": 20,
+      "state": "accepted",
+      "localMessageId": "msg-1786734114277-9qginek",
+      "timestamp": 1786734114277,
+      "rawDisplayText": "quero uma tabela simples com classe, valor no fim do mes, valorizacao, movimentacao",
+      "canonicalText": "quero uma tabela simples com classe, valor no fim do mes, valorizacao, movimentacao",
+      "images": [],
+      "contentDigest": "89b021f066bb978b7f6880abfe5188d8af810c1fc932fe3d068b6e2e8a767e19",
+      "providerUserMessageId": "01a001a6-f6b1-7f91-960b-d29f21996354",
+      "providerAssistantMessageId": "msg_0e2d8e9023cc2957016a7f6665d690819185eeec8c591d2713"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786734225235-pz8egxl",
+      "userTurnOrdinal": 21,
+      "state": "accepted",
+      "localMessageId": "msg-1786734225228-wzjdh8w",
+      "timestamp": 1786734225228,
+      "rawDisplayText": "a valorizacao contem os valores de movimentacao?",
+      "canonicalText": "a valorizacao contem os valores de movimentacao?",
+      "images": [],
+      "contentDigest": "150ca1ddcb0115d91e446bb7ab4ce30d8f6f7f216b4e5687d8fb354c3236d666",
+      "providerUserMessageId": "01a001a8-a80e-7721-ac22-29bd35140235",
+      "providerAssistantMessageId": "msg_0e2d8e9023cc2957016a7f6698d970819185698daf8b09890a"
     }
   ]
 }
