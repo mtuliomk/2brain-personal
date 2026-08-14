@@ -85,6 +85,47 @@
       "contentDigest": "17dc2f21a7f18f7743f4ebdc8db6d4348bb14c8cd1dc08dfc9fe9950add57878",
       "providerUserMessageId": "01a00183-38be-7502-a536-9806e0dd26bc",
       "providerAssistantMessageId": "msg_0e2d8e9023cc2957016a7f5d08bb048191acbf5b66aa5aee45"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786731973445-lohm0uy",
+      "userTurnOrdinal": 7,
+      "state": "accepted",
+      "localMessageId": "msg-1786731973437-ttz3ecw",
+      "timestamp": 1786731973437,
+      "rawDisplayText": "nao tem o valor de compra?",
+      "canonicalText": "nao tem o valor de compra?",
+      "images": [],
+      "contentDigest": "b87bc074b044c3964bc67f066793b6e7ec41c6bc4adeb451a02facd4083a808b",
+      "providerUserMessageId": "01a00186-4c2d-7be0-8ab3-dd3db3737d05",
+      "providerAssistantMessageId": "msg_0e2d8e9023cc2957016a7f5dd0766481918e5aa84743f0e118"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786732125333-j1c1c1o",
+      "userTurnOrdinal": 8,
+      "state": "accepted",
+      "localMessageId": "msg-1786732125325-2x4sh8z",
+      "timestamp": 1786732125325,
+      "rawDisplayText": "a LCA do votorantin, pagou algum cupom/dividendo nos ultimos anos?",
+      "canonicalText": "a LCA do votorantin, pagou algum cupom/dividendo nos ultimos anos?",
+      "images": [],
+      "contentDigest": "b365d50575606866c6ad5075e2a65ddb173181c571d0cc5213ad46dad0040789",
+      "providerUserMessageId": "01a00188-9d75-7450-8c01-d8a94d2c868f",
+      "providerAssistantMessageId": "msg_0e2d8e9023cc2957016a7f5e64f44c8191bda89059ebdb901f"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786732191477-yhe6n72",
+      "userTurnOrdinal": 9,
+      "state": "accepted",
+      "localMessageId": "msg-1786732191471-cwvekr3",
+      "timestamp": 1786732191471,
+      "rawDisplayText": "me de o rendimento acumulado desses apeis desde o inicio do ano",
+      "canonicalText": "me de o rendimento acumulado desses apeis desde o inicio do ano",
+      "images": [],
+      "contentDigest": "eaa5718a5385ff5326cba44a4a24bc5488b27029377b2572c05d8d301998ba01",
+      "providerUserMessageId": "01a00189-9f72-7822-aff8-fc24526d7faa"
     }
   ]
 }
