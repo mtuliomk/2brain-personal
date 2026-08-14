@@ -59,12 +59,12 @@ O percentual é calculado sobre o valor da classe no fim do mês anterior; não 
 
 ## Abril
 
-| Classe | Valor no fim do mês | Rendimento ($ e %) | Movimentação |
-| --- | ---: | ---: | --- |
-| Renda Fixa | R$ 3.513.473,81 | -R$ 219.513,62 (-5,91%) | Compras: R$ 61.788,49; Resgates/vencimentos: R$ 25.558,14; Juros/rendimentos: R$ 8.047,46; Amortizações: R$ 4.007,48; Outros créditos: R$ 2.394,53 |
-| Ações | R$ 126.380,39 | R$ 6.662,67 (5,51%) | Juros/rendimentos: R$ 20,08; Outros créditos: R$ 1.138,56 |
-| Fundos | R$ 70.405,98 | -R$ 2.455,77 (-3,33%) | Juros/rendimentos: R$ 871,10 |
-| Tesouro Direto | R$ 0,00 | — | Sem movimentação financeira registrada |
+| Classe         | Valor no fim do mês |      Rendimento ($ e %) | Movimentação                                                                                                                                       |
+| -------------- | ------------------: | ----------------------: | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Renda Fixa     |     R$ 3.513.473,81 | -R$ 219.513,62 (-5,91%) | Compras: R$ 61.788,49; Resgates/vencimentos: R$ 25.558,14; Juros/rendimentos: R$ 8.047,46; Amortizações: R$ 4.007,48; Outros créditos: R$ 2.394,53 |
+| Ações          |       R$ 126.380,39 |     R$ 6.662,67 (5,51%) | Juros/rendimentos: R$ 20,08; Outros créditos: R$ 1.138,56                                                                                          |
+| Fundos         |        R$ 70.405,98 |   -R$ 2.455,77 (-3,33%) | Juros/rendimentos: R$ 871,10                                                                                                                       |
+| Tesouro Direto |             R$ 0,00 |                       — | Sem movimentação financeira registrada                                                                                                             |
 
 ## Maio
 
@@ -95,9 +95,9 @@ O percentual é calculado sobre o valor da classe no fim do mês anterior; não 
 
 ## Agosto (parcial até 14/08)
 
-| Classe | Valor no fim do mês | Rendimento ($ e %) | Movimentação |
-| --- | ---: | ---: | --- |
-| Renda Fixa | R$ 3.549.683,31 | R$ 15.816,52 (0,44%) | Compras: R$ 61.000,00; Resgates/vencimentos: R$ 105.637,56; Juros/rendimentos: R$ 29.100,42; Amortizações: R$ 49,90 |
-| Ações | R$ 105.155,43 | -R$ 9.008,08 (-7,87%) | Juros/rendimentos: R$ 0,04; Outros créditos: R$ 359,68 |
-| Fundos | R$ 54.842,58 | -R$ 5.962,06 (-9,81%) | Sem movimentação financeira registrada |
-| Tesouro Direto | R$ 67.833,38 | R$ 586,37 (0,87%) | Sem movimentação financeira registrada |
+| Classe         | Valor no fim do mês |    Rendimento ($ e %) | Movimentação                                                                                                        |
+| -------------- | ------------------: | --------------------: | ------------------------------------------------------------------------------------------------------------------- |
+| Renda Fixa     |     R$ 3.549.683,31 |  R$ 15.816,52 (0,44%) | Compras: R$ 61.000,00; Resgates/vencimentos: R$ 105.637,56; Juros/rendimentos: R$ 29.100,42; Amortizações: R$ 49,90 |
+| Ações          |       R$ 105.155,43 | -R$ 9.008,08 (-7,87%) | Juros/rendimentos: R$ 0,04; Outros créditos: R$ 359,68                                                              |
+| Fundos         |        R$ 54.842,58 | -R$ 5.962,06 (-9,81%) | Sem movimentação financeira registrada                                                                              |
+| Tesouro Direto |        R$ 67.833,38 |     R$ 586,37 (0,87%) | Sem movimentação financeira registrada                                                                              |
