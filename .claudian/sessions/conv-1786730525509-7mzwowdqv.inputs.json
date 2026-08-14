@@ -323,6 +323,47 @@
       "contentDigest": "fd0d89ef52e039d75700cbd0471f37728a6ba4e0ba03cd9cd82249ce47784c49",
       "providerUserMessageId": "01a001ac-cac1-7502-98bc-c843555426b8",
       "providerAssistantMessageId": "msg_0e2d8e9023cc2957016a7f67d8b2f881918e1e815e46037ca8"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786734609857-sa0sp0l",
+      "userTurnOrdinal": 24,
+      "state": "accepted",
+      "localMessageId": "msg-1786734609853-2nebsge",
+      "timestamp": 1786734609853,
+      "rawDisplayText": "CPTR11 nao é considerado como FII?",
+      "canonicalText": "CPTR11 nao é considerado como FII?",
+      "images": [],
+      "contentDigest": "292785f74dfbbefd411cc3e2b2a2653b1de327fbe97f2ed8f09b01568dad9c10",
+      "providerUserMessageId": "01a001ae-8783-7b90-a2ca-6cdf1b53349e",
+      "providerAssistantMessageId": "msg_0e2d8e9023cc2957016a7f6821dbac81919137030268c6d9b1"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786734699970-pp25niv",
+      "userTurnOrdinal": 25,
+      "state": "accepted",
+      "localMessageId": "msg-1786734699964-85tn8br",
+      "timestamp": 1786734699964,
+      "rawDisplayText": "considere as classes Renda Fixa, Ações, Fundos, Tesouro Direto, Outros (se houver)",
+      "canonicalText": "considere as classes Renda Fixa, Ações, Fundos, Tesouro Direto, Outros (se houver)",
+      "images": [],
+      "contentDigest": "a01efa21c177930e07cb453034d8a7edfac0c9eb7c74a7cd3a3d625453890594",
+      "providerUserMessageId": "01a001af-e64e-79f3-be50-dedb590032d8",
+      "providerAssistantMessageId": "msg_0e2d8e9023cc2957016a7f6875f4548191b9684561a81c6000"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786734770240-s0dpgnu",
+      "userTurnOrdinal": 26,
+      "state": "accepted",
+      "localMessageId": "msg-1786734770233-frj9l49",
+      "timestamp": 1786734770233,
+      "rawDisplayText": "crie um markdown chamado resumo. nele eu quero essa analise para cada um dos meses.\n\nno inicio, um resumo ontendo a classe, e o rendimento para cada mes analisado ($ e %)",
+      "canonicalText": "crie um markdown chamado resumo. nele eu quero essa analise para cada um dos meses.\n\nno inicio, um resumo ontendo a classe, e o rendimento para cada mes analisado ($ e %)",
+      "images": [],
+      "contentDigest": "30435bd530fe94fa67221cc56fc2ad57c6c3031ce95177d24d497204f4bafa99",
+      "providerUserMessageId": "01a001b0-f8b7-7262-bf75-5f68c59f4b24"
     }
   ]
 }
