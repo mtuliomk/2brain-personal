@@ -363,7 +363,8 @@
       "canonicalText": "crie um markdown chamado resumo. nele eu quero essa analise para cada um dos meses.\n\nno inicio, um resumo ontendo a classe, e o rendimento para cada mes analisado ($ e %)",
       "images": [],
       "contentDigest": "30435bd530fe94fa67221cc56fc2ad57c6c3031ce95177d24d497204f4bafa99",
-      "providerUserMessageId": "01a001b0-f8b7-7262-bf75-5f68c59f4b24"
+      "providerUserMessageId": "01a001b0-f8b7-7262-bf75-5f68c59f4b24",
+      "providerAssistantMessageId": "msg_0e2d8e9023cc2957016a7f693a92b88191987abf64c01c3a5d"
     }
   ]
 }

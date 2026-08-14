@@ -11,10 +11,14 @@
             "id": "cbab94360634f735",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Projects/Investments/resumo.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nova aba"
+              "title": "resumo"
             }
           }
         ]
@@ -198,6 +202,7 @@
   },
   "active": "cbab94360634f735",
   "lastOpenFiles": [
+    "Projects/Investments/resumo.md",
     "Projects/Investments/posicao-2026-08-14.md",
     "Projects/Investments/posicao-2025.md",
     "Projects/Investments/movimentacao-2026-08-14.md",
@@ -232,7 +237,6 @@
     "DevSkills/dev-frontend-nodejs/examples.md",
     "DevSkills/Backend - NodeJS.md",
     "Profile/Me.md",
-    "Welcome.md",
-    "Profile/Maya Onese.md"
+    "Welcome.md"
   ]
 }
