@@ -239,6 +239,20 @@
       "contentDigest": "5321ef3da9073a95749bc506376562bf57314893db7541e14ef6ed6713c3e4d3",
       "providerUserMessageId": "01a00199-63bc-78c3-b9d4-525978169883",
       "providerAssistantMessageId": "msg_0e2d8e9023cc2957016a7f62e4fb248191b1bffd156a257a40"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786733487236-az0hrej",
+      "userTurnOrdinal": 18,
+      "state": "accepted",
+      "localMessageId": "msg-1786733487224-dguu0pb",
+      "timestamp": 1786733487224,
+      "rawDisplayText": "na minha carteira atual, me diga, no mes de julho, qual o valor e rendimento ($ e % no mes) entre\n- renda fixa\n- ações\n- FIIs\n- Outros fundos\n- Outros investimentos",
+      "canonicalText": "na minha carteira atual, me diga, no mes de julho, qual o valor e rendimento ($ e % no mes) entre\n- renda fixa\n- ações\n- FIIs\n- Outros fundos\n- Outros investimentos",
+      "images": [],
+      "contentDigest": "a039bf882c27d6dc9b260d7f32c119c3201e9fb42364d5e4f6488a0be6722905",
+      "providerUserMessageId": "01a0019d-64ff-73f1-a848-c90924c13cbb",
+      "providerAssistantMessageId": "msg_0e2d8e9023cc2957016a7f646ee2488191854329833b848ad9"
     }
   ]
 }
