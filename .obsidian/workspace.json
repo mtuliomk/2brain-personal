@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Projects/Investments/posicao-2026-07.md",
+                "file": "Projects/Investments/posicao-2026-05.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "posicao-2026-07"
+              "title": "posicao-2026-05"
             }
           }
         ]
@@ -185,7 +185,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 942.44140625
+    "width": 1048.2421875
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -202,10 +202,10 @@
   },
   "active": "3c0394227e055c14",
   "lastOpenFiles": [
+    "Projects/Investments/posicao-2026-07.md",
     "Projects/Investments/movimentacao-2026-08-14.md",
     "Projects/Investments/posicao-2026-08-14.md",
     "Projects/Investments/posicao-2026-06.md",
-    "Projects/Investments/posicao-2026-07.md",
     "Projects/Investments/posicao-2026-04.md",
     "Projects/Investments/posicao-2026-05.md",
     "Projects/Investments/posicao-2026-08.md",

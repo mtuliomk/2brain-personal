@@ -169,6 +169,20 @@
       "contentDigest": "5cfd5fb6ec72137548912e3d6b49d58661308753d82b21e6ccfe84cc69e6bf4e",
       "providerUserMessageId": "01a0018d-63d5-7ee3-b4d2-637ae6b3b84d",
       "providerAssistantMessageId": "msg_0e2d8e9023cc2957016a7f5faa02f08191a308ea31c70b8be8"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786732683495-l1zow3j",
+      "userTurnOrdinal": 13,
+      "state": "accepted",
+      "localMessageId": "msg-1786732683488-96o8269",
+      "timestamp": 1786732683488,
+      "rawDisplayText": "olhe a posicao atual de RF\n\nquais os top 10 investimentos mais detratores da carteira",
+      "canonicalText": "olhe a posicao atual de RF\n\nquais os top 10 investimentos mais detratores da carteira",
+      "images": [],
+      "contentDigest": "a37f247959a0641ca281cf23ae8e84a4fdc14a1b05fcbc091de2fa7467b3b644",
+      "providerUserMessageId": "01a00191-219e-7ef1-8af6-8b1fb65ec78b",
+      "providerAssistantMessageId": "msg_0e2d8e9023cc2957016a7f60af5d4c8191aca82bd46874f3f4"
     }
   ]
 }
