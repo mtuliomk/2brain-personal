@@ -183,6 +183,47 @@
       "contentDigest": "a37f247959a0641ca281cf23ae8e84a4fdc14a1b05fcbc091de2fa7467b3b644",
       "providerUserMessageId": "01a00191-219e-7ef1-8af6-8b1fb65ec78b",
       "providerAssistantMessageId": "msg_0e2d8e9023cc2957016a7f60af5d4c8191aca82bd46874f3f4"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786732799853-zjxidat",
+      "userTurnOrdinal": 14,
+      "state": "accepted",
+      "localMessageId": "msg-1786732799848-8ktiz1h",
+      "timestamp": 1786732799848,
+      "rawDisplayText": "considere na movimentacao, se algum desses papeis chegou a pagar algum dividendo",
+      "canonicalText": "considere na movimentacao, se algum desses papeis chegou a pagar algum dividendo",
+      "images": [],
+      "contentDigest": "de28c26174d9a8a6c5f1f4ab19c5c7a31c54c243377d34295e5d37b13c85f843",
+      "providerUserMessageId": "01a00192-e7ec-7a61-a761-99abeea2ebcf",
+      "providerAssistantMessageId": "msg_0e2d8e9023cc2957016a7f6107b504819180f3914969057ab0"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786732943104-ihp7azv",
+      "userTurnOrdinal": 15,
+      "state": "accepted",
+      "localMessageId": "msg-1786732943091-0rxsai8",
+      "timestamp": 1786732943091,
+      "rawDisplayText": "atualize o arquivo de movimentacao com o movimentacao-2026-08-14-15-41-29.xlsx (~/Downloads)",
+      "canonicalText": "atualize o arquivo de movimentacao com o movimentacao-2026-08-14-15-41-29.xlsx (~/Downloads)",
+      "images": [],
+      "contentDigest": "2e6a0ad396f44367569ff0b6832137cedb3e94b3c6b42821ba98a9f2aba73ac0",
+      "providerUserMessageId": "01a00195-1809-7670-9cd3-8ec4a3668487",
+      "providerAssistantMessageId": "msg_0e2d8e9023cc2957016a7f61c0e9dc8191bdcb1348faae52db"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786733058228-a2662m7",
+      "userTurnOrdinal": 16,
+      "state": "accepted",
+      "localMessageId": "msg-1786733058211-w777d3o",
+      "timestamp": 1786733058212,
+      "rawDisplayText": "analise novamente os papeis detratores, se eles tiveram pagamentos na movimentacao",
+      "canonicalText": "analise novamente os papeis detratores, se eles tiveram pagamentos na movimentacao",
+      "images": [],
+      "contentDigest": "2123876cf4ff21d40869f98e5a7ffc8fe5534ca04049ea8ec500c60992ba49dc",
+      "providerUserMessageId": "01a00196-da0c-7143-adce-6a1f7e97024d"
     }
   ]
 }
