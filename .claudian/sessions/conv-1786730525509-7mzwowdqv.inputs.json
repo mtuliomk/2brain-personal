@@ -29,6 +29,20 @@
       "contentDigest": "25bb62b7daba8df5196a43323e29abf75863a5d218ef86f2f1ebc7e04d65d770",
       "providerUserMessageId": "01a0017a-4cbb-7e21-a480-602cc1822f44",
       "providerAssistantMessageId": "msg_0e2d8e9023cc2957016a7f5acec83c81919bc6c55a7ff67421"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786731463267-p6zzy7t",
+      "userTurnOrdinal": 3,
+      "state": "accepted",
+      "localMessageId": "msg-1786731463255-je0laqh",
+      "timestamp": 1786731463255,
+      "rawDisplayText": "analiando as posicoes, qual a evolucao mensal da acao do bradesco",
+      "canonicalText": "analiando as posicoes, qual a evolucao mensal da acao do bradesco",
+      "images": [],
+      "contentDigest": "31b53b4e38726a4b0316e6b83688b6b09691ad138a1767e0ad8a3e2c4551c30d",
+      "providerUserMessageId": "01a0017e-8327-72c2-8ec9-adb7f38d0307",
+      "providerAssistantMessageId": "msg_0e2d8e9023cc2957016a7f5bd7f27081919045e63fe580579f"
     }
   ]
 }
