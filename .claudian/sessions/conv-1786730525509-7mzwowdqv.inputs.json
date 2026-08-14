@@ -253,6 +253,20 @@
       "contentDigest": "a039bf882c27d6dc9b260d7f32c119c3201e9fb42364d5e4f6488a0be6722905",
       "providerUserMessageId": "01a0019d-64ff-73f1-a848-c90924c13cbb",
       "providerAssistantMessageId": "msg_0e2d8e9023cc2957016a7f646ee2488191854329833b848ad9"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786733850204-uu32rsm",
+      "userTurnOrdinal": 19,
+      "state": "accepted",
+      "localMessageId": "msg-1786733850199-momdtei",
+      "timestamp": 1786733850199,
+      "rawDisplayText": "adicione nessa tabela, movimentacoes (quero saber os dividendos, amortizacoes, juros, etc... de cada investimento dessas categorias)",
+      "canonicalText": "adicione nessa tabela, movimentacoes (quero saber os dividendos, amortizacoes, juros, etc... de cada investimento dessas categorias)",
+      "images": [],
+      "contentDigest": "77be764df68957f0595234c26cd853dcb564952f945d49db831354e99415c0f7",
+      "providerUserMessageId": "01a001a2-ef37-7301-9c9e-c5e3f71cdbf0",
+      "providerAssistantMessageId": "msg_0e2d8e9023cc2957016a7f6556ac988191ad8951f271ea7013"
     }
   ]
 }
