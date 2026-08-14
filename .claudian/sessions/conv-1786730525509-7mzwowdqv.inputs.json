@@ -43,6 +43,48 @@
       "contentDigest": "31b53b4e38726a4b0316e6b83688b6b09691ad138a1767e0ad8a3e2c4551c30d",
       "providerUserMessageId": "01a0017e-8327-72c2-8ec9-adb7f38d0307",
       "providerAssistantMessageId": "msg_0e2d8e9023cc2957016a7f5bd7f27081919045e63fe580579f"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786731605260-mohjp2s",
+      "userTurnOrdinal": 4,
+      "state": "accepted",
+      "localMessageId": "msg-1786731605200-kl8lrib",
+      "timestamp": 1786731605202,
+      "rawDisplayText": "olhe novamente a pasta /home/tulio/Downloads/\ntemos arquvos xlsx com prefixo movimentacao-yyyy-mm\ncrie um markdown para a movimentacao até a data de referencia",
+      "canonicalText": "olhe novamente a pasta /home/tulio/Downloads/\ntemos arquvos xlsx com prefixo movimentacao-yyyy-mm\ncrie um markdown para a movimentacao até a data de referencia",
+      "images": [],
+      "contentDigest": "c0c85fa75985461132d6c529745204c19290ef9074972bf6e482d052c2e10f2f",
+      "providerUserMessageId": "01a00180-af0d-7cc3-b10c-c86315f31d07",
+      "providerAssistantMessageId": "msg_0e2d8e9023cc2957016a7f5c7d828c819184b7b684106ae972"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786731705354-02m326f",
+      "userTurnOrdinal": 5,
+      "state": "accepted",
+      "localMessageId": "msg-1786731705344-1iev6i4",
+      "timestamp": 1786731705344,
+      "rawDisplayText": "quais renda fixa irao vencer esse mes",
+      "canonicalText": "quais renda fixa irao vencer esse mes",
+      "images": [],
+      "contentDigest": "6e59f4701a745407d8b3c2ee891d3e85e37b61386c58a6a8f27e42492244743a",
+      "providerUserMessageId": "01a00182-3475-7393-b7eb-5cae3d0b873f",
+      "providerAssistantMessageId": "msg_0e2d8e9023cc2957016a7f5cc54e2881918deaf25eeed5ed9f"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786731771980-6bvmyyh",
+      "userTurnOrdinal": 6,
+      "state": "accepted",
+      "localMessageId": "msg-1786731771972-abuhqyc",
+      "timestamp": 1786731771972,
+      "rawDisplayText": "adicione nessa tabela o valor investido em cada investimento, e a taxa anual de rendimento",
+      "canonicalText": "adicione nessa tabela o valor investido em cada investimento, e a taxa anual de rendimento",
+      "images": [],
+      "contentDigest": "17dc2f21a7f18f7743f4ebdc8db6d4348bb14c8cd1dc08dfc9fe9950add57878",
+      "providerUserMessageId": "01a00183-38be-7502-a536-9806e0dd26bc",
+      "providerAssistantMessageId": "msg_0e2d8e9023cc2957016a7f5d08bb048191acbf5b66aa5aee45"
     }
   ]
 }
