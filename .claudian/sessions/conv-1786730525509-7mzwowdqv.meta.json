@@ -1,0 +1,27 @@
+{
+  "id": "conv-1786730525509-7mzwowdqv",
+  "providerId": "codex",
+  "title": "analise o arquivo /home/tulio/Downloads/posicao-20...",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1786730525537,
+  "lastActivityAt": 1786730588929,
+  "sessionId": "01a00170-371d-7701-80ca-9411c2f18452",
+  "selectedModel": "gpt-5.6-luna",
+  "providerState": {
+    "threadId": "01a00170-371d-7701-80ca-9411c2f18452",
+    "nativeConversationContextEstablished": true,
+    "sessionFilePath": "/home/tulio/.codex/sessions/2026/08/14/rollout-2026-08-14T15-02-06-01a00170-371d-7701-80ca-9411c2f18452.jsonl",
+    "transcriptRootPath": "/home/tulio/.codex/sessions",
+    "workspaceDependencyToolVersion": 1
+  },
+  "usage": {
+    "inputTokens": 24541,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 23296,
+    "contextWindow": 258400,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 24541,
+    "percentage": 9,
+    "model": "gpt-5.6-luna"
+  }
+}

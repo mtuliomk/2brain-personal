@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1786730525509-7mzwowdqv",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786730525562-heh8ww4",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1786730525474-j4yct21",
+      "timestamp": 1786730525474,
+      "rawDisplayText": "analise o arquivo /home/tulio/Downloads/posicao-2026-08-14-11-55-22.xlsx\n\nreescreva esse arquivo em markdown dentro da pasta Projects/Investments",
+      "canonicalText": "analise o arquivo /home/tulio/Downloads/posicao-2026-08-14-11-55-22.xlsx\n\nreescreva esse arquivo em markdown dentro da pasta Projects/Investments",
+      "images": [],
+      "contentDigest": "7482aa3679715589a276ef177b4572c5448382c721b2f5530604aad22944babf",
+      "providerUserMessageId": "01a00170-40e1-75c1-a7df-d0fdff8f3147",
+      "providerAssistantMessageId": "msg_0e2d8e9023cc2957016a7f585b54d08191a432b1ef760b3773"
+    }
+  ]
+}
