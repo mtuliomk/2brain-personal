@@ -125,7 +125,50 @@
       "canonicalText": "me de o rendimento acumulado desses apeis desde o inicio do ano",
       "images": [],
       "contentDigest": "eaa5718a5385ff5326cba44a4a24bc5488b27029377b2572c05d8d301998ba01",
-      "providerUserMessageId": "01a00189-9f72-7822-aff8-fc24526d7faa"
+      "providerUserMessageId": "01a00189-9f72-7822-aff8-fc24526d7faa",
+      "providerAssistantMessageId": "msg_0e2d8e9023cc2957016a7f5ead2cd4819199d3e95d889096fb"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786732353394-7e30jgn",
+      "userTurnOrdinal": 10,
+      "state": "accepted",
+      "localMessageId": "msg-1786732353385-3dielhg",
+      "timestamp": 1786732353385,
+      "rawDisplayText": "faca a mesma analise para setembro",
+      "canonicalText": "faca a mesma analise para setembro",
+      "images": [],
+      "contentDigest": "3f54fa20a2c162b1cca463eca0659994223a5e8fa6d701548d6200f5dcf29faf",
+      "providerUserMessageId": "01a0018c-1866-7bd0-8645-180dec17aa25",
+      "providerAssistantMessageId": "msg_0e2d8e9023cc2957016a7f5f480918819183c5326b2ab7bda6"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786732375830-wxzqq37",
+      "userTurnOrdinal": 11,
+      "state": "accepted",
+      "localMessageId": "msg-1786732375822-a5yic6n",
+      "timestamp": 1786732375822,
+      "rawDisplayText": "use a posicao atual, e me diga quais vencerao em setembro",
+      "canonicalText": "use a posicao atual, e me diga quais vencerao em setembro",
+      "images": [],
+      "contentDigest": "192dc41e0b7ce51cd065b2c076f0c1d4bbb03b5a3b680eeab1fb2d61eab440c8",
+      "providerUserMessageId": "01a0018c-6f8f-7611-8092-88a008cbf145",
+      "providerAssistantMessageId": "msg_0e2d8e9023cc2957016a7f5f62c4c88191910b7cb67a2d3180"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786732438365-nkc51ke",
+      "userTurnOrdinal": 12,
+      "state": "accepted",
+      "localMessageId": "msg-1786732438358-sa28fxv",
+      "timestamp": 1786732438358,
+      "rawDisplayText": "para esses papeiis, mostre o rendmento em 2026",
+      "canonicalText": "para esses papeiis, mostre o rendmento em 2026",
+      "images": [],
+      "contentDigest": "5cfd5fb6ec72137548912e3d6b49d58661308753d82b21e6ccfe84cc69e6bf4e",
+      "providerUserMessageId": "01a0018d-63d5-7ee3-b4d2-637ae6b3b84d",
+      "providerAssistantMessageId": "msg_0e2d8e9023cc2957016a7f5faa02f08191a308ea31c70b8be8"
     }
   ]
 }
