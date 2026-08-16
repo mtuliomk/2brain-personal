@@ -1,6 +1,6 @@
 ---
 name: spec-tecnica
-description: Gerar a especificação técnica de uma TAK a partir da spec funcional, descrevendo como implementá-la com base no código existente e classificando a mudança como nova, modificação ou duplicada. Usar depois de `tasks/TAK-XXXX/spec-funcional.md` estar pronta, durante o refinamento e antes de qualquer implementação. Não usar para definir comportamento funcional nem para implementar código.
+description: Gerar a especificação técnica de uma TAK a partir de uma spec funcional aprovada disponível no contexto, descrevendo como implementá-la com base no código existente e classificando a mudança como nova, modificação ou duplicada. Usar durante o refinamento e antes de qualquer implementação. Não usar para definir comportamento funcional nem para implementar código.
 ---
 
 # Spec técnica
@@ -12,31 +12,23 @@ existe — decisão que pertence a esta skill, não à spec funcional.
 Não alterar o escopo funcional silenciosamente. A spec técnica deve explicar a
 implementação, não repetir o comportamento esperado.
 
-## Entradas obrigatórias
+## Contexto de entrada
 
-Ler sempre, nesta ordem:
+Considerar todos os arquivos de contexto já lidos ou disponibilizados na área de
+trabalho, independentemente de caminho, pasta ou nome. Priorizar uma spec
+funcional aprovada como fonte do escopo funcional, além de decisões técnicas,
+padrões arquiteturais, convenções, requisitos de testes, contratos, integrações
+e guias operacionais diretamente relacionados à mudança.
 
-1. `tasks/TAK-XXXX/spec-funcional.md`: identificar o que deve ser verdadeiro
-   depois da mudança; esta é a fonte de escopo funcional.
-2. `tasks/TAK-XXXX/tak.md`, a TAK original completa, incluindo seus
-   campos de **objetivo** e **descrição**: usar apenas como referência secundária para preservar o
-   contexto e identificar eventual perda de informação na transição para a
-   spec funcional; não redefinir o escopo a partir dela.
-3. Código-fonte relevante: procurar a feature, equivalentes e pontos de
-   integração existentes.
-4. `.taloren_context/architecture.md`: aplicar os padrões arquiteturais estabelecidos.
-5. `.taloren_context/conventions.md`: aplicar convenções de código, nomenclatura e
-   estrutura.
-6. `.taloren_context/decisions.md`: recuperar decisões técnicas aplicáveis.
-7. `.taloren_context/testing.md`: identificar a cobertura de testes exigida.
+Quando houver uma TAK em `tasks/`, ela é uma fonte opcional de consulta. Ler o
+arquivo original completo quando estiver disponível apenas para preservar
+contexto e identificar eventual perda de informação na transição para a spec
+funcional; não redefinir o escopo a partir dela.
 
-Depois das entradas obrigatórias, procurar em `tasks/`, `.taloren_context/` e nos demais
-arquivos Markdown do projeto documentos relacionados ao mesmo assunto da TAK,
-como ADRs, contratos, documentação de integrações e guias operacionais. Usar
-esse material como contexto complementar à análise do código.
-
-Se algum documento de contexto obrigatório não existir, registrar sua ausência
-em `Decisões assumidas` e seguir com as fontes disponíveis.
+Inspecionar também o código-fonte relevante para localizar a feature,
+equivalentes e pontos de integração existentes. Se um contexto necessário não
+estiver disponível, registrar sua ausência em `Decisões assumidas` e seguir com
+as fontes existentes.
 
 ## Investigação no código
 
@@ -131,12 +123,13 @@ explicitamente pelos documentos de contexto, usando:
 
 - **Ambiguidade:** ...
 - **Decisão:** ...
-- **Fonte:** `architecture.md` / `conventions.md` / `decisions.md` / código /
-outro documento Markdown relevante / raciocínio próprio.
+- **Fonte:** arquivo de contexto técnico relevante / código / precedente
+  disponível / raciocínio próprio.
 
 ## Plano de testes
-Aplicar o que `testing.md` exigir. Relacionar cada cenário aos `CE-XX` e
-`CA-XX` da spec funcional e especificar os níveis de teste relevantes.
+Aplicar os requisitos de testes definidos no contexto disponível. Relacionar
+cada cenário aos `CE-XX` e `CA-XX` da spec funcional e especificar os níveis de
+teste relevantes.
 ```
 
 ## Formato de saída: modificação
@@ -211,9 +204,9 @@ esclarecer uma diferença funcional.
 Não parar por causa de uma decisão técnica em aberto. Decidir usando esta ordem
 de prioridade:
 
-1. decisão técnica aplicável em `.taloren_context/decisions.md`;
-2. padrão de `.taloren_context/architecture.md` ou `.taloren_context/conventions.md`;
-3. outro documento Markdown relevante do projeto;
+1. decisão técnica explícita em arquivo de contexto disponível;
+2. padrão arquitetural ou convenção técnica disponível;
+3. outro requisito ou documento de contexto relevante;
 4. precedente direto no código;
 5. raciocínio próprio, explicitando a lógica.
 
@@ -222,9 +215,9 @@ caminhos, sem exceção, no formato `Ambiguidade` / `Decisão` / `Fonte`.
 
 ### Contradições com o contexto
 
-Se a abordagem mais razoável colidir com um padrão estabelecido em
-`architecture.md`, `conventions.md` ou `decisions.md`, seguir o contexto,
-não a preferência de implementação. Registrar o conflito em destaque:
+Se a abordagem mais razoável colidir com um padrão estabelecido em arquivo de
+contexto aplicável, seguir o contexto, não a preferência de implementação.
+Registrar o conflito em destaque:
 
 > **⚠ Contradição**: explicar o padrão que entra em conflito e o que a
 > abordagem mais óbvia exigiria quebrar.
@@ -245,8 +238,8 @@ Considerar a spec pronta para revisão humana quando:
 - uma **Modificação** descrever o delta com precisão;
 - uma **Duplicada** demonstrar que todos os critérios relevantes já são
   atendidos e trouxer uma recomendação clara;
-- o plano de testes cobrir os `CE-XX` e `CA-XX` afetados e o que `testing.md`
-  exigir;
+- o plano de testes cobrir os `CE-XX` e `CA-XX` afetados e os requisitos de
+  teste definidos no contexto;
 - toda decisão técnica, ausência de contexto ou divergência funcional estiver
   registrada;
 - nenhuma mudança de escopo funcional tiver sido feita silenciosamente.
@@ -260,14 +253,14 @@ Para a spec funcional "Usuário consegue gerar um PDF do relatório atualmente
 visível na tela":
 
 > **Decisão técnica**: gerar o PDF no cliente, não no servidor.  
-> **Fonte**: `architecture.md` estabelece que operações que não precisam de
-> dados adicionais do backend devem ocorrer no cliente para reduzir a carga do
-> servidor.
+> **Fonte**: o contexto arquitetural disponível estabelece que operações que não
+> precisam de dados adicionais do backend devem ocorrer no cliente para reduzir
+> a carga do servidor.
 
 Exemplo de contradição:
 
 > **⚠ Contradição**: a abordagem mais simples exigiria uma dependência de
-> geração de PDF não aprovada em `conventions.md`.  
+> geração de PDF não aprovada pelas convenções disponíveis.
 > **Decisão**: usar a biblioteca já presente no projeto, mesmo exigindo mais
 > código de adaptação.  
 > **Ação recomendada**: avaliar a adoção de uma nova biblioteca em uma

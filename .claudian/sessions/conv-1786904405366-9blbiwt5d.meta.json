@@ -4,7 +4,7 @@
   "title": "nessa skill (funcional) ela especifica a existenci...",
   "titleGenerationStatus": "failed",
   "createdAt": 1786904405369,
-  "lastActivityAt": 1786904723197,
+  "lastActivityAt": 1786904925273,
   "sessionId": "01a00bcd-6965-7ec1-9e37-28e72750ba1d",
   "selectedModel": "gpt-5.6-terra",
   "providerState": {
@@ -16,13 +16,13 @@
   },
   "currentNote": "DevSkills/spec-functional/SKILL.md",
   "usage": {
-    "inputTokens": 24582,
+    "inputTokens": 41071,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 23296,
+    "cacheReadInputTokens": 38656,
     "contextWindow": 258400,
     "contextWindowIsAuthoritative": true,
-    "contextTokens": 24582,
-    "percentage": 10,
+    "contextTokens": 41071,
+    "percentage": 16,
     "model": "gpt-5.6-terra"
   }
 }

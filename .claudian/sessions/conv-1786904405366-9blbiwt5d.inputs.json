@@ -62,6 +62,20 @@
       "contentDigest": "7a5b641e3ff3944879b3f0f89c556c9e6a1fb72b14f02c6e2ba61d7d0dc3e85d",
       "providerUserMessageId": "01a00bd2-336b-7ad1-aa6e-0ee3ba8ad176",
       "providerAssistantMessageId": "msg_06842ae1a37f6afd016a820092409481918100d5b1a8a41da1"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786904864635-t5nzgp4",
+      "userTurnOrdinal": 5,
+      "state": "accepted",
+      "localMessageId": "msg-1786904864632-m1k5v8i",
+      "timestamp": 1786904864632,
+      "rawDisplayText": "aplique esse mesmo conceito de dependencia de arquivos nas demais skills de spec",
+      "canonicalText": "aplique esse mesmo conceito de dependencia de arquivos nas demais skills de spec",
+      "images": [],
+      "contentDigest": "1b3bf205054322f70a4ce377f52693c53d77385d1b712250fa86df096f430894",
+      "providerUserMessageId": "01a00bd4-6916-7c63-b19c-683408cec352",
+      "providerAssistantMessageId": "msg_06842ae1a37f6afd016a820159444c819181183dea5b4dd592"
     }
   ]
 }

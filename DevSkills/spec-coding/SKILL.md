@@ -12,26 +12,21 @@ escopo, classificação ou arquitetura.
 
 ## Pré-condição e entradas
 
-Usar somente após a aprovação humana de `tasks/TAK-XXXX/spec-tecnica.md`.
-Confirmar a aprovação pelo status, marcação ou evidência definida pelo pipeline.
-Se não houver evidência verificável, não iniciar: registrar o bloqueio e pedir a
-regularização da etapa 2. Não iniciar se a classificação for `Duplicada`: esse
-caso encerra o fluxo antes da implementação.
+Usar somente após a aprovação humana de uma spec técnica disponível no
+contexto. Confirmar a aprovação pelo status, marcação ou evidência definida pelo
+pipeline. Se não houver evidência verificável, não iniciar: registrar o bloqueio
+e pedir a regularização da etapa 2. Não iniciar se a classificação for
+`Duplicada`: esse caso encerra o fluxo antes da implementação.
 
-Ler sempre, nesta ordem:
+Considerar todos os arquivos de contexto já lidos ou disponibilizados na área de
+trabalho, independentemente de caminho, pasta ou nome. Priorizar a spec técnica
+aprovada para executar a abordagem ou o delta da classificação `Nova` ou
+`Modificação`; a spec funcional, quando disponível, para validar os
+comportamentos e critérios de aceite; e os documentos de convenções, testes,
+arquitetura, decisões, contratos, integrações e guias operacionais diretamente
+relacionados à mudança.
 
-1. `tasks/TAK-XXXX/spec-tecnica.md`: executar a abordagem ou o delta já
-   decidido, conforme a classificação `Nova` ou `Modificação`.
-2. `tasks/TAK-XXXX/spec-funcional.md`: validar ao final que os comportamentos e
-   critérios de aceite observáveis foram atendidos.
-3. `.taloren_context/conventions.md`: obrigatório; aplicar convenções e identificar os
-   comandos ou critérios de padrão de código definidos.
-4. `.taloren_context/testing.md`: identificar cobertura e comandos de teste exigidos.
-5. `.taloren_context/architecture.md`: usar como referência de padrão geral; a spec
-   técnica já deve ter resolvido conflitos arquiteturais.
-
-Ler também os demais arquivos Markdown do projeto diretamente relacionados à
-mudança, incluindo decisões, contratos, integrações e guias operacionais.
+Quando houver uma TAK em `tasks/`, ela é uma fonte opcional de consulta.
 Inspecionar os scripts, configurações e padrões do repositório necessários para
 executar os gates. Não inventar comandos, critérios ou ferramentas ausentes.
 Registrar a ausência de um gate obrigatório como falha e escalar conforme o
@@ -134,18 +129,18 @@ arquivos fora do escopo apenas para fazer um gate global passar.
 
 Antes de executar cada gate, identificar seu comando ou procedimento oficial no
 projeto. Consultar, conforme aplicável, scripts e configurações do repositório,
-CI/CD, `README.md`, `CONTRIBUTING.md`, `.taloren_context/testing.md` e
-`.taloren_context/conventions.md`. Não pressupor linguagem, gerenciador de pacotes,
-ferramenta ou sintaxe de comando. Registrar em `implementacao-log.md`, para cada
-gate, o procedimento executado, sua fonte e o resultado.
+CI/CD e os arquivos de contexto disponíveis que definam testes ou convenções.
+Não pressupor linguagem, gerenciador de pacotes, ferramenta ou sintaxe de
+comando. Registrar em `implementacao-log.md`, para cada gate, o procedimento
+executado, sua fonte e o resultado.
 
 Após implementar, executar os gates nesta ordem, usando os comandos e critérios
 definidos no projeto:
 
-1. testes exigidos por `.taloren_context/testing.md`, incluindo unitários e, quando
+1. testes exigidos pelo contexto disponível, incluindo unitários e, quando
    aplicável, integração, contrato, E2E e regressão;
 2. lint;
-3. padrão de código, conforme `.taloren_context/conventions.md`;
+3. padrão de código, conforme as convenções disponíveis;
 4. review automatizado.
 
 O review automatizado deve avaliar o diff da TAK quanto à aderência à spec
@@ -212,8 +207,8 @@ como toda sugestão fora de escopo. Usar este formato:
 - **Tipo:** Decisão | Fora de escopo — não implementado
 - **Contexto/Ambiguidade:** ...
 - **Decisão/Observação:** ...
-- **Fonte:** `conventions.md` / precedente no código / outro documento do projeto /
-  raciocínio próprio.
+- **Fonte:** arquivo de contexto relevante / precedente no código / raciocínio
+  próprio.
 ```
 
 Não usar essa seção para alterar silenciosamente o escopo funcional ou técnico.
@@ -259,9 +254,9 @@ Todos passaram na tentativa N | Listar falhas corrigidas, com referência às
 respectivas tentativas em [[implementacao-log.md]].
 
 ## Critérios de aceite
-Copiar literalmente os critérios de aceite de `spec-funcional.md`, com um item
-por linha e as referências `CA-XX` e `CE-XX`. Não resumir, reinterpretar ou
-criar critérios novos.
+Copiar literalmente os critérios de aceite da spec funcional aprovada
+ disponível no contexto, com um item por linha e as referências `CA-XX` e
+`CE-XX`. Não resumir, reinterpretar ou criar critérios novos.
 
 ## Alterações fora do escopo original
 Listar os itens marcados como **Fora de escopo — não implementado** no log.
@@ -297,7 +292,7 @@ spec de correção.
 > deveria ser reutilizado.  
 > **Decisão/Observação:** reaproveitado `formatarData()` com um parâmetro extra,
 > em vez de criar utilitário duplicado.  
-> **Fonte:** `conventions.md` — evitar duplicação de utilitários equivalentes.
+> **Fonte:** convenções disponíveis — evitar duplicação de utilitários equivalentes.
 
 **Tentativa de correção:**
 
