@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1786904405366-9blbiwt5d",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786904405400-bd6yia5",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1786904405360-e43iqp0",
+      "timestamp": 1786904405360,
+      "rawDisplayText": "nessa skill (funcional) ela especifica a existencia de outros arquivos. quais sao?",
+      "canonicalText": "nessa skill (funcional) ela especifica a existencia de outros arquivos. quais sao?",
+      "context": {
+        "currentNote": {
+          "path": "DevSkills/spec-functional/SKILL.md"
+        }
+      },
+      "images": [],
+      "contentDigest": "a8841ac8e02e4298ffd6df55dabb9e06725c34f1171803b145a65ee396fd6fdf",
+      "providerUserMessageId": "01a00bcd-70b8-7c51-be10-392badee3680",
+      "providerAssistantMessageId": "msg_06842ae1a37f6afd016a81ff5bd5988191a777e68a9d63993f"
+    }
+  ]
+}

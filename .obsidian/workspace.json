@@ -185,7 +185,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 637.16015625
+    "width": 371.953125
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -200,7 +200,7 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "cbab94360634f735",
+  "active": "8e7c699d605b1ea8",
   "lastOpenFiles": [
     "Projects/Investments/resumo.md",
     "Projects/Investments/posicao-2026-08-14.md",

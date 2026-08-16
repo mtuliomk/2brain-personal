@@ -1,0 +1,28 @@
+{
+  "id": "conv-1786904405366-9blbiwt5d",
+  "providerId": "codex",
+  "title": "nessa skill (funcional) ela especifica a existenci...",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1786904405369,
+  "lastActivityAt": 1786904413687,
+  "sessionId": "01a00bcd-6965-7ec1-9e37-28e72750ba1d",
+  "selectedModel": "gpt-5.6-terra",
+  "providerState": {
+    "threadId": "01a00bcd-6965-7ec1-9e37-28e72750ba1d",
+    "nativeConversationContextEstablished": true,
+    "sessionFilePath": "/home/tulio/.codex/sessions/2026/08/16/rollout-2026-08-16T15-20-06-01a00bcd-6965-7ec1-9e37-28e72750ba1d.jsonl",
+    "transcriptRootPath": "/home/tulio/.codex/sessions",
+    "workspaceDependencyToolVersion": 1
+  },
+  "currentNote": "DevSkills/spec-functional/SKILL.md",
+  "usage": {
+    "inputTokens": 15204,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 13056,
+    "contextWindow": 258400,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 15204,
+    "percentage": 6,
+    "model": "gpt-5.6-terra"
+  }
+}
