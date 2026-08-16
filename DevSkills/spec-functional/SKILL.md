@@ -2,7 +2,6 @@
 name: spec-funcional
 description: Gerar a especificação funcional de uma TAK (task), descrevendo o que deve ser entregue sob a ótica do usuário ou negócio, sem decisões de implementação. Usar quando uma TAK entrar no refinamento, antes da spec técnica. Não usar para decidir como implementar, escrever código ou revisar UAT.
 ---
-
 # Spec funcional
 
 Gerar a especificação funcional de uma TAK: descrever o que deve ser entregue
@@ -10,27 +9,24 @@ sob a ótica do usuário ou negócio. Nunca decidir arquitetura, tecnologia ou
 abordagem de implementação; isso pertence à skill `spec-tecnica`, executada
 posteriormente a partir deste documento.
 
-## Entradas obrigatórias
+## Contexto de entrada
 
-Ler sempre, nesta ordem:
+Considerar todos os arquivos de contexto já lidos ou disponibilizados na área de
+trabalho, independentemente de caminho, pasta ou nome. Priorizar, entre eles,
+decisões, regras de negócio, personas, glossários, fluxos, requisitos e
+precedentes diretamente relacionados ao assunto da solicitação. Não consultar
+código para verificar se a feature já existe.
 
-1. `.taloren_context/product.md`: entender o produto, suas regras, personas e fronteiras de escopo.
-2. `.taloren_context/glossary.md`: usar a terminologia oficial, sem inventar sinônimos.
-3. `tasks/TAK-XXXX/tak.md`, a TAK original completa, incluindo seus
-   campos de **objetivo** e **descrição**. Usar o objetivo como fonte primária de `## Objetivo` e a
-   descrição como fonte primária de `## Contexto`, `## Comportamento esperado`
-   e `## Fora de escopo`.
+Quando houver uma TAK em `tasks/`, ela é uma fonte opcional de consulta. Ler o
+arquivo original completo quando estiver disponível e usar seus campos de
+**objetivo** e **descrição** como fontes primárias para `## Objetivo`,
+`## Contexto`, `## Comportamento esperado` e `## Fora de escopo`.
 
-Depois das entradas obrigatórias, procurar em `tasks/`, `.taloren_context/` e nos demais
-arquivos Markdown do projeto os documentos relacionados ao mesmo assunto da
-TAK. Priorizar decisões, regras de negócio, fluxos e precedentes diretamente
-relevantes; não consultar código para verificar se a feature já existe.
-
-Se algum documento de contexto obrigatório não existir, registrar sua ausência
-em `Decisões assumidas` e seguir com as fontes disponíveis. Se a TAK referenciar
-outra task, feature ou decisão anterior, localizar esse material antes de
-prosseguir. Não assumir contexto ausente: registrar a interpretação adotada em
-`Decisões assumidas`.
+Se um contexto necessário não estiver disponível, registrar a ausência em
+`Decisões assumidas` e seguir com as fontes existentes. Se o contexto
+referenciar outra task, feature ou decisão anterior, localizar esse material
+quando estiver disponível antes de prosseguir. Não assumir contexto ausente:
+registrar a interpretação adotada em `Decisões assumidas`.
 
 ## Limites funcionais
 
@@ -82,8 +78,8 @@ item, este formato:
 
 - **Ambiguidade:** ...
 - **Decisão:** ...
-- **Fonte:** TAK / `product.md` / `glossary.md` / `decisions.md` / outro
-  documento Markdown relevante / precedente em `tasks/` / raciocínio próprio.
+- **Fonte:** arquivo de contexto relevante / TAK, quando consultada / precedente
+  disponível / raciocínio próprio.
 ```
 
 Cada item de `Comportamento esperado` deve ter ao menos um critério de aceite
@@ -97,9 +93,9 @@ limites de escopo, especialmente quando a TAK for ambígua.
 Entregar uma spec completa; não parar por causa de ambiguidades. Resolver cada
 ponto usando esta ordem de prioridade:
 
-1. `.taloren_context/decisions.md`;
-2. `.taloren_context/product.md` ou `.taloren_context/glossary.md`;
-3. precedente de TAKs semelhantes em `tasks/`;
+1. decisão explícita em arquivo de contexto disponível;
+2. regra de produto, terminologia oficial ou requisito contextual disponível;
+3. precedente relevante disponível, inclusive em `tasks/` quando houver;
 4. raciocínio próprio, explicitando a lógica.
 
 Registrar toda decisão tomada em `Decisões assumidas`, sem exceção. O registro
@@ -108,8 +104,8 @@ foi interpretação da skill.
 
 ### Contradições com o contexto
 
-Se a TAK contradizer diretamente `product.md`, `decisions.md` ou outro
-contexto de produto, seguir o contexto e registrar o conflito com destaque:
+Se a solicitação ou uma TAK consultada contradizer diretamente um arquivo de
+contexto aplicável, seguir o contexto e registrar o conflito com destaque:
 
 > **⚠ Contradição**: indicar o que a TAK pede e qual regra de contexto conflita.
 >
@@ -148,7 +144,7 @@ Para a TAK “Usuário quer poder exportar relatório em PDF”:
 
 > **Ambiguidade**: a TAK não diz se a exportação respeita os filtros aplicados.
 > **Decisão**: respeitar os filtros atuais.
-> **Fonte**: `product.md` e o precedente das demais exportações do produto.
+> **Fonte**: arquivos de contexto de produto e precedente disponível.
 
 A `spec-tecnica`, ao consultar o código, classifica a mudança como `nova`,
 `modificação` ou `duplicada`; essa classificação não pertence a esta skill.

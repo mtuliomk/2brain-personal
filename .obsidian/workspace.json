@@ -200,8 +200,10 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "8e7c699d605b1ea8",
+  "active": "cbab94360634f735",
   "lastOpenFiles": [
+    "Profile/Maya Onese.md",
+    "DevSkills/spec-functional/SKILL.md",
     "Projects/Investments/resumo.md",
     "Projects/Investments/posicao-2026-08-14.md",
     "Projects/Investments/posicao-2025.md",
@@ -230,13 +232,11 @@
     "DevSkills/dev-backend-golan",
     "DevSkills/plan-tak/SKILL.md",
     "DevSkills/plan-tak",
-    "DevSkills/spec-functional/SKILL.md",
     "DevSkills/spec-tecnica/SKILL.md",
     "DevSkills/dev-commit/SKILL.md",
     "DevSkills/dev-frontend-nodejs/SKILL.md",
     "DevSkills/dev-frontend-nodejs/examples.md",
     "DevSkills/Backend - NodeJS.md",
-    "Profile/Me.md",
-    "Welcome.md"
+    "Profile/Me.md"
   ]
 }

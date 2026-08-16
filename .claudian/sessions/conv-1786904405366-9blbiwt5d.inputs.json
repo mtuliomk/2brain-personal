@@ -20,6 +20,48 @@
       "contentDigest": "a8841ac8e02e4298ffd6df55dabb9e06725c34f1171803b145a65ee396fd6fdf",
       "providerUserMessageId": "01a00bcd-70b8-7c51-be10-392badee3680",
       "providerAssistantMessageId": "msg_06842ae1a37f6afd016a81ff5bd5988191a777e68a9d63993f"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786904541145-zfhox2e",
+      "userTurnOrdinal": 2,
+      "state": "accepted",
+      "localMessageId": "msg-1786904541136-mjxl968",
+      "timestamp": 1786904541136,
+      "rawDisplayText": "quero que ela seja mais generia. que ela considere arquivos de contexto já lidos na área de trabalho, independente do caminho ou nome. quanto a pasta task, ela deve considerar como opcional para consulta.\n\na geracao do arquivo final, mantenha como está",
+      "canonicalText": "quero que ela seja mais generia. que ela considere arquivos de contexto já lidos na área de trabalho, independente do caminho ou nome. quanto a pasta task, ela deve considerar como opcional para consulta.\n\na geracao do arquivo final, mantenha como está",
+      "images": [],
+      "contentDigest": "550a28ca3d4d6992c8469a06425dceb2d1ae0c3fd471bb5a65e17cd47fd2fa02",
+      "providerUserMessageId": "01a00bcf-7971-75f0-ac20-39a6de3e9baa",
+      "providerAssistantMessageId": "msg_06842ae1a37f6afd016a81fff197cc8191b00558bf9cf80409"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786904692105-mhsvqmh",
+      "userTurnOrdinal": 3,
+      "state": "accepted",
+      "localMessageId": "msg-1786904692102-t8qnwsg",
+      "timestamp": 1786904692102,
+      "rawDisplayText": "porque o final do arquivo referencia a espec tecnica?4",
+      "canonicalText": "porque o final do arquivo referencia a espec tecnica?4",
+      "images": [],
+      "contentDigest": "2a43926de5af8d7ec3cb4a25da6bac13a72e4dc633b89f46f9e827873ead3f14",
+      "providerUserMessageId": "01a00bd1-c86c-79c3-bd70-816ffb38e358",
+      "providerAssistantMessageId": "msg_06842ae1a37f6afd016a8200777c308191b5e734776d8a0e4d"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786904720124-ed9ks30",
+      "userTurnOrdinal": 4,
+      "state": "accepted",
+      "localMessageId": "msg-1786904720116-hqeezt6",
+      "timestamp": 1786904720116,
+      "rawDisplayText": "isso faz sentido estar ai?",
+      "canonicalText": "isso faz sentido estar ai?",
+      "images": [],
+      "contentDigest": "7a5b641e3ff3944879b3f0f89c556c9e6a1fb72b14f02c6e2ba61d7d0dc3e85d",
+      "providerUserMessageId": "01a00bd2-336b-7ad1-aa6e-0ee3ba8ad176",
+      "providerAssistantMessageId": "msg_06842ae1a37f6afd016a820092409481918100d5b1a8a41da1"
     }
   ]
 }
