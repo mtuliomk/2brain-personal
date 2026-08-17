@@ -1,4 +1,0 @@
-interface:
-  display_name: "Backend Go"
-  short_description: "Convenções de código para backends em Go"
-  default_prompt: "Aplicar as convenções desta skill ao escrever, revisar ou refatorar código backend em Go."
