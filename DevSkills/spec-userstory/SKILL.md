@@ -36,10 +36,12 @@ impactado, a necessidade, o benefício esperado, limites conhecidos e
 referências relevantes. Quando a informação for suficiente, elaborar a user
 story sem antecipar comportamentos detalhados ou decisões das próximas etapas.
 
-Fazer perguntas somente quando não for possível identificar a pessoa ou
-processo impactado, a necessidade ou o benefício. Registrar as demais lacunas
-em `Pontos a esclarecer`; não inventar regras ou resolver ambiguidades que
-competem à `spec-funcional`.
+Quando a solicitação e os documentos de contexto não indicarem uma persona,
+papel ou processo impactado, considerar **usuário do sistema**. Nesse caso,
+não fazer uma pergunta apenas para identificar a pessoa beneficiada. Fazer
+perguntas somente quando não for possível identificar a necessidade ou o
+benefício. Registrar as demais lacunas em `Pontos a esclarecer`; não inventar
+regras ou resolver ambiguidades que competem à `spec-funcional`.
 
 Não incluir linguagem, framework, biblioteca, arquivos, classes, rotas,
 arquitetura ou solução de implementação. Se houver sugestão técnica na
@@ -80,8 +82,9 @@ identificado` quando não houver pontos.
 
 Manter a seção `História` em uma frase orientada a valor, usando a terminologia
 do produto. Quando não existir uma persona humana, usar o processo ou papel que
-recebe o benefício. Em `Contexto` e `Escopo inicial`, diferenciar fatos de
-hipóteses; hipóteses devem ir para `Pontos a esclarecer`.
+recebe o benefício; se nenhum deles for informado, usar **usuário do sistema**.
+Em `Contexto` e `Escopo inicial`, diferenciar fatos de hipóteses; hipóteses
+devem ir para `Pontos a esclarecer`.
 
 Não transformar a user story em uma spec funcional: não criar `CE-XX`, `CA-XX`,
 fluxos completos, regras detalhadas, cenários de erro ou decisões assumidas.

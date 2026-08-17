@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1786979847875-9okq8s56j",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786979847974-0btmshh",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1786979847862-8gipqes",
+      "timestamp": 1786979847862,
+      "rawDisplayText": "nessa skill de user story, se nao mencionado, o usuário a ser considerado deerá ser o \"usuário do sistema\"",
+      "canonicalText": "nessa skill de user story, se nao mencionado, o usuário a ser considerado deerá ser o \"usuário do sistema\"",
+      "context": {
+        "currentNote": {
+          "path": "DevSkills/spec-userstory/SKILL.md"
+        }
+      },
+      "images": [],
+      "contentDigest": "4f3f51111b64f42af2eace1f11deea36f2d3ee6572d56e82408c058634fa07b6",
+      "providerUserMessageId": "01a0104c-9baf-7873-9084-959740692680",
+      "providerAssistantMessageId": "msg_02ed3c3cc9c2abef016a8326187fbc8191a2a65fd9e17b2040"
+    }
+  ]
+}

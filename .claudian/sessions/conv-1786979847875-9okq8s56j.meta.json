@@ -1,0 +1,28 @@
+{
+  "id": "conv-1786979847875-9okq8s56j",
+  "providerId": "codex",
+  "title": "nessa skill de user story, se nao mencionado, o us...",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1786979847934,
+  "lastActivityAt": 1786979865663,
+  "sessionId": "01a0104c-92b4-76b1-b9f6-e8663504d69f",
+  "selectedModel": "gpt-5.6-terra",
+  "providerState": {
+    "threadId": "01a0104c-92b4-76b1-b9f6-e8663504d69f",
+    "nativeConversationContextEstablished": true,
+    "sessionFilePath": "/home/tulio/.codex/sessions/2026/08/17/rollout-2026-08-17T12-17-28-01a0104c-92b4-76b1-b9f6-e8663504d69f.jsonl",
+    "transcriptRootPath": "/home/tulio/.codex/sessions",
+    "workspaceDependencyToolVersion": 1
+  },
+  "currentNote": "DevSkills/spec-userstory/SKILL.md",
+  "usage": {
+    "inputTokens": 15981,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 15104,
+    "contextWindow": 258400,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 15981,
+    "percentage": 6,
+    "model": "gpt-5.6-terra"
+  }
+}

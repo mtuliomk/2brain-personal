@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevSkills/spec-functional/SKILL.md",
+                "file": "DevSkills/spec-userstory/SKILL.md",
                 "mode": "source",
                 "source": false
               },
@@ -200,13 +200,13 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "8e7c699d605b1ea8",
+  "active": "cbab94360634f735",
   "lastOpenFiles": [
+    "DevSkills/spec-functional/SKILL.md",
     "DevSkills/spec-userstory/SKILL.md",
     "DevSkills/dev-commit/SKILL.md",
     "DevSkills/plan-tak/SKILL.md",
     "DevSkills/spec-userstory",
-    "DevSkills/spec-functional/SKILL.md",
     "Profile/Maya Onese.md",
     "Projects/Investments/resumo.md",
     "Projects/Investments/posicao-2026-08-14.md",
