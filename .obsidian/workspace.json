@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevSkills/spec-userstory/SKILL.md",
+                "file": "DevSkills/spec-functional/SKILL.md",
                 "mode": "source",
                 "source": false
               },
@@ -202,8 +202,8 @@
   },
   "active": "cbab94360634f735",
   "lastOpenFiles": [
-    "DevSkills/spec-functional/SKILL.md",
     "DevSkills/spec-userstory/SKILL.md",
+    "DevSkills/spec-functional/SKILL.md",
     "DevSkills/dev-commit/SKILL.md",
     "DevSkills/plan-tak/SKILL.md",
     "DevSkills/spec-userstory",
