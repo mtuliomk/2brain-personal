@@ -20,10 +20,10 @@ funcional aprovada como fonte do escopo funcional, além de decisões técnicas,
 padrões arquiteturais, convenções, requisitos de testes, contratos, integrações
 e guias operacionais diretamente relacionados à mudança.
 
-Quando houver uma TAK em `tasks/`, ela é uma fonte opcional de consulta. Ler o
-arquivo original completo quando estiver disponível apenas para preservar
-contexto e identificar eventual perda de informação na transição para a spec
-funcional; não redefinir o escopo a partir dela.
+Quando uma user story ou demanda anterior estiver disponível no contexto, lê-la
+por completo apenas para preservar contexto e identificar eventual perda de
+informação na transição para a spec funcional; não redefinir o escopo a partir
+dela.
 
 Inspecionar também o código-fonte relevante para localizar a feature,
 equivalentes e pontos de integração existentes. Se um contexto necessário não
@@ -63,13 +63,13 @@ classes, funções ou rotas. Incluir uma tabela de evidências que relacione cad
 
 - **Nova**: produzir a spec técnica completa.
 - **Modificação**: produzir apenas o delta sobre o sistema existente.
-- **Duplicada**: não descrever uma implementação nova. Produzir um documento
-  curto apontando onde a feature já existe, para que a revisão humana decida se
-  encerra a TAK ou se a spec funcional descreveu uma diferença sutil.
+- **Duplicada**: não descrever uma implementação nova. Produzir uma análise
+  curta apontando onde a feature já existe, para que a revisão humana decida se
+  encerra a demanda ou se a spec funcional descreveu uma diferença sutil.
 
-## Formato de saída: nova
+## Estrutura da spec técnica: nova
 
-Escrever em `tasks/TAK-XXXX/spec-tecnica.md`:
+Gerar a spec com esta estrutura:
 
 ```markdown
 # Spec técnica — TAK-XXXX
@@ -132,7 +132,7 @@ cada cenário aos `CE-XX` e `CA-XX` da spec funcional e especificar os níveis d
 teste relevantes.
 ```
 
-## Formato de saída: modificação
+## Estrutura da spec técnica: modificação
 
 Não reconstruir o que já existe. Escrever apenas o delta:
 
@@ -168,7 +168,7 @@ Listar somente a cobertura do delta e relacionar cada cenário aos `CE-XX` e
 `CA-XX` afetados. Não repetir testes existentes que continuam válidos.
 ```
 
-## Formato de saída: duplicada
+## Estrutura da spec técnica: duplicada
 
 ```markdown
 # Spec técnica — TAK-XXXX

@@ -20,6 +20,20 @@
       "contentDigest": "2d4dc5a4c564803b703497a4042bbe6e67608e85d22cff6ff915e96e285f85ec",
       "providerUserMessageId": "01a0103c-1504-7003-a76c-d5d0e6272135",
       "providerAssistantMessageId": "msg_09402795009f8661016a832204cd308191b3d971ec243441f0"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786979026443-2xz9cnm",
+      "userTurnOrdinal": 2,
+      "state": "accepted",
+      "localMessageId": "msg-1786979026434-9586f3c",
+      "timestamp": 1786979026434,
+      "rawDisplayText": "revise todas as specs do projeto.\n\nremova instrucoes sobre o local de geracao dos documentos. o foco deverá ser na geracao das specs, nao no local ou arquivos de output",
+      "canonicalText": "revise todas as specs do projeto.\n\nremova instrucoes sobre o local de geracao dos documentos. o foco deverá ser na geracao das specs, nao no local ou arquivos de output",
+      "images": [],
+      "contentDigest": "e313b25f644ccf731d5fa044be7015d7ecaee170e90dda743fb1b009f6e6f16d",
+      "providerUserMessageId": "01a01040-07a0-7400-a0f5-bd0651d807c7",
+      "providerAssistantMessageId": "msg_09402795009f8661016a83232513248191b23b45807130af26"
     }
   ]
 }

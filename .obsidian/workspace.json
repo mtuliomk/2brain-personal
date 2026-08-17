@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevSkills/dev-commit/SKILL.md",
+                "file": "DevSkills/spec-functional/SKILL.md",
                 "mode": "source",
                 "source": false
               },
@@ -202,10 +202,10 @@
   },
   "active": "cbab94360634f735",
   "lastOpenFiles": [
-    "DevSkills/plan-tak/SKILL.md",
     "DevSkills/spec-userstory/SKILL.md",
-    "DevSkills/spec-userstory",
     "DevSkills/dev-commit/SKILL.md",
+    "DevSkills/plan-tak/SKILL.md",
+    "DevSkills/spec-userstory",
     "DevSkills/spec-functional/SKILL.md",
     "Profile/Maya Onese.md",
     "Projects/Investments/resumo.md",

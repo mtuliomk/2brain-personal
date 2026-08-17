@@ -17,10 +17,10 @@ decisões, regras de negócio, personas, glossários, fluxos, requisitos e
 precedentes diretamente relacionados ao assunto da solicitação. Não consultar
 código para verificar se a feature já existe.
 
-Quando houver uma TAK em `tasks/`, ela é uma fonte opcional de consulta. Ler o
-arquivo original completo quando estiver disponível e usar seus campos de
-**objetivo** e **descrição** como fontes primárias para `## Objetivo`,
-`## Contexto`, `## Comportamento esperado` e `## Fora de escopo`.
+Quando uma user story ou demanda anterior estiver disponível no contexto, lê-la
+por completo e usar sua história, contexto e escopo inicial como fontes
+primárias para `## Objetivo`, `## Contexto`, `## Comportamento esperado` e
+`## Fora de escopo`. Não redefinir seu valor de negócio silenciosamente.
 
 Se um contexto necessário não estiver disponível, registrar a ausência em
 `Decisões assumidas` e seguir com as fontes existentes. Se o contexto
@@ -43,9 +43,9 @@ Se a TAK sugerir uma solução técnica, registrar a sugestão apenas como
 contexto ou motivação e sinalizar que ela deve ser avaliada na spec técnica —
 nunca tratá-la como requisito funcional.
 
-## Formato de saída
+## Estrutura da spec funcional
 
-Escrever `tasks/TAK-XXXX/spec-funcional.md` com estas seções, nesta ordem:
+Gerar a spec com estas seções, nesta ordem:
 
 ```markdown
 # Spec funcional — TAK-XXXX
@@ -95,7 +95,7 @@ ponto usando esta ordem de prioridade:
 
 1. decisão explícita em arquivo de contexto disponível;
 2. regra de produto, terminologia oficial ou requisito contextual disponível;
-3. precedente relevante disponível, inclusive em `tasks/` quando houver;
+3. precedente relevante disponível;
 4. raciocínio próprio, explicitando a lógica.
 
 Registrar toda decisão tomada em `Decisões assumidas`, sem exceção. O registro

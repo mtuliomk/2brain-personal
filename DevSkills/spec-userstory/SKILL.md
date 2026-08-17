@@ -47,11 +47,9 @@ Quando a demanda conflitar diretamente com contexto disponível, destacar o
 conflito, a regra existente e a validação necessária. Não ocultar o conflito nem
 alterar silenciosamente o pedido.
 
-## Formato de saída
+## Estrutura da user story
 
-Criar ou atualizar `tasks/TAK-XXXX/user-story.md`, preservando frontmatter e
-campos existentes. Criar `tasks/TAK-XXXX/` quando necessário. Garantir, no
-mínimo, esta estrutura:
+Gerar a user story com, no mínimo, esta estrutura:
 
 ```markdown
 # User story — TAK-XXXX — Título objetivo
