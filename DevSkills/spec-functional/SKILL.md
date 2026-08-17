@@ -1,13 +1,14 @@
 ---
 name: spec-funcional
-description: Gerar a especificação funcional de uma TAK (task), descrevendo o que deve ser entregue sob a ótica do usuário ou negócio, sem decisões de implementação. Usar quando uma TAK entrar no refinamento, antes da spec técnica. Não usar para decidir como implementar, escrever código ou revisar UAT.
+description: Gerar a especificação funcional de uma demanda a partir de uma user story, descrevendo o que deve ser entregue sob a ótica do usuário ou negócio, sem decisões de implementação. Usar na primeira etapa do refinamento, antes da spec técnica. Não usar para decidir como implementar, escrever código ou revisar UAT.
 ---
 # Spec funcional
 
-Gerar a especificação funcional de uma TAK: descrever o que deve ser entregue
-sob a ótica do usuário ou negócio. Nunca decidir arquitetura, tecnologia ou
+Gerar a especificação funcional de uma demanda a partir da user story:
+descrever o que deve ser entregue sob a ótica do usuário ou negócio. Esta é a
+primeira etapa do refinamento. Nunca decidir arquitetura, tecnologia ou
 abordagem de implementação; isso pertence à skill `spec-tecnica`, executada
-posteriormente a partir deste documento.
+após a aprovação humana desta spec.
 
 ## Contexto de entrada
 
@@ -36,12 +37,12 @@ Não incluir:
 - decisões sobre como implementar;
 - verificação, no código, de que a feature já existe.
 
-Tratar toda TAK como candidata a uma feature nova. Classificar a mudança como
-nova, modificação ou duplicata é responsabilidade da `spec-tecnica`.
+Tratar toda demanda como candidata a uma feature nova. Classificar a mudança
+como nova, modificação ou duplicata é responsabilidade da `spec-tecnica`.
 
-Se a TAK sugerir uma solução técnica, registrar a sugestão apenas como
-contexto ou motivação e sinalizar que ela deve ser avaliada na spec técnica —
-nunca tratá-la como requisito funcional.
+Se a user story ou a demanda sugerir uma solução técnica, registrar a sugestão
+apenas como contexto ou motivação e sinalizar que ela deve ser avaliada na spec
+técnica — nunca tratá-la como requisito funcional.
 
 ## Estrutura da spec funcional
 
@@ -73,20 +74,20 @@ critério deve indicar o `CE-XX` correspondente e servir como checklist do UAT.
 
 ## Decisões assumidas
 Registrar somente ambiguidades ou contradições resolvidas pela skill; não
-repetir fatos explícitos no objetivo ou na descrição da TAK. Usar, para cada
-item, este formato:
+repetir fatos explícitos na user story. Usar, para cada item, este formato:
 
 - **Ambiguidade:** ...
 - **Decisão:** ...
-- **Fonte:** arquivo de contexto relevante / TAK, quando consultada / precedente
-  disponível / raciocínio próprio.
+- **Fonte:** arquivo de contexto relevante / user story ou demanda, quando
+  consultada / precedente disponível / raciocínio próprio.
 ```
 
 Cada item de `Comportamento esperado` deve ter ao menos um critério de aceite
 correspondente, identificado pela referência ao mesmo `CE-XX`. Sintetizar no
-`Contexto` somente fatos do objetivo e da descrição da TAK; colocar qualquer
-interpretação nova exclusivamente em `Decisões assumidas`. Tornar explícitos os
-limites de escopo, especialmente quando a TAK for ambígua.
+`Contexto` somente fatos da história, do contexto e do escopo inicial da user
+story; colocar qualquer interpretação nova exclusivamente em `Decisões
+assumidas`. Tornar explícitos os limites de escopo, especialmente quando a
+demanda for ambígua.
 
 ## Autonomia e rastreabilidade
 
@@ -99,15 +100,16 @@ ponto usando esta ordem de prioridade:
 4. raciocínio próprio, explicitando a lógica.
 
 Registrar toda decisão tomada em `Decisões assumidas`, sem exceção. O registro
-serve para a revisão humana distinguir o que veio diretamente da TAK do que
-foi interpretação da skill.
+serve para a revisão humana distinguir o que veio diretamente da user story
+do que foi interpretação da skill.
 
 ### Contradições com o contexto
 
-Se a solicitação ou uma TAK consultada contradizer diretamente um arquivo de
-contexto aplicável, seguir o contexto e registrar o conflito com destaque:
+Se a solicitação, a user story ou uma demanda anterior contradizer diretamente
+um arquivo de contexto aplicável, seguir o contexto e registrar o conflito com
+destaque:
 
-> **⚠ Contradição**: indicar o que a TAK pede e qual regra de contexto conflita.
+> **⚠ Contradição**: indicar o que a demanda pede e qual regra de contexto conflita.
 >
 > **Decisão**: indicar a regra de contexto seguida e por quê.
 >
@@ -123,12 +125,12 @@ Considerar a spec pronta para revisão humana quando:
 - toda ambiguidade resolvida estiver documentada com sua fonte;
 - nenhuma decisão técnica tiver vazado para o documento.
 
-A revisão humana da etapa 2 continua obrigatória. Não aprovar a própria saída
-nem iniciar a implementação.
+A aprovação humana desta primeira etapa do refinamento é obrigatória antes da
+`spec-tecnica`. Não aprovar a própria saída nem iniciar a implementação.
 
 ## Exemplo
 
-Para a TAK “Usuário quer poder exportar relatório em PDF”:
+Para a user story “Usuário quer poder exportar relatório em PDF”:
 
 **Bom comportamento esperado:**
 
@@ -142,7 +144,7 @@ Para a TAK “Usuário quer poder exportar relatório em PDF”:
 
 **Decisão assumida:**
 
-> **Ambiguidade**: a TAK não diz se a exportação respeita os filtros aplicados.
+> **Ambiguidade**: a user story não diz se a exportação respeita os filtros aplicados.
 > **Decisão**: respeitar os filtros atuais.
 > **Fonte**: arquivos de contexto de produto e precedente disponível.
 

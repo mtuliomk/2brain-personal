@@ -185,7 +185,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 422.796875
+    "width": 568.49609375
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -200,7 +200,7 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "cbab94360634f735",
+  "active": "8e7c699d605b1ea8",
   "lastOpenFiles": [
     "DevSkills/spec-userstory/SKILL.md",
     "DevSkills/dev-commit/SKILL.md",

@@ -4,7 +4,7 @@
   "title": "revise a skill plan-tak",
   "titleGenerationStatus": "failed",
   "createdAt": 1786978765069,
-  "lastActivityAt": 1786979111352,
+  "lastActivityAt": 1786979344653,
   "sessionId": "01a0103c-0c47-7e80-8133-c88e3f1420d7",
   "selectedModel": "gpt-5.6-terra",
   "providerState": {
@@ -15,13 +15,13 @@
     "workspaceDependencyToolVersion": 1
   },
   "usage": {
-    "inputTokens": 51760,
+    "inputTokens": 68038,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 49920,
+    "cacheReadInputTokens": 66304,
     "contextWindow": 258400,
     "contextWindowIsAuthoritative": true,
-    "contextTokens": 51760,
-    "percentage": 20,
+    "contextTokens": 68038,
+    "percentage": 26,
     "model": "gpt-5.6-terra"
   }
 }

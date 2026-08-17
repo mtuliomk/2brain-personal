@@ -11,6 +11,9 @@ centrada na pessoa ou processo beneficiado e no valor esperado. O documento não
 substitui a especificação funcional: esta definirá depois os comportamentos
 verificáveis e os critérios de aceite.
 
+Neste pipeline, `TAK-XXXX` identifica a demanda; a user story é o documento
+que registra seu contexto e valor de negócio.
+
 ## Contexto a consultar
 
 Antes de escrever ou alterar a user story, ler nesta ordem, quando existirem:
@@ -18,7 +21,7 @@ Antes de escrever ou alterar a user story, ler nesta ordem, quando existirem:
 1. `.taloren_context/product.md`: produto, personas, regras e limites de escopo;
 2. `.taloren_context/glossary.md`: terminologia oficial;
 3. `.taloren_context/decisions.md`: decisões de produto aplicáveis;
-4. user stories, TAKs, decisões e outros arquivos Markdown diretamente
+4. user stories, demandas anteriores, decisões e outros arquivos Markdown diretamente
    relacionados ao mesmo assunto.
 
 Usar esses documentos para manter a terminologia consistente, identificar

@@ -34,6 +34,34 @@
       "contentDigest": "e313b25f644ccf731d5fa044be7015d7ecaee170e90dda743fb1b009f6e6f16d",
       "providerUserMessageId": "01a01040-07a0-7400-a0f5-bd0651d807c7",
       "providerAssistantMessageId": "msg_09402795009f8661016a83232513248191b23b45807130af26"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786979170526-11nermn",
+      "userTurnOrdinal": 3,
+      "state": "accepted",
+      "localMessageId": "msg-1786979170520-98o7ub7",
+      "timestamp": 1786979170520,
+      "rawDisplayText": "qual sua avaliacao sobre as specs? elas estão coerentes entre si?",
+      "canonicalText": "qual sua avaliacao sobre as specs? elas estão coerentes entre si?",
+      "images": [],
+      "contentDigest": "80fa97bc7d0d7ecd10d76f3db043edbbd0334b77ca9c667aed588caa55c37dc0",
+      "providerUserMessageId": "01a01042-3af5-7811-ba72-d54b5b8554cb",
+      "providerAssistantMessageId": "msg_09402795009f8661016a8323740ff0819182c1a29c23336844"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786979271853-835z528",
+      "userTurnOrdinal": 4,
+      "state": "accepted",
+      "localMessageId": "msg-1786979271843-lp9a96l",
+      "timestamp": 1786979271843,
+      "rawDisplayText": "faca os ajustes 1 e 2",
+      "canonicalText": "faca os ajustes 1 e 2",
+      "images": [],
+      "contentDigest": "47cd651624f7d03aace37fb88578082b64745237c1ee6d46bdf602fda1570ae7",
+      "providerUserMessageId": "01a01043-c536-7d50-b94d-0cd846b5536b",
+      "providerAssistantMessageId": "msg_09402795009f8661016a83240db7ec81919f300a24b6423dfe"
     }
   ]
 }

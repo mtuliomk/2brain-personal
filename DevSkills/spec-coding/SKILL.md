@@ -1,6 +1,6 @@
 ---
 name: spec-coding
-description: Implementar a mudança de código a partir da spec técnica aprovada, executar os gates automáticos — testes, lint, padrão de código e review automatizado — e sinalizar prontidão para UAT somente quando todos passarem. Usar na etapa 3 do pipeline, depois da revisão humana da spec técnica. Não usar para gerar specs nem para classificar uma TAK como nova, modificação ou duplicada.
+description: Implementar a mudança de código a partir da spec técnica aprovada, executar os gates automáticos — testes, lint, padrão de código e review automatizado — e sinalizar prontidão para UAT somente quando todos passarem. Usar na etapa de implementação, após a aprovação humana da spec técnica. Não usar para gerar specs nem para classificar uma demanda como nova, modificação ou duplicada.
 ---
 
 # Implementação
@@ -15,7 +15,7 @@ escopo, classificação ou arquitetura.
 Usar somente após a aprovação humana de uma spec técnica disponível no
 contexto. Confirmar a aprovação pelo status, marcação ou evidência definida pelo
 pipeline. Se não houver evidência verificável, não iniciar: registrar o bloqueio
-e pedir a regularização da etapa 2. Não iniciar se a classificação for
+e pedir a regularização da aprovação técnica. Não iniciar se a classificação for
 `Duplicada`: esse caso encerra o fluxo antes da implementação.
 
 Considerar todos os arquivos de contexto já lidos ou disponibilizados na área de
@@ -61,7 +61,7 @@ Antes de alterar código, registrar:
 - os resultados dos gates que puderem ser executados sem a implementação;
 - falhas preexistentes ou limitações do ambiente, com evidência.
 
-Não atribuir à TAK uma falha comprovadamente preexistente. Se ela impedir a
+Não atribuir à demanda uma falha comprovadamente preexistente. Se ela impedir a
 validação obrigatória, tratá-la como bloqueio externo e escalar.
 
 ## Implementação por classificação
@@ -105,25 +105,25 @@ Exemplo:
 
 ### Escopo dos gates
 
-Os gates devem avaliar a alteração efetivamente produzida pela TAK, e não
+Os gates devem avaliar a alteração efetivamente produzida pela demanda, e não
 reprovar a implementação por problemas preexistentes e fora do escopo. Antes
-de cada gate, determinar o conjunto de arquivos alterados pela TAK usando o
+de cada gate, determinar o conjunto de arquivos alterados pela demanda usando o
 diff da implementação e, quando aplicável, os arquivos diretamente afetados
 por ela.
 
 - **Formatação, lint e padrão de código:** executar preferencialmente no
   conjunto de arquivos alterados. Se o projeto só oferecer um comando global,
-  executá-lo, mas separar no resultado as falhas nos arquivos da TAK das falhas
+  executá-lo, mas separar no resultado as falhas nos arquivos da demanda das falhas
   preexistentes fora do escopo.
 - **Testes:** executar os testes exigidos e relacionados aos critérios de
   aceite e, quando o projeto exigir, a suíte completa. Falhas em testes ou
-  componentes fora do escopo que já existiam antes da TAK devem ser registradas
+  componentes fora do escopo que já existiam antes da demanda devem ser registradas
   como preexistentes, sem serem atribuídas à implementação.
-- **Review automatizado:** revisar somente o diff da TAK, verificando aderência
+- **Review automatizado:** revisar somente o diff da demanda, verificando aderência
   à spec técnica, escopo, segurança, regressões e cobertura aplicável.
 
 Uma falha preexistente fora do escopo não deve consumir uma tentativa nem ser
-registrada como falha da TAK. Se ela impedir a execução ou a interpretação de
+registrada como falha da demanda. Se ela impedir a execução ou a interpretação de
 um gate obrigatório, registrar como **Bloqueio externo/preexistente**, com a
 evidência da linha de base, e escalar para decisão humana. Nunca corrigir
 arquivos fora do escopo apenas para fazer um gate global passar.
@@ -144,10 +144,10 @@ definidos no projeto:
 3. padrão de código, conforme as convenções disponíveis;
 4. review automatizado.
 
-O review automatizado deve avaliar o diff da TAK quanto à aderência à spec
+O review automatizado deve avaliar o diff da demanda quanto à aderência à spec
 técnica, alterações fora de escopo, segurança, tratamento de erros, regressões
-e cobertura de testes. Todos os gates são obrigatórios. Só sinalizar a TAK como
-pronta para UAT humano quando todos passarem.
+e cobertura de testes. Todos os gates são obrigatórios. Só sinalizar a demanda
+como pronta para UAT humano quando todos passarem.
 
 Quando uma skill auxiliar executar um gate, aceitar seu resultado sem duplicar a
 execução somente se o gate tiver sido concluído após a última alteração de código
@@ -156,7 +156,7 @@ procedimento, a fonte, o resultado e o estado do código validado. Qualquer
 alteração posterior invalida essa evidência para os gates
 afetados, que devem ser executados novamente antes do UAT. A `spec-coding`
 continua responsável por conferir a cobertura de todos os gates e pelo status
-final da TAK.
+final da demanda.
 
 ## Loop de correção
 
@@ -184,7 +184,7 @@ com evidências e escalar imediatamente; não consumir tentativas repetindo uma
 execução que não pode ser corrigida no código. Nos demais casos, escalar após a
 quinta tentativa com os registros completos. A revisão humana decide entre
 nova direção
-na etapa 3 ou retorno à etapa 2 via `spec-correcao`.
+na implementação ou retorno ao refinamento via `spec-correcao`.
 
 ## Validação de critérios de aceite
 
@@ -226,10 +226,9 @@ correção nesta skill.
 ## Revisão final do diff
 
 Antes de preparar o resumo, revisar as alterações efetivas para confirmar que
-não
-há arquivos acidentais, segredos, artefatos gerados indevidos ou mudanças sem
+não há arquivos acidentais, segredos, artefatos gerados indevidos ou mudanças sem
 relação com o plano e a spec técnica. Remover ou reverter o que não pertencer à
-TAK e registrar qualquer exceção justificada nos registros.
+demanda e registrar qualquer exceção justificada nos registros.
 
 ## Registros e resumo de implementação
 
@@ -264,25 +263,25 @@ Escrever `Nenhuma` se não houver itens.
 ```
 
 Em caso de bloqueio, gerar o resumo com os gates pendentes e as tentativas
-realizadas. A TAK não segue para UAT até ser destravada.
+realizadas. A demanda não segue para UAT até ser destravada.
 
 ## Critério de conclusão
 
-Considerar a TAK pronta para Human UAT somente quando:
+Considerar a demanda pronta para Human UAT somente quando:
 
 - o código estiver conforme a abordagem ou delta da spec técnica;
 - todos os gates automáticos tiverem passado;
 - os comportamentos e critérios de aceite da spec funcional tiverem evidência
   registrada na seção `Validação de critérios de aceite`;
 - o diff final tiver sido revisado e contiver somente alterações pertinentes à
-  TAK, sem segredos ou artefatos indevidos;
+  demanda, sem segredos ou artefatos indevidos;
 - os registros da implementação contiverem decisões e todas as tentativas
   realizadas;
 - o resumo de implementação indicar status `Pronto para UAT`;
 - nenhuma alteração fora do escopo da spec técnica tiver sido implementada.
 
-Não aprovar o UAT humano, não alterar a classificação da TAK e não iniciar uma
-spec de correção.
+Não aprovar o UAT humano, não alterar a classificação da demanda e não iniciar
+uma spec de correção.
 
 ## Exemplos
 

@@ -1,16 +1,19 @@
 ---
 name: spec-tecnica
-description: Gerar a especificação técnica de uma TAK a partir de uma spec funcional aprovada disponível no contexto, descrevendo como implementá-la com base no código existente e classificando a mudança como nova, modificação ou duplicada. Usar durante o refinamento e antes de qualquer implementação. Não usar para definir comportamento funcional nem para implementar código.
+description: Gerar a especificação técnica de uma demanda a partir de uma spec funcional aprovada disponível no contexto, descrevendo como implementá-la com base no código existente e classificando a mudança como nova, modificação ou duplicada. Usar na segunda etapa do refinamento, antes da implementação. Não usar para definir comportamento funcional nem para implementar código.
 ---
 
 # Spec técnica
 
-Gerar a especificação técnica de uma TAK: descrever como implementar o que a
-spec funcional definiu. Verificar também, no código existente, se a feature já
-existe — decisão que pertence a esta skill, não à spec funcional.
+Gerar a especificação técnica de uma demanda: descrever como implementar o que
+a spec funcional aprovou. Esta é a segunda etapa do refinamento, executada
+após a aprovação humana da spec funcional. Verificar também, no código
+existente, se a feature já existe — decisão que pertence a esta skill, não à
+spec funcional.
 
 Não alterar o escopo funcional silenciosamente. A spec técnica deve explicar a
-implementação, não repetir o comportamento esperado.
+implementação, não repetir o comportamento esperado. A aprovação humana desta
+spec é pré-requisito para a `spec-coding`.
 
 ## Contexto de entrada
 
@@ -32,8 +35,8 @@ as fontes existentes.
 
 ## Investigação no código
 
-Antes de classificar a TAK, pesquisar sistematicamente os termos da TAK e da
-spec funcional e inspecionar, quando aplicável:
+Antes de classificar a demanda, pesquisar sistematicamente os termos da user
+story, da spec funcional e da demanda e inspecionar, quando aplicável:
 
 - fluxos, telas, rotas, serviços e integrações equivalentes;
 - modelos, persistência, migrações e contratos de API;
@@ -110,7 +113,7 @@ existentes, compatibilidade e rollout.
 
 ## Fora do escopo técnico
 Se necessário, registrar alterações técnicas relacionadas que foram
-consideradas, mas não fazem parte desta TAK.
+consideradas, mas não fazem parte da demanda.
 
 ## Divergências com a spec funcional
 Incluir somente se a análise revelar perda de informação, conflito,
@@ -195,8 +198,8 @@ Registrar decisões de classificação, ausências de contexto ou interpretaçõ
 necessárias, no formato: ambiguidade, decisão e fonte.
 
 ## Recomendação
-Indicar claramente se a TAK deve ser encerrada ou devolvida ao refinamento para
-esclarecer uma diferença funcional.
+Indicar claramente se a demanda deve ser encerrada ou devolvida ao refinamento
+para esclarecer uma diferença funcional.
 ```
 
 ## Autonomia e decisões
@@ -226,7 +229,7 @@ Registrar o conflito em destaque:
 >
 > **Ação recomendada**: se o padrão precisar mudar, sugerir uma decisão
 > separada de arquitetura, convenções ou contexto; não resolver isso
-> silenciosamente nesta TAK.
+> silenciosamente nesta demanda.
 
 ## Critério de conclusão
 
@@ -244,8 +247,8 @@ Considerar a spec pronta para revisão humana quando:
   registrada;
 - nenhuma mudança de escopo funcional tiver sido feita silenciosamente.
 
-A revisão humana continua obrigatória na etapa 2 do pipeline. Não aprovar a
-própria saída nem iniciar implementação.
+A aprovação humana desta segunda etapa do refinamento é obrigatória antes da
+`spec-coding`. Não aprovar a própria saída nem iniciar implementação.
 
 ## Exemplo
 
@@ -264,4 +267,4 @@ Exemplo de contradição:
 > **Decisão**: usar a biblioteca já presente no projeto, mesmo exigindo mais
 > código de adaptação.  
 > **Ação recomendada**: avaliar a adoção de uma nova biblioteca em uma
-> alteração separada de convenções, não nesta TAK.
+> alteração separada de convenções, não nesta demanda.
