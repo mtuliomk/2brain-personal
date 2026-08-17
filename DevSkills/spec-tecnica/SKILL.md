@@ -133,6 +133,16 @@ explicitamente pelos documentos de contexto, usando:
 Aplicar os requisitos de testes definidos no contexto disponível. Relacionar
 cada cenário aos `CE-XX` e `CA-XX` da spec funcional e especificar os níveis de
 teste relevantes.
+
+## Controle de versão
+Este deve ser obrigatoriamente o último conteúdo do documento. Manter todo o
+histórico já registrado e adicionar uma linha a cada alteração material do
+artefato; para a criação inicial, usar a versão `1.0`. Não incluir seções,
+texto ou anexos depois desta tabela.
+
+| Versão | Data | Autor | Alteração |
+| --- | --- | --- | --- |
+| 1.0 | AAAA-MM-DD | Agente | Criação inicial do documento |
 ```
 
 ## Estrutura da spec técnica: modificação
@@ -169,6 +179,16 @@ no formato: ambiguidade, decisão e fonte.
 ## Plano de testes
 Listar somente a cobertura do delta e relacionar cada cenário aos `CE-XX` e
 `CA-XX` afetados. Não repetir testes existentes que continuam válidos.
+
+## Controle de versão
+Este deve ser obrigatoriamente o último conteúdo do documento. Manter todo o
+histórico já registrado e adicionar uma linha a cada alteração material do
+artefato; para a criação inicial, usar a versão `1.0`. Não incluir seções,
+texto ou anexos depois desta tabela.
+
+| Versão | Data | Autor | Alteração |
+| --- | --- | --- | --- |
+| 1.0 | AAAA-MM-DD | Agente | Criação inicial do documento |
 ```
 
 ## Estrutura da spec técnica: duplicada
@@ -200,6 +220,16 @@ necessárias, no formato: ambiguidade, decisão e fonte.
 ## Recomendação
 Indicar claramente se a demanda deve ser encerrada ou devolvida ao refinamento
 para esclarecer uma diferença funcional.
+
+## Controle de versão
+Este deve ser obrigatoriamente o último conteúdo do documento. Manter todo o
+histórico já registrado e adicionar uma linha a cada alteração material do
+artefato; para a criação inicial, usar a versão `1.0`. Não incluir seções,
+texto ou anexos depois desta tabela.
+
+| Versão | Data | Autor | Alteração |
+| --- | --- | --- | --- |
+| 1.0 | AAAA-MM-DD | Agente | Criação inicial do documento |
 ```
 
 ## Autonomia e decisões

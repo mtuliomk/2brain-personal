@@ -80,6 +80,16 @@ repetir fatos explícitos na user story. Usar, para cada item, este formato:
 - **Decisão:** ...
 - **Fonte:** arquivo de contexto relevante / user story ou demanda, quando
   consultada / precedente disponível / raciocínio próprio.
+
+## Controle de versão
+Este deve ser obrigatoriamente o último conteúdo do documento. Manter todo o
+histórico já registrado e adicionar uma linha a cada alteração material do
+artefato; para a criação inicial, usar a versão `1.0`. Não incluir seções,
+texto ou anexos depois desta tabela.
+
+| Versão | Data | Autor | Alteração |
+| --- | --- | --- | --- |
+| 1.0 | AAAA-MM-DD | Agente | Criação inicial do documento |
 ```
 
 Cada item de `Comportamento esperado` deve ter ao menos um critério de aceite

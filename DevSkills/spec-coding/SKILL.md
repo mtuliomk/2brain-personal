@@ -260,6 +260,16 @@ Copiar literalmente os critérios de aceite da spec funcional aprovada
 ## Alterações fora do escopo original
 Listar os itens marcados como **Fora de escopo — não implementado** no log.
 Escrever `Nenhuma` se não houver itens.
+
+## Controle de versão
+Este deve ser obrigatoriamente o último conteúdo do documento. Manter todo o
+histórico já registrado e adicionar uma linha a cada alteração material do
+artefato; para a criação inicial, usar a versão `1.0`. Não incluir seções,
+texto ou anexos depois desta tabela.
+
+| Versão | Data | Autor | Alteração |
+| --- | --- | --- | --- |
+| 1.0 | AAAA-MM-DD | Agente | Criação inicial do documento |
 ```
 
 Em caso de bloqueio, gerar o resumo com os gates pendentes e as tentativas

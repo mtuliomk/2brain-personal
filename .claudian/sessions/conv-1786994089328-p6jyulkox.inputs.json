@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1786994089328-p6jyulkox",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786994089373-vhi97dd",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1786994089312-2ixyaar",
+      "timestamp": 1786994089312,
+      "rawDisplayText": "em todas as skills de spec, quero que ela adicione no final do arquivo um controle de versao",
+      "canonicalText": "em todas as skills de spec, quero que ela adicione no final do arquivo um controle de versao",
+      "context": {
+        "currentNote": {
+          "path": "DevSkills/spec-functional/SKILL.md"
+        }
+      },
+      "images": [],
+      "contentDigest": "1508c2fa8c8c270aa50372ad940c1496dcd26999290698df1f28f9d6aee1371c",
+      "providerUserMessageId": "01a01125-f056-7953-852f-4ec888dbafd1",
+      "providerAssistantMessageId": "msg_0b3d55eafc0af131016a835ddcbff487d0a8ad6eb48264582b"
+    }
+  ]
+}

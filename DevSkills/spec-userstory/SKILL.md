@@ -78,6 +78,16 @@ sugestões técnicas apenas como contexto para avaliação posterior.
 ## Pontos a esclarecer
 Listar lacunas que precisarão ser tratadas na spec funcional. Escrever `Nenhum
 identificado` quando não houver pontos.
+
+## Controle de versão
+Este deve ser obrigatoriamente o último conteúdo do documento. Manter todo o
+histórico já registrado e adicionar uma linha a cada alteração material do
+artefato; para a criação inicial, usar a versão `1.0`. Não incluir seções,
+texto ou anexos depois desta tabela.
+
+| Versão | Data | Autor | Alteração |
+| --- | --- | --- | --- |
+| 1.0 | AAAA-MM-DD | Agente | Criação inicial do documento |
 ```
 
 Manter a seção `História` em uma frase orientada a valor, usando a terminologia
