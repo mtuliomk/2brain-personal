@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1786978765055-byo28pqee",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1786978765092-9156tn8",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1786978765044-zwqpm13",
+      "timestamp": 1786978765044,
+      "rawDisplayText": "revise a skill plan-tak\nrenomeie ela para spec-userstory\n\nreescreva ela para ter o objetivo de gerar um documento no formato de user story para ser utilizado posteriormente na elaboracao de uma especificacao funcional completa da demanda.",
+      "canonicalText": "revise a skill plan-tak\nrenomeie ela para spec-userstory\n\nreescreva ela para ter o objetivo de gerar um documento no formato de user story para ser utilizado posteriormente na elaboracao de uma especificacao funcional completa da demanda.",
+      "context": {
+        "currentNote": {
+          "path": "DevSkills/plan-tak/SKILL.md"
+        }
+      },
+      "images": [],
+      "contentDigest": "2d4dc5a4c564803b703497a4042bbe6e67608e85d22cff6ff915e96e285f85ec",
+      "providerUserMessageId": "01a0103c-1504-7003-a76c-d5d0e6272135",
+      "providerAssistantMessageId": "msg_09402795009f8661016a832204cd308191b3d971ec243441f0"
+    }
+  ]
+}

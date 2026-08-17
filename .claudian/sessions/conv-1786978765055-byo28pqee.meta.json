@@ -1,0 +1,27 @@
+{
+  "id": "conv-1786978765055-byo28pqee",
+  "providerId": "codex",
+  "title": "revise a skill plan-tak",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1786978765069,
+  "lastActivityAt": 1786978821715,
+  "sessionId": "01a0103c-0c47-7e80-8133-c88e3f1420d7",
+  "selectedModel": "gpt-5.6-terra",
+  "providerState": {
+    "threadId": "01a0103c-0c47-7e80-8133-c88e3f1420d7",
+    "nativeConversationContextEstablished": true,
+    "sessionFilePath": "/home/tulio/.codex/sessions/2026/08/17/rollout-2026-08-17T11-59-25-01a0103c-0c47-7e80-8133-c88e3f1420d7.jsonl",
+    "transcriptRootPath": "/home/tulio/.codex/sessions",
+    "workspaceDependencyToolVersion": 1
+  },
+  "usage": {
+    "inputTokens": 28948,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 26368,
+    "contextWindow": 258400,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 28948,
+    "percentage": 11,
+    "model": "gpt-5.6-terra"
+  }
+}
