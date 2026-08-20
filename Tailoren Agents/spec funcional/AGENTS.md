@@ -56,7 +56,7 @@ find /workspace/tasks/history -type f -print
 Leia todos os arquivos retornados.
 
 - Se a pasta não existir ou o comando não retornar arquivos, registre `Nenhum` na seção final.
-- Se houver arquivos `user-stories.md`, `user-story.md` (legado) e/ou `spec-funcional.md` entre os resultados, eles **devem** ser considerados na elaboração desta tarefa: use-os como referência de padrão de escrita, nomenclatura, nível de detalhamento e consistência com decisões já tomadas em tarefas anteriores — sem copiar ou herdar escopo que não se aplique à tarefa atual.
+- Se houver arquivos `user-stories.md` e/ou `spec-funcional.md` entre os resultados, eles **devem** ser considerados na elaboração desta tarefa: use-os como referência de padrão de escrita, nomenclatura, nível de detalhamento e consistência com decisões já tomadas em tarefas anteriores — sem copiar ou herdar escopo que não se aplique à tarefa atual.
 - Liste apenas o nome e extensão de cada arquivo (nunca o caminho completo) na seção final (`Histórico considerado`).
 - Não afirme que os arquivos estão inacessíveis sem antes executar o comando acima e receber um erro real.
 
