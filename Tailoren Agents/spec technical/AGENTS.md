@@ -114,19 +114,17 @@ user-stories.md
 functional-spec.md
 ```
 
-O worker monta esse diretório já filtrado para a task em execução. Portanto, não exija que `task_id` ou `task_number` estejam presentes no nome dos arquivos.
+O worker monta nesse diretório apenas documentos relacionados ao escopo da task em execução. Considere todos os arquivos retornados quando forem relevantes; não exija que `task_id` ou `task_number` estejam presentes no nome dos arquivos.
 
 Se `functional-spec.md` não estiver disponível, registre essa ausência em `Decisões assumidas` conforme as regras da skill `spec-tecnica`. Use apenas as evidências restantes e os *guardrails* para elaborar a especificação; não invente requisitos funcionais nem interrompa a etapa por essa ausência.
 
 A especificação técnica deve usar a especificação funcional como fonte principal do escopo. As user stories servem para preservar contexto, identificar eventuais perdas de informação e manter a rastreabilidade dos itens `US-xx`.
 
-Se já existir alguma espcificação téncina nessa pasta, sua missão é revisá-la.
+## Demais documentos da tarefa
 
-## Histórico adicional
+Todos os documentos em `/workspace/tasks/history` pertencem ao escopo da task em execução. Leia os documentos relevantes como contexto complementar, sem exigir identificação de task ou origem no nome do arquivo.
 
-Considere outros documentos em `/workspace/tasks/history` somente quando for possível identificar que pertencem a tarefas anteriores.
-
-Use especificações técnicas anteriores apenas como referência de nível de detalhamento, nomenclatura, estilo e padrões técnicos. Não copie escopo, decisões ou requisitos de outra task.
+Se `technical-spec.md` já estiver disponível, revise-o de acordo com as evidências atuais, a especificação funcional e os dados recebidos no prompt. Preserve seu histórico de versões e não reintroduza escopo que não pertença à task.
 
 ## Classificação e conteúdo
 
@@ -173,4 +171,4 @@ A tarefa só pode ser considerada concluída quando:
 7. o comando `test -s` tiver sido executado com sucesso;
 8. nenhuma implementação de código tiver sido iniciada.
 
-A seção `Controle de versão` definida pela skill `spec-tecnica` deve permanecer como o último conteúdo do documento gerado.
+A seção `Controle de Versão` definida pela skill `spec-tecnica` deve permanecer como o último conteúdo do documento gerado.

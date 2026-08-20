@@ -49,7 +49,7 @@ Leia integralmente cada `SKILL.md` retornado.
 - Se retornar arquivos, liste apenas o nome de cada skill (nunca o caminho completo) em `Skills consideradas`.
 - Não afirme que as skills estão inacessíveis sem antes executar o comando acima e receber um erro real.
 
-## Passo 3 — Levantar histórico de tarefas anteriores
+## Passo 3 — Levantar histórico da tarefa
 
 Antes de preparar o diretório de saída, execute:
 
@@ -60,7 +60,7 @@ find /workspace/tasks/history -type f -print
 Leia todos os arquivos retornados.
 
 - Se a pasta não existir ou o comando não retornar arquivos, registre `Nenhum` na seção final.
-- Se houver arquivos `user-stories.md` e/ou `functional-spec.md` entre os resultados, eles **devem** ser considerados na elaboração desta tarefa: use-os como referência de padrão de escrita, nomenclatura, nível de detalhamento e consistência com decisões já tomadas em tarefas anteriores — sem copiar ou herdar escopo que não se aplique à tarefa atual.
+- Todos os arquivos retornados pertencem ao escopo da task em execução e devem ser considerados quando forem relevantes. Se houver `user-stories.md` e/ou `functional-spec.md`, use-os como entrada para revisar os respectivos artefatos da task.
 - Liste apenas o nome e extensão de cada arquivo (nunca o caminho completo) na seção final (`Histórico considerado`).
 - Não afirme que os arquivos estão inacessíveis sem antes executar o comando acima e receber um erro real.
 
@@ -76,7 +76,7 @@ Os dois documentos gerados por esta tarefa (`user-stories.md` e `functional-spec
 
 ## Passo 5 — Gerar `user-stories.md`
 
-Com o contexto de aplicação e o histórico de tarefas anteriores carregados, produza uma ou mais user stories incorporando os dados variáveis recebidos no prompt (objetivo da subtask, objetivo da task, descrição da task e *guardrails*, se houver).
+Com o contexto de aplicação e o histórico da task carregados, produza uma ou mais user stories incorporando os dados variáveis recebidos no prompt (objetivo da subtask, objetivo da task, descrição da task e *guardrails*, se houver).
 
 O agente deve decidir autonomamente quantas stories são necessárias. Crie stories distintas quando a demanda contiver personas, objetivos, benefícios, fluxos ou critérios de aceite independentes. Não divida uma mesma necessidade apenas por camadas técnicas, componentes ou etapas internas de implementação. Gere ao menos uma story.
 
@@ -106,6 +106,11 @@ Formato fixo do documento:
 
 ## US-02 — <short title, when applicable>
 ...
+
+## Version History
+| Version | Date | Author | Change |
+| --- | --- | --- | --- |
+| 1.0 | YYYY-MM-DD | Agent | Initial document creation |
 ```
 
 Regras de preenchimento:
@@ -113,7 +118,7 @@ Regras de preenchimento:
 - Se a persona não estiver explícita nos dados recebidos, infira a partir do contexto da aplicação (Passo 1) e da descrição da task; se ainda assim não houver base para inferir, use `usuário do sistema`.
 - Os critérios de aceite de cada story devem ser derivados do `task_description` e do `subtask_objective` — não invente requisitos que não decorrem deles.
 - Se houver `user-stories.md` no histórico (Passo 3), mantenha consistência de estilo, granularidade e nomenclatura de personas com o que já foi usado, quando aplicável à tarefa atual.
-- Se não houver itens fora de escopo evidentes para uma story, escreva `Não identificado` em vez de omitir a seção.
+- Se não houver itens fora de escopo evidentes para uma story, escreva `None identified` em vez de omitir a seção.
 
 Grave o arquivo em:
 
@@ -135,7 +140,7 @@ Use o conteúdo do `user-stories.md` gerado no Passo 5 como **input principal** 
 
 Além disso, aplique as instruções de cada skill considerada no Passo 2 que sejam pertinentes à tarefa em questão, e considere eventuais `functional-spec.md` encontrados no histórico (Passo 3) como referência de padrão e estrutura, quando aplicável.
 
-Se já existir um arquivo de spec-funcional em seu contexto, considere que seu objetivo é revisar esse arquivo de acordo o **input principal**, gerando uma nova versão da especificação funcional. O novo documento gerado precisa registrar o histórico completo de versão.
+Se já existir `functional-spec.md` no histórico, revise-o de acordo com o **input principal**, gerando uma nova versão da especificação funcional. O novo documento deve preservar e ampliar o histórico de versões.
 
 O título dessa especificação deverá conter o `{{task_number}}`.
 
@@ -185,4 +190,4 @@ Não conclua a resposta sem essa seção.
 - Nunca solicite ou aguarde aprovação, validação, decisão ou outra intervenção humana. Registre as premissas e limitações conforme a seção `Autonomia e tratamento de incertezas` e conclua a entrega.
 - Os diretórios de contexto, skills e histórico de tarefas (`/workspace/tasks/history`) são somente leitura; nunca tente editá-los ou gravar neles.
 - Ao mencionar um determinado arquivo, em qualquer parte da resposta — incluindo a seção `Contexto utilizado` — escreva apenas o nome e extensão do arquivo, nunca seu caminho completo.
-- Nunca gere `functional-spec.md` sem antes ter gravado e validado `user-stories.md`; a ordem entre os passos 5 e 6 é obrigatória.
+- Nunca gere `functional-spec.md` sem antes ter gravado e validado `user-stories.md`; a ordem entre os passos 5 e 6 é obrigatória. Em ambos os documentos, `## Version History` deve ser a última seção.

@@ -1,142 +1,59 @@
 ---
 name: spec-userstory
-description: Gerar ou revisar um documento de user story que registre uma demanda sob a ótica de valor para usuário ou negócio e sirva de entrada para uma especificação funcional completa. Usar ao registrar ou esclarecer uma demanda, antes da spec funcional. Não usar para definir critérios de aceite detalhados, tomar decisões de implementação, classificar mudanças no código ou desenvolver.
+description: Gerar ou revisar um documento em inglês com uma ou mais user stories que registrem valor para usuário ou negócio e sirvam de entrada para uma especificação funcional. Usar na etapa de user stories, antes da especificação funcional. Não usar para decidir implementação, classificar a mudança ou desenvolver.
 ---
 
-# User story
+# User stories
 
-Gerar ou revisar uma user story que será a entrada da `spec-funcional`.
-Transformar a necessidade informada em uma narrativa curta, clara e rastreável,
-centrada na pessoa ou processo beneficiado e no valor esperado. O documento não
-substitui a especificação funcional: esta definirá depois os comportamentos
-verificáveis e os critérios de aceite.
+Generate `user-stories.md` in English. Convert the task into one or more concise, value-oriented stories. Do not inspect code, define implementation details, or create the functional specification.
 
-Neste pipeline, `TAK-XXXX` identifica a demanda; a user story é o documento
-que registra seu contexto e valor de negócio.
+## Inputs and decomposition
 
-## Contexto a consultar
+Read the application context and every available document related to the current task scope. Extract the affected persona or process, desired capability, expected value, known limits, and relevant terminology.
 
-Antes de escrever ou alterar a user story, ler nesta ordem, quando existirem:
+Decide autonomously how many stories are needed. Create separate stories only when personas, desired outcomes, benefits, flows, or acceptance criteria are independent. Do not split a single need by technical layers, components, or implementation steps. Generate at least one story.
 
-1. `.taloren_context/product.md`: produto, personas, regras e limites de escopo;
-2. `.taloren_context/glossary.md`: terminologia oficial;
-3. `.taloren_context/decisions.md`: decisões de produto aplicáveis;
-4. user stories, demandas anteriores, decisões e outros arquivos Markdown diretamente
-   relacionados ao mesmo assunto.
+When a persona or process cannot be identified from the available evidence, use `system user`. Do not wait for human clarification. Record material ambiguities, decisions, and sources in the document.
 
-Usar esses documentos para manter a terminologia consistente, identificar
-conflitos e evitar registrar uma demanda já descrita. Não consultar o código
-para concluir se a funcionalidade existe: essa análise pertence à
-`spec-tecnica`.
+## Required document structure
 
-## Como conduzir
-
-Extrair da solicitação o problema ou oportunidade, a persona ou processo
-impactado, a necessidade, o benefício esperado, limites conhecidos e
-referências relevantes. Quando a informação for suficiente, elaborar a user
-story sem antecipar comportamentos detalhados ou decisões das próximas etapas.
-
-Quando a solicitação e os documentos de contexto não indicarem uma persona,
-papel ou processo impactado, considerar **usuário do sistema**. Nesse caso,
-não fazer uma pergunta apenas para identificar a pessoa beneficiada. Fazer
-perguntas somente quando não for possível identificar a necessidade ou o
-benefício. Registrar as demais lacunas em `Pontos a esclarecer`; não inventar
-regras ou resolver ambiguidades que competem à `spec-funcional`.
-
-Não incluir linguagem, framework, biblioteca, arquivos, classes, rotas,
-arquitetura ou solução de implementação. Se houver sugestão técnica na
-solicitação, registrá-la em `Contexto adicional` como hipótese para avaliação
-posterior, nunca como requisito.
-
-Quando a demanda conflitar diretamente com contexto disponível, destacar o
-conflito, a regra existente e a validação necessária. Não ocultar o conflito nem
-alterar silenciosamente o pedido.
-
-## Estrutura da user story
-
-Gerar a user story com, no mínimo, esta estrutura:
+Use this fixed structure. The document must be written in English, and `## Version History` must be its final section.
 
 ```markdown
-# User story — TAK-XXXX — Título objetivo
+# User Stories — TAK-{{task_number}}
 
-## História
-Como **[persona ou processo]**, quero **[necessidade ou capacidade]** para
-**[benefício ou resultado esperado]**.
+## Task Context
+<Problem or opportunity, affected users, and task objective.>
 
-## Contexto
-Descrever o problema ou oportunidade e quem é afetado. Registrar somente fatos
-fornecidos ou confirmados nos documentos de contexto.
+## US-01 — <short title>
 
-## Escopo inicial
-Resumir o resultado pretendido e os limites já conhecidos, sem listar
-comportamentos detalhados nem critérios de aceite.
+**As a** <persona or process>
+**I want** <desired capability>
+**So that** <expected benefit or value>
 
-## Contexto adicional
-Incluir links para demandas, decisões e documentos relacionados. Registrar
-sugestões técnicas apenas como contexto para avaliação posterior.
+### Acceptance Criteria
+- Given <precondition>, when <action>, then <expected result>.
 
-## Pontos a esclarecer
-Listar lacunas que precisarão ser tratadas na spec funcional. Escrever `Nenhum
-identificado` quando não houver pontos.
+### Out of Scope
+- <Explicitly excluded scope>
+- Write `None identified` when there is no relevant exclusion.
 
-## Controle de versão
-Este deve ser obrigatoriamente o último conteúdo do documento. Manter todo o
-histórico já registrado e adicionar uma linha a cada alteração material do
-artefato; para a criação inicial, usar a versão `1.0`. Não incluir seções,
-texto ou anexos depois desta tabela.
+### Assumptions and Decisions
+- **Ambiguity:** <missing, ambiguous, or conflicting information>
+- **Decision:** <narrowest decision compatible with the evidence>
+- **Source:** <context document, task input, or reasoning>
 
-| Versão | Data | Autor | Alteração |
+## US-02 — <short title, when applicable>
+...
+
+## Version History
+| Version | Date | Author | Change |
 | --- | --- | --- | --- |
-| 1.0 | AAAA-MM-DD | Agente | Criação inicial do documento |
+| 1.0 | YYYY-MM-DD | Agent | Initial document creation |
 ```
 
-Manter a seção `História` em uma frase orientada a valor, usando a terminologia
-do produto. Quando não existir uma persona humana, usar o processo ou papel que
-recebe o benefício; se nenhum deles for informado, usar **usuário do sistema**.
-Em `Contexto` e `Escopo inicial`, diferenciar fatos de hipóteses; hipóteses
-devem ir para `Pontos a esclarecer`.
+Preserve every existing version-history entry and append one entry for each material revision. Keep user stories focused on value and scope; leave detailed expected behavior and cross-story acceptance-criteria mapping to `functional-spec.md`.
 
-Não transformar a user story em uma spec funcional: não criar `CE-XX`, `CA-XX`,
-fluxos completos, regras detalhadas, cenários de erro ou decisões assumidas.
+## Completion criteria
 
-## Qualidade antes de concluir
-
-Considerar a user story pronta para servir de entrada da `spec-funcional`
-quando:
-
-- possui título e a frase `Como..., quero..., para...` preenchidos;
-- explica o problema, o público ou processo afetado e o valor esperado;
-- registra limites, contexto e referências relevantes sem inventar requisitos;
-- usa a terminologia oficial e explicita conflitos conhecidos;
-- separa as lacunas remanescentes em `Pontos a esclarecer`;
-- não contém critérios de aceite, detalhamento funcional ou decisões técnicas.
-
-Não gerar a spec funcional, não aprovar a própria demanda e não iniciar
-implementação.
-
-## Exemplo
-
-```markdown
-# User story — TAK-1234 — Exportar relatório visível
-
-## História
-Como **analista**, quero **exportar o relatório que estou consultando** para
-**compartilhar seus resultados sem reproduzir os dados manualmente**.
-
-## Contexto
-Analistas precisam compartilhar resultados de relatórios com outras pessoas. O
-relatório consultado é a referência para a exportação solicitada.
-
-## Escopo inicial
-A demanda contempla disponibilizar uma forma de exportar o relatório visualizado.
-Formato, permissões, filtros e demais regras serão definidos na spec funcional.
-
-## Contexto adicional
-- [[.taloren_context/product]] — regras de acesso a relatórios.
-- Sugestão técnica da solicitação: gerar o arquivo no backend; avaliar na spec
-  técnica, não tratar como requisito.
-
-## Pontos a esclarecer
-- Quais formatos de exportação devem ser suportados?
-- A exportação deve respeitar filtros aplicados?
-```
+Consider the document complete only when it is written in English, contains one or more independently justified stories, includes scope and material decisions for each story, keeps `## Version History` as the final section, and has been saved and validated at the path required by the stage agent.

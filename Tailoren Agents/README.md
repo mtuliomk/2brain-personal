@@ -52,7 +52,7 @@ Todas as etapas recebem documentos de apoio e histórico; esses materiais são s
 | Fonte | Caminho no worker | Uso |
 | --- | --- | --- |
 | Contexto da aplicação | `/workspace/.taloren-docs-context/application` | Produto, arquitetura, segurança, padrões, decisões e demais documentos da aplicação. |
-| Histórico da task | `/workspace/tasks/history` | Entregas e decisões anteriores. Serve de referência; não deve receber alterações. |
+| Histórico da task | `/workspace/tasks/history` | Documentos, entregas e decisões relacionados exclusivamente ao escopo da task em execução. Serve de referência; não deve receber alterações. |
 | Skills | `/workspace/.taloren-docs-skills` | Instruções especializadas que se aplicam à tarefa. |
 | Repositórios | `/workspace/repositories/<repository-id>` | Código, configurações, testes e contratos da aplicação. |
 
@@ -60,7 +60,7 @@ A etapa **spec funcional** não possui código no workspace e, portanto, não de
 
 ## Contrato de transição entre etapas
 
-O worker é responsável por disponibilizar os artefatos concluídos no histórico somente leitura da etapa seguinte. O encadeamento obrigatório é:
+O worker disponibiliza no histórico somente leitura apenas documentos relacionados ao escopo da task em execução, incluindo os artefatos concluídos pela etapa anterior. O encadeamento obrigatório é:
 
 1. **spec funcional → spec technical:** `user-stories.md` e `functional-spec.md` devem estar em `/workspace/tasks/history` quando a etapa técnica iniciar.
 2. **spec technical → coding:** `technical-spec.md`, junto com as user stories e a especificação funcional relacionadas, deve estar em `/workspace/tasks/history` quando a implementação iniciar.
