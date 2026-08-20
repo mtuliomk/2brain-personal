@@ -351,6 +351,47 @@
       "contentDigest": "b6e531dd9fbe2e3d4f0be2471cd47b867315dffbf04a0ec8c18cf84cf7b853fb",
       "providerUserMessageId": "01a01f77-eb5a-7422-a673-a11b5037b53e",
       "providerAssistantMessageId": "msg_0569d62880ee59d3016a87088e753087d09454d7c328cb90c8"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787234494817-9y2dwmm",
+      "userTurnOrdinal": 25,
+      "state": "accepted",
+      "localMessageId": "msg-1787234494798-l1ga7dq",
+      "timestamp": 1787234494798,
+      "rawDisplayText": "o idioma da spec funcional tambem precisa ser em portugue. apenas termos tecnicos e nomes de arquivos devem ser em ingles",
+      "canonicalText": "o idioma da spec funcional tambem precisa ser em portugue. apenas termos tecnicos e nomes de arquivos devem ser em ingles",
+      "images": [],
+      "contentDigest": "ac502abac9a4001ba26efb2604aefb415555a69dc2978476458afc0c32d75547",
+      "providerUserMessageId": "01a01f7a-2a8f-7fe3-b139-f4af6222ccb7",
+      "providerAssistantMessageId": "msg_0569d62880ee59d3016a8708f4721c87d0ad25a6295a201965"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787234572705-qc7m2bw",
+      "userTurnOrdinal": 26,
+      "state": "accepted",
+      "localMessageId": "msg-1787234572682-zcgrflw",
+      "timestamp": 1787234572682,
+      "rawDisplayText": "deixe essa regra de idioma clara no readem.md",
+      "canonicalText": "deixe essa regra de idioma clara no readem.md",
+      "images": [],
+      "contentDigest": "6d47ee9e4b780ddae51f5920697542ec478a334b1dd9adf4f34eb19069af71b1",
+      "providerUserMessageId": "01a01f7b-5a3d-7ac0-a318-9fe509269afa",
+      "providerAssistantMessageId": "msg_0569d62880ee59d3016a87093f42d087d09eff819ae0dc89e2"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787234651873-x3a70ah",
+      "userTurnOrdinal": 27,
+      "state": "accepted",
+      "localMessageId": "msg-1787234651863-7osp6fx",
+      "timestamp": 1787234651863,
+      "rawDisplayText": "baseada na estrutura das specs funcional e tecnica, crie agora a coding\n\nconsidere que ela terá acesso as skills que estao na pasta DefSkills, mas essas skills serao copiadas para o servidor, logo nao referencie elas pelo caminho existente nessa maquina.",
+      "canonicalText": "baseada na estrutura das specs funcional e tecnica, crie agora a coding\n\nconsidere que ela terá acesso as skills que estao na pasta DefSkills, mas essas skills serao copiadas para o servidor, logo nao referencie elas pelo caminho existente nessa maquina.",
+      "images": [],
+      "contentDigest": "64bd18fb60fa699e600bfee1d3c04291653a59b85a04f576c4e683b766d5fd99",
+      "providerUserMessageId": "01a01f7c-8fbe-7bc2-aba6-868b7e055fd6"
     }
   ]
 }

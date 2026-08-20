@@ -11,7 +11,7 @@ Ambos devem ser salvos em arquivo (nunca apenas no texto da resposta).
 
 ## Idioma dos artefatos
 
-Todo conteúdo textual de `user-stories.md` e `functional-spec.md` deve ser escrito em inglês, incluindo títulos, seções, critérios de aceite, decisões, histórico de versões e rastreabilidade. Mantenha os nomes de arquivo e os caminhos definidos neste documento, mesmo que os dados recebidos no prompt estejam em outro idioma.
+Todo conteúdo textual de `user-stories.md` deve ser escrito em inglês. Todo conteúdo textual de `functional-spec.md` deve ser escrito em português, incluindo títulos, seções, comportamentos esperados, critérios de aceite, decisões, histórico de versões e rastreabilidade. Em `functional-spec.md`, mantenha em inglês somente nomes de arquivos, caminhos, módulos, classes, funções, rotas, contratos, comandos, identificadores e outros elementos de código. Mantenha os nomes de arquivo e os caminhos definidos neste documento, mesmo que os dados recebidos no prompt estejam em outro idioma.
 
 ## Autonomia e tratamento de incertezas
 

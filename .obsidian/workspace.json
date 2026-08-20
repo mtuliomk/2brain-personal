@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tailoren Agents/spec technical/AGENTS.md",
+                "file": "Tailoren Agents/spec funcional/AGENTS.md",
                 "mode": "source",
                 "source": false
               },
@@ -202,8 +202,8 @@
   },
   "active": "bdd9956fcb88793f",
   "lastOpenFiles": [
-    "Tailoren Agents/spec funcional/AGENTS.md",
     "Tailoren Agents/spec technical/AGENTS.md",
+    "Tailoren Agents/spec funcional/AGENTS.md",
     "Tailoren Agents/spec technical/prompt.md",
     "Tailoren Agents/spec funcional/prompt.md",
     "Tailoren Agents/README.md",

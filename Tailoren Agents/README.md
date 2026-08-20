@@ -23,7 +23,14 @@ Os agentes devem executar integralmente suas etapas de forma autônoma. Eles nã
 
 ## Idioma dos artefatos
 
-Todo arquivo final deve usar um nome de arquivo em inglês e os caminhos contratuais definidos neste documento, independentemente do idioma dos dados recebidos no prompt. O conteúdo textual de `user-stories.md` e `functional-spec.md` é escrito em inglês; o conteúdo de `technical-spec.md` é escrito em português, exceto nomes de arquivos e elementos de código, que permanecem em inglês. A regra de idioma do futuro `implementation-result.md` será definida com a etapa de `coding`.
+Os nomes de todos os arquivos finais e os caminhos contratuais devem permanecer em inglês, independentemente do idioma dos dados recebidos no prompt.
+
+| Artefato | Idioma do conteúdo |
+| --- | --- |
+| `user-stories.md` | Inglês. |
+| `functional-spec.md` | Português. Mantenha em inglês somente nomes de arquivos, caminhos e elementos de código existentes, como módulos, classes, funções, rotas, contratos, comandos e identificadores. |
+| `technical-spec.md` | Português. Mantenha em inglês somente nomes de arquivos, caminhos e elementos de código existentes, como módulos, classes, funções, rotas, contratos, comandos e identificadores. |
+| `implementation-result.md` | Português. Mantenha em inglês somente nomes de arquivos, caminhos e elementos de código existentes, como módulos, classes, funções, rotas, contratos, comandos, identificadores e hashes de commit. |
 
 ## Tratamento de incertezas
 
@@ -99,7 +106,8 @@ A `functional-spec.md` é a fonte principal do escopo. Caso ela não esteja no h
 
 **Finalidade:** implementar a task conforme a especificação técnica disponível nos repositórios montados, trabalhando na branch `TALOREN-{{task_number}}`, validando a alteração e criando os commits necessários — sem *push*.
 
-- **Prompt de início:** `coding/prompt.md` fornece os dados da task, aponta para o histórico, contexto e repositórios e exige que as alterações sejam commitadas.
+- **Instruções fixas:** `coding/AGENTS.md` define o uso de skills, a investigação de contexto, a implementação, as validações, os commits locais e o arquivo final.
+- **Prompt de início:** `coding/prompt.md` fornece exclusivamente os dados variáveis da task.
 - **Entradas principais:** histórico (incluindo as especificações disponíveis), documentos da aplicação, skills aplicáveis e repositórios montados.
 - **Saídas obrigatórias:** alterações implementadas, validações executadas, commits locais nas branches preparadas e `/workspace/tasks/{{task_id}}/implementation-result.md`.
 - **Múltiplos repositórios:** altere somente os repositórios necessários; mantenha cada alteração na branch `TALOREN-{{task_number}}` correspondente e faça commits atômicos em cada repositório modificado.

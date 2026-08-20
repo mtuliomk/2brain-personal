@@ -1,317 +1,42 @@
 ---
 name: spec-coding
-description: Implementar a mudança de código a partir da spec técnica aprovada, executar os gates automáticos — testes, lint, padrão de código e review automatizado — e sinalizar prontidão para UAT somente quando todos passarem. Usar na etapa de implementação, após a aprovação humana da spec técnica. Não usar para gerar specs nem para classificar uma demanda como nova, modificação ou duplicada.
+description: Implementar uma mudança de código a partir de uma especificação técnica disponível, aplicando skills de desenvolvimento relevantes, executando validações do projeto, criando commits locais e gerando um resultado de implementação versionado. Usar na etapa de implementação. Não usar para redefinir escopo funcional ou técnico.
 ---
 
 # Implementação
 
-Implementar a mudança de código descrita em uma spec técnica aprovada. Esta é a
-única skill do pipeline que altera código de produção; as skills anteriores
-produzem documentos. Executar a abordagem definida sem reabrir decisões de
-escopo, classificação ou arquitetura.
+Implemente o escopo definido na especificação técnica disponível. Use a especificação funcional e as user stories para manter a rastreabilidade dos comportamentos e critérios de aceite. Não altere silenciosamente o escopo, a classificação ou a abordagem técnica.
 
-## Pré-condição e entradas
+## Autonomia e linha de base
 
-Usar somente após a aprovação humana de uma spec técnica disponível no
-contexto. Confirmar a aprovação pelo status, marcação ou evidência definida pelo
-pipeline. Se não houver evidência verificável, não iniciar: registrar o bloqueio
-e pedir a regularização da aprovação técnica. Não iniciar se a classificação for
-`Duplicada`: esse caso encerra o fluxo antes da implementação.
+Execute a etapa de forma autônoma. Não aguarde aprovação, validação, decisão ou intervenção humana. Quando houver informação ausente, ambígua ou conflitante, use a especificação técnica, o contexto, as skills e o código como evidências; adote a decisão mais restrita compatível com elas e registre a decisão no resultado final.
 
-Considerar todos os arquivos de contexto já lidos ou disponibilizados na área de
-trabalho, independentemente de caminho, pasta ou nome. Priorizar a spec técnica
-aprovada para executar a abordagem ou o delta da classificação `Nova` ou
-`Modificação`; a spec funcional, quando disponível, para validar os
-comportamentos e critérios de aceite; e os documentos de convenções, testes,
-arquitetura, decisões, contratos, integrações e guias operacionais diretamente
-relacionados à mudança.
-
-Quando uma user story ou demanda anterior estiver disponível no contexto, ela
-é uma fonte opcional de consulta. Inspecionar os scripts, configurações e
-padrões do repositório necessários para executar os gates. Não inventar
-comandos, critérios ou ferramentas ausentes.
-Registrar a ausência de um gate obrigatório como falha e escalar conforme o
-loop de correção.
-
-## Skills auxiliares
-
-Antes de alterar código, consultar as skills disponíveis e identificar quais
-são aplicáveis ao domínio, linguagem, tipo de mudança e artefatos afetados.
-Dar preferência às skills cujo nome começa com `dev-`, por serem as convenções
-de desenvolvimento do workspace. Ler e seguir integralmente as instruções das
-skills selecionadas.
-
-Selecionar apenas skills relevantes; não carregar uma skill sem relação com a
-mudança. Exemplos: usar `dev-backend-nodejs` para alterações de backend Node.js
-com TypeScript, `dev-frontend-nodejs` para frontend Node.js com TypeScript e
-`dev-commit` somente quando a tarefa incluir preparar ou criar commit. Se não
-houver skill `dev-` aplicável, considerar as demais skills disponíveis que
-atendam diretamente à necessidade, respeitando suas condições de uso.
-
-Registrar as skills auxiliares consultadas e o motivo da seleção. Quando nenhuma
-for aplicável, registrar essa conclusão e a fonte da análise. As skills
-auxiliares complementam esta skill; não podem ampliar o
-escopo definido na spec técnica nem substituir seus gates obrigatórios.
-
-## Linha de base
-
-Antes de alterar código, registrar:
-
-- o estado inicial do repositório, incluindo alterações preexistentes;
-- os resultados dos gates que puderem ser executados sem a implementação;
-- falhas preexistentes ou limitações do ambiente, com evidência.
-
-Não atribuir à demanda uma falha comprovadamente preexistente. Se ela impedir a
-validação obrigatória, tratá-la como bloqueio externo e escalar.
+Antes de alterar código, registre a linha de base: branches, alterações preexistentes, comandos oficiais de validação e falhas já existentes. Não atribua falhas preexistentes à task e não altere arquivos fora do escopo para fazer validações globais passarem.
 
 ## Implementação por classificação
 
-- **Nova**: seguir integralmente a abordagem da spec técnica e criar apenas os
-  módulos e arquivos necessários.
-- **Modificação**: alterar o mínimo necessário ao redor do código existente.
-  Reaproveitar padrões, helpers e estruturas já presentes no código afetado.
-  Não refatorar fora do delta da spec, mesmo que haja algo melhorável.
+- **Nova:** implemente a abordagem completa definida na especificação técnica.
+- **Modificação:** implemente somente o delta definido sobre o código existente.
+- **Duplicada:** não crie alterações ou commits vazios; registre no resultado final as evidências de que o comportamento já existe.
 
-Registrar uma melhoria identificada, mas fora do escopo, em `Decisões e
-observações` como **Fora de escopo — não implementado**. Não converter essa
-sugestão em código não solicitado.
+Reutilize padrões, componentes, helpers, contratos e convenções existentes antes de criar novos. Crie ou ajuste testes para os comportamentos `CE-xx` e critérios `CA-xx` afetados quando aplicável.
 
-## Plano de implementação
+## Validações
 
-Antes de alterar código, documentar um plano de implementação. Decompor a
-abordagem ou o delta aprovado da spec técnica em um checklist de itens
-verificáveis, incluindo criação ou alteração de código, dados, contratos,
-integrações e testes quando aplicáveis. Incluir também os gates e o resumo
-final.
+Identifique os comandos e procedimentos oficiais no repositório. Execute as validações aplicáveis após a última alteração, incluindo testes, *lint*, formatação, análise estática, *typecheck*, *build* e revisão do diff.
 
-O plano apenas detalha a execução; não redefine a abordagem, classificação ou
-escopo da spec técnica. Marcar cada item como concluído somente após a execução
-correspondente. Registrar qualquer desvio ou melhoria identificada em `Decisões
-e observações`, sem incluir trabalho fora de escopo no checklist. Relacionar os
-itens de testes aos `CE-XX` e `CA-XX` aplicáveis.
+Para cada validação, registre comando ou procedimento, resultado e evidência. Quando uma falha preexistente impedir uma validação, registre a linha de base, a limitação e o impacto. Não invente comandos, ferramentas ou critérios ausentes.
 
-Exemplo:
+## Commits
 
-```markdown
-## Plano de implementação
-- [ ] Alterar o módulo responsável por ...
-- [ ] Atualizar dados, contratos ou integrações afetados
-- [ ] Criar ou ajustar testes para CA-01 e CA-02
-- [ ] Executar todos os gates automáticos
-- [ ] Preparar o resumo final de implementação
-```
+Crie commits atômicos e locais somente nos repositórios modificados. Inclua apenas alterações da task, siga a skill `dev-commit` quando disponível e não faça *push*. Não crie commit vazio quando não houver alteração necessária.
 
-## Gates automáticos
+## Resultado final
 
-### Escopo dos gates
+Gere `implementation-result.md` em português no caminho definido pelo agente da etapa. Mantenha em inglês somente nomes de arquivos, caminhos, módulos, classes, funções, rotas, contratos, comandos, identificadores, hashes de commit e outros elementos de código.
 
-Os gates devem avaliar a alteração efetivamente produzida pela demanda, e não
-reprovar a implementação por problemas preexistentes e fora do escopo. Antes
-de cada gate, determinar o conjunto de arquivos alterados pela demanda usando o
-diff da implementação e, quando aplicável, os arquivos diretamente afetados
-por ela.
+O resultado deve usar a estrutura definida pelo agente da etapa, preservar `## Controle de Versão` como última seção e registrar status, alterações, rastreabilidade, validações, commits, escopo excluído, decisões e limitações. Preserve entradas existentes do histórico de versão e acrescente uma entrada a cada revisão material.
 
-- **Formatação, lint e padrão de código:** executar preferencialmente no
-  conjunto de arquivos alterados. Se o projeto só oferecer um comando global,
-  executá-lo, mas separar no resultado as falhas nos arquivos da demanda das falhas
-  preexistentes fora do escopo.
-- **Testes:** executar os testes exigidos e relacionados aos critérios de
-  aceite e, quando o projeto exigir, a suíte completa. Falhas em testes ou
-  componentes fora do escopo que já existiam antes da demanda devem ser registradas
-  como preexistentes, sem serem atribuídas à implementação.
-- **Review automatizado:** revisar somente o diff da demanda, verificando aderência
-  à spec técnica, escopo, segurança, regressões e cobertura aplicável.
+## Critérios de conclusão
 
-Uma falha preexistente fora do escopo não deve consumir uma tentativa nem ser
-registrada como falha da demanda. Se ela impedir a execução ou a interpretação de
-um gate obrigatório, registrar como **Bloqueio externo/preexistente**, com a
-evidência da linha de base, e escalar para decisão humana. Nunca corrigir
-arquivos fora do escopo apenas para fazer um gate global passar.
-
-Antes de executar cada gate, identificar seu comando ou procedimento oficial no
-projeto. Consultar, conforme aplicável, scripts e configurações do repositório,
-CI/CD e os arquivos de contexto disponíveis que definam testes ou convenções.
-Não pressupor linguagem, gerenciador de pacotes, ferramenta ou sintaxe de
-comando. Registrar, para cada gate, o procedimento executado, sua fonte e o
-resultado.
-
-Após implementar, executar os gates nesta ordem, usando os comandos e critérios
-definidos no projeto:
-
-1. testes exigidos pelo contexto disponível, incluindo unitários e, quando
-   aplicável, integração, contrato, E2E e regressão;
-2. lint;
-3. padrão de código, conforme as convenções disponíveis;
-4. review automatizado.
-
-O review automatizado deve avaliar o diff da demanda quanto à aderência à spec
-técnica, alterações fora de escopo, segurança, tratamento de erros, regressões
-e cobertura de testes. Todos os gates são obrigatórios. Só sinalizar a demanda
-como pronta para UAT humano quando todos passarem.
-
-Quando uma skill auxiliar executar um gate, aceitar seu resultado sem duplicar a
-execução somente se o gate tiver sido concluído após a última alteração de código
-e houver evidência suficiente. Registrar o gate, a skill responsável, o
-procedimento, a fonte, o resultado e o estado do código validado. Qualquer
-alteração posterior invalida essa evidência para os gates
-afetados, que devem ser executados novamente antes do UAT. A `spec-coding`
-continua responsável por conferir a cobertura de todos os gates e pelo status
-final da demanda.
-
-## Loop de correção
-
-Manter um registro da implementação desde a primeira alteração. Uma tentativa
-corresponde a uma rodada completa de implementar ou corrigir e executar todos os
-gates na ordem definida.
-
-Quando qualquer gate falhar:
-
-1. registrar o número da tentativa, o gate, a causa e a alteração realizada
-   para correção;
-2. corrigir somente o necessário, respeitando a spec técnica;
-3. durante o diagnóstico, executar primeiro o gate afetado quando isso reduzir
-   o tempo de feedback; antes de concluir a tentativa, executar todos os gates
-   novamente, na ordem definida.
-
-Permitir no máximo cinco tentativas por rodada de implementação, incluindo a
-primeira. Se a quinta tentativa ainda falhar, parar: não executar uma sexta,
-não avançar para UAT e gerar o resumo com status `Bloqueado`.
-
-Se a falha for externa ou de configuração — por exemplo, credencial ausente,
-ambiente indisponível, dependência externa indisponível, gate não configurado
-ou falha preexistente que impeça validação — registrar como **Bloqueio externo**
-com evidências e escalar imediatamente; não consumir tentativas repetindo uma
-execução que não pode ser corrigida no código. Nos demais casos, escalar após a
-quinta tentativa com os registros completos. A revisão humana decide entre
-nova direção
-na implementação ou retorno ao refinamento via `spec-correcao`.
-
-## Validação de critérios de aceite
-
-Registrar, após os testes e antes de preparar o resumo, a evidência de
-implementação de cada critério aplicável:
-
-```markdown
-## Validação de critérios de aceite
-- [x] CA-01 / CE-01 — evidência: teste, fluxo ou artefato correspondente.
-- [ ] CA-02 / CE-02 — pendente ou bloqueado: motivo.
-```
-
-Não marcar um critério como atendido sem evidência verificável. Critério pendente
-ou bloqueado impede o status `Pronto para UAT`.
-
-## Decisões e observações
-
-Registrar toda decisão de baixo nível não coberta pela spec técnica, bem como
-toda sugestão fora de escopo. Usar este formato:
-
-```markdown
-- **Tipo:** Decisão | Fora de escopo — não implementado
-- **Contexto/Ambiguidade:** ...
-- **Decisão/Observação:** ...
-- **Fonte:** arquivo de contexto relevante / precedente no código / raciocínio
-  próprio.
-```
-
-Não usar essa seção para alterar silenciosamente o escopo funcional ou técnico.
-
-## Nova rodada após correção de UAT
-
-A skill `spec-correcao` é responsável por produzir a correção após uma rejeição
-no UAT humano. Quando uma spec de correção aprovada for fornecida, tratá-la como
-uma nova rodada de spec técnica: ler suas instruções, implementar o delta e
-reiniciar o limite de cinco tentativas para essa rodada. Não escrever a spec de
-correção nesta skill.
-
-## Revisão final do diff
-
-Antes de preparar o resumo, revisar as alterações efetivas para confirmar que
-não há arquivos acidentais, segredos, artefatos gerados indevidos ou mudanças sem
-relação com o plano e a spec técnica. Remover ou reverter o que não pertencer à
-demanda e registrar qualquer exceção justificada nos registros.
-
-## Registros e resumo de implementação
-
-Além do código, manter um registro da execução e preparar um resumo para o UAT
-humano, inclusive quando a implementação estiver bloqueada. O registro deve
-conter, nesta ordem, `Skills auxiliares`, `Linha de base`, `Plano de
-implementação`, `Tentativas e gates`, `Validação de critérios de aceite`,
-`Decisões e observações` e `Bloqueios e escalonamento`. Em `Tentativas e gates`,
-registrar para cada gate o procedimento executado, a fonte que o definiu, o
-resultado e as evidências relevantes.
-
-Usar esta estrutura para o resumo:
-
-```markdown
-# Resumo de implementação — TAK-XXXX
-
-## Status
-Pronto para UAT | Bloqueado (consultar os registros de implementação)
-
-## Gates
-Todos passaram na tentativa N | Listar falhas corrigidas, com referência às
-respectivas tentativas registradas.
-
-## Critérios de aceite
-Copiar literalmente os critérios de aceite da spec funcional aprovada
- disponível no contexto, com um item por linha e as referências `CA-XX` e
-`CE-XX`. Não resumir, reinterpretar ou criar critérios novos.
-
-## Alterações fora do escopo original
-Listar os itens marcados como **Fora de escopo — não implementado** no log.
-Escrever `Nenhuma` se não houver itens.
-
-## Controle de versão
-Este deve ser obrigatoriamente o último conteúdo do documento. Manter todo o
-histórico já registrado e adicionar uma linha a cada alteração material do
-artefato; para a criação inicial, usar a versão `1.0`. Não incluir seções,
-texto ou anexos depois desta tabela.
-
-| Versão | Data | Autor | Alteração |
-| --- | --- | --- | --- |
-| 1.0 | AAAA-MM-DD | Agente | Criação inicial do documento |
-```
-
-Em caso de bloqueio, gerar o resumo com os gates pendentes e as tentativas
-realizadas. A demanda não segue para UAT até ser destravada.
-
-## Critério de conclusão
-
-Considerar a demanda pronta para Human UAT somente quando:
-
-- o código estiver conforme a abordagem ou delta da spec técnica;
-- todos os gates automáticos tiverem passado;
-- os comportamentos e critérios de aceite da spec funcional tiverem evidência
-  registrada na seção `Validação de critérios de aceite`;
-- o diff final tiver sido revisado e contiver somente alterações pertinentes à
-  demanda, sem segredos ou artefatos indevidos;
-- os registros da implementação contiverem decisões e todas as tentativas
-  realizadas;
-- o resumo de implementação indicar status `Pronto para UAT`;
-- nenhuma alteração fora do escopo da spec técnica tiver sido implementada.
-
-Não aprovar o UAT humano, não alterar a classificação da demanda e não iniciar
-uma spec de correção.
-
-## Exemplos
-
-**Decisão de implementação:**
-
-> **Tipo:** Decisão  
-> **Contexto/Ambiguidade:** havia helper existente e a spec não definia se ele
-> deveria ser reutilizado.  
-> **Decisão/Observação:** reaproveitado `formatarData()` com um parâmetro extra,
-> em vez de criar utilitário duplicado.  
-> **Fonte:** convenções disponíveis — evitar duplicação de utilitários equivalentes.
-
-**Tentativa de correção:**
-
-> **Tentativa 2/5**: testes unitários falharam em caso de lista vazia. Corrigida
-> a validação antes do processamento principal; todos os gates foram executados
-> novamente a partir dos testes unitários.
-
-**Escalonamento:**
-
-> **Bloqueado após 5 tentativas**: testes continuam falhando em escrita
-> simultânea. A abordagem da spec técnica pode não ser viável como descrita;
-> recomendar revisão humana da spec técnica antes de nova implementação.
+Considere a implementação concluída somente quando o escopo técnico tiver sido respeitado, as alterações ou a ausência justificada estiverem registradas, as validações aplicáveis tiverem sido executadas e documentadas, os commits necessários tiverem sido criados localmente sem *push*, o resultado final tiver sido gravado e validado e nenhuma alteração fora do escopo tiver sido introduzida.

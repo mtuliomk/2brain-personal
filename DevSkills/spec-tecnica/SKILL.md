@@ -51,7 +51,7 @@ Use esta estrutura fixa para todas as classificações. Ela espelha a estrutura 
 
 | Referência Funcional | Evidência no Código | Conclusão |
 | --- | --- | --- |
-| US-01 / EB-01 / AC-01 | <caminho, módulo, função, rota ou teste investigado> | <nova, estender, modificar ou já atendida> |
+| US-01 / CE-01 / CA-01 | <caminho, módulo, função, rota ou teste investigado> | <nova, estender, modificar ou já atendida> |
 
 ## Abordagem Técnica
 
@@ -84,7 +84,7 @@ Use esta estrutura fixa para todas as classificações. Ela espelha a estrutura 
 ## Plano de Testes
 | Referência Funcional | Cenário | Nível de Teste | Resultado Esperado |
 | --- | --- | --- | --- |
-| US-01 / EB-01 / AC-01 | <cenário> | Unitário / Integração / E2E / Manual | <resultado esperado> |
+| US-01 / CE-01 / CA-01 | <cenário> | Unitário / Integração / E2E / Manual | <resultado esperado> |
 
 ## Controle de Versão
 | Versão | Data | Autor | Alteração |
@@ -92,7 +92,7 @@ Use esta estrutura fixa para todas as classificações. Ela espelha a estrutura 
 | 1.0 | YYYY-MM-DD | Agente | Criação inicial do documento |
 ```
 
-Use referências `US-xx`, `EB-xx` e `AC-xx` quando estiverem disponíveis nos artefatos funcionais. Preserve todas as entradas existentes no histórico de versão e acrescente uma entrada a cada revisão material.
+Use referências `US-xx`, `CE-xx` e `CA-xx` quando estiverem disponíveis nos artefatos funcionais. Preserve todas as entradas existentes no histórico de versão e acrescente uma entrada a cada revisão material.
 
 ## Decisões e divergências
 
