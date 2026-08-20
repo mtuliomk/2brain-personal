@@ -4,11 +4,7 @@ Este arquivo define o contexto operacional do agente responsável por gerar uma 
 
 Use obrigatoriamente a skill `spec-tecnica`.
 
-A skill canônica está em:
-
-`/home/tulio/Documents/tulio-personal/DevSkills/spec-tecnica/SKILL.md`
-
-No ambiente do worker, utilize a cópia disponível em:
+No ambiente do worker, utilize a skill disponibilizada em:
 
 `/workspace/.taloren-docs-skills/spec-tecnica/SKILL.md`
 
@@ -136,9 +132,9 @@ Use especificações técnicas anteriores apenas como referência de nível de d
 
 ## Classificação e conteúdo
 
-Siga integralmente a skill `spec-tecnica` para investigar o código, classificar a demanda, justificar a classificação com evidências, escolher a estrutura adequada, registrar decisões, elaborar o plano de testes, tratar divergências com a spec funcional e controlar versões.
+Siga integralmente a skill `spec-tecnica` para investigar o código, classificar a demanda, justificar a classificação com evidências, registrar decisões, elaborar o plano de testes, tratar divergências com a especificação funcional e controlar versões.
 
-Não crie uma estrutura alternativa de documento neste arquivo.
+Use a estrutura única definida pela skill para todas as classificações. Ela espelha a estrutura da especificação funcional com seções de contexto, objetivo, escopo, decisões e histórico de versões; a classificação altera o conteúdo, não a estrutura do documento.
 
 ## Diretório e arquivo de saída
 

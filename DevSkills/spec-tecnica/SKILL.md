@@ -1,300 +1,101 @@
 ---
 name: spec-tecnica
-description: Gerar a especificação técnica de uma demanda a partir de uma spec funcional aprovada disponível no contexto, descrevendo como implementá-la com base no código existente e classificando a mudança como nova, modificação ou duplicada. Usar na segunda etapa do refinamento, antes da implementação. Não usar para definir comportamento funcional nem para implementar código.
+description: Gerar uma especificação técnica em inglês a partir de uma especificação funcional disponível, investigando o código existente, classificando a mudança como Nova, Modificação ou Duplicada e definindo uma implementação e um plano de testes. Usar na etapa de especificação técnica, antes da implementação. Não usar para alterar código ou redefinir o escopo funcional.
 ---
 
-# Spec técnica
+# Technical specification
 
-Gerar a especificação técnica de uma demanda: descrever como implementar o que
-a spec funcional aprovou. Esta é a segunda etapa do refinamento, executada
-após a aprovação humana da spec funcional. Verificar também, no código
-existente, se a feature já existe — decisão que pertence a esta skill, não à
-spec funcional.
+Generate `technical-spec.md` in English. Describe how to implement the functional scope using the available codebase and context. Do not implement code, alter repositories, or silently redefine functional scope.
 
-Não alterar o escopo funcional silenciosamente. A spec técnica deve explicar a
-implementação, não repetir o comportamento esperado. A aprovação humana desta
-spec é pré-requisito para a `spec-coding`.
+## Inputs and investigation
 
-## Contexto de entrada
+Read the functional specification as the primary scope source and user stories as traceability context. Inspect relevant application documents, skills, source code, tests, configurations, contracts, integrations, permissions, persistence, and equivalent features before classifying the demand.
 
-Considerar todos os arquivos de contexto já lidos ou disponibilizados na área de
-trabalho, independentemente de caminho, pasta ou nome. Priorizar uma spec
-funcional aprovada como fonte do escopo funcional, além de decisões técnicas,
-padrões arquiteturais, convenções, requisitos de testes, contratos, integrações
-e guias operacionais diretamente relacionados à mudança.
+Search systematically for terms from the task, user stories, and functional specification. Record evidence using precise repository, path, module, class, function, route, contract, or test references. Do not classify a change as `New` merely because the first search result has no match.
 
-Quando uma user story ou demanda anterior estiver disponível no contexto, lê-la
-por completo apenas para preservar contexto e identificar eventual perda de
-informação na transição para a spec funcional; não redefinir o escopo a partir
-dela.
+## Classification
 
-Inspecionar também o código-fonte relevante para localizar a feature,
-equivalentes e pontos de integração existentes. Se um contexto necessário não
-estiver disponível, registrar sua ausência em `Decisões assumidas` e seguir com
-as fontes existentes.
+Classify every demand as exactly one of the following:
 
-## Investigação no código
+- **New:** no existing implementation delivers the requested functional behavior.
+- **Modification:** an existing feature delivers part of the behavior or requires an extension or change.
+- **Duplicate:** the current system already delivers all relevant functional behavior and acceptance criteria without material difference.
 
-Antes de classificar a demanda, pesquisar sistematicamente os termos da user
-story, da spec funcional e da demanda e inspecionar, quando aplicável:
+The classification changes the content of the same document structure; it never changes the structure itself.
 
-- fluxos, telas, rotas, serviços e integrações equivalentes;
-- modelos, persistência, migrações e contratos de API;
-- testes, configurações e permissões relacionados;
-- pontos de entrada e módulos que chamam ou expõem o comportamento.
+- For **New**, describe the complete implementation approach.
+- For **Modification**, describe only the delta over the existing implementation.
+- For **Duplicate**, document where the behavior already exists and state that no implementation is required.
 
-Não concluir que uma mudança é **Nova** apenas porque não há evidência no ponto
-inicial da busca. Registrar as evidências relevantes na classificação.
+## Required document structure
 
-## Classificação obrigatória
-
-Abrir toda spec técnica com uma classificação, resultado da busca no código:
-
-- **Nova**: não existir implementação que entregue o comportamento funcional
-  solicitado.
-- **Modificação**: existir uma feature relacionada, ou o sistema já entregar
-  apenas parte dos comportamentos ou critérios de aceite; a mudança altera ou
-  estende o que existe.
-- **Duplicada**: o sistema já entregar todos os comportamentos e critérios de
-  aceite relevantes da spec funcional, sem diferença funcional material.
-
-Justificar a classificação com referências precisas a arquivos, módulos,
-classes, funções ou rotas. Incluir uma tabela de evidências que relacione cada
-`CE-XX` ou `CA-XX` relevante à evidência encontrada e à conclusão.
-
-## Fluxo por classificação
-
-- **Nova**: produzir a spec técnica completa.
-- **Modificação**: produzir apenas o delta sobre o sistema existente.
-- **Duplicada**: não descrever uma implementação nova. Produzir uma análise
-  curta apontando onde a feature já existe, para que a revisão humana decida se
-  encerra a demanda ou se a spec funcional descreveu uma diferença sutil.
-
-## Estrutura da spec técnica: nova
-
-Gerar a spec com esta estrutura:
+Use this fixed structure for every classification. It mirrors the functional specification structure: title, context, objective, scope, assumptions, traceability, and version history. Do not add content after `## Version History`.
 
 ```markdown
-# Spec técnica — TAK-XXXX
+# Technical Specification — TAK-{{task_number}}
 
-## Classificação
-Nova — justificar a classificação e incluir uma tabela:
+## Context
+<Relevant functional scope, technical context, and current-system findings.>
 
-| Referência funcional | Evidência no código | Conclusão |
+## Objective
+<What the implementation must achieve technically.>
+
+## Classification
+**Type:** New | Modification | Duplicate
+
+<Rationale for the classification.>
+
+| Functional Reference | Code Evidence | Conclusion |
 | --- | --- | --- |
-| CE-01 / CA-01 | Arquivos, módulos, funções ou rotas investigados | Não existe equivalente |
+| US-01 / CE-01 / CA-01 | <repository path, module, function, route, or test investigated> | <new, extend, modify, or already covered> |
 
-## Abordagem
+## Technical Approach
 
-### Componentes e módulos afetados
-...
+### Affected Components and Modules
+<Components, services, routes, jobs, or configurations to create or change. For Duplicate, state `No implementation required` and identify the existing implementation.>
 
-### Fluxo principal
-...
+### Main Flow
+<Implementation flow and responsibility boundaries. For Modification, describe only the delta.>
 
-### Dados e contratos
-...
+### Data and Contracts
+<Persistence, migrations, API contracts, events, validation, and data handling; state `No impact identified` when applicable.>
 
-### Integrações
-...
+### Integrations
+<External or internal integrations, failure handling, and compatibility considerations; state `No impact identified` when applicable.>
 
-### Compatibilidade e migração
-Descrever quando aplicável; caso contrário, indicar que não há impacto identificado.
+## Impact
+<Permissions and security, observability, performance, existing data, compatibility, rollout, and dependent features. State `No impact identified` for each non-applicable area.>
 
-## Trade-offs
-Registrar alternativas razoáveis consideradas e por que a abordagem escolhida
-foi preferida, quando aplicável.
+## Technical Out of Scope
+<Technical work considered but excluded. Write `None identified` when there is no relevant exclusion.>
 
-## Impacto
-Descrever efeitos fora do módulo principal: dados, contratos de API,
-dependências e comportamento de outras features. Avaliar explicitamente, quando
-aplicável, permissões e segurança, observabilidade, desempenho, dados
-existentes, compatibilidade e rollout.
+## Functional Specification Divergences
+<Information loss, conflict, infeasibility, or interpretation difference found during analysis. Write `None identified` when there is no divergence. Do not change functional scope here.>
 
-## Fora do escopo técnico
-Se necessário, registrar alterações técnicas relacionadas que foram
-consideradas, mas não fazem parte da demanda.
+## Assumptions and Decisions
+- **Ambiguity:** <missing, ambiguous, or conflicting information>
+- **Decision:** <narrowest decision compatible with the evidence>
+- **Source:** <context document, code evidence, precedent, or reasoning>
 
-## Divergências com a spec funcional
-Incluir somente se a análise revelar perda de informação, conflito,
-inviabilidade ou diferença de interpretação. Não alterar a spec funcional:
-descrever o impacto e recomendar retorno à revisão de refinamento.
-
-## Decisões assumidas
-Registrar cada decisão técnica ou ausência de contexto que não esteja coberta
-explicitamente pelos documentos de contexto, usando:
-
-- **Ambiguidade:** ...
-- **Decisão:** ...
-- **Fonte:** arquivo de contexto técnico relevante / código / precedente
-  disponível / raciocínio próprio.
-
-## Plano de testes
-Aplicar os requisitos de testes definidos no contexto disponível. Relacionar
-cada cenário aos `CE-XX` e `CA-XX` da spec funcional e especificar os níveis de
-teste relevantes.
-
-## Controle de versão
-Este deve ser obrigatoriamente o último conteúdo do documento. Manter todo o
-histórico já registrado e adicionar uma linha a cada alteração material do
-artefato; para a criação inicial, usar a versão `1.0`. Não incluir seções,
-texto ou anexos depois desta tabela.
-
-| Versão | Data | Autor | Alteração |
+## Test Plan
+| Functional Reference | Scenario | Test Level | Expected Result |
 | --- | --- | --- | --- |
-| 1.0 | AAAA-MM-DD | Agente | Criação inicial do documento |
+| US-01 / CE-01 / CA-01 | <scenario> | Unit / Integration / E2E / Manual | <expected result> |
+
+## Version History
+| Version | Date | Author | Change |
+| --- | --- | --- | --- |
+| 1.0 | YYYY-MM-DD | Agent | Initial document creation |
 ```
 
-## Estrutura da spec técnica: modificação
+Use `US-xx`, `CE-xx`, and `CA-xx` references when they are available in the functional artifacts. Preserve all existing version-history entries and append a new entry for every material revision.
 
-Não reconstruir o que já existe. Escrever apenas o delta:
+## Decisions and divergences
 
-```markdown
-# Spec técnica — TAK-XXXX
+Do not stop for missing, ambiguous, or conflicting information. Apply this priority order: explicit technical context, established architecture or convention, relevant contextual requirement, direct code precedent, then documented reasoning. Choose the narrowest option compatible with the evidence.
 
-## Classificação
-Modificação — indicar exatamente o código existente que será alterado e incluir
-a tabela de evidências por `CE-XX` ou `CA-XX`.
+Record every material assumption in `## Assumptions and Decisions`. Record functional conflicts, information loss, or infeasibility in `## Functional Specification Divergences`; do not resolve them by silently changing functional scope.
 
-| Referência funcional | Evidência no código | Conclusão |
-| --- | --- | --- |
-| CE-01 / CA-01 | Arquivos, módulos, funções ou rotas investigados | Alterar ou estender |
+## Completion criteria
 
-## O que muda
-Descrever somente a alteração sobre o comportamento ou código atual. Incluir
-impactos em contratos de API, dados persistidos, integrações, permissões,
-segurança, observabilidade, desempenho, compatibilidade ou rollout, quando
-houver.
-
-## Fora do escopo técnico
-Incluir somente se houver exclusões técnicas relevantes.
-
-## Divergências com a spec funcional
-Incluir somente quando aplicável, sem alterar a spec funcional silenciosamente.
-
-## Decisões assumidas
-Registrar apenas as decisões e ausências de contexto relevantes para o delta,
-no formato: ambiguidade, decisão e fonte.
-
-## Plano de testes
-Listar somente a cobertura do delta e relacionar cada cenário aos `CE-XX` e
-`CA-XX` afetados. Não repetir testes existentes que continuam válidos.
-
-## Controle de versão
-Este deve ser obrigatoriamente o último conteúdo do documento. Manter todo o
-histórico já registrado e adicionar uma linha a cada alteração material do
-artefato; para a criação inicial, usar a versão `1.0`. Não incluir seções,
-texto ou anexos depois desta tabela.
-
-| Versão | Data | Autor | Alteração |
-| --- | --- | --- | --- |
-| 1.0 | AAAA-MM-DD | Agente | Criação inicial do documento |
-```
-
-## Estrutura da spec técnica: duplicada
-
-```markdown
-# Spec técnica — TAK-XXXX
-
-## Classificação
-Duplicada — incluir uma tabela de evidências demonstrando que todos os `CE-XX`
-e `CA-XX` relevantes já são atendidos.
-
-| Referência funcional | Evidência no código | Conclusão |
-| --- | --- | --- |
-| CE-01 / CA-01 | Arquivo, módulo, função ou rota existente | Já atendido |
-
-## Onde já existe
-Indicar a referência exata no código que entrega cada comportamento descrito na
-spec funcional.
-
-## Observação
-Registrar diferenças sutis entre a spec funcional e o comportamento existente,
-se houver. Havendo diferença funcional material ou algum critério não atendido,
-reclassificar como `Modificação`.
-
-## Decisões assumidas
-Registrar decisões de classificação, ausências de contexto ou interpretações
-necessárias, no formato: ambiguidade, decisão e fonte.
-
-## Recomendação
-Indicar claramente se a demanda deve ser encerrada ou devolvida ao refinamento
-para esclarecer uma diferença funcional.
-
-## Controle de versão
-Este deve ser obrigatoriamente o último conteúdo do documento. Manter todo o
-histórico já registrado e adicionar uma linha a cada alteração material do
-artefato; para a criação inicial, usar a versão `1.0`. Não incluir seções,
-texto ou anexos depois desta tabela.
-
-| Versão | Data | Autor | Alteração |
-| --- | --- | --- | --- |
-| 1.0 | AAAA-MM-DD | Agente | Criação inicial do documento |
-```
-
-## Autonomia e decisões
-
-Não parar por causa de uma decisão técnica em aberto. Decidir usando esta ordem
-de prioridade:
-
-1. decisão técnica explícita em arquivo de contexto disponível;
-2. padrão arquitetural ou convenção técnica disponível;
-3. outro requisito ou documento de contexto relevante;
-4. precedente direto no código;
-5. raciocínio próprio, explicitando a lógica.
-
-Registrar em `Decisões assumidas` toda decisão tomada por qualquer desses
-caminhos, sem exceção, no formato `Ambiguidade` / `Decisão` / `Fonte`.
-
-### Contradições com o contexto
-
-Se a abordagem mais razoável colidir com um padrão estabelecido em arquivo de
-contexto aplicável, seguir o contexto, não a preferência de implementação.
-Registrar o conflito em destaque:
-
-> **⚠ Contradição**: explicar o padrão que entra em conflito e o que a
-> abordagem mais óbvia exigiria quebrar.
->
-> **Decisão**: indicar o padrão seguido e o que teve de ceder.
->
-> **Ação recomendada**: se o padrão precisar mudar, sugerir uma decisão
-> separada de arquitetura, convenções ou contexto; não resolver isso
-> silenciosamente nesta demanda.
-
-## Critério de conclusão
-
-Considerar a spec pronta para revisão humana quando:
-
-- a classificação estiver definida, justificada e apoiada pela tabela de
-  evidências;
-- uma mudança **Nova** tiver todas as seções do formato completo preenchidas;
-- uma **Modificação** descrever o delta com precisão;
-- uma **Duplicada** demonstrar que todos os critérios relevantes já são
-  atendidos e trouxer uma recomendação clara;
-- o plano de testes cobrir os `CE-XX` e `CA-XX` afetados e os requisitos de
-  teste definidos no contexto;
-- toda decisão técnica, ausência de contexto ou divergência funcional estiver
-  registrada;
-- nenhuma mudança de escopo funcional tiver sido feita silenciosamente.
-
-A aprovação humana desta segunda etapa do refinamento é obrigatória antes da
-`spec-coding`. Não aprovar a própria saída nem iniciar implementação.
-
-## Exemplo
-
-Para a spec funcional "Usuário consegue gerar um PDF do relatório atualmente
-visível na tela":
-
-> **Decisão técnica**: gerar o PDF no cliente, não no servidor.  
-> **Fonte**: o contexto arquitetural disponível estabelece que operações que não
-> precisam de dados adicionais do backend devem ocorrer no cliente para reduzir
-> a carga do servidor.
-
-Exemplo de contradição:
-
-> **⚠ Contradição**: a abordagem mais simples exigiria uma dependência de
-> geração de PDF não aprovada pelas convenções disponíveis.
-> **Decisão**: usar a biblioteca já presente no projeto, mesmo exigindo mais
-> código de adaptação.  
-> **Ação recomendada**: avaliar a adoção de uma nova biblioteca em uma
-> alteração separada de convenções, não nesta demanda.
+Consider the specification complete only when it is written in English, has exactly the required structure, contains a justified classification and evidence table, maps the technical approach and test plan to available functional references, records decisions and divergences, keeps `## Version History` as the final section, and has been saved and validated at the path required by the stage agent.

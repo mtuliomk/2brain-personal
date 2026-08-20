@@ -244,6 +244,34 @@
       "contentDigest": "6dd93f2680461641127094c455c8f1f7e05c6ded725a145c0f797439c337c29a",
       "providerUserMessageId": "01a01f6a-70da-7f30-bcd1-670891a8caaa",
       "providerAssistantMessageId": "msg_0569d62880ee59d3016a8704e8467087d0911b5d644cbb769a"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787233605562-bobm2m8",
+      "userTurnOrdinal": 18,
+      "state": "accepted",
+      "localMessageId": "msg-1787233605550-whnizbj",
+      "timestamp": 1787233605550,
+      "rawDisplayText": "revise a espec tecnica. quero uma estrutura de documento semelhante a da spec funcional",
+      "canonicalText": "revise a espec tecnica. quero uma estrutura de documento semelhante a da spec funcional",
+      "images": [],
+      "contentDigest": "739c9e9214fc1d7450b03e573ef21ebc30d963ba888639735dfb05c43cc2a275",
+      "providerUserMessageId": "01a01f6c-9860-7e23-a811-3d11e051c46d",
+      "providerAssistantMessageId": "msg_0569d62880ee59d3016a870599791487d08f9c3a89fc45d6ad"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787233739664-lc1azey",
+      "userTurnOrdinal": 19,
+      "state": "accepted",
+      "localMessageId": "msg-1787233739655-c3tp2l8",
+      "timestamp": 1787233739655,
+      "rawDisplayText": "ele está se referindo a uma spec tecnina especifica, com um path que nao vai existir no servidor",
+      "canonicalText": "ele está se referindo a uma spec tecnina especifica, com um path que nao vai existir no servidor",
+      "images": [],
+      "contentDigest": "ccd5eecc0f32e4c83db984f0b611d835660dedd16de7b48a167a818a6d504220",
+      "providerUserMessageId": "01a01f6e-a445-75b1-b9f2-53d190f8ce53",
+      "providerAssistantMessageId": "msg_0569d62880ee59d3016a8705e6b3ec87d0b806bf3ede617143"
     }
   ]
 }
