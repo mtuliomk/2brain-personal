@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tailoren Agents/spec funcional/AGENTS.md",
+                "file": "Tailoren Agents/coding/AGENTS.md",
                 "mode": "source",
                 "source": false
               },
@@ -202,13 +202,13 @@
   },
   "active": "bdd9956fcb88793f",
   "lastOpenFiles": [
+    "Tailoren Agents/spec technical/AGENTS.md",
+    "Tailoren Agents/spec funcional/AGENTS.md",
     "Tailoren Agents/spec funcional/prompt.md",
     "Tailoren Agents/spec technical/prompt.md",
     "Tailoren Agents/coding/prompt.md",
     "Tailoren Agents/coding/AGENTS.md",
     "Tailoren Agents/README.md",
-    "Tailoren Agents/spec funcional/AGENTS.md",
-    "Tailoren Agents/spec technical/AGENTS.md",
     "DevSkills/dev-backend-golang/SKILL.md",
     "Tailoren Agents/coding",
     "Tailoren Agents/spec technical",
