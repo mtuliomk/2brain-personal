@@ -7,24 +7,18 @@ responsáveis pelas etapas do fluxo de desenvolvimento:
 2. especificação técnica;
 3. implementação (*coding*).
 
-Cada subpasta representa uma etapa. Nela, os arquivos `AGENTS.md.md` e
-`prompt.md.md` têm funções complementares e devem ser enviados ao agente da
-etapa correspondente.
-
-> **Nota sobre os nomes:** os arquivos atualmente usam a extensão dupla
-> `.md.md`. Ela é intencionalmente mantida nesta documentação para corresponder
-> aos nomes existentes no repositório.
+Cada subpasta representa uma etapa. Nela, os arquivos `AGENTS.md` e
+`prompt.md` têm funções complementares e devem ser enviados ao agente da etapa correspondente.
 
 ## Papéis dos arquivos
 
-| Arquivo | Responsabilidade | Conteúdo esperado |
-| --- | --- | --- |
-| `AGENTS.md.md` | Contrato permanente da etapa. | Objetivo, regras, sequência de trabalho, fontes obrigatórias, restrições, validações e critérios de conclusão. Não deve conter dados de uma task específica. |
-| `prompt.md.md` | Mensagem de inicialização da execução. | Instruções resumidas para a tarefa atual e variáveis interpoladas, como `{{task_id}}`, `{{task_number}}`, objetivos, descrição e *guardrails*. |
+| Arquivo     | Responsabilidade                       | Conteúdo esperado                                                                                                                                            |
+| ----------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `AGENTS.md` | Contrato permanente da etapa.          | Objetivo, regras, sequência de trabalho, fontes obrigatórias, restrições, validações e critérios de conclusão. Não deve conter dados de uma task específica. |
+| `prompt.md` | Mensagem de inicialização da execução. | Instruções resumidas para a tarefa atual e variáveis interpoladas, como `{{task_id}}`, `{{task_number}}`, objetivos, descrição e *guardrails*.               |
 
-O `prompt.md.md` não substitui o `AGENTS.md.md`: o primeiro fornece os dados
-variáveis; o segundo define o comportamento que se aplica a todas as execuções
-daquela etapa.
+O `prompt.md` não substitui o `AGENTS.md`: o primeiro fornece os dados
+variáveis; o segundo define o comportamento que se aplica a todas as execuções daquela etapa.
 
 ## Estrutura
 
@@ -54,9 +48,7 @@ somente leitura e devem ser investigados antes de produzir a entrega.
 | Skills | `/workspace/.taloren-docs-skills` | Instruções especializadas que se aplicam à tarefa. |
 | Repositórios | `/workspace/repositories/<repository-id>` | Código, configurações, testes e contratos da aplicação. |
 
-A etapa **spec funcional** não possui código no workspace e, portanto, não deve
-depender de inspeção de repositórios. As etapas **spec technical** e **coding**
-possuem repositórios montados e devem usá-los quando forem relevantes à tarefa.
+A etapa **spec funcional** não possui código no workspace e, portanto, não deve depender de inspeção de repositórios. As etapas **spec technical** e **coding** possuem repositórios montados e devem usá-los quando forem relevantes à tarefa.
 
 ## Etapas
 
