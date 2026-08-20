@@ -32,7 +32,49 @@
       "canonicalText": "fiz uma revisao no arquivo. veja o que voce acha",
       "images": [],
       "contentDigest": "219a6147e09335c9d19a30ea54b661b309d698548d34fb55bf721cc48b997160",
-      "providerUserMessageId": "01a01f4f-e4ef-7621-b6de-8e5fa536a9a7"
+      "providerUserMessageId": "01a01f4f-e4ef-7621-b6de-8e5fa536a9a7",
+      "providerAssistantMessageId": "msg_0569d62880ee59d3016a86fe0b083487d0b36316d7b0cf6397"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787231862479-o3js5fp",
+      "userTurnOrdinal": 3,
+      "state": "accepted",
+      "localMessageId": "msg-1787231862454-84sijq6",
+      "timestamp": 1787231862456,
+      "rawDisplayText": "o codiging ainda será criado. fiz mais ajustes",
+      "canonicalText": "o codiging ainda será criado. fiz mais ajustes",
+      "images": [],
+      "contentDigest": "cf656f996cb8d024c7e896514245382133abbefaee4d76ca784e7b7d0e4cce4f",
+      "providerUserMessageId": "01a01f52-01d7-7de3-a689-b933dd5b77ea",
+      "providerAssistantMessageId": "msg_0569d62880ee59d3016a86fe7f696c87d092d2d3705330a8eb"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787231953977-366a2te",
+      "userTurnOrdinal": 4,
+      "state": "accepted",
+      "localMessageId": "msg-1787231953950-syo3kok",
+      "timestamp": 1787231953952,
+      "rawDisplayText": "quero que vc ajuste alguns pontos nessa documentacao. depois disso, iremos rever o restante das documentacoes (a meu pedido)\n- considere que os agentes devem ser totalmente autonomos, sem depender de aprovações ou interefeencias humanas em suas tarefas",
+      "canonicalText": "quero que vc ajuste alguns pontos nessa documentacao. depois disso, iremos rever o restante das documentacoes (a meu pedido)\n- considere que os agentes devem ser totalmente autonomos, sem depender de aprovações ou interefeencias humanas em suas tarefas",
+      "images": [],
+      "contentDigest": "efbf966ae5c09a5ca08922983f54b1f1de864240c346a14bb813dd47dc995754",
+      "providerUserMessageId": "01a01f53-6563-7fe0-a0e4-9c3d92b2bf7d",
+      "providerAssistantMessageId": "msg_0569d62880ee59d3016a86fef198c087d088c7f6a74f77d099"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787232029800-ujr3gaa",
+      "userTurnOrdinal": 5,
+      "state": "accepted",
+      "localMessageId": "msg-1787232029790-2tz2e5k",
+      "timestamp": 1787232029790,
+      "rawDisplayText": "o que voce acha do fluxo como um todo? alguma observacao antes de seguirmos?",
+      "canonicalText": "o que voce acha do fluxo como um todo? alguma observacao antes de seguirmos?",
+      "images": [],
+      "contentDigest": "12895cbb33903177d8068da8990f06f0e4a9fa00fd31bd65a4d2414155b0f053",
+      "providerUserMessageId": "01a01f54-8cd8-7f92-80e8-1e2cd8cec76b"
     }
   ]
 }

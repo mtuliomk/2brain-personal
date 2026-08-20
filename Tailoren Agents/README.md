@@ -20,20 +20,29 @@ Cada subpasta representa uma etapa. Nela, os arquivos `AGENTS.md` e
 O `prompt.md` não substitui o `AGENTS.md`: o primeiro fornece os dados
 variáveis; o segundo define o comportamento que se aplica a todas as execuções daquela etapa.
 
+## Autonomia dos agentes
+
+Os agentes devem executar integralmente suas etapas de forma autônoma. Eles
+não dependem de aprovação, validação, decisão ou outra intervenção humana
+durante a execução. Quando houver informação ausente, ambígua ou indisponível,
+o agente deve seguir as regras da sua etapa, registrar as premissas e
+limitações no artefato final e concluir o trabalho com base nas evidências
+disponíveis.
+
 ## Estrutura
 
 ```text
 Tailoren Agents/
 ├── README.md
 ├── spec funcional/
-│   ├── AGENTS.md.md
-│   └── prompt.md.md
+│   ├── AGENTS.md
+│   └── prompt.md
 ├── spec technical/
-│   ├── AGENTS.md.md
-│   └── prompt.md.md
+│   ├── AGENTS.md
+│   └── prompt.md
 └── coding/
-    ├── AGENTS.md.md
-    └── prompt.md.md
+    ├── AGENTS.md
+    └── prompt.md
 ```
 
 ## Contexto disponível no workspace
@@ -75,7 +84,7 @@ A especificação funcional é a fonte de escopo para a etapa técnica; ela deve
 
 ### 2. `spec technical`
 
-**Finalidade:** converter a especificação funcional aprovada em um plano
+**Finalidade:** converter a especificação funcional disponível em um plano
 implementável, baseado no contexto e no código efetivamente disponível, sem alterar o repositório.
 
 - **Instruções fixas:** `spec technical/AGENTS.md` torna a skill
@@ -94,14 +103,14 @@ histórico, a ausência deve ser registrada conforme a skill `spec-tecnica`, sem
 
 ### 3. `coding`
 
-**Finalidade:** implementar a task aprovada nos repositórios montados,
+**Finalidade:** implementar a task conforme a especificação técnica disponível nos repositórios montados,
 trabalhando na branch `TALOREN-{{task_number}}`, validando a alteração e
 criando os commits necessários — sem *push*.
 
 - **Prompt de início:** `coding/prompt.md` fornece os dados da task, aponta
   para o histórico, contexto e repositórios e exige que as alterações sejam
   commitadas.
-- **Entradas principais:** histórico (incluindo as especificações aprovadas),
+- **Entradas principais:** histórico (incluindo as especificações disponíveis),
   documentos da aplicação, skills aplicáveis e repositórios montados.
 - **Saída operacional atual:** alterações implementadas, validações executadas e commits locais na branch preparada.
 
@@ -120,4 +129,4 @@ spec technical ──► spec-tecnica.md
 coding ──────────► código validado + commits + arquivo final de resultado
 ```
 
-Em qualquer etapa, o agente deve preservar o contexto/histórico como leitura, não inventar informações ausentes e validar o artefato final antes de encerrar a execução. As referências entre etapas devem respeitar o escopo já aprovado:a especificação técnica não modifica silenciosamente a funcional e a implementação não deve ultrapassar a especificação técnica aprovada.
+Em qualquer etapa, o agente deve preservar o contexto/histórico como leitura, não inventar informações ausentes e validar o artefato final antes de encerrar a execução. As referências entre etapas devem respeitar o escopo já definido: a especificação técnica não modifica silenciosamente a funcional e a implementação não deve ultrapassar a especificação técnica disponível.
