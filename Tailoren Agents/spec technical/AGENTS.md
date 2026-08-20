@@ -60,6 +60,16 @@ Esse contexto pode conter arquitetura, segurança, padrões de código, design s
 
 Não declare que um arquivo está inacessível sem executar a busca e receber um erro real.
 
+## Contexto dos repositórios
+
+Antes de inspecionar o código, liste e leia os documentos de contexto específicos dos repositórios:
+
+```bash
+if [ -d /workspace/.taloren-docs-context/repositories ]; then find /workspace/.taloren-docs-context/repositories -type f -name '*.md' -print; fi
+```
+
+A pasta e os arquivos são opcionais. Se não existirem ou não houver arquivos, siga normalmente com a tarefa. Quando existirem, use-os como complemento do contexto da aplicação para localizar repositórios, padrões, contratos, integrações e decisões relevantes.
+
 ## Repositórios da aplicação
 
 Verifique se existem repositórios clonados:

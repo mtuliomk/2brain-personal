@@ -28,6 +28,16 @@ find /workspace/.taloren-docs-context/application -type f -name '*.md' -print
 
 Use esse contexto para aplicar regras de produto, arquitetura, segurança, padrões de código, convenções, contratos, testes e decisões técnicas relevantes. Não declare que um arquivo está inacessível sem executar a busca e receber um erro real.
 
+## Contexto dos repositórios
+
+Antes de implementar, liste e leia os documentos de contexto específicos dos repositórios:
+
+```bash
+if [ -d /workspace/.taloren-docs-context/repositories ]; then find /workspace/.taloren-docs-context/repositories -type f -name '*.md' -print; fi
+```
+
+A pasta e os arquivos são opcionais. Se não existirem ou não houver arquivos, siga normalmente com a tarefa. Quando existirem, use-os como complemento do contexto da aplicação e do código para identificar repositórios, padrões, contratos, integrações, comandos e validações relevantes.
+
 ## Histórico da task
 
 Localize os documentos disponíveis:

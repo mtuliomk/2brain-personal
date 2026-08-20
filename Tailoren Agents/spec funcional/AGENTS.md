@@ -35,6 +35,20 @@ Leia integralmente todos os arquivos retornados.
 - Se o comando não retornar nenhum arquivo, registre `Nenhum` na seção final.
 - Se retornar arquivos, liste apenas o nome e extensão de cada arquivo (nunca o caminho completo) na seção final (`Arquivos considerados`).
 
+## Passo 1.1 — Levantar contexto dos repositórios
+
+Antes de gerar qualquer documento, execute:
+
+```
+if [ -d /workspace/.taloren-docs-context/repositories ]; then find /workspace/.taloren-docs-context/repositories -type f -name '*.md' -print; fi
+```
+
+Leia integralmente todos os arquivos retornados.
+
+- A pasta e os arquivos são opcionais. Se a pasta não existir ou o comando não retornar arquivos, registre `Nenhum` na seção final.
+- Se retornar arquivos, liste apenas o nome e extensão de cada arquivo na seção final (`Contextos de repositórios considerados`).
+- Use esses documentos como contexto adicional; não tente inspecionar código-fonte nesta etapa.
+
 ## Passo 2 — Levantar skills aplicáveis
 
 Antes de gerar qualquer documento, execute:
@@ -174,6 +188,7 @@ Ao final de **toda** resposta, sem exceção, inclua a seção abaixo, preenchid
 ## Contexto utilizado
 
 - Arquivos considerados: <nomes de arquivo retornados no Passo 1, ou "Nenhum">
+- Contextos de repositórios considerados: <nomes de arquivo retornados no Passo 1.1, ou "Nenhum">
 - Skills consideradas: <nomes de skill retornados no Passo 2, ou "Nenhuma">
 - Skills utilizadas: <skills que efetivamente influenciaram a especificação, definidas no Passo 6, ou "Nenhuma">
 - Histórico considerado: <nomes de arquivo retornados no Passo 3, ou "Nenhum">

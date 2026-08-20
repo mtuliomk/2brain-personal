@@ -60,11 +60,12 @@ Todas as etapas recebem documentos de apoio e histórico; esses materiais são s
 | Fonte                 | Caminho no worker                              | Uso                                                                                                                                          |
 | --------------------- | ---------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | Contexto da aplicação | `/workspace/.taloren-docs-context/application` | Produto, arquitetura, segurança, padrões, decisões e demais documentos da aplicação.                                                         |
+| Contexto dos repositórios (opcional) | `/workspace/.taloren-docs-context/repositories` | Documentos de contexto específicos para cada repositório da aplicação. A pasta e seus arquivos podem não existir. |
 | Histórico da task     | `/workspace/tasks/history`                     | Documentos, entregas e decisões relacionados exclusivamente ao escopo da task em execução. Serve de referência; não deve receber alterações. |
 | Skills                | `/workspace/.taloren-docs-skills`              | Instruções especializadas que se aplicam à tarefa.                                                                                           |
 | Repositórios          | `/workspace/repositories/<repository-id>`      | Código, configurações, testes e contratos da aplicação.                                                                                      |
 
-A etapa **spec funcional** não possui código no workspace e, portanto, não deve depender de inspeção de repositórios. As etapas **spec technical** e **coding** possuem repositórios montados e devem usá-los quando forem relevantes à tarefa.
+A etapa **spec funcional** não possui código no workspace e, portanto, não deve depender de inspeção de código-fonte. Ela pode usar os documentos opcionais de contexto dos repositórios quando existirem. As etapas **spec technical** e **coding** possuem repositórios montados e devem usar tanto seus documentos de contexto quanto o código relevante à tarefa.
 
 ## Contrato de transição entre etapas
 
