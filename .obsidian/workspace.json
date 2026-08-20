@@ -185,7 +185,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 568.49609375
+    "width": 540.27734375
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -200,7 +200,7 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "bdd9956fcb88793f",
+  "active": "8e7c699d605b1ea8",
   "lastOpenFiles": [
     "Tailoren Agents/spec funcional/prompt.md",
     "Tailoren Agents/spec technical/prompt.md",

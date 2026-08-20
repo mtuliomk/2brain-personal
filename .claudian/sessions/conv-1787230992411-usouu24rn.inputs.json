@@ -172,7 +172,50 @@
       "canonicalText": "isso ocorre em todos os arquivos que voce atua",
       "images": [],
       "contentDigest": "f7ed60aa542f8af298e787d4a8ec7e10af516f79bc19f2c32934c7471f580404",
-      "providerUserMessageId": "01a01f5e-08b8-7e52-b0ff-77780fccccdb"
+      "providerUserMessageId": "01a01f5e-08b8-7e52-b0ff-77780fccccdb",
+      "providerAssistantMessageId": "msg_0569d62880ee59d3016a8701a1949c87d095d08592b0444ecf"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787232701049-sck54m8",
+      "userTurnOrdinal": 13,
+      "state": "accepted",
+      "localMessageId": "msg-1787232701041-yt14osp",
+      "timestamp": 1787232701041,
+      "rawDisplayText": "na funcional, vc acha que ele poderia gerar mais de uma user story? dependendo da demanda recebida, ele nao poderia identificar a necessidade de atuar com mais de uma user story?",
+      "canonicalText": "na funcional, vc acha que ele poderia gerar mais de uma user story? dependendo da demanda recebida, ele nao poderia identificar a necessidade de atuar com mais de uma user story?",
+      "images": [],
+      "contentDigest": "f8aeba6a9794e900a05c6acd017301f6fc974fdf4a679e3f77efd932894eacf5",
+      "providerUserMessageId": "01a01f5e-caf8-7fb3-beab-507a8a2e2950",
+      "providerAssistantMessageId": "msg_0569d62880ee59d3016a8701cdd7ac87d09f7aeca0c96a7fb9"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787232753207-oeqn6q8",
+      "userTurnOrdinal": 14,
+      "state": "accepted",
+      "localMessageId": "msg-1787232753198-c70uqws",
+      "timestamp": 1787232753198,
+      "rawDisplayText": "pode fazer essa melhoria",
+      "canonicalText": "pode fazer essa melhoria",
+      "images": [],
+      "contentDigest": "54493fc6584a4ec9308a8d7da4f4d1f754016ece6f6d64156126dbb9bbe995b6",
+      "providerUserMessageId": "01a01f5f-9a9f-7f00-b084-bbff3b508173",
+      "providerAssistantMessageId": "msg_0569d62880ee59d3016a87023278cc87d0bed0b5f32153092e"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787232843223-f5jt31t",
+      "userTurnOrdinal": 15,
+      "state": "accepted",
+      "localMessageId": "msg-1787232843215-5zinu48",
+      "timestamp": 1787232843215,
+      "rawDisplayText": "revise a formatacao de todos os md. ainda está com quebra de linha errada",
+      "canonicalText": "revise a formatacao de todos os md. ainda está com quebra de linha errada",
+      "images": [],
+      "contentDigest": "db0c2046063e87113ffa185cfa8ace98f4c0c6814b1c0cc5553dcd7764b2a7ac",
+      "providerUserMessageId": "01a01f60-f65d-7283-8106-0de6b02e447b",
+      "providerAssistantMessageId": "msg_0569d62880ee59d3016a870282db4487d0ae764469dab204b3"
     }
   ]
 }
