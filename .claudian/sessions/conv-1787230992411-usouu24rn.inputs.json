@@ -20,6 +20,19 @@
       "contentDigest": "15220dcb61f1c059686cbf49bd575a0232e2a47fca05d23d3dcc12756f20418c",
       "providerUserMessageId": "01a01f44-c8d9-7581-b296-b6381ffe121a",
       "providerAssistantMessageId": "msg_0569d62880ee59d3016a86fb44424487d09ff7390706db5a88"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787231724435-j70rqgj",
+      "userTurnOrdinal": 2,
+      "state": "accepted",
+      "localMessageId": "msg-1787231724403-hbzmerx",
+      "timestamp": 1787231724406,
+      "rawDisplayText": "fiz uma revisao no arquivo. veja o que voce acha",
+      "canonicalText": "fiz uma revisao no arquivo. veja o que voce acha",
+      "images": [],
+      "contentDigest": "219a6147e09335c9d19a30ea54b661b309d698548d34fb55bf721cc48b997160",
+      "providerUserMessageId": "01a01f4f-e4ef-7621-b6de-8e5fa536a9a7"
     }
   ]
 }

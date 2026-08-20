@@ -57,10 +57,10 @@ A etapa **spec funcional** não possui código no workspace e, portanto, não de
 **Finalidade:** transformar os dados da task e o contexto da aplicação em uma
 user story e em uma especificação funcional, sem implementar código.
 
-- **Instruções fixas:** `spec funcional/AGENTS.md.md` determina a leitura do
+- **Instruções fixas:** `spec funcional/AGENTS.md` determina a leitura do
   contexto, das skills e do histórico, a ordem obrigatória de produção e a
   rastreabilidade da resposta.
-- **Prompt de início:** `spec funcional/prompt.md.md` fornece os campos da
+- **Prompt de início:** `spec funcional/prompt.md` fornece os campos da
   task e reforça que não há implementação de código.
 - **Entradas principais:** documentos da aplicação, histórico e skills
   disponíveis. Não há repositórios/código para investigar nesta etapa.
@@ -71,22 +71,17 @@ user story e em uma especificação funcional, sem implementar código.
   conclusão. A `user-story.md` deve ser criada e validada antes da
   `spec-funcional.md`.
 
-A especificação funcional é a fonte de escopo para a etapa técnica; ela deve
-explicar o comportamento esperado, sem tomar decisões de implementação nem
-aprovar a própria entrega.
+A especificação funcional é a fonte de escopo para a etapa técnica; ela deve explicar o comportamento esperado.
 
 ### 2. `spec technical`
 
 **Finalidade:** converter a especificação funcional aprovada em um plano
-implementável, baseado no contexto e no código efetivamente disponível, sem
-alterar o repositório.
+implementável, baseado no contexto e no código efetivamente disponível, sem alterar o repositório.
 
-- **Instruções fixas:** `spec technical/AGENTS.md.md` torna a skill
+- **Instruções fixas:** `spec technical/AGENTS.md` torna a skill
   `spec-tecnica` obrigatória e delega a ela a classificação da mudança, a
-  estrutura da especificação, as evidências, decisões, testes, divergências e
-  controle de versão.
-- **Prompt de início:** `spec technical/prompt.md.md` fornece os dados da task
-  e define o destino da entrega.
+  estrutura da especificação, as evidências, decisões, testes, divergências e controle de versão.
+- **Prompt de início:** `spec technical/prompt.md` fornece os dados da task e define o destino da entrega.
 - **Entradas principais:** `spec-funcional.md` e `user-story.md` do histórico,
   documentos da aplicação, skills e repositórios montados.
 - **Saída obrigatória:**
@@ -95,9 +90,7 @@ alterar o repositório.
   código nem se altera qualquer arquivo do repositório nesta etapa.
 
 A `spec-funcional.md` é a fonte principal do escopo. Caso ela não esteja no
-histórico, a ausência deve ser registrada conforme a skill `spec-tecnica`, sem
-inventar requisitos. A especificação técnica requer aprovação humana antes do
-início da implementação.
+histórico, a ausência deve ser registrada conforme a skill `spec-tecnica`, sem inventar requisitos.
 
 ### 3. `coding`
 
@@ -105,22 +98,12 @@ início da implementação.
 trabalhando na branch `TALOREN-{{task_number}}`, validando a alteração e
 criando os commits necessários — sem *push*.
 
-- **Prompt de início:** `coding/prompt.md.md` fornece os dados da task, aponta
+- **Prompt de início:** `coding/prompt.md` fornece os dados da task, aponta
   para o histórico, contexto e repositórios e exige que as alterações sejam
   commitadas.
 - **Entradas principais:** histórico (incluindo as especificações aprovadas),
   documentos da aplicação, skills aplicáveis e repositórios montados.
-- **Saída operacional atual:** alterações implementadas, validações executadas
-  e commits locais na branch preparada.
-
-> **Ponto de atenção:** `coding/AGENTS.md.md` está vazio e o
-> `coding/prompt.md.md` ainda não define o caminho ou o nome de um arquivo de
-> resultado. Isso contraria a regra de que toda etapa deve gerar um arquivo
-> final. Antes de usar esta etapa em produção, as instruções de *coding* devem
-> definir esse artefato (por exemplo,
-> `/workspace/tasks/{{task_id}}/resultado-implementacao.md`), seu conteúdo
-> mínimo e a validação `test -s`. Enquanto isso não for feito, não há contrato
-> de arquivo final para a implementação.
+- **Saída operacional atual:** alterações implementadas, validações executadas e commits locais na branch preparada.
 
 ## Fluxo e dependências
 
@@ -131,14 +114,10 @@ Contexto + histórico + skills
 spec funcional ──► user-story.md + spec-funcional.md
              │
              ▼
-spec technical ──► spec-tecnica.md (aprovação humana)
+spec technical ──► spec-tecnica.md
              │
              ▼
 coding ──────────► código validado + commits + arquivo final de resultado
 ```
 
-Em qualquer etapa, o agente deve preservar o contexto/histórico como leitura,
-não inventar informações ausentes e validar o artefato final antes de encerrar
-a execução. As referências entre etapas devem respeitar o escopo já aprovado:
-a especificação técnica não modifica silenciosamente a funcional e a
-implementação não deve ultrapassar a especificação técnica aprovada.
+Em qualquer etapa, o agente deve preservar o contexto/histórico como leitura, não inventar informações ausentes e validar o artefato final antes de encerrar a execução. As referências entre etapas devem respeitar o escopo já aprovado:a especificação técnica não modifica silenciosamente a funcional e a implementação não deve ultrapassar a especificação técnica aprovada.
