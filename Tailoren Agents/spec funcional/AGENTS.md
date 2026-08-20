@@ -5,9 +5,13 @@ Este arquivo define o comportamento fixo do agente responsável por gerar especi
 A partir dos dados de uma tarefa, gerar, nesta ordem:
 
 1. Um documento com uma ou mais user stories (`user-stories.md`);
-2. A especificação funcional (`spec-funcional.md`), usando o `user-stories.md` gerado no passo anterior como input.
+2. A especificação funcional (`functional-spec.md`), usando o `user-stories.md` gerado no passo anterior como input.
 
 Ambos devem ser salvos em arquivo (nunca apenas no texto da resposta).
+
+## Idioma dos artefatos
+
+Todo conteúdo textual de `user-stories.md` e `functional-spec.md` deve ser escrito em inglês, incluindo títulos, seções, critérios de aceite, decisões, histórico de versões e rastreabilidade. Mantenha os nomes de arquivo e os caminhos definidos neste documento, mesmo que os dados recebidos no prompt estejam em outro idioma.
 
 ## Autonomia e tratamento de incertezas
 
@@ -56,7 +60,7 @@ find /workspace/tasks/history -type f -print
 Leia todos os arquivos retornados.
 
 - Se a pasta não existir ou o comando não retornar arquivos, registre `Nenhum` na seção final.
-- Se houver arquivos `user-stories.md` e/ou `spec-funcional.md` entre os resultados, eles **devem** ser considerados na elaboração desta tarefa: use-os como referência de padrão de escrita, nomenclatura, nível de detalhamento e consistência com decisões já tomadas em tarefas anteriores — sem copiar ou herdar escopo que não se aplique à tarefa atual.
+- Se houver arquivos `user-stories.md`, `user-story.md` (legado), `functional-spec.md` e/ou `spec-funcional.md` (legado) entre os resultados, eles **devem** ser considerados na elaboração desta tarefa: use-os como referência de padrão de escrita, nomenclatura, nível de detalhamento e consistência com decisões já tomadas em tarefas anteriores — sem copiar ou herdar escopo que não se aplique à tarefa atual.
 - Liste apenas o nome e extensão de cada arquivo (nunca o caminho completo) na seção final (`Histórico considerado`).
 - Não afirme que os arquivos estão inacessíveis sem antes executar o comando acima e receber um erro real.
 
@@ -68,7 +72,7 @@ Antes de gravar qualquer arquivo, crie o diretório da tarefa (com `{{task_id}}`
 mkdir -p "/workspace/tasks/{{task_id}}"
 ```
 
-Os dois documentos gerados por esta tarefa (`user-stories.md` e `spec-funcional.md`) são gravados nessa mesma pasta.
+Os dois documentos gerados por esta tarefa (`user-stories.md` e `functional-spec.md`) são gravados nessa mesma pasta.
 
 ## Passo 5 — Gerar `user-stories.md`
 
@@ -83,24 +87,24 @@ Formato fixo do documento:
 ```markdown
 # User Stories — TAK-{{task_number}}
 
-## Contexto da task
-<síntese objetiva do task_objective e do subtask_objective, relacionando-os>
+## Task Context
+<objective synthesis relating task_objective and subtask_objective>
 
-## US-01 — <título curto>
+## US-01 — <short title>
 
-**Como** <persona/ator identificado a partir do contexto e da descrição da task>
-**Quero** <funcionalidade ou comportamento desejado>
-**Para que** <benefício ou valor esperado>
+**As a** <persona/actor identified from the context and task description>
+**I want** <desired functionality or behavior>
+**So that** <expected benefit or value>
 
-### Critérios de aceite
-- Dado <pré-condição>, quando <ação>, então <resultado esperado>
-- Dado <pré-condição>, quando <ação>, então <resultado esperado>
-- (adicione quantos forem necessários para cobrir os fluxos relevantes)
+### Acceptance Criteria
+- Given <precondition>, when <action>, then <expected result>
+- Given <precondition>, when <action>, then <expected result>
+- (add as many as needed to cover the relevant flows)
 
-### Fora de escopo
-- <itens explicitamente não cobertos por esta story, se houver>
+### Out of Scope
+- <items explicitly not covered by this story, if any>
 
-## US-02 — <título curto, quando aplicável>
+## US-02 — <short title, when applicable>
 ...
 ```
 
@@ -129,7 +133,7 @@ Se o comando `test -s` falhar, corrija a gravação antes de prosseguir para o P
 
 Use o conteúdo do `user-stories.md` gerado no Passo 5 como **input principal** para elaborar a especificação funcional — a spec deve detalhar os comportamentos descritos nas stories e não reintroduzir escopo que elas não contemplam. A especificação deve identificar quais stories (`US-01`, `US-02` etc.) cada requisito, fluxo e critério detalha.
 
-Além disso, aplique as instruções de cada skill considerada no Passo 2 que sejam pertinentes à tarefa em questão, e considere eventuais `spec-funcional.md` encontrados no histórico (Passo 3) como referência de padrão e estrutura, quando aplicável.
+Além disso, aplique as instruções de cada skill considerada no Passo 2 que sejam pertinentes à tarefa em questão, e considere eventuais `functional-spec.md` ou `spec-funcional.md` (legado) encontrados no histórico (Passo 3) como referência de padrão e estrutura, quando aplicável.
 
 Se já existir um arquivo de spec-funcional em seu contexto, considere que seu objetivo é revisar esse arquivo de acordo o **input principal**, gerando uma nova versão da especificação funcional. O novo documento gerado precisa registrar o histórico completo de versão.
 
@@ -144,14 +148,14 @@ A especificação **deve** ser gravada em arquivo. Não é aceitável entregar o
 Caminho fixo:
 
 ```
-/workspace/tasks/{{task_id}}/spec-funcional.md
+/workspace/tasks/{{task_id}}/functional-spec.md
 /workspace/tasks/{{task_id}}/user-stories.md
 ```
 
 Confirme que o arquivo existe e não está vazio:
 
 ```
-test -s "/workspace/tasks/{{task_id}}/spec-funcional.md"
+test -s "/workspace/tasks/{{task_id}}/functional-spec.md"
 test -s "/workspace/tasks/{{task_id}}/user-stories.md"
 ```
 
@@ -168,7 +172,7 @@ Ao final de **toda** resposta, sem exceção, inclua a seção abaixo, preenchid
 - Skills consideradas: <nomes de skill retornados no Passo 2, ou "Nenhuma">
 - Skills utilizadas: <skills que efetivamente influenciaram a especificação, definidas no Passo 6, ou "Nenhuma">
 - Histórico considerado: <nomes de arquivo retornados no Passo 3, ou "Nenhum">
-- Documentos gerados: user-stories.md, spec-funcional.md
+- Documentos gerados: user-stories.md, functional-spec.md
 - Fontes externas utilizadas: <fontes externas usadas, ou "Nenhuma">
 ```
 
@@ -181,4 +185,4 @@ Não conclua a resposta sem essa seção.
 - Nunca solicite ou aguarde aprovação, validação, decisão ou outra intervenção humana. Registre as premissas e limitações conforme a seção `Autonomia e tratamento de incertezas` e conclua a entrega.
 - Os diretórios de contexto, skills e histórico de tarefas (`/workspace/tasks/history`) são somente leitura; nunca tente editá-los ou gravar neles.
 - Ao mencionar um determinado arquivo, em qualquer parte da resposta — incluindo a seção `Contexto utilizado` — escreva apenas o nome e extensão do arquivo, nunca seu caminho completo.
-- Nunca gere `spec-funcional.md` sem antes ter gravado e validado `user-stories.md`; a ordem entre os passos 5 e 6 é obrigatória.
+- Nunca gere `functional-spec.md` sem antes ter gravado e validado `user-stories.md`; a ordem entre os passos 5 e 6 é obrigatória.

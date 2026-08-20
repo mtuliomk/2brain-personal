@@ -216,6 +216,34 @@
       "contentDigest": "db0c2046063e87113ffa185cfa8ace98f4c0c6814b1c0cc5553dcd7764b2a7ac",
       "providerUserMessageId": "01a01f60-f65d-7283-8106-0de6b02e447b",
       "providerAssistantMessageId": "msg_0569d62880ee59d3016a870282db4487d0ae764469dab204b3"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787233390657-zui5ovu",
+      "userTurnOrdinal": 16,
+      "state": "accepted",
+      "localMessageId": "msg-1787233390544-o9uql6y",
+      "timestamp": 1787233390549,
+      "rawDisplayText": "quero que os arquivos gerados sempre sejam escritos em ingles",
+      "canonicalText": "quero que os arquivos gerados sempre sejam escritos em ingles",
+      "images": [],
+      "contentDigest": "81fda1c37cda8aea8063bf6a27abe20f910fb21328173399fd6c31aadb532dee",
+      "providerUserMessageId": "01a01f69-5236-74d3-82c1-6eb1838cad4a",
+      "providerAssistantMessageId": "msg_0569d62880ee59d3016a87048e3f9087d0ac66822b0d90b0ec"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787233464422-eaut9xa",
+      "userTurnOrdinal": 17,
+      "state": "accepted",
+      "localMessageId": "msg-1787233464415-gj2m7ga",
+      "timestamp": 1787233464415,
+      "rawDisplayText": "altere os nomes atuais",
+      "canonicalText": "altere os nomes atuais",
+      "images": [],
+      "contentDigest": "6dd93f2680461641127094c455c8f1f7e05c6ded725a145c0f797439c337c29a",
+      "providerUserMessageId": "01a01f6a-70da-7f30-bcd1-670891a8caaa",
+      "providerAssistantMessageId": "msg_0569d62880ee59d3016a8704e8467087d0911b5d644cbb769a"
     }
   ]
 }

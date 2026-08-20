@@ -21,6 +21,10 @@ O `prompt.md` não substitui o `AGENTS.md`: o primeiro fornece os dados variáve
 
 Os agentes devem executar integralmente suas etapas de forma autônoma. Eles não dependem de aprovação, validação, decisão ou outra intervenção humana durante a execução. Quando houver informação ausente, ambígua ou indisponível, o agente deve seguir as regras da sua etapa, registrar as premissas e limitações no artefato final e concluir o trabalho com base nas evidências disponíveis.
 
+## Idioma dos artefatos
+
+Todo arquivo final gerado por uma etapa deve ter o conteúdo textual e o nome do arquivo em inglês. Use os caminhos contratuais definidos neste documento, independentemente do idioma dos dados recebidos no prompt. Esta regra inclui `user-stories.md`, `functional-spec.md`, `technical-spec.md` e o futuro `implementation-result.md` da etapa de `coding`.
+
 ## Tratamento de incertezas
 
 A ausência, ambiguidade ou conflito de informações não bloqueia a execução. O agente deve investigar as fontes disponíveis para sua etapa, adotar a premissa mais restrita compatível com as evidências e com os *guardrails*, e não criar requisitos, módulos ou comportamentos sem respaldo. A premissa, a fonte consultada e qualquer divergência devem ser registradas no artefato final da etapa.
@@ -58,8 +62,8 @@ A etapa **spec funcional** não possui código no workspace e, portanto, não de
 
 O worker é responsável por disponibilizar os artefatos concluídos no histórico somente leitura da etapa seguinte. O encadeamento obrigatório é:
 
-1. **spec funcional → spec technical:** `user-stories.md` e `spec-funcional.md` devem estar em `/workspace/tasks/history` quando a etapa técnica iniciar.
-2. **spec technical → coding:** `spec-tecnica.md`, junto com as user stories e a especificação funcional relacionadas, deve estar em `/workspace/tasks/history` quando a implementação iniciar.
+1. **spec funcional → spec technical:** `user-stories.md` e `functional-spec.md` devem estar em `/workspace/tasks/history` quando a etapa técnica iniciar.
+2. **spec technical → coding:** `technical-spec.md`, junto com as user stories e a especificação funcional relacionadas, deve estar em `/workspace/tasks/history` quando a implementação iniciar.
 
 Cada agente deve consumir exclusivamente os artefatos montados no seu workspace, sem alterar o histórico. Se algum artefato esperado não estiver presente, o agente segue o tratamento de incertezas e registra a situação em sua entrega final.
 
@@ -74,8 +78,8 @@ Cada agente deve consumir exclusivamente os artefatos montados no seu workspace,
 - **Entradas principais:** documentos da aplicação, histórico e skills disponíveis. Não há repositórios/código para investigar nesta etapa.
 - **Saídas obrigatórias:**
   - `/workspace/tasks/{{task_id}}/user-stories.md`;
-  - `/workspace/tasks/{{task_id}}/spec-funcional.md`.
-- **Validação:** ambos os arquivos devem existir e não estar vazios antes da conclusão. A `user-stories.md` deve ser criada e validada antes da `spec-funcional.md`.
+  - `/workspace/tasks/{{task_id}}/functional-spec.md`.
+- **Validação:** ambos os arquivos devem existir e não estar vazios antes da conclusão. A `user-stories.md` deve ser criada e validada antes da `functional-spec.md`.
 
 A especificação funcional é a fonte de escopo para a etapa técnica; ela deve explicar o comportamento esperado.
 
@@ -85,11 +89,11 @@ A especificação funcional é a fonte de escopo para a etapa técnica; ela deve
 
 - **Instruções fixas:** `spec technical/AGENTS.md` torna a skill `spec-tecnica` obrigatória e delega a ela a classificação da mudança, a estrutura da especificação, as evidências, decisões, testes, divergências e controle de versão.
 - **Prompt de início:** `spec technical/prompt.md` fornece os dados da task e define o destino da entrega.
-- **Entradas principais:** `spec-funcional.md` e `user-stories.md` do histórico, documentos da aplicação, skills e repositórios montados.
-- **Saída obrigatória:** `/workspace/tasks/{{task_id}}/spec-tecnica.md`.
+- **Entradas principais:** `functional-spec.md` e `user-stories.md` do histórico, documentos da aplicação, skills e repositórios montados.
+- **Saída obrigatória:** `/workspace/tasks/{{task_id}}/technical-spec.md`.
 - **Validação:** o arquivo deve existir e não estar vazio. Não se implementa código nem se altera qualquer arquivo do repositório nesta etapa.
 
-A `spec-funcional.md` é a fonte principal do escopo. Caso ela não esteja no histórico, a ausência deve ser registrada conforme a skill `spec-tecnica`, sem inventar requisitos.
+A `functional-spec.md` é a fonte principal do escopo. Caso ela não esteja no histórico, a ausência deve ser registrada conforme a skill `spec-tecnica`, sem inventar requisitos.
 
 ### 3. `coding`
 
@@ -97,12 +101,12 @@ A `spec-funcional.md` é a fonte principal do escopo. Caso ela não esteja no hi
 
 - **Prompt de início:** `coding/prompt.md` fornece os dados da task, aponta para o histórico, contexto e repositórios e exige que as alterações sejam commitadas.
 - **Entradas principais:** histórico (incluindo as especificações disponíveis), documentos da aplicação, skills aplicáveis e repositórios montados.
-- **Saídas obrigatórias:** alterações implementadas, validações executadas, commits locais nas branches preparadas e `/workspace/tasks/{{task_id}}/resultado-implementacao.md`.
+- **Saídas obrigatórias:** alterações implementadas, validações executadas, commits locais nas branches preparadas e `/workspace/tasks/{{task_id}}/implementation-result.md`.
 - **Múltiplos repositórios:** altere somente os repositórios necessários; mantenha cada alteração na branch `TALOREN-{{task_number}}` correspondente e faça commits atômicos em cada repositório modificado.
 - **Validações:** execute os testes, *lint*, *build* e demais verificações aplicáveis às alterações. Registre no arquivo final os comandos executados e seus resultados.
 - **Sem alteração necessária:** não crie commits vazios. Registre no arquivo final a justificativa e as evidências que levaram a essa conclusão.
 - **Conteúdo mínimo do arquivo final:** status da implementação, escopo realizado, repositórios e commits locais, arquivos alterados, validações, premissas, divergências e limitações.
-- **Validação do arquivo final:** crie o diretório da task se necessário e execute `test -s "/workspace/tasks/{{task_id}}/resultado-implementacao.md"` antes de concluir.
+- **Validação do arquivo final:** crie o diretório da task se necessário e execute `test -s "/workspace/tasks/{{task_id}}/implementation-result.md"` antes de concluir.
 
 ## Fluxo e dependências
 
@@ -110,10 +114,10 @@ A `spec-funcional.md` é a fonte principal do escopo. Caso ela não esteja no hi
 Contexto + histórico + skills
              │
              ▼
-spec funcional ──► user-stories.md + spec-funcional.md
+spec funcional ──► user-stories.md + functional-spec.md
              │
              ▼
-spec technical ──► spec-tecnica.md
+spec technical ──► technical-spec.md
              │
              ▼
 coding ──────────► código validado + commits + arquivo final de resultado

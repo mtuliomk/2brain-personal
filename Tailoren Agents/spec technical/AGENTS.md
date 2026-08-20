@@ -1,4 +1,3 @@
-
 Este arquivo define o contexto operacional do agente responsável por gerar uma especificação técnica. A skill `spec-tecnica` define as regras de conteúdo, estrutura e classificação; este arquivo define como a etapa deve ser executada no workspace.
 
 ## Skill obrigatória
@@ -27,6 +26,10 @@ A skill `spec-tecnica` é a autoridade para:
 Não duplique as regras de conteúdo definidas pela skill. Este arquivo complementa a skill exclusivamente com regras operacionais do workspace, incluindo a autonomia da execução.
 
 A especificação técnica deve explicar como implementar o que está definido na especificação funcional disponível. Não altere o escopo funcional silenciosamente.
+
+## Idioma do artefato
+
+Todo conteúdo textual de `technical-spec.md` deve ser escrito em inglês, incluindo títulos, seções, classificação, evidências, decisões, plano de testes, divergências, controle de versão e rastreabilidade. Mantenha o nome de arquivo e o caminho definidos neste documento, mesmo que os dados recebidos no prompt estejam em outro idioma.
 
 ## Autonomia e tratamento de incertezas
 
@@ -113,12 +116,13 @@ Leia integralmente os arquivos encontrados, especialmente:
 ```text
 user-stories.md
 user-story.md (legado)
-spec-funcional.md
+functional-spec.md
+spec-funcional.md (legado)
 ```
 
 O worker monta esse diretório já filtrado para a task em execução. Portanto, não exija que `task_id` ou `task_number` estejam presentes no nome dos arquivos.
 
-Se `spec-funcional.md` não estiver disponível, registre essa ausência em `Decisões assumidas` conforme as regras da skill `spec-tecnica`. Use apenas as evidências restantes e os *guardrails* para elaborar a especificação; não invente requisitos funcionais nem interrompa a etapa por essa ausência.
+Se nem `functional-spec.md` nem `spec-funcional.md` (legado) estiverem disponíveis, registre essa ausência em `Decisões assumidas` conforme as regras da skill `spec-tecnica`. Use apenas as evidências restantes e os *guardrails* para elaborar a especificação; não invente requisitos funcionais nem interrompa a etapa por essa ausência.
 
 A especificação técnica deve usar a especificação funcional como fonte principal do escopo. As user stories servem para preservar contexto, identificar eventuais perdas de informação e manter a rastreabilidade dos itens `US-xx`.
 
@@ -147,7 +151,7 @@ mkdir -p "/workspace/tasks/{{task_id}}"
 Grave obrigatoriamente a especificação em:
 
 ```text
-/workspace/tasks/{{task_id}}/spec-tecnica.md
+/workspace/tasks/{{task_id}}/technical-spec.md
 ```
 
 O arquivo deve ser criado pelo agente e não apenas apresentado na resposta.
@@ -155,12 +159,12 @@ O arquivo deve ser criado pelo agente e não apenas apresentado na resposta.
 Antes de concluir, valide:
 
 ```bash
-test -s "/workspace/tasks/{{task_id}}/spec-tecnica.md"
+test -s "/workspace/tasks/{{task_id}}/technical-spec.md"
 ```
 
 Se a validação falhar, corrija a gravação antes de concluir.
 
-O arquivo `spec-tecnica.md` será coletado pelo worker e publicado como attachment da task.
+O arquivo `technical-spec.md` será coletado pelo worker e publicado como attachment da task.
 
 ## Critério operacional de conclusão
 

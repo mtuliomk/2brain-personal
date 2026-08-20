@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tailoren Agents/spec funcional/AGENTS.md",
+                "file": "Tailoren Agents/spec technical/AGENTS.md",
                 "mode": "source",
                 "source": false
               },
@@ -200,10 +200,10 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "8e7c699d605b1ea8",
+  "active": "bdd9956fcb88793f",
   "lastOpenFiles": [
-    "Tailoren Agents/spec funcional/prompt.md",
     "Tailoren Agents/spec technical/prompt.md",
+    "Tailoren Agents/spec funcional/prompt.md",
     "Tailoren Agents/spec funcional/AGENTS.md",
     "Tailoren Agents/README.md",
     "Tailoren Agents/spec technical/AGENTS.md",
