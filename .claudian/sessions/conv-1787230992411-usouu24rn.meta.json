@@ -1,0 +1,27 @@
+{
+  "id": "conv-1787230992411-usouu24rn",
+  "providerId": "codex",
+  "title": "dentro da pasta Tailoren Agents, temos subpastas q...",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1787230992495,
+  "lastActivityAt": 1787231044979,
+  "sessionId": "01a01f44-be2d-7941-b1d6-2caae98f1ecc",
+  "selectedModel": "gpt-5.6-terra",
+  "providerState": {
+    "threadId": "01a01f44-be2d-7941-b1d6-2caae98f1ecc",
+    "nativeConversationContextEstablished": true,
+    "sessionFilePath": "/home/tulio/.codex/sessions/2026/08/20/rollout-2026-08-20T10-03-13-01a01f44-be2d-7941-b1d6-2caae98f1ecc.jsonl",
+    "transcriptRootPath": "/home/tulio/.codex/sessions",
+    "workspaceDependencyToolVersion": 1
+  },
+  "usage": {
+    "inputTokens": 23460,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 20224,
+    "contextWindow": 258400,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 23460,
+    "percentage": 9,
+    "model": "gpt-5.6-terra"
+  }
+}

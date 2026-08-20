@@ -4,109 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "13d342172949ec43",
+        "id": "ac16365753d0f10f",
         "type": "tabs",
         "children": [
           {
-            "id": "cbab94360634f735",
+            "id": "bdd9956fcb88793f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevSkills/spec-functional/SKILL.md",
+                "file": "Tailoren Agents/README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SKILL"
-            }
-          },
-          {
-            "id": "f6f7ef3f4f44011b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Tailoren Agents/spec funcional/AGENTS.md.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "AGENTS.md"
-            }
-          },
-          {
-            "id": "436b9b6fceb2917f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Tailoren Agents/spec technical/AGENTS.md.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "AGENTS.md"
-            }
-          },
-          {
-            "id": "be781d5137eec16c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Tailoren Agents/coding/AGENTS.md.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "AGENTS.md"
-            }
-          },
-          {
-            "id": "931670c2f49b2874",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Tailoren Agents/coding/prompt.md.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "prompt.md"
-            }
-          },
-          {
-            "id": "f90ffc2b42cfb8c1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Tailoren Agents/spec funcional/prompt.md.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "prompt.md"
-            }
-          },
-          {
-            "id": "96cb47f7c410809c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Tailoren Agents/spec technical/prompt.md.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "prompt.md"
+              "title": "README"
             }
           }
-        ],
-        "currentTab": 6
+        ]
       }
     ],
     "direction": "vertical"
@@ -285,10 +200,11 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "7979d0b1fc809aa1",
+  "active": "bdd9956fcb88793f",
   "lastOpenFiles": [
-    "Tailoren Agents/spec funcional/prompt.md.md",
     "Tailoren Agents/spec technical/prompt.md.md",
+    "Tailoren Agents/README.md",
+    "Tailoren Agents/spec funcional/prompt.md.md",
     "Tailoren Agents/coding/prompt.md.md",
     "Tailoren Agents/coding/AGENTS.md.md",
     "Tailoren Agents/spec technical/AGENTS.md.md",
@@ -320,7 +236,6 @@
     "Projects/Investiments",
     "Projects",
     "DevSkills/dev-backend-nodejs/SKILL.md",
-    "DevSkills/dev-backend-nodejs/examples.md",
     "DevSkills/dev-backend-golang/agents/openai.yaml",
     "DevSkills/dev-backend-golang/agents"
   ]

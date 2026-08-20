@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1787230992411-usouu24rn",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787230992546-be8hpmb",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1787230992334-83h2zpp",
+      "timestamp": 1787230992335,
+      "rawDisplayText": "dentro da pasta Tailoren Agents, temos subpastas que definem o AGENTS.md de cada etapa do desenvolvimento. tambem temos o prompt.md de cada uma dessa etapa (enviado ao agente para iniciar a tarefa)\n\nquero que voce faça o seguinte:\n- crie um README.md na pasta Tailoren Agents documentando essa estrutura\n\ninclua nesse arquivo as informacoes necessárias para contextualizar cada um desses arquivos. considere que na spec funcional, nao teremos codigo na workspace. nas demais, teremos.\n\nem todas as etapas, teremos documentos historico, contexto da aplicacao, dos repositorios. todas elas precisam gerar um arquivo final com o resultado do trabalho",
+      "canonicalText": "dentro da pasta Tailoren Agents, temos subpastas que definem o AGENTS.md de cada etapa do desenvolvimento. tambem temos o prompt.md de cada uma dessa etapa (enviado ao agente para iniciar a tarefa)\n\nquero que voce faça o seguinte:\n- crie um README.md na pasta Tailoren Agents documentando essa estrutura\n\ninclua nesse arquivo as informacoes necessárias para contextualizar cada um desses arquivos. considere que na spec funcional, nao teremos codigo na workspace. nas demais, teremos.\n\nem todas as etapas, teremos documentos historico, contexto da aplicacao, dos repositorios. todas elas precisam gerar um arquivo final com o resultado do trabalho",
+      "context": {
+        "currentNote": {
+          "path": "Tailoren Agents/spec technical/prompt.md.md"
+        }
+      },
+      "images": [],
+      "contentDigest": "15220dcb61f1c059686cbf49bd575a0232e2a47fca05d23d3dcc12756f20418c",
+      "providerUserMessageId": "01a01f44-c8d9-7581-b296-b6381ffe121a",
+      "providerAssistantMessageId": "msg_0569d62880ee59d3016a86fb44424487d09ff7390706db5a88"
+    }
+  ]
+}
