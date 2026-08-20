@@ -1,59 +1,63 @@
 ---
 name: spec-userstory
-description: Gerar ou revisar um documento em inglês com uma ou mais user stories que registrem valor para usuário ou negócio e sirvam de entrada para uma especificação funcional. Usar na etapa de user stories, antes da especificação funcional. Não usar para decidir implementação, classificar a mudança ou desenvolver.
+description: Gerar ou revisar um documento em português com uma ou mais histórias de usuário que registrem valor para usuário ou negócio e sirvam de entrada para uma especificação funcional. Usar na etapa de histórias de usuário, antes da especificação funcional. Não usar para decidir implementação, classificar a mudança ou desenvolver.
 ---
 
-# User stories
+# Histórias de usuário
 
-Generate `user-stories.md` in English. Convert the task into one or more concise, value-oriented stories. Do not inspect code, define implementation details, or create the functional specification.
+Gere `user-stories.md` em português. Converta a task em uma ou mais histórias concisas e orientadas a valor. Não inspecione código, defina detalhes de implementação ou gere a especificação funcional.
 
-## Inputs and decomposition
+## Idioma
 
-Read the application context and every available document related to the current task scope. Extract the affected persona or process, desired capability, expected value, known limits, and relevant terminology.
+Escreva em português todos os títulos, seções, histórias, critérios de aceite, decisões e histórico de versão. Mantenha em inglês somente nomes de arquivos, caminhos, módulos, classes, funções, rotas, contratos, comandos, identificadores e demais trechos que representem código ou elementos técnicos existentes.
 
-Decide autonomously how many stories are needed. Create separate stories only when personas, desired outcomes, benefits, flows, or acceptance criteria are independent. Do not split a single need by technical layers, components, or implementation steps. Generate at least one story.
+## Entradas e decomposição
 
-When a persona or process cannot be identified from the available evidence, use `system user`. Do not wait for human clarification. Record material ambiguities, decisions, and sources in the document.
+Leia o contexto da aplicação e todos os documentos disponíveis relacionados ao escopo da task em execução. Extraia a persona ou processo afetado, a capacidade desejada, o valor esperado, os limites conhecidos e a terminologia relevante.
 
-## Required document structure
+Decida autonomamente quantas histórias são necessárias. Crie histórias distintas somente quando personas, resultados desejados, benefícios, fluxos ou critérios de aceite forem independentes. Não divida uma necessidade única por camadas técnicas, componentes ou etapas de implementação. Gere ao menos uma história.
 
-Use this fixed structure. The document must be written in English, and `## Version History` must be its final section.
+Quando não for possível identificar uma persona ou processo pelas evidências disponíveis, use `usuário do sistema`. Não aguarde esclarecimento humano. Registre ambiguidades, decisões e fontes materiais no documento.
+
+## Estrutura obrigatória do documento
+
+Use esta estrutura fixa. O documento deve ser escrito em português, e `## Controle de Versão` deve ser sua última seção.
 
 ```markdown
-# User Stories — TAK-{{task_number}}
+# Histórias de Usuário — TAK-{{task_number}}
 
-## Task Context
-<Problem or opportunity, affected users, and task objective.>
+## Contexto da Task
+<Problema ou oportunidade, usuários afetados e objetivo da task.>
 
-## US-01 — <short title>
+## US-01 — <título curto>
 
-**As a** <persona or process>
-**I want** <desired capability>
-**So that** <expected benefit or value>
+**Como** <persona ou processo>
+**Quero** <capacidade desejada>
+**Para que** <benefício ou valor esperado>
 
-### Acceptance Criteria
-- Given <precondition>, when <action>, then <expected result>.
+### Critérios de Aceite
+- Dado <pré-condição>, quando <ação>, então <resultado esperado>.
 
-### Out of Scope
-- <Explicitly excluded scope>
-- Write `None identified` when there is no relevant exclusion.
+### Fora de Escopo
+- <Escopo explicitamente excluído>
+- Escreva `Nenhum identificado` quando não houver exclusão relevante.
 
-### Assumptions and Decisions
-- **Ambiguity:** <missing, ambiguous, or conflicting information>
-- **Decision:** <narrowest decision compatible with the evidence>
-- **Source:** <context document, task input, or reasoning>
+### Premissas e Decisões
+- **Ambiguidade:** <informação ausente, ambígua ou conflitante>
+- **Decisão:** <decisão mais restrita compatível com as evidências>
+- **Fonte:** <documento de contexto, dados da task ou raciocínio>
 
-## US-02 — <short title, when applicable>
+## US-02 — <título curto, quando aplicável>
 ...
 
-## Version History
-| Version | Date | Author | Change |
+## Controle de Versão
+| Versão | Data | Autor | Alteração |
 | --- | --- | --- | --- |
-| 1.0 | YYYY-MM-DD | Agent | Initial document creation |
+| 1.0 | YYYY-MM-DD | Agente | Criação inicial do documento |
 ```
 
-Preserve every existing version-history entry and append one entry for each material revision. Keep user stories focused on value and scope; leave detailed expected behavior and cross-story acceptance-criteria mapping to `functional-spec.md`.
+Preserve todas as entradas existentes no histórico de versão e acrescente uma entrada a cada revisão material. Mantenha as histórias focadas em valor e escopo; deixe o detalhamento de comportamentos e o mapeamento de critérios entre histórias para `functional-spec.md`.
 
-## Completion criteria
+## Critérios de conclusão
 
-Consider the document complete only when it is written in English, contains one or more independently justified stories, includes scope and material decisions for each story, keeps `## Version History` as the final section, and has been saved and validated at the path required by the stage agent.
+Considere o documento concluído somente quando estiver escrito em português, exceto pelos nomes de arquivos e elementos de código, contiver uma ou mais histórias justificadamente independentes, incluir escopo e decisões materiais para cada história, mantiver `## Controle de Versão` como última seção e tiver sido gravado e validado no caminho exigido pelo agente da etapa.

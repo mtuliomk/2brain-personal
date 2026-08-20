@@ -23,14 +23,14 @@ Os agentes devem executar integralmente suas etapas de forma autônoma. Eles nã
 
 ## Idioma dos artefatos
 
-Os nomes de todos os arquivos finais e os caminhos contratuais devem permanecer em inglês, independentemente do idioma dos dados recebidos no prompt.
+Todos os artefatos finais devem ter o conteúdo textual escrito em português. Mantenha em inglês somente nomes de arquivos, caminhos, módulos, classes, funções, rotas, contratos, comandos, identificadores, hashes de commit e demais elementos de código existentes. Os nomes de arquivos e os caminhos contratuais também permanecem em inglês, independentemente do idioma dos dados recebidos no prompt.
 
 | Artefato | Idioma do conteúdo |
 | --- | --- |
-| `user-stories.md` | Inglês. |
-| `functional-spec.md` | Português. Mantenha em inglês somente nomes de arquivos, caminhos e elementos de código existentes, como módulos, classes, funções, rotas, contratos, comandos e identificadores. |
-| `technical-spec.md` | Português. Mantenha em inglês somente nomes de arquivos, caminhos e elementos de código existentes, como módulos, classes, funções, rotas, contratos, comandos e identificadores. |
-| `implementation-result.md` | Português. Mantenha em inglês somente nomes de arquivos, caminhos e elementos de código existentes, como módulos, classes, funções, rotas, contratos, comandos, identificadores e hashes de commit. |
+| `user-stories.md` | Português, exceto nomes de arquivos e elementos de código. |
+| `functional-spec.md` | Português, exceto nomes de arquivos e elementos de código. |
+| `technical-spec.md` | Português, exceto nomes de arquivos e elementos de código. |
+| `implementation-result.md` | Português, exceto nomes de arquivos e elementos de código. |
 
 ## Tratamento de incertezas
 

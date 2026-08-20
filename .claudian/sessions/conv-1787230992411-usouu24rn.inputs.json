@@ -391,7 +391,22 @@
       "canonicalText": "baseada na estrutura das specs funcional e tecnica, crie agora a coding\n\nconsidere que ela terá acesso as skills que estao na pasta DefSkills, mas essas skills serao copiadas para o servidor, logo nao referencie elas pelo caminho existente nessa maquina.",
       "images": [],
       "contentDigest": "64bd18fb60fa699e600bfee1d3c04291653a59b85a04f576c4e683b766d5fd99",
-      "providerUserMessageId": "01a01f7c-8fbe-7bc2-aba6-868b7e055fd6"
+      "providerUserMessageId": "01a01f7c-8fbe-7bc2-aba6-868b7e055fd6",
+      "providerAssistantMessageId": "msg_0569d62880ee59d3016a8709d68a4087d0b8d18ba588581072"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787234775284-hdlcipd",
+      "userTurnOrdinal": 28,
+      "state": "accepted",
+      "localMessageId": "msg-1787234775265-wr1jvw8",
+      "timestamp": 1787234775265,
+      "rawDisplayText": "a user-stories tambem precisa ser escrita em portugues. a regra vale para todos os artefatos gerados em todoas as etapas",
+      "canonicalText": "a user-stories tambem precisa ser escrita em portugues. a regra vale para todos os artefatos gerados em todoas as etapas",
+      "images": [],
+      "contentDigest": "3d0d8f553c7970491fec5ea3783d3fb2cdf2592948f5ee3c8d584cca35f746cf",
+      "providerUserMessageId": "01a01f7e-7375-75d1-af05-aebb2f3d82fa",
+      "providerAssistantMessageId": "msg_0569d62880ee59d3016a870a1714d487d0b1a05a6a340e9927"
     }
   ]
 }

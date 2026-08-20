@@ -11,7 +11,7 @@ Ambos devem ser salvos em arquivo (nunca apenas no texto da resposta).
 
 ## Idioma dos artefatos
 
-Todo conteúdo textual de `user-stories.md` deve ser escrito em inglês. Todo conteúdo textual de `functional-spec.md` deve ser escrito em português, incluindo títulos, seções, comportamentos esperados, critérios de aceite, decisões, histórico de versões e rastreabilidade. Em `functional-spec.md`, mantenha em inglês somente nomes de arquivos, caminhos, módulos, classes, funções, rotas, contratos, comandos, identificadores e outros elementos de código. Mantenha os nomes de arquivo e os caminhos definidos neste documento, mesmo que os dados recebidos no prompt estejam em outro idioma.
+Todo conteúdo textual de `user-stories.md` e `functional-spec.md` deve ser escrito em português, incluindo títulos, seções, critérios de aceite, decisões, histórico de versões e rastreabilidade. Mantenha em inglês somente nomes de arquivos, caminhos, módulos, classes, funções, rotas, contratos, comandos, identificadores e outros elementos de código. Mantenha os nomes de arquivo e os caminhos definidos neste documento, mesmo que os dados recebidos no prompt estejam em outro idioma.
 
 ## Autonomia e tratamento de incertezas
 
@@ -85,32 +85,32 @@ Se já existir `user-stories.md` no histórico, use-o como referência e revise 
 Formato fixo do documento:
 
 ```markdown
-# User Stories — TAK-{{task_number}}
+# Histórias de Usuário — TAK-{{task_number}}
 
-## Task Context
-<objective synthesis relating task_objective and subtask_objective>
+## Contexto da Task
+<síntese objetiva do task_objective e do subtask_objective>
 
-## US-01 — <short title>
+## US-01 — <título curto>
 
-**As a** <persona/actor identified from the context and task description>
-**I want** <desired functionality or behavior>
-**So that** <expected benefit or value>
+**Como** <persona/ator identificado a partir do contexto e da descrição da task>
+**Quero** <funcionalidade ou comportamento desejado>
+**Para que** <benefício ou valor esperado>
 
-### Acceptance Criteria
-- Given <precondition>, when <action>, then <expected result>
-- Given <precondition>, when <action>, then <expected result>
-- (add as many as needed to cover the relevant flows)
+### Critérios de Aceite
+- Dado <pré-condição>, quando <ação>, então <resultado esperado>
+- Dado <pré-condição>, quando <ação>, então <resultado esperado>
+- (adicione quantos forem necessários para cobrir os fluxos relevantes)
 
-### Out of Scope
-- <items explicitly not covered by this story, if any>
+### Fora de Escopo
+- <itens explicitamente não cobertos por esta história, se houver>
 
-## US-02 — <short title, when applicable>
+## US-02 — <título curto, quando aplicável>
 ...
 
-## Version History
-| Version | Date | Author | Change |
+## Controle de Versão
+| Versão | Data | Autor | Alteração |
 | --- | --- | --- | --- |
-| 1.0 | YYYY-MM-DD | Agent | Initial document creation |
+| 1.0 | YYYY-MM-DD | Agente | Criação inicial do documento |
 ```
 
 Regras de preenchimento:
@@ -118,7 +118,7 @@ Regras de preenchimento:
 - Se a persona não estiver explícita nos dados recebidos, infira a partir do contexto da aplicação (Passo 1) e da descrição da task; se ainda assim não houver base para inferir, use `usuário do sistema`.
 - Os critérios de aceite de cada story devem ser derivados do `task_description` e do `subtask_objective` — não invente requisitos que não decorrem deles.
 - Se houver `user-stories.md` no histórico (Passo 3), mantenha consistência de estilo, granularidade e nomenclatura de personas com o que já foi usado, quando aplicável à tarefa atual.
-- Se não houver itens fora de escopo evidentes para uma story, escreva `None identified` em vez de omitir a seção.
+- Se não houver itens fora de escopo evidentes para uma story, escreva `Nenhum identificado` em vez de omitir a seção.
 
 Grave o arquivo em:
 
@@ -190,4 +190,4 @@ Não conclua a resposta sem essa seção.
 - Nunca solicite ou aguarde aprovação, validação, decisão ou outra intervenção humana. Registre as premissas e limitações conforme a seção `Autonomia e tratamento de incertezas` e conclua a entrega.
 - Os diretórios de contexto, skills e histórico de tarefas (`/workspace/tasks/history`) são somente leitura; nunca tente editá-los ou gravar neles.
 - Ao mencionar um determinado arquivo, em qualquer parte da resposta — incluindo a seção `Contexto utilizado` — escreva apenas o nome e extensão do arquivo, nunca seu caminho completo.
-- Nunca gere `functional-spec.md` sem antes ter gravado e validado `user-stories.md`; a ordem entre os passos 5 e 6 é obrigatória. Em ambos os documentos, `## Version History` deve ser a última seção.
+- Nunca gere `functional-spec.md` sem antes ter gravado e validado `user-stories.md`; a ordem entre os passos 5 e 6 é obrigatória. Em ambos os documentos, `## Controle de Versão` deve ser a última seção.
