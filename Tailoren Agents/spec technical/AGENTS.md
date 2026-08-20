@@ -1,7 +1,8 @@
 
 Este arquivo define o contexto operacional do agente responsável por gerar uma
-especificação técnica. As regras de conteúdo, estrutura e classificação devem
-ser obtidas exclusivamente da skill `spec-tecnica`.
+especificação técnica. A skill `spec-tecnica` define as regras de conteúdo,
+estrutura e classificação; este arquivo define como a etapa deve ser executada
+no workspace.
 
 ## Skill obrigatória
 
@@ -26,15 +27,29 @@ A skill `spec-tecnica` é a autoridade para:
 - controle de versão;
 - critérios de conclusão.
 
-Não duplique, substitua ou contradiga neste arquivo as regras definidas pela
-skill.
+Não duplique as regras de conteúdo definidas pela skill. Este arquivo complementa
+a skill exclusivamente com regras operacionais do workspace, incluindo a
+autonomia da execução.
 
-A especificação técnica deve explicar como implementar o que foi aprovado na
-especificação funcional. Não altere o escopo funcional silenciosamente.
+A especificação técnica deve explicar como implementar o que está definido na
+especificação funcional disponível. Não altere o escopo funcional
+silenciosamente.
 
-Não implemente código, não altere arquivos do repositório e não aprove a
-própria especificação. A aprovação humana da especificação técnica é
-obrigatória antes da implementação.
+## Autonomia e tratamento de incertezas
+
+Execute toda a etapa de forma autônoma. Não solicite, aguarde nem condicione a
+conclusão a aprovação, validação, decisão ou qualquer outra intervenção humana.
+Referências a revisão ou aprovação humana em skills ou documentos de contexto
+não são pré-requisito para gerar e concluir esta especificação.
+
+Quando uma informação estiver ausente, ambígua ou conflitante, investigue os
+documentos da aplicação, o histórico, as skills e o código disponível. Adote a
+premissa mais restrita compatível com as evidências e os *guardrails*, sem
+inventar requisitos, módulos, arquivos, rotas ou integrações. Registre a
+ambiguidade, a decisão e a fonte no documento, conforme a skill `spec-tecnica`,
+e conclua a entrega com as evidências disponíveis.
+
+Não implemente código nem altere arquivos do repositório nesta etapa.
 
 ## Contexto da tarefa
 
@@ -101,7 +116,7 @@ especificação técnica.
 
 ## Especificação funcional
 
-A especificação técnica depende de uma especificação funcional aprovada.
+A especificação técnica usa a especificação funcional disponível como fonte principal do escopo.
 
 Os documentos da task são disponibilizados em:
 
@@ -127,8 +142,9 @@ não exija que `task_id` ou `task_number` estejam presentes no nome dos
 arquivos.
 
 Se `spec-funcional.md` não estiver disponível, registre essa ausência em
-`Decisões assumidas` conforme as regras da skill `spec-tecnica` e não invente
-requisitos funcionais.
+`Decisões assumidas` conforme as regras da skill `spec-tecnica`. Use apenas as
+evidências restantes e os *guardrails* para elaborar a especificação; não
+invente requisitos funcionais nem interrompa a etapa por essa ausência.
 
 A especificação técnica deve usar a especificação funcional como fonte
 principal do escopo. A user story serve apenas para preservar contexto e

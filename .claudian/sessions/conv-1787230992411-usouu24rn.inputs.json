@@ -102,7 +102,77 @@
       "canonicalText": "agora quero que voce faça essas atividades:\n- revise os arquivos em spec funcional e spec technical\n\najuste esses arquivos de acordo com o agents.md\n\npor enquanto, nao vamos atuar nos arquivos de coding",
       "images": [],
       "contentDigest": "4fb52bab0bbc4eff706589b91ad67d6e5a9e793dd7894e6d7ed2dd49347c1d54",
-      "providerUserMessageId": "01a01f58-e428-7290-b594-360f4830d2e9"
+      "providerUserMessageId": "01a01f58-e428-7290-b594-360f4830d2e9",
+      "providerAssistantMessageId": "msg_0569d62880ee59d3016a8700887f1087d089f7e28e9c8064bd"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787232507978-e0g5hb7",
+      "userTurnOrdinal": 8,
+      "state": "accepted",
+      "localMessageId": "msg-1787232507967-l3wnttd",
+      "timestamp": 1787232507967,
+      "rawDisplayText": "estou ollha do a funcional. temos diretorios e caminhos definidos no prompt e agents.md. o que voce acha disso?",
+      "canonicalText": "estou ollha do a funcional. temos diretorios e caminhos definidos no prompt e agents.md. o que voce acha disso?",
+      "images": [],
+      "contentDigest": "a509578f492c87eeef4e3295187d2670e421f493a005ab7b901885f7d80b4be4",
+      "providerUserMessageId": "01a01f5b-da27-7003-ae45-70a68186a34b",
+      "providerAssistantMessageId": "msg_0569d62880ee59d3016a87010a513c87d090dc15380bd6134d"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787232543702-m5u6nwz",
+      "userTurnOrdinal": 9,
+      "state": "accepted",
+      "localMessageId": "msg-1787232543694-foh8zgf",
+      "timestamp": 1787232543694,
+      "rawDisplayText": "pode fazer",
+      "canonicalText": "pode fazer",
+      "images": [],
+      "contentDigest": "b82cbbaabf5589812a3f278c22d0247a5e7c07ec5b49d0bff0a44fe386f5a7ac",
+      "providerUserMessageId": "01a01f5c-644c-7881-8e2d-449069f2e4ca",
+      "providerAssistantMessageId": "msg_0569d62880ee59d3016a87012e0aa087d0b9713aa013af3fdd"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787232586091-zgchcl0",
+      "userTurnOrdinal": 10,
+      "state": "accepted",
+      "localMessageId": "msg-1787232586080-rirppo5",
+      "timestamp": 1787232586080,
+      "rawDisplayText": "use a mesma estratégia no spec technical",
+      "canonicalText": "use a mesma estratégia no spec technical",
+      "images": [],
+      "contentDigest": "79e9d33a8ba22732cc3d07147c36df9b289f149037edb917d415f79c6f82d988",
+      "providerUserMessageId": "01a01f5d-0a20-73a2-8461-adbb8bfce28d",
+      "providerAssistantMessageId": "msg_0569d62880ee59d3016a870151c43c87d09e6ffdf3f1fce9e1"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787232619251-re99cf4",
+      "userTurnOrdinal": 11,
+      "state": "accepted",
+      "localMessageId": "msg-1787232619234-f69duid",
+      "timestamp": 1787232619234,
+      "rawDisplayText": "vc está gerando os arquivos com quebra de linha errado",
+      "canonicalText": "vc está gerando os arquivos com quebra de linha errado",
+      "images": [],
+      "contentDigest": "0b69349d3403f6f307e120f7a2afd0d8f5bd90b1c06119b10414e2a231a80320",
+      "providerUserMessageId": "01a01f5d-9154-7bc2-a845-3043a5c5bf95",
+      "providerAssistantMessageId": "msg_0569d62880ee59d3016a87017ae41087d0b348edaf1b7c8837"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787232651308-1ssqorb",
+      "userTurnOrdinal": 12,
+      "state": "accepted",
+      "localMessageId": "msg-1787232651298-wlbr407",
+      "timestamp": 1787232651298,
+      "rawDisplayText": "isso ocorre em todos os arquivos que voce atua",
+      "canonicalText": "isso ocorre em todos os arquivos que voce atua",
+      "images": [],
+      "contentDigest": "f7ed60aa542f8af298e787d4a8ec7e10af516f79bc19f2c32934c7471f580404",
+      "providerUserMessageId": "01a01f5e-08b8-7e52-b0ff-77780fccccdb"
     }
   ]
 }
