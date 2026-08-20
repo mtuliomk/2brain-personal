@@ -74,7 +74,35 @@
       "canonicalText": "o que voce acha do fluxo como um todo? alguma observacao antes de seguirmos?",
       "images": [],
       "contentDigest": "12895cbb33903177d8068da8990f06f0e4a9fa00fd31bd65a4d2414155b0f053",
-      "providerUserMessageId": "01a01f54-8cd8-7f92-80e8-1e2cd8cec76b"
+      "providerUserMessageId": "01a01f54-8cd8-7f92-80e8-1e2cd8cec76b",
+      "providerAssistantMessageId": "msg_0569d62880ee59d3016a86ff3f65a887d0a76c5d382366316f"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787232152726-mhitrui",
+      "userTurnOrdinal": 6,
+      "state": "accepted",
+      "localMessageId": "msg-1787232152715-mi097hf",
+      "timestamp": 1787232152715,
+      "rawDisplayText": "ajuste os itens 2, 3, 4,",
+      "canonicalText": "ajuste os itens 2, 3, 4,",
+      "images": [],
+      "contentDigest": "62d967eca3189754a2ad3e3fe918cead3a007e2b0bf55d9a6376a910c73c2d2d",
+      "providerUserMessageId": "01a01f56-6d37-72e2-a162-3c6f7427287c",
+      "providerAssistantMessageId": "msg_0569d62880ee59d3016a86ffb54fc487d0a6b70df08da61d58"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787232313685-1r8n3t2",
+      "userTurnOrdinal": 7,
+      "state": "accepted",
+      "localMessageId": "msg-1787232313672-phc7c28",
+      "timestamp": 1787232313672,
+      "rawDisplayText": "agora quero que voce faça essas atividades:\n- revise os arquivos em spec funcional e spec technical\n\najuste esses arquivos de acordo com o agents.md\n\npor enquanto, nao vamos atuar nos arquivos de coding",
+      "canonicalText": "agora quero que voce faça essas atividades:\n- revise os arquivos em spec funcional e spec technical\n\najuste esses arquivos de acordo com o agents.md\n\npor enquanto, nao vamos atuar nos arquivos de coding",
+      "images": [],
+      "contentDigest": "4fb52bab0bbc4eff706589b91ad67d6e5a9e793dd7894e6d7ed2dd49347c1d54",
+      "providerUserMessageId": "01a01f58-e428-7290-b594-360f4830d2e9"
     }
   ]
 }

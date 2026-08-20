@@ -29,6 +29,15 @@ o agente deve seguir as regras da sua etapa, registrar as premissas e
 limitações no artefato final e concluir o trabalho com base nas evidências
 disponíveis.
 
+## Tratamento de incertezas
+
+A ausência, ambiguidade ou conflito de informações não bloqueia a execução.
+O agente deve investigar as fontes disponíveis para sua etapa, adotar a
+premissa mais restrita compatível com as evidências e com os *guardrails*, e
+não criar requisitos, módulos ou comportamentos sem respaldo. A premissa, a
+fonte consultada e qualquer divergência devem ser registradas no artefato
+final da etapa.
+
 ## Estrutura
 
 ```text
@@ -58,6 +67,23 @@ somente leitura e devem ser investigados antes de produzir a entrega.
 | Repositórios | `/workspace/repositories/<repository-id>` | Código, configurações, testes e contratos da aplicação. |
 
 A etapa **spec funcional** não possui código no workspace e, portanto, não deve depender de inspeção de repositórios. As etapas **spec technical** e **coding** possuem repositórios montados e devem usá-los quando forem relevantes à tarefa.
+
+## Contrato de transição entre etapas
+
+O worker é responsável por disponibilizar os artefatos concluídos no histórico
+somente leitura da etapa seguinte. O encadeamento obrigatório é:
+
+1. **spec funcional → spec technical:** `user-story.md` e
+   `spec-funcional.md` devem estar em `/workspace/tasks/history` quando a
+   etapa técnica iniciar.
+2. **spec technical → coding:** `spec-tecnica.md`, junto com a user story e a
+   especificação funcional relacionadas, deve estar em
+   `/workspace/tasks/history` quando a implementação iniciar.
+
+Cada agente deve consumir exclusivamente os artefatos montados no seu
+workspace, sem alterar o histórico. Se algum artefato esperado não estiver
+presente, o agente segue o tratamento de incertezas e registra a situação em
+sua entrega final.
 
 ## Etapas
 
@@ -112,7 +138,23 @@ criando os commits necessários — sem *push*.
   commitadas.
 - **Entradas principais:** histórico (incluindo as especificações disponíveis),
   documentos da aplicação, skills aplicáveis e repositórios montados.
-- **Saída operacional atual:** alterações implementadas, validações executadas e commits locais na branch preparada.
+- **Saídas obrigatórias:** alterações implementadas, validações executadas,
+  commits locais nas branches preparadas e
+  `/workspace/tasks/{{task_id}}/resultado-implementacao.md`.
+- **Múltiplos repositórios:** altere somente os repositórios necessários;
+  mantenha cada alteração na branch `TALOREN-{{task_number}}` correspondente e
+  faça commits atômicos em cada repositório modificado.
+- **Validações:** execute os testes, *lint*, *build* e demais verificações
+  aplicáveis às alterações. Registre no arquivo final os comandos executados e
+  seus resultados.
+- **Sem alteração necessária:** não crie commits vazios. Registre no arquivo
+  final a justificativa e as evidências que levaram a essa conclusão.
+- **Conteúdo mínimo do arquivo final:** status da implementação, escopo
+  realizado, repositórios e commits locais, arquivos alterados, validações,
+  premissas, divergências e limitações.
+- **Validação do arquivo final:** crie o diretório da task se necessário e
+  execute `test -s "/workspace/tasks/{{task_id}}/resultado-implementacao.md"`
+  antes de concluir.
 
 ## Fluxo e dependências
 
