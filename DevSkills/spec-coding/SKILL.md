@@ -5,13 +5,21 @@ description: Implementar uma mudança de código a partir de uma especificação
 
 # Implementação
 
-Implemente o escopo definido na especificação técnica disponível. Use a especificação funcional e as user stories para manter a rastreabilidade dos comportamentos e critérios de aceite. Não altere silenciosamente o escopo, a classificação ou a abordagem técnica.
+Gere `implementation-plan.md` antes de implementar o escopo definido na especificação técnica disponível. Use a especificação funcional e as user stories para manter a rastreabilidade dos comportamentos e critérios de aceite. Depois, execute o plano usando as skills de desenvolvimento aplicáveis. Não altere silenciosamente o escopo, a classificação ou a abordagem técnica.
 
 ## Autonomia e linha de base
 
 Execute a etapa de forma autônoma. Não aguarde aprovação, validação, decisão ou intervenção humana. Quando houver informação ausente, ambígua ou conflitante, use a especificação técnica, o contexto, as skills e o código como evidências; adote a decisão mais restrita compatível com elas e registre a decisão no resultado final.
 
 Antes de alterar código, registre a linha de base: branches, alterações preexistentes, comandos oficiais de validação e falhas já existentes. Não atribua falhas preexistentes à task e não altere arquivos fora do escopo para fazer validações globais passarem.
+
+## Plano de implementação
+
+Após registrar a linha de base e antes de alterar código, gere `implementation-plan.md` no caminho definido pelo agente da etapa. O plano deve ser escrito em português, exceto por nomes de arquivos e elementos de código, e deve usar a estrutura definida pelo agente.
+
+Decomponha a especificação técnica em itens verificáveis, identificados como `IP-xx`. Para cada item, registre repositório, referências `US-xx`/`CE-xx`/`CA-xx`, arquivos ou módulos afetados, alteração planejada, validações e estratégia de commit. Registre trabalho excluído, premissas e decisões. Mantenha `## Controle de Versão` como última seção.
+
+Valide que `implementation-plan.md` existe e não está vazio antes de iniciar qualquer alteração de código. Use as skills de desenvolvimento aplicáveis para executar os itens planejados; elas não podem ampliar o escopo ou alterar a abordagem técnica sem registrar uma decisão no plano e no resultado final.
 
 ## Implementação por classificação
 
@@ -35,8 +43,8 @@ Crie commits atômicos e locais somente nos repositórios modificados. Inclua ap
 
 Gere `implementation-result.md` em português no caminho definido pelo agente da etapa. Mantenha em inglês somente nomes de arquivos, caminhos, módulos, classes, funções, rotas, contratos, comandos, identificadores, hashes de commit e outros elementos de código.
 
-O resultado deve usar a estrutura definida pelo agente da etapa, preservar `## Controle de Versão` como última seção e registrar status, alterações, rastreabilidade, validações, commits, escopo excluído, decisões e limitações. Preserve entradas existentes do histórico de versão e acrescente uma entrada a cada revisão material.
+O resultado deve usar a estrutura definida pelo agente da etapa, preservar `## Controle de Versão` como última seção e registrar o plano executado, status, alterações, rastreabilidade, validações, commits, escopo excluído, decisões e limitações. Preserve entradas existentes do histórico de versão e acrescente uma entrada a cada revisão material.
 
 ## Critérios de conclusão
 
-Considere a implementação concluída somente quando o escopo técnico tiver sido respeitado, as alterações ou a ausência justificada estiverem registradas, as validações aplicáveis tiverem sido executadas e documentadas, os commits necessários tiverem sido criados localmente sem *push*, o resultado final tiver sido gravado e validado e nenhuma alteração fora do escopo tiver sido introduzida.
+Considere a implementação concluída somente quando o plano tiver sido gerado e validado antes das alterações de código, o escopo técnico tiver sido respeitado, as alterações ou a ausência justificada estiverem registradas, as validações aplicáveis tiverem sido executadas e documentadas, os commits necessários tiverem sido criados localmente sem *push*, `implementation-plan.md` e o resultado final tiverem sido gravados e validados e nenhuma alteração fora do escopo tiver sido introduzida.

@@ -30,6 +30,7 @@ Todos os artefatos finais devem ter o conteúdo textual escrito em português. M
 | `user-stories.md` | Português, exceto nomes de arquivos e elementos de código. |
 | `functional-spec.md` | Português, exceto nomes de arquivos e elementos de código. |
 | `technical-spec.md` | Português, exceto nomes de arquivos e elementos de código. |
+| `implementation-plan.md` | Português, exceto nomes de arquivos e elementos de código. |
 | `implementation-result.md` | Português, exceto nomes de arquivos e elementos de código. |
 
 ## Tratamento de incertezas
@@ -109,12 +110,12 @@ A `functional-spec.md` é a fonte principal do escopo. Caso ela não esteja no h
 - **Instruções fixas:** `coding/AGENTS.md` define o uso de skills, a investigação de contexto, a implementação, as validações, os commits locais e o arquivo final.
 - **Prompt de início:** `coding/prompt.md` fornece exclusivamente os dados variáveis da task.
 - **Entradas principais:** histórico (incluindo as especificações disponíveis), documentos da aplicação, skills aplicáveis e repositórios montados.
-- **Saídas obrigatórias:** alterações implementadas, validações executadas, commits locais nas branches preparadas e `/workspace/tasks/{{task_id}}/implementation-result.md`.
+- **Saídas obrigatórias:** `implementation-plan.md` gerado e validado antes de qualquer alteração de código, alterações implementadas, validações executadas, commits locais nas branches preparadas e `/workspace/tasks/{{task_id}}/implementation-result.md`.
 - **Múltiplos repositórios:** altere somente os repositórios necessários; mantenha cada alteração na branch `TALOREN-{{task_number}}` correspondente e faça commits atômicos em cada repositório modificado.
 - **Validações:** execute os testes, *lint*, *build* e demais verificações aplicáveis às alterações. Registre no arquivo final os comandos executados e seus resultados.
 - **Sem alteração necessária:** não crie commits vazios. Registre no arquivo final a justificativa e as evidências que levaram a essa conclusão.
-- **Conteúdo mínimo do arquivo final:** status da implementação, escopo realizado, repositórios e commits locais, arquivos alterados, validações, premissas, divergências e limitações.
-- **Validação do arquivo final:** crie o diretório da task se necessário e execute `test -s "/workspace/tasks/{{task_id}}/implementation-result.md"` antes de concluir.
+- **Conteúdo mínimo dos artefatos:** plano rastreável de itens de implementação, validações e commits; e resultado com status da implementação, escopo realizado, repositórios e commits locais, arquivos alterados, validações, premissas, divergências e limitações.
+- **Validação dos artefatos:** crie o diretório da task se necessário e execute `test -s "/workspace/tasks/{{task_id}}/implementation-plan.md"` antes de codificar e `test -s "/workspace/tasks/{{task_id}}/implementation-result.md"` antes de concluir.
 
 ## Fluxo e dependências
 
@@ -128,7 +129,7 @@ spec funcional ──► user-stories.md + functional-spec.md
 spec technical ──► technical-spec.md
              │
              ▼
-coding ──────────► código validado + commits + arquivo final de resultado
+coding ──────────► implementation-plan.md → código validado + commits + implementation-result.md
 ```
 
 Em qualquer etapa, o agente deve preservar o contexto/histórico como leitura, não inventar informações ausentes e validar o artefato final antes de encerrar a execução. As referências entre etapas devem respeitar o escopo já definido: a especificação técnica não modifica silenciosamente a funcional e a implementação não deve ultrapassar a especificação técnica disponível.

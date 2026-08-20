@@ -60,9 +60,78 @@ Inspecione o código, os testes, os scripts, as configurações e os padrões re
 
 Registre o estado inicial de cada repositório, incluindo branch atual, alterações preexistentes e resultados de validações que possam ser executadas antes da implementação. Não atribua à task falhas comprovadamente preexistentes e não altere arquivos fora do escopo para corrigir problemas não relacionados.
 
-## Implementação, validação e commits
+## Plano de implementação
 
-Implemente somente o escopo definido pela `technical-spec.md`. Para classificações `Nova` e `Modificação`, siga a abordagem ou o delta definido. Para `Duplicada`, não crie alterações ou commits vazios; registre as evidências de que o comportamento já existe.
+A skill `spec-coding` deve gerar o plano de implementação antes de qualquer alteração de código. Após investigar o contexto, os repositórios, a linha de base e as skills aplicáveis, prepare o diretório da task e crie o plano em:
+
+```bash
+mkdir -p "/workspace/tasks/{{task_id}}"
+```
+
+```text
+/workspace/tasks/{{task_id}}/implementation-plan.md
+```
+
+O plano é a entrada obrigatória para as skills de desenvolvimento. Não altere código antes de gerar e validar esse arquivo. As skills de desenvolvimento aplicáveis executam os itens planejados; elas não podem alterar o escopo ou a abordagem definida no plano e na especificação técnica.
+
+O conteúdo textual de `implementation-plan.md` deve ser escrito em português. Mantenha em inglês somente nomes de arquivos, caminhos, módulos, classes, funções, rotas, contratos, comandos, identificadores, hashes de commit e demais elementos de código.
+
+Use a estrutura abaixo. `## Controle de Versão` deve ser a última seção.
+
+```markdown
+# Plano de Implementação — TAK-{{task_number}}
+
+## Contexto
+<Resumo do escopo funcional e técnico que será executado.>
+
+## Objetivo
+<O resultado técnico esperado para a task.>
+
+## Classificação
+**Tipo:** Nova | Modificação | Duplicada
+
+<Justificativa e impacto da classificação na execução.>
+
+## Itens de Implementação
+- [ ] **IP-01 — <título curto>**
+  - **Repositório:** <repository-id>
+  - **Referências:** US-01 / CE-01 / CA-01
+  - **Arquivos ou Módulos:** <paths ou elementos de código>
+  - **Execução:** <alteração planejada>
+
+## Validações Planejadas
+| Referência | Validação | Comando ou Procedimento | Resultado Esperado |
+| --- | --- | --- | --- |
+| IP-01 / CA-01 | <teste, lint, build ou revisão> | `<command>` | <resultado esperado> |
+
+## Estratégia de Commits
+| Repositório | Itens | Commit Planejado |
+| --- | --- | --- |
+| <repository-id> | IP-01 | <mensagem ou convenção aplicável> |
+
+## Fora do Escopo
+<Trabalho identificado e não planejado. Escreva `Nenhum identificado` quando aplicável.>
+
+## Premissas e Decisões
+- **Ambiguidade:** <informação ausente, ambígua ou conflitante>
+- **Decisão:** <decisão adotada>
+- **Fonte:** <especificação, contexto, skill, código ou raciocínio>
+
+## Controle de Versão
+| Versão | Data | Autor | Alteração |
+| --- | --- | --- | --- |
+| 1.0 | YYYY-MM-DD | Agente | Criação inicial do documento |
+```
+
+Antes de iniciar a implementação, valide o plano:
+
+```bash
+test -s "/workspace/tasks/{{task_id}}/implementation-plan.md"
+```
+
+## Execução do plano, validação e commits
+
+Execute os itens de `implementation-plan.md` usando as skills de desenvolvimento aplicáveis. Implemente somente o escopo definido pela `technical-spec.md` e pelo plano. Para classificações `Nova` e `Modificação`, siga a abordagem ou o delta definido. Para `Duplicada`, não crie alterações ou commits vazios; registre as evidências de que o comportamento já existe.
 
 Aplique os padrões do repositório e as skills relevantes. Crie ou ajuste testes para os critérios `CA-xx` e comportamentos `CE-xx` afetados quando aplicável.
 
@@ -70,17 +139,12 @@ Execute os comandos oficiais do projeto para testes, *lint*, formatação, anál
 
 Revise o diff final para confirmar aderência ao escopo, segurança, tratamento de erros, regressões e cobertura de testes. Faça commits atômicos em cada repositório modificado, usando a skill `dev-commit`. Não faça *push*. Não inclua alterações preexistentes ou não relacionadas nos commits.
 
-## Artefato final
+## Artefatos finais
 
-Crie o diretório da task antes de gravar o resultado:
-
-```bash
-mkdir -p "/workspace/tasks/{{task_id}}"
-```
-
-Grave obrigatoriamente o resultado em:
+Grave obrigatoriamente os dois artefatos da etapa em:
 
 ```text
+/workspace/tasks/{{task_id}}/implementation-plan.md
 /workspace/tasks/{{task_id}}/implementation-result.md
 ```
 
@@ -149,4 +213,4 @@ test -s "/workspace/tasks/{{task_id}}/implementation-result.md"
 
 ## Critério operacional de conclusão
 
-A tarefa somente está concluída quando os documentos e repositórios relevantes tiverem sido investigados, as skills aplicáveis tiverem sido usadas, a implementação ou a ausência justificada tiver sido registrada, as validações aplicáveis tiverem sido executadas e registradas, os commits necessários tiverem sido criados sem *push*, `implementation-result.md` existir e não estiver vazio e nenhuma alteração fora do escopo tiver sido introduzida.
+A tarefa somente está concluída quando os documentos e repositórios relevantes tiverem sido investigados, as skills aplicáveis tiverem sido usadas, `implementation-plan.md` tiver sido criado e validado antes de qualquer alteração de código, a implementação ou a ausência justificada tiver sido registrada, as validações aplicáveis tiverem sido executadas e registradas, os commits necessários tiverem sido criados sem *push*, `implementation-plan.md` e `implementation-result.md` existirem e não estiverem vazios e nenhuma alteração fora do escopo tiver sido introduzida.
