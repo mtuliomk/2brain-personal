@@ -25,7 +25,7 @@ A especificação técnica deve explicar como implementar o que está definido n
 
 ## Idioma do artefato
 
-Todo conteúdo textual de `technical-spec.md` deve ser escrito em inglês, incluindo títulos, seções, classificação, evidências, decisões, plano de testes, divergências, controle de versão e rastreabilidade. Mantenha o nome de arquivo e o caminho definidos neste documento, mesmo que os dados recebidos no prompt estejam em outro idioma.
+Todo conteúdo textual de `technical-spec.md` deve ser escrito em português, incluindo títulos, seções, classificação, evidências, decisões, plano de testes, divergências, controle de versão e rastreabilidade. Mantenha em inglês somente nomes de arquivos, caminhos, módulos, classes, funções, rotas, contratos, comandos, identificadores e outros elementos de código. Mantenha o nome de arquivo e o caminho definidos neste documento, mesmo que os dados recebidos no prompt estejam em outro idioma.
 
 ## Autonomia e tratamento de incertezas
 
@@ -111,14 +111,12 @@ Leia integralmente os arquivos encontrados, especialmente:
 
 ```text
 user-stories.md
-user-story.md (legado)
 functional-spec.md
-spec-funcional.md (legado)
 ```
 
 O worker monta esse diretório já filtrado para a task em execução. Portanto, não exija que `task_id` ou `task_number` estejam presentes no nome dos arquivos.
 
-Se nem `functional-spec.md` nem `spec-funcional.md` (legado) estiverem disponíveis, registre essa ausência em `Decisões assumidas` conforme as regras da skill `spec-tecnica`. Use apenas as evidências restantes e os *guardrails* para elaborar a especificação; não invente requisitos funcionais nem interrompa a etapa por essa ausência.
+Se `functional-spec.md` não estiver disponível, registre essa ausência em `Decisões assumidas` conforme as regras da skill `spec-tecnica`. Use apenas as evidências restantes e os *guardrails* para elaborar a especificação; não invente requisitos funcionais nem interrompa a etapa por essa ausência.
 
 A especificação técnica deve usar a especificação funcional como fonte principal do escopo. As user stories servem para preservar contexto, identificar eventuais perdas de informação e manter a rastreabilidade dos itens `US-xx`.
 

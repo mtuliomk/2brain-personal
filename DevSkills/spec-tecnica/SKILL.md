@@ -1,101 +1,105 @@
 ---
 name: spec-tecnica
-description: Gerar uma especificação técnica em inglês a partir de uma especificação funcional disponível, investigando o código existente, classificando a mudança como Nova, Modificação ou Duplicada e definindo uma implementação e um plano de testes. Usar na etapa de especificação técnica, antes da implementação. Não usar para alterar código ou redefinir o escopo funcional.
+description: Gerar uma especificação técnica em português a partir de uma especificação funcional disponível, investigando o código existente, classificando a mudança como Nova, Modificação ou Duplicada e definindo uma implementação e um plano de testes. Usar na etapa de especificação técnica, antes da implementação. Não usar para alterar código ou redefinir o escopo funcional.
 ---
 
-# Technical specification
+# Especificação técnica
 
-Generate `technical-spec.md` in English. Describe how to implement the functional scope using the available codebase and context. Do not implement code, alter repositories, or silently redefine functional scope.
+Gere `technical-spec.md` em português. Descreva como implementar o escopo funcional usando o código e o contexto disponíveis. Não implemente código, altere repositórios ou redefina silenciosamente o escopo funcional.
 
-## Inputs and investigation
+## Idioma
 
-Read the functional specification as the primary scope source and user stories as traceability context. Inspect relevant application documents, skills, source code, tests, configurations, contracts, integrations, permissions, persistence, and equivalent features before classifying the demand.
+Escreva em português todos os títulos, seções, explicações, decisões, evidências, cenários e histórico de versão. Mantenha em inglês somente nomes de arquivos, caminhos, módulos, classes, funções, rotas, contratos, comandos, identificadores e demais trechos que representem código ou elementos técnicos existentes.
 
-Search systematically for terms from the task, user stories, and functional specification. Record evidence using precise repository, path, module, class, function, route, contract, or test references. Do not classify a change as `New` merely because the first search result has no match.
+## Entradas e investigação
 
-## Classification
+Leia a especificação funcional como fonte principal do escopo e as user stories como contexto de rastreabilidade. Inspecione documentos relevantes da aplicação, skills, código-fonte, testes, configurações, contratos, integrações, permissões, persistência e funcionalidades equivalentes antes de classificar a demanda.
 
-Classify every demand as exactly one of the following:
+Pesquise sistematicamente termos da task, das user stories e da especificação funcional. Registre evidências usando referências precisas de repositório, caminho, módulo, classe, função, rota, contrato ou teste. Não classifique uma mudança como `Nova` apenas porque a primeira busca não encontrou correspondências.
 
-- **New:** no existing implementation delivers the requested functional behavior.
-- **Modification:** an existing feature delivers part of the behavior or requires an extension or change.
-- **Duplicate:** the current system already delivers all relevant functional behavior and acceptance criteria without material difference.
+## Classificação
 
-The classification changes the content of the same document structure; it never changes the structure itself.
+Classifique toda demanda como exatamente uma das opções abaixo:
 
-- For **New**, describe the complete implementation approach.
-- For **Modification**, describe only the delta over the existing implementation.
-- For **Duplicate**, document where the behavior already exists and state that no implementation is required.
+- **Nova:** nenhuma implementação existente entrega o comportamento funcional solicitado.
+- **Modificação:** uma funcionalidade existente entrega parte do comportamento ou precisa ser estendida ou alterada.
+- **Duplicada:** o sistema atual já entrega todos os comportamentos funcionais e critérios de aceite relevantes, sem diferença material.
 
-## Required document structure
+A classificação altera o conteúdo da mesma estrutura de documento; ela nunca altera a estrutura.
 
-Use this fixed structure for every classification. It mirrors the functional specification structure: title, context, objective, scope, assumptions, traceability, and version history. Do not add content after `## Version History`.
+- Para **Nova**, descreva a abordagem completa de implementação.
+- Para **Modificação**, descreva somente o delta sobre a implementação existente.
+- Para **Duplicada**, documente onde o comportamento já existe e registre que não há implementação necessária.
+
+## Estrutura obrigatória do documento
+
+Use esta estrutura fixa para todas as classificações. Ela espelha a estrutura da especificação funcional com título, contexto, objetivo, escopo, decisões, rastreabilidade e histórico de versão. Não adicione conteúdo após `## Controle de Versão`.
 
 ```markdown
-# Technical Specification — TAK-{{task_number}}
+# Especificação Técnica — TAK-{{task_number}}
 
-## Context
-<Relevant functional scope, technical context, and current-system findings.>
+## Contexto
+<Contexto funcional relevante, contexto técnico e descobertas do sistema atual.>
 
-## Objective
-<What the implementation must achieve technically.>
+## Objetivo
+<O que a implementação deve alcançar tecnicamente.>
 
-## Classification
-**Type:** New | Modification | Duplicate
+## Classificação
+**Tipo:** Nova | Modificação | Duplicada
 
-<Rationale for the classification.>
+<Justificativa da classificação.>
 
-| Functional Reference | Code Evidence | Conclusion |
+| Referência Funcional | Evidência no Código | Conclusão |
 | --- | --- | --- |
-| US-01 / CE-01 / CA-01 | <repository path, module, function, route, or test investigated> | <new, extend, modify, or already covered> |
+| US-01 / CE-01 / CA-01 | <caminho, módulo, função, rota ou teste investigado> | <nova, estender, modificar ou já atendida> |
 
-## Technical Approach
+## Abordagem Técnica
 
-### Affected Components and Modules
-<Components, services, routes, jobs, or configurations to create or change. For Duplicate, state `No implementation required` and identify the existing implementation.>
+### Componentes e Módulos Afetados
+<Componentes, serviços, rotas, jobs ou configurações a criar ou alterar. Para Duplicada, escreva `Nenhuma implementação necessária` e identifique a implementação existente.>
 
-### Main Flow
-<Implementation flow and responsibility boundaries. For Modification, describe only the delta.>
+### Fluxo Principal
+<Fluxo de implementação e limites de responsabilidade. Para Modificação, descreva somente o delta.>
 
-### Data and Contracts
-<Persistence, migrations, API contracts, events, validation, and data handling; state `No impact identified` when applicable.>
+### Dados e Contratos
+<Persistência, migrações, contratos de API, eventos, validação e tratamento de dados; escreva `Nenhum impacto identificado` quando aplicável.>
 
-### Integrations
-<External or internal integrations, failure handling, and compatibility considerations; state `No impact identified` when applicable.>
+### Integrações
+<Integrações externas ou internas, tratamento de falhas e considerações de compatibilidade; escreva `Nenhum impacto identificado` quando aplicável.>
 
-## Impact
-<Permissions and security, observability, performance, existing data, compatibility, rollout, and dependent features. State `No impact identified` for each non-applicable area.>
+## Impacto
+<Permissões e segurança, observabilidade, desempenho, dados existentes, compatibilidade, rollout e funcionalidades dependentes. Registre `Nenhum impacto identificado` para cada área não aplicável.>
 
-## Technical Out of Scope
-<Technical work considered but excluded. Write `None identified` when there is no relevant exclusion.>
+## Fora do Escopo Técnico
+<Trabalho técnico considerado, mas excluído. Escreva `Nenhum identificado` quando não houver exclusão relevante.>
 
-## Functional Specification Divergences
-<Information loss, conflict, infeasibility, or interpretation difference found during analysis. Write `None identified` when there is no divergence. Do not change functional scope here.>
+## Divergências com a Especificação Funcional
+<Perda de informação, conflito, inviabilidade ou diferença de interpretação identificada durante a análise. Escreva `Nenhuma identificada` quando não houver divergência. Não altere o escopo funcional nesta seção.>
 
-## Assumptions and Decisions
-- **Ambiguity:** <missing, ambiguous, or conflicting information>
-- **Decision:** <narrowest decision compatible with the evidence>
-- **Source:** <context document, code evidence, precedent, or reasoning>
+## Premissas e Decisões
+- **Ambiguidade:** <informação ausente, ambígua ou conflitante>
+- **Decisão:** <decisão mais restrita compatível com as evidências>
+- **Fonte:** <documento de contexto, evidência no código, precedente ou raciocínio>
 
-## Test Plan
-| Functional Reference | Scenario | Test Level | Expected Result |
+## Plano de Testes
+| Referência Funcional | Cenário | Nível de Teste | Resultado Esperado |
 | --- | --- | --- | --- |
-| US-01 / CE-01 / CA-01 | <scenario> | Unit / Integration / E2E / Manual | <expected result> |
+| US-01 / CE-01 / CA-01 | <cenário> | Unitário / Integração / E2E / Manual | <resultado esperado> |
 
-## Version History
-| Version | Date | Author | Change |
+## Controle de Versão
+| Versão | Data | Autor | Alteração |
 | --- | --- | --- | --- |
-| 1.0 | YYYY-MM-DD | Agent | Initial document creation |
+| 1.0 | YYYY-MM-DD | Agente | Criação inicial do documento |
 ```
 
-Use `US-xx`, `CE-xx`, and `CA-xx` references when they are available in the functional artifacts. Preserve all existing version-history entries and append a new entry for every material revision.
+Use referências `US-xx`, `CE-xx` e `CA-xx` quando estiverem disponíveis nos artefatos funcionais. Preserve todas as entradas existentes no histórico de versão e acrescente uma entrada a cada revisão material.
 
-## Decisions and divergences
+## Decisões e divergências
 
-Do not stop for missing, ambiguous, or conflicting information. Apply this priority order: explicit technical context, established architecture or convention, relevant contextual requirement, direct code precedent, then documented reasoning. Choose the narrowest option compatible with the evidence.
+Não interrompa a tarefa por informações ausentes, ambíguas ou conflitantes. Use esta ordem de prioridade: contexto técnico explícito, arquitetura ou convenção estabelecida, requisito contextual relevante, precedente direto no código e, por fim, raciocínio documentado. Escolha a opção mais restrita compatível com as evidências.
 
-Record every material assumption in `## Assumptions and Decisions`. Record functional conflicts, information loss, or infeasibility in `## Functional Specification Divergences`; do not resolve them by silently changing functional scope.
+Registre toda premissa material em `## Premissas e Decisões`. Registre conflitos funcionais, perda de informação ou inviabilidade em `## Divergências com a Especificação Funcional`; não os resolva alterando silenciosamente o escopo funcional.
 
-## Completion criteria
+## Critérios de conclusão
 
-Consider the specification complete only when it is written in English, has exactly the required structure, contains a justified classification and evidence table, maps the technical approach and test plan to available functional references, records decisions and divergences, keeps `## Version History` as the final section, and has been saved and validated at the path required by the stage agent.
+Considere a especificação concluída somente quando estiver escrita em português, exceto pelos nomes de arquivos e elementos de código, usar exatamente a estrutura obrigatória, contiver classificação justificada e tabela de evidências, relacionar abordagem técnica e plano de testes às referências funcionais disponíveis, registrar decisões e divergências, mantiver `## Controle de Versão` como última seção e tiver sido gravada e validada no caminho exigido pelo agente da etapa.

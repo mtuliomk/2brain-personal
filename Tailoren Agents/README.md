@@ -23,7 +23,7 @@ Os agentes devem executar integralmente suas etapas de forma autônoma. Eles nã
 
 ## Idioma dos artefatos
 
-Todo arquivo final gerado por uma etapa deve ter o conteúdo textual e o nome do arquivo em inglês. Use os caminhos contratuais definidos neste documento, independentemente do idioma dos dados recebidos no prompt. Esta regra inclui `user-stories.md`, `functional-spec.md`, `technical-spec.md` e o futuro `implementation-result.md` da etapa de `coding`.
+Todo arquivo final deve usar um nome de arquivo em inglês e os caminhos contratuais definidos neste documento, independentemente do idioma dos dados recebidos no prompt. O conteúdo textual de `user-stories.md` e `functional-spec.md` é escrito em inglês; o conteúdo de `technical-spec.md` é escrito em português, exceto nomes de arquivos e elementos de código, que permanecem em inglês. A regra de idioma do futuro `implementation-result.md` será definida com a etapa de `coding`.
 
 ## Tratamento de incertezas
 

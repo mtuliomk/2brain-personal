@@ -4,7 +4,7 @@
   "title": "dentro da pasta Tailoren Agents, temos subpastas q...",
   "titleGenerationStatus": "failed",
   "createdAt": 1787230992495,
-  "lastActivityAt": 1787233767331,
+  "lastActivityAt": 1787234094563,
   "sessionId": "01a01f44-be2d-7941-b1d6-2caae98f1ecc",
   "selectedModel": "gpt-5.6-terra",
   "providerState": {
@@ -15,13 +15,13 @@
     "workspaceDependencyToolVersion": 1
   },
   "usage": {
-    "inputTokens": 103618,
+    "inputTokens": 113136,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 102144,
+    "cacheReadInputTokens": 111360,
     "contextWindow": 258400,
     "contextWindowIsAuthoritative": true,
-    "contextTokens": 103618,
-    "percentage": 40,
+    "contextTokens": 113136,
+    "percentage": 44,
     "model": "gpt-5.6-terra"
   }
 }

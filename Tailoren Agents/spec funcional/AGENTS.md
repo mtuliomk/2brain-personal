@@ -60,7 +60,7 @@ find /workspace/tasks/history -type f -print
 Leia todos os arquivos retornados.
 
 - Se a pasta não existir ou o comando não retornar arquivos, registre `Nenhum` na seção final.
-- Se houver arquivos `user-stories.md`, `user-story.md` (legado), `functional-spec.md` e/ou `spec-funcional.md` (legado) entre os resultados, eles **devem** ser considerados na elaboração desta tarefa: use-os como referência de padrão de escrita, nomenclatura, nível de detalhamento e consistência com decisões já tomadas em tarefas anteriores — sem copiar ou herdar escopo que não se aplique à tarefa atual.
+- Se houver arquivos `user-stories.md` e/ou `functional-spec.md` entre os resultados, eles **devem** ser considerados na elaboração desta tarefa: use-os como referência de padrão de escrita, nomenclatura, nível de detalhamento e consistência com decisões já tomadas em tarefas anteriores — sem copiar ou herdar escopo que não se aplique à tarefa atual.
 - Liste apenas o nome e extensão de cada arquivo (nunca o caminho completo) na seção final (`Histórico considerado`).
 - Não afirme que os arquivos estão inacessíveis sem antes executar o comando acima e receber um erro real.
 
@@ -80,7 +80,7 @@ Com o contexto de aplicação e o histórico de tarefas anteriores carregados, p
 
 O agente deve decidir autonomamente quantas stories são necessárias. Crie stories distintas quando a demanda contiver personas, objetivos, benefícios, fluxos ou critérios de aceite independentes. Não divida uma mesma necessidade apenas por camadas técnicas, componentes ou etapas internas de implementação. Gere ao menos uma story.
 
-Se já existir `user-stories.md` ou `user-story.md` (legado) no histórico, use-o como referência e revise o conjunto de stories conforme as informações da subtask. O novo documento deve registrar o histórico completo de versões.
+Se já existir `user-stories.md` no histórico, use-o como referência e revise o conjunto de stories conforme as informações da subtask. O novo documento deve registrar o histórico completo de versões.
 
 Formato fixo do documento:
 
@@ -112,7 +112,7 @@ Regras de preenchimento:
 
 - Se a persona não estiver explícita nos dados recebidos, infira a partir do contexto da aplicação (Passo 1) e da descrição da task; se ainda assim não houver base para inferir, use `usuário do sistema`.
 - Os critérios de aceite de cada story devem ser derivados do `task_description` e do `subtask_objective` — não invente requisitos que não decorrem deles.
-- Se houver `user-stories.md` ou `user-story.md` (legado) no histórico (Passo 3), mantenha consistência de estilo, granularidade e nomenclatura de personas com o que já foi usado, quando aplicável à tarefa atual.
+- Se houver `user-stories.md` no histórico (Passo 3), mantenha consistência de estilo, granularidade e nomenclatura de personas com o que já foi usado, quando aplicável à tarefa atual.
 - Se não houver itens fora de escopo evidentes para uma story, escreva `Não identificado` em vez de omitir a seção.
 
 Grave o arquivo em:
@@ -133,7 +133,7 @@ Se o comando `test -s` falhar, corrija a gravação antes de prosseguir para o P
 
 Use o conteúdo do `user-stories.md` gerado no Passo 5 como **input principal** para elaborar a especificação funcional — a spec deve detalhar os comportamentos descritos nas stories e não reintroduzir escopo que elas não contemplam. A especificação deve identificar quais stories (`US-01`, `US-02` etc.) cada requisito, fluxo e critério detalha.
 
-Além disso, aplique as instruções de cada skill considerada no Passo 2 que sejam pertinentes à tarefa em questão, e considere eventuais `functional-spec.md` ou `spec-funcional.md` (legado) encontrados no histórico (Passo 3) como referência de padrão e estrutura, quando aplicável.
+Além disso, aplique as instruções de cada skill considerada no Passo 2 que sejam pertinentes à tarefa em questão, e considere eventuais `functional-spec.md` encontrados no histórico (Passo 3) como referência de padrão e estrutura, quando aplicável.
 
 Se já existir um arquivo de spec-funcional em seu contexto, considere que seu objetivo é revisar esse arquivo de acordo o **input principal**, gerando uma nova versão da especificação funcional. O novo documento gerado precisa registrar o histórico completo de versão.
 
