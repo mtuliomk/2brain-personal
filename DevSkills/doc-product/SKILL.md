@@ -5,7 +5,7 @@ description: Analisar um ou mais repositórios que compõem uma aplicação e pr
 
 # Documentação da visão de produto
 
-Produza a documentação de visão de produto no **caminho e nome de arquivo definidos pelo prompt**. Não presuma nem imponha um nome padrão. Se o prompt não definir o destino, pergunte onde gravar o documento antes de criar ou alterar qualquer arquivo.
+Produza a documentação de visão de produto no **caminho e nome de arquivo definidos pelo prompt**. Não presuma nem imponha um nome padrão. Se o prompt não definir o destino, apresente a documentação completa no output da execução; não crie nem altere arquivos.
 
 Uma aplicação é a composição de todos os repositórios presentes na workspace ou explicitamente indicados pelo prompt e pelo contexto. Analise essa aplicação como um todo, identifique todos os produtos que ela oferece e documente cada um. Não presuma que um repositório, uma tela, uma API ou uma camada técnica seja necessariamente um produto.
 
@@ -99,10 +99,10 @@ Inclua ao menos uma capacidade principal para cada produto identificado. Não pr
 
 ## Autonomia e decisões
 
-Não interrompa a análise por ausência, ambiguidade ou conflito de informações, exceto pela ausência do caminho de saída. Para conclusões de produto, priorize: dados explícitos do prompt e do contexto, documentação e linguagem voltada ao usuário, comportamento observável em interfaces e jornadas, testes e exemplos de uso, e por fim implementação e configuração. Quando fontes divergirem, registre o conflito e privilegie a fonte mais específica e atual sobre o comportamento ou intenção de produto.
+Não interrompa a análise por ausência, ambiguidade ou conflito de informações. Para conclusões de produto, priorize: dados explícitos do prompt e do contexto, documentação e linguagem voltada ao usuário, comportamento observável em interfaces e jornadas, testes e exemplos de uso, e por fim implementação e configuração. Quando fontes divergirem, registre o conflito e privilegie a fonte mais específica e atual sobre o comportamento ou intenção de produto.
 
 Não inclua nomes de arquivos, tecnologias, módulos, rotas, contratos ou estruturas de dados no corpo principal apenas por estarem disponíveis. Inclua-os somente quando forem indispensáveis para explicar um limite, uma dependência, uma decisão ou uma evidência; nesse caso, contextualize seu impacto para Produto.
 
 ## Critérios de conclusão
 
-Considere a documentação concluída somente quando estiver no caminho definido pelo prompt, escrita em português e orientada a pessoas de Produto; delimitar todos os repositórios analisados como uma aplicação única; identificar e documentar todos os produtos sustentados por evidências; diferenciar produtos de componentes técnicos; incorporar dados relevantes fornecidos pelo prompt e pelo contexto; registrar rastreabilidade, lacunas e decisões materiais; e manter `## Controle de Versão` como última seção.
+Considere a documentação concluída somente quando estiver gravada no caminho definido pelo prompt ou, quando ele não existir, apresentada integralmente no output da execução; estiver escrita em português e orientada a pessoas de Produto; delimitar todos os repositórios analisados como uma aplicação única; identificar e documentar todos os produtos sustentados por evidências; diferenciar produtos de componentes técnicos; incorporar dados relevantes fornecidos pelo prompt e pelo contexto; registrar rastreabilidade, lacunas e decisões materiais; e manter `## Controle de Versão` como última seção.

@@ -29,6 +29,20 @@
       "contentDigest": "5d9399bd17a4b1ab7d2ff926347f16b69d864c7ca9e185019f626ca012bd340d",
       "providerUserMessageId": "01a03e51-2379-7603-9943-b05c22aa1424",
       "providerAssistantMessageId": "msg_0bdab1dc2732b1a9016a8eedfc789487d299dd4a306312ee1a"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787752244919-845l31o",
+      "userTurnOrdinal": 3,
+      "state": "accepted",
+      "localMessageId": "msg-1787752244910-lg1yitu",
+      "timestamp": 1787752244910,
+      "rawDisplayText": "se o prompt nao definir o caminho do arquivo, os dados deverão ser exibidos no output",
+      "canonicalText": "se o prompt nao definir o caminho do arquivo, os dados deverão ser exibidos no output",
+      "images": [],
+      "contentDigest": "f2596445d21e7f2a2e14c8828e29c83081b9379a5effdb89d7c7b43c9ece9dae",
+      "providerUserMessageId": "01a03e56-6961-7350-ab85-8f66a7bca148",
+      "providerAssistantMessageId": "msg_0bdab1dc2732b1a9016a8eef3e564087d2a0a1e663507ff335"
     }
   ]
 }
