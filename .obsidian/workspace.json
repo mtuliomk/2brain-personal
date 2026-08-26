@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevSkills/doc-product/SKILL.md",
+                "file": "DevSkills/doc-architecture/SKILL.md",
                 "mode": "source",
                 "source": false
               },
@@ -202,8 +202,10 @@
   },
   "active": "bdd9956fcb88793f",
   "lastOpenFiles": [
-    "DevSkills/dev-fast-commit/SKILL.md",
     "DevSkills/doc-product/SKILL.md",
+    "DevSkills/doc-architecture/SKILL.md",
+    "DevSkills/doc-architecture",
+    "DevSkills/dev-fast-commit/SKILL.md",
     "DevSkills/doc-product",
     "Tailoren Agents/coding/AGENTS.md",
     "Tailoren Agents/spec technical/AGENTS.md",
@@ -233,10 +235,8 @@
     "Projects/Investments/posicao-2026-08.md",
     "Projects/Investments/posicao-2026-03.md",
     "Projects/Investments/posicao-2026-02.md",
-    "Projects/Investments/posicao-2026-01.md",
     "Projects/Investments",
     "Projects/Investiments",
-    "Projects",
-    "DevSkills/dev-backend-golang/agents/openai.yaml"
+    "Projects"
   ]
 }
