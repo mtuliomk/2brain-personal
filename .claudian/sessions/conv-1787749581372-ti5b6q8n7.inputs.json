@@ -43,6 +43,20 @@
       "contentDigest": "f2596445d21e7f2a2e14c8828e29c83081b9379a5effdb89d7c7b43c9ece9dae",
       "providerUserMessageId": "01a03e56-6961-7350-ab85-8f66a7bca148",
       "providerAssistantMessageId": "msg_0bdab1dc2732b1a9016a8eef3e564087d2a0a1e663507ff335"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787752949525-ic6gqfy",
+      "userTurnOrdinal": 4,
+      "state": "accepted",
+      "localMessageId": "msg-1787752949519-j3etuxc",
+      "timestamp": 1787752949519,
+      "rawDisplayText": "adicione algumas outra premissas:\n- se houver ambiguidade entre documentos e codigo, de preferencia ao que estiver no codigo, documentando essa decisao \n- a informacao final gerada por essa skill, deverá abastecer um documento que será usado futuramente dentro de um contexto de agentes de desenvolvimento autnomo com IA",
+      "canonicalText": "adicione algumas outra premissas:\n- se houver ambiguidade entre documentos e codigo, de preferencia ao que estiver no codigo, documentando essa decisao \n- a informacao final gerada por essa skill, deverá abastecer um documento que será usado futuramente dentro de um contexto de agentes de desenvolvimento autnomo com IA",
+      "images": [],
+      "contentDigest": "38c96c196a80b1d1c01ce2259d9bf5436accab0c34ba8698b56cc3061facb0ca",
+      "providerUserMessageId": "01a03e61-2a3e-7e12-88aa-68c7d209289c",
+      "providerAssistantMessageId": "msg_0bdab1dc2732b1a9016a8ef20aaa0487d2806167c8266d5915"
     }
   ]
 }

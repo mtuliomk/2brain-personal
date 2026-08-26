@@ -9,13 +9,13 @@ Produza a documentação de visão de produto no **caminho e nome de arquivo def
 
 Uma aplicação é a composição de todos os repositórios presentes na workspace ou explicitamente indicados pelo prompt e pelo contexto. Analise essa aplicação como um todo, identifique todos os produtos que ela oferece e documente cada um. Não presuma que um repositório, uma tela, uma API ou uma camada técnica seja necessariamente um produto.
 
-O resultado é destinado a uma pessoa de Produto. Descreva o que é oferecido, para quem, qual problema atende, seus fluxos, capacidades, regras e limites. Mencione detalhes técnicos somente se forem necessários para sustentar uma decisão, esclarecer uma dependência que afete a experiência ou fortalecer um ponto de vista de produto. Prefira linguagem de negócio e comportamento observável; não transforme o documento em inventário técnico.
+O resultado é destinado a uma pessoa de Produto e servirá futuramente como contexto para agentes de desenvolvimento autônomo com IA. Descreva o que é oferecido, para quem, qual problema atende, seus fluxos, capacidades, regras e limites. Escreva de forma autocontida, explícita e verificável, para que leitores humanos e agentes não dependam de conhecimento implícito para interpretar o produto. Mencione detalhes técnicos somente se forem necessários para sustentar uma decisão, esclarecer uma dependência que afete a experiência ou fortalecer um ponto de vista de produto. Prefira linguagem de negócio e comportamento observável; não transforme o documento em inventário técnico.
 
 Não altere código, configurações, dados ou documentação existente, salvo quando o usuário pedir expressamente. O objetivo é retratar o produto atual com base em evidências e no contexto recebido, não propor estratégia, *roadmap* ou implementação futura.
 
 ## Fontes e investigação
 
-Use, em conjunto, os dados e instruções fornecidos no prompt, o contexto em que a skill foi invocada e os artefatos dos repositórios. Trate dados explícitos de produto — como público, objetivos, terminologia, posicionamento, restrições e métricas — como fontes relevantes; valide-os contra o código quando isso for necessário para evitar contradições, sem descartá-los apenas por não aparecerem na implementação.
+Use, em conjunto, os dados e instruções fornecidos no prompt, o contexto em que a skill foi invocada e os artefatos dos repositórios. Trate dados explícitos de produto — como público, objetivos, terminologia, posicionamento, restrições e métricas — como fontes relevantes. Quando houver ambiguidade ou conflito entre documentos, dados de contexto e o código, priorize o comportamento demonstrado pelo código como representação do estado atual da aplicação; registre a divergência, a decisão e as evidências em `## Premissas e Decisões`.
 
 Delimite primeiro a aplicação: registre os repositórios analisados e a contribuição de cada um para a oferta. Investigue, conforme existirem, documentação, textos de interface, telas, fluxos, contratos, testes, exemplos de uso, modelos de dados, integrações e configurações. Use artefatos técnicos para compreender o comportamento, mas traduza-os em impacto, capacidade e experiência de produto no documento final.
 
@@ -44,7 +44,7 @@ Use esta estrutura fixa. Documente todos os produtos identificados, com uma seç
 | --- | --- | --- | --- |
 | <nome do produto> | <público/processo ou `Não identificado`> | <valor ou `Não identificado`> | <capacidades observáveis> |
 
-## Produto 1 — <nome>
+## Produto PR-01 — <nome>
 
 ### Resumo
 <Propósito, problema atendido e proposta de valor observável.>
@@ -99,10 +99,12 @@ Inclua ao menos uma capacidade principal para cada produto identificado. Não pr
 
 ## Autonomia e decisões
 
-Não interrompa a análise por ausência, ambiguidade ou conflito de informações. Para conclusões de produto, priorize: dados explícitos do prompt e do contexto, documentação e linguagem voltada ao usuário, comportamento observável em interfaces e jornadas, testes e exemplos de uso, e por fim implementação e configuração. Quando fontes divergirem, registre o conflito e privilegie a fonte mais específica e atual sobre o comportamento ou intenção de produto.
+Não interrompa a análise por ausência, ambiguidade ou conflito de informações. Para conclusões de produto, priorize o comportamento efetivamente demonstrado pelo código, incluindo interfaces, fluxos, contratos e testes; em seguida, use dados explícitos do prompt e do contexto, documentação e linguagem voltada ao usuário. Quando documentos, contexto ou prompt divergirem do código, registre o conflito em `## Premissas e Decisões`, adote o código como fonte do comportamento atual e explique o impacto da decisão. Quando o código não fornecer evidência suficiente, use a fonte não técnica mais específica e registre a premissa.
+
+Use identificadores estáveis `PR-xx`, `CP-xx` e `JF-xx` e referencie-os consistentemente no mapa, nas evidências e nas decisões. Declare explicitamente fatos não identificados, lacunas, limites, dependências e divergências; não deixe instruções, relações ou regras relevantes apenas implícitas. Isso permite que agentes futuros usem o documento como fonte de contexto, sem convertê-lo em uma especificação técnica.
 
 Não inclua nomes de arquivos, tecnologias, módulos, rotas, contratos ou estruturas de dados no corpo principal apenas por estarem disponíveis. Inclua-os somente quando forem indispensáveis para explicar um limite, uma dependência, uma decisão ou uma evidência; nesse caso, contextualize seu impacto para Produto.
 
 ## Critérios de conclusão
 
-Considere a documentação concluída somente quando estiver gravada no caminho definido pelo prompt ou, quando ele não existir, apresentada integralmente no output da execução; estiver escrita em português e orientada a pessoas de Produto; delimitar todos os repositórios analisados como uma aplicação única; identificar e documentar todos os produtos sustentados por evidências; diferenciar produtos de componentes técnicos; incorporar dados relevantes fornecidos pelo prompt e pelo contexto; registrar rastreabilidade, lacunas e decisões materiais; e manter `## Controle de Versão` como última seção.
+Considere a documentação concluída somente quando estiver gravada no caminho definido pelo prompt ou, quando ele não existir, apresentada integralmente no output da execução; estiver escrita em português e orientada a pessoas de Produto; delimitar todos os repositórios analisados como uma aplicação única; identificar e documentar todos os produtos sustentados por evidências; diferenciar produtos de componentes técnicos; incorporar dados relevantes fornecidos pelo prompt e pelo contexto; registrar divergências entre documentos e código, com prevalência explícita do comportamento do código; usar identificadores estáveis e registrar rastreabilidade, lacunas e decisões materiais de forma autocontida para consumo futuro por agentes de desenvolvimento autônomo; e manter `## Controle de Versão` como última seção.
