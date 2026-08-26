@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevSkills/dev-fast-commit/SKILL.md",
+                "file": "DevSkills/doc-product/SKILL.md",
                 "mode": "source",
                 "source": false
               },
@@ -200,8 +200,9 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "8e7c699d605b1ea8",
+  "active": "bdd9956fcb88793f",
   "lastOpenFiles": [
+    "DevSkills/dev-fast-commit/SKILL.md",
     "DevSkills/doc-product/SKILL.md",
     "DevSkills/doc-product",
     "Tailoren Agents/coding/AGENTS.md",
@@ -218,7 +219,6 @@
     "Tailoren Agents/spec funcional",
     "Tailoren Agents",
     "DevSkills/spec-userstory/SKILL.md",
-    "DevSkills/dev-fast-commit/SKILL.md",
     "DevSkills/plan-tak/SKILL.md",
     "DevSkills/spec-userstory",
     "Profile/Maya Onese.md",
