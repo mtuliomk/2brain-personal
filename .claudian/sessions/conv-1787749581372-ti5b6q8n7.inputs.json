@@ -139,7 +139,8 @@
       "canonicalText": "a skill de security está muito focada em auditar a aplicação do que documentar como está sua arquitetura de segurança e compliance.\n\n\nquero que ela continue auditando, como está, mas com menos foco.\n\nno final, quero uma sessão que documente o estado atual da aplicação quanto a segurança e compliance. essa sessão será usada posteriormente no contexto de agentes de desenvolvimento para dar manutenção na aplicação.\n\ntambem quero foco nos protocolos de comunicação utilizado (tokens de autenticaao), tanto para autenticar usuario quanto service-to-sercie",
       "images": [],
       "contentDigest": "0b57cf568340e416d4d160a9972e8aa0775a9b6f549ffaca0c9af5cdd7186401",
-      "providerUserMessageId": "01a03f0a-26b8-75a2-a036-505582c7c63a"
+      "providerUserMessageId": "01a03f0a-26b8-75a2-a036-505582c7c63a",
+      "providerAssistantMessageId": "msg_0bdab1dc2732b1a9016a8f1e94a1f887d2b725bf04266aacc0"
     }
   ]
 }
