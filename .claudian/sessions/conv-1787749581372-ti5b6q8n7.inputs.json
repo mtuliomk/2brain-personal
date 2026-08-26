@@ -15,6 +15,20 @@
       "contentDigest": "1c5074c643a4e94f5c6a29dd8e535dc5549714637c561764ab4b5680968bb013",
       "providerUserMessageId": "01a03e2d-d5d9-7612-8c35-d73d051cec50",
       "providerAssistantMessageId": "msg_0bdab1dc2732b1a9016a8ee4fa484c87d28abd8d045bc7cecb"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787751898986-1utnh8l",
+      "userTurnOrdinal": 2,
+      "state": "accepted",
+      "localMessageId": "msg-1787751898930-szt1xp8",
+      "timestamp": 1787751898930,
+      "rawDisplayText": "alguns pontos de atenção:\n- o arquivo final, da visao de produto, deverá ser especificado pelo prompt.\n- considere tambem dados que serão passados pelo prompt e contexto em que essa skill estiver envolvida.\n- o output dessa skill é para uma pessoa de produtos, não técnica. inclua termos e dados técnicos apenas se for necessário para suportar alguma decisao tomada, ou fortalecer pontos de vista.",
+      "canonicalText": "alguns pontos de atenção:\n- o arquivo final, da visao de produto, deverá ser especificado pelo prompt.\n- considere tambem dados que serão passados pelo prompt e contexto em que essa skill estiver envolvida.\n- o output dessa skill é para uma pessoa de produtos, não técnica. inclua termos e dados técnicos apenas se for necessário para suportar alguma decisao tomada, ou fortalecer pontos de vista.",
+      "images": [],
+      "contentDigest": "5d9399bd17a4b1ab7d2ff926347f16b69d864c7ca9e185019f626ca012bd340d",
+      "providerUserMessageId": "01a03e51-2379-7603-9943-b05c22aa1424",
+      "providerAssistantMessageId": "msg_0bdab1dc2732b1a9016a8eedfc789487d299dd4a306312ee1a"
     }
   ]
 }

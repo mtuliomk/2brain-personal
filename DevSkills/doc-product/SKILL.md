@@ -1,48 +1,48 @@
 ---
 name: doc-product
-description: Analisar um ou mais repositórios de código que compõem uma aplicação e gerar, em português, documentação da visão de produto, identificando e descrevendo todos os produtos existentes. Usar para compreender o produto a partir do código e artefatos do repositório; não usar para especificar uma mudança ou decidir implementação.
+description: Analisar um ou mais repositórios que compõem uma aplicação e produzir uma visão de produto, em português, identificando e descrevendo todos os produtos existentes. Usar para documentar o produto atual para pessoas de Produto; não usar para especificar mudanças ou decidir implementação.
 ---
 
 # Documentação da visão de produto
 
-Gere `product-vision.md` em português a partir da análise dos repositórios fornecidos. Uma aplicação é a composição de todos os repositórios presentes na workspace ou explicitamente indicados no contexto. Identifique todos os produtos que a aplicação oferece e documente cada um; não presuma que cada repositório corresponde a um produto.
+Produza a documentação de visão de produto no **caminho e nome de arquivo definidos pelo prompt**. Não presuma nem imponha um nome padrão. Se o prompt não definir o destino, pergunte onde gravar o documento antes de criar ou alterar qualquer arquivo.
 
-Não altere código, configurações, dados ou documentação existente, salvo quando o usuário pedir expressamente. O objetivo é descrever o produto atual com base em evidências, não propor uma estratégia, *roadmap* ou implementação futura.
+Uma aplicação é a composição de todos os repositórios presentes na workspace ou explicitamente indicados pelo prompt e pelo contexto. Analise essa aplicação como um todo, identifique todos os produtos que ela oferece e documente cada um. Não presuma que um repositório, uma tela, uma API ou uma camada técnica seja necessariamente um produto.
 
-## Idioma
+O resultado é destinado a uma pessoa de Produto. Descreva o que é oferecido, para quem, qual problema atende, seus fluxos, capacidades, regras e limites. Mencione detalhes técnicos somente se forem necessários para sustentar uma decisão, esclarecer uma dependência que afete a experiência ou fortalecer um ponto de vista de produto. Prefira linguagem de negócio e comportamento observável; não transforme o documento em inventário técnico.
 
-Escreva em português todos os títulos, seções, explicações, decisões e histórico de versão. Mantenha em inglês somente nomes de repositórios, arquivos, caminhos, módulos, classes, funções, rotas, contratos, comandos, identificadores e outros elementos técnicos existentes.
+Não altere código, configurações, dados ou documentação existente, salvo quando o usuário pedir expressamente. O objetivo é retratar o produto atual com base em evidências e no contexto recebido, não propor estratégia, *roadmap* ou implementação futura.
 
-## Investigação
+## Fontes e investigação
 
-Delimite primeiro a aplicação: liste os repositórios analisados e a responsabilidade aparente de cada um. Inspecione sistematicamente, conforme existirem, `README`, documentação, manifestos, configurações, rotas, telas, componentes, serviços, contratos de API, modelos de dados, eventos, testes, integrações, variáveis de ambiente, textos de interface e exemplos de uso.
+Use, em conjunto, os dados e instruções fornecidos no prompt, o contexto em que a skill foi invocada e os artefatos dos repositórios. Trate dados explícitos de produto — como público, objetivos, terminologia, posicionamento, restrições e métricas — como fontes relevantes; valide-os contra o código quando isso for necessário para evitar contradições, sem descartá-los apenas por não aparecerem na implementação.
 
-Investigue também como os repositórios se relacionam. Diferencie aplicações entregues a usuários, superfícies administrativas, APIs e serviços de suporte, bibliotecas compartilhadas, infraestrutura e ferramentas internas. Esses elementos podem habilitar um produto sem constituir um produto independente.
+Delimite primeiro a aplicação: registre os repositórios analisados e a contribuição de cada um para a oferta. Investigue, conforme existirem, documentação, textos de interface, telas, fluxos, contratos, testes, exemplos de uso, modelos de dados, integrações e configurações. Use artefatos técnicos para compreender o comportamento, mas traduza-os em impacto, capacidade e experiência de produto no documento final.
 
-Identifique um produto quando houver uma proposta de valor, público ou processo atendido e conjunto coerente de capacidades observáveis. Não fragmente um único produto por camada técnica, repositório, tela ou API. Documente produtos separados quando as evidências indicarem públicos, propostas de valor, jornadas, domínios ou ofertas independentes. Quando a separação for incerta, adote a interpretação mais conservadora e registre a ambiguidade.
+Identifique um produto quando houver proposta de valor, público ou processo atendido e um conjunto coerente de capacidades observáveis. Documente produtos separados quando as evidências indicarem públicos, propostas de valor, jornadas, domínios ou ofertas independentes. Não fragmente um produto por repositório ou arquitetura. Bibliotecas, APIs de suporte, infraestrutura e ferramentas internas só são produtos quando houver evidência de uso e valor próprios.
 
-Baseie afirmações em evidências observadas. Para cada afirmação material, registre ao menos uma referência precisa de repositório, caminho, módulo, rota, contrato, tela, teste ou documento. Não infira regras de negócio, personas, preços, métricas, permissões ou integrações sem evidência; registre `Não identificado` quando aplicável.
+Baseie afirmações materiais em evidências. Não infira regras de negócio, personas, preços, métricas, permissões ou integrações sem suporte; escreva `Não identificado` quando aplicável. Guarde referências técnicas precisas apenas na seção de rastreabilidade, e somente quando elas forem úteis para comprovar uma conclusão de produto.
 
 ## Estrutura obrigatória do documento
 
-Use esta estrutura fixa. Ela deve documentar todos os produtos identificados, com uma seção `## Produto N` para cada produto. Mantenha `## Controle de Versão` como a última seção.
+Use esta estrutura fixa. Documente todos os produtos identificados, com uma seção `## Produto N` para cada um. Mantenha `## Controle de Versão` como a última seção.
 
 ```markdown
 # Visão de Produto — <nome da aplicação ou `Não identificado`>
 
 ## Escopo da Análise
 - **Repositórios analisados:**
-  - `<repositório>` — <responsabilidade aparente>
-- **Critério de composição:** <como os repositórios foram considerados uma única aplicação>
-- **Limites da análise:** <repositórios, arquivos ou evidências indisponíveis; escreva `Nenhum identificado` quando aplicável>
+  - `<repositório>` — <contribuição para a aplicação, em linguagem de produto>
+- **Contexto considerado:** <dados fornecidos pelo prompt, contexto e documentos relevantes>
+- **Limites da análise:** <evidências indisponíveis ou escopo não analisado; escreva `Nenhum identificado` quando aplicável>
 
 ## Visão da Aplicação
-<Propósito geral, problema ou oportunidade atendida e relação entre os produtos. Use somente evidências disponíveis.>
+<Propósito geral, problema ou oportunidade atendida e como os produtos se relacionam.>
 
 ## Mapa de Produtos
-| Produto | Público ou processo atendido | Proposta de valor | Repositórios e evidências principais |
+| Produto | Público ou processo atendido | Proposta de valor | Capacidades centrais |
 | --- | --- | --- | --- |
-| <nome do produto> | <público/processo ou `Não identificado`> | <valor ou `Não identificado`> | `<repositório>:<caminho ou referência>` |
+| <nome do produto> | <público/processo ou `Não identificado`> | <valor ou `Não identificado`> | <capacidades observáveis> |
 
 ## Produto 1 — <nome>
 
@@ -52,44 +52,42 @@ Use esta estrutura fixa. Ela deve documentar todos os produtos identificados, co
 ### Público e Contexto de Uso
 - **Público ou processo atendido:** <descrição ou `Não identificado`>
 - **Necessidade atendida:** <descrição ou `Não identificado`>
-- **Contexto e canais de acesso:** <web, API, aplicação móvel, processo interno etc., ou `Não identificado`>
+- **Canais e contexto de uso:** <descrição ou `Não identificado`>
 
 ### Capacidades Principais
 1. **CP-01 — <nome da capacidade>**
-   - <O que o usuário ou processo consegue realizar e o resultado observável.>
-   - **Evidências:** `<repositório>:<caminho, rota, módulo, contrato ou teste>`
+   - <O que a pessoa ou processo consegue realizar e o resultado percebido.>
 
 ### Jornada e Fluxos Relevantes
 1. **JF-01 — <nome do fluxo>**
    - **Início:** <gatilho ou pré-condição>
    - **Fluxo:** <etapas observáveis>
    - **Resultado:** <resultado entregue>
-   - **Evidências:** `<repositório>:<referência>`
 
-### Regras, Permissões e Dados Relevantes
-- <Regra, permissão ou dado de produto observado, com evidência.>
+### Regras, Permissões e Informações Relevantes
+- <Regra, permissão ou informação que afete a experiência ou a decisão de produto.>
 - Escreva `Nenhum identificado` quando não houver evidência suficiente.
 
-### Integrações e Dependências de Produto
-- <Integração ou dependência que afete a experiência, com evidência.>
+### Dependências que Afetam a Experiência
+- <Dependência, integração ou condição externa e seu efeito para o produto.>
 - Escreva `Nenhuma identificada` quando aplicável.
 
 ### Limites e Lacunas Conhecidas
-- <Comportamento ausente, limitação ou incerteza sustentada por evidência.>
+- <Limitação, comportamento ausente ou incerteza relevante para Produto.>
 - Escreva `Nenhum identificado` quando aplicável.
 
 ## Relação entre Produtos
-<Como os produtos se complementam, compartilham usuários, dados, capacidades ou dependências. Escreva `Não aplicável: um único produto identificado` quando houver somente um.>
+<Como os produtos se complementam, compartilham públicos, jornadas ou informações. Escreva `Não aplicável: um único produto identificado` quando houver somente um.>
 
 ## Evidências e Rastreabilidade
-| Afirmação ou elemento | Evidência | Interpretação |
+| Conclusão de Produto | Fonte | Como sustenta a conclusão |
 | --- | --- | --- |
-| <produto, capacidade, fluxo ou relação> | `<repositório>:<caminho, módulo, rota, contrato ou teste>` | <o que a evidência sustenta> |
+| <produto, capacidade, fluxo ou relação> | <dado do prompt, documento, tela ou, quando necessário, referência técnica> | <interpretação> |
 
 ## Premissas e Decisões
 - **Ambiguidade:** <informação ausente, ambígua ou conflitante>
 - **Decisão:** <interpretação conservadora adotada>
-- **Fonte:** <evidência, documento de contexto ou raciocínio>
+- **Fonte:** <dado do prompt, contexto, evidência ou raciocínio>
 
 ## Controle de Versão
 | Versão | Data | Autor | Alteração |
@@ -97,14 +95,14 @@ Use esta estrutura fixa. Ela deve documentar todos os produtos identificados, co
 | 1.0 | YYYY-MM-DD | Agente | Criação inicial do documento |
 ```
 
-Inclua ao menos uma capacidade principal e uma evidência para cada produto identificado. Não invente seções adicionais para produtos sem evidência suficiente: trate-os como hipótese ou lacuna em `## Premissas e Decisões`, sem promovê-los a produto identificado. Preserve as entradas existentes no histórico de versão e acrescente uma entrada a cada revisão material.
+Inclua ao menos uma capacidade principal para cada produto identificado. Não promova uma hipótese a produto sem evidência suficiente: registre-a como lacuna ou ambiguidade. Preserve as entradas existentes no histórico de versão e acrescente uma entrada a cada revisão material.
 
 ## Autonomia e decisões
 
-Não interrompa a análise por ausência, ambiguidade ou conflito de informações. Use esta ordem de prioridade: documentação e linguagem explícita voltada ao usuário, comportamento observável em interfaces e contratos, testes e exemplos de uso, implementação e configuração e, por fim, raciocínio documentado. Quando as fontes divergirem, registre o conflito e privilegie a evidência mais próxima do comportamento atual.
+Não interrompa a análise por ausência, ambiguidade ou conflito de informações, exceto pela ausência do caminho de saída. Para conclusões de produto, priorize: dados explícitos do prompt e do contexto, documentação e linguagem voltada ao usuário, comportamento observável em interfaces e jornadas, testes e exemplos de uso, e por fim implementação e configuração. Quando fontes divergirem, registre o conflito e privilegie a fonte mais específica e atual sobre o comportamento ou intenção de produto.
 
-Não trate uma biblioteca, serviço de suporte, repositório de infraestrutura ou componente técnico como produto sem evidência de proposta de valor e uso próprio. Não omita produtos apenas porque compartilham um repositório, interface ou dados com outro produto.
+Não inclua nomes de arquivos, tecnologias, módulos, rotas, contratos ou estruturas de dados no corpo principal apenas por estarem disponíveis. Inclua-os somente quando forem indispensáveis para explicar um limite, uma dependência, uma decisão ou uma evidência; nesse caso, contextualize seu impacto para Produto.
 
 ## Critérios de conclusão
 
-Considere a documentação concluída somente quando `product-vision.md` estiver em português, exceto pelos elementos técnicos existentes, delimitar todos os repositórios analisados como uma única aplicação, identificar e documentar todos os produtos sustentados pelas evidências, diferenciar produtos de componentes técnicos, incluir rastreabilidade para afirmações materiais, registrar lacunas e decisões relevantes, preservar `## Controle de Versão` como última seção e tiver sido gravado e validado no caminho exigido pelo contexto da tarefa.
+Considere a documentação concluída somente quando estiver no caminho definido pelo prompt, escrita em português e orientada a pessoas de Produto; delimitar todos os repositórios analisados como uma aplicação única; identificar e documentar todos os produtos sustentados por evidências; diferenciar produtos de componentes técnicos; incorporar dados relevantes fornecidos pelo prompt e pelo contexto; registrar rastreabilidade, lacunas e decisões materiais; e manter `## Controle de Versão` como última seção.
