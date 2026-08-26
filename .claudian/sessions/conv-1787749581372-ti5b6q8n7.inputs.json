@@ -211,6 +211,61 @@
       "contentDigest": "edd338fe52f60d6f6df038d766326d3efdf469877643f8f44c78b7775191d27b",
       "providerUserMessageId": "01a03f1a-e8a4-7742-af49-aefd496b5e84",
       "providerAssistantMessageId": "msg_0bdab1dc2732b1a9016a8f21891cf887d2a57591e6c5cca05b"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787765350153-3lc8a6g",
+      "userTurnOrdinal": 16,
+      "state": "accepted",
+      "localMessageId": "msg-1787765350116-fc5us89",
+      "timestamp": 1787765350116,
+      "rawDisplayText": "quero um agente especialista em analisar repositorios, fazer assessment e gerar documentações",
+      "canonicalText": "quero um agente especialista em analisar repositorios, fazer assessment e gerar documentações",
+      "images": [],
+      "contentDigest": "933dd1b8b41ece87e6c778da6a9440066ad48130f2dd688793836f78dc19057f",
+      "providerUserMessageId": "01a03f1e-62f9-7af1-92f3-24d6cd8ff6fe",
+      "providerAssistantMessageId": "msg_0bdab1dc2732b1a9016a8f22881d3087d2a97ba4fe10f4d4fb"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787765411205-ml8r2hz",
+      "userTurnOrdinal": 17,
+      "state": "accepted",
+      "localMessageId": "msg-1787765411157-vf2m0sj",
+      "timestamp": 1787765411157,
+      "rawDisplayText": "qual o conteudo do arquivo toml?",
+      "canonicalText": "qual o conteudo do arquivo toml?",
+      "images": [],
+      "contentDigest": "d494a76d481700f8f1e4610d80598beb80b3f4fe3fc0b1ebcd219e8290f180b4",
+      "providerUserMessageId": "01a03f1f-4e76-7252-8d6f-9f123863a16f",
+      "providerAssistantMessageId": "msg_0bdab1dc2732b1a9016a8f22a7aca487d2b1414343694534a7"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787765528056-fo0bhqo",
+      "userTurnOrdinal": 18,
+      "state": "accepted",
+      "localMessageId": "msg-1787765528035-uhj243u",
+      "timestamp": 1787765528035,
+      "rawDisplayText": "se as skills que construimos estiverem disponiveis, ele irá utilizar?",
+      "canonicalText": "se as skills que construimos estiverem disponiveis, ele irá utilizar?",
+      "images": [],
+      "contentDigest": "9c6fc8679d5684650444bd5dc5673fe8d2b06c264a32239b44d509925a168642",
+      "providerUserMessageId": "01a03f21-18fb-7c91-b5fa-cede1e2f4482",
+      "providerAssistantMessageId": "msg_0bdab1dc2732b1a9016a8f231da95087d2890503b08f1c4dba"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787765607156-0ddgzyl",
+      "userTurnOrdinal": 19,
+      "state": "accepted",
+      "localMessageId": "msg-1787765607135-ldewml6",
+      "timestamp": 1787765607135,
+      "rawDisplayText": "eu criei ele com effort medium\n\nagora quero um outro agente, com effort high, especialista em revisar documentos",
+      "canonicalText": "eu criei ele com effort medium\n\nagora quero um outro agente, com effort high, especialista em revisar documentos",
+      "images": [],
+      "contentDigest": "e01634b7b1ff12b2c95359a85b4f7ac6d43eab68826215c238cdb550dde6956e",
+      "providerUserMessageId": "01a03f22-4bf0-7211-9c78-f2d8c3ca851f"
     }
   ]
 }
