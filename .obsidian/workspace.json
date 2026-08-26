@@ -200,8 +200,10 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "bdd9956fcb88793f",
+  "active": "8e7c699d605b1ea8",
   "lastOpenFiles": [
+    "DevSkills/doc-product/SKILL.md",
+    "DevSkills/doc-product",
     "Tailoren Agents/coding/AGENTS.md",
     "Tailoren Agents/spec technical/AGENTS.md",
     "Tailoren Agents/spec funcional/AGENTS.md",
@@ -235,8 +237,6 @@
     "Projects/Investments",
     "Projects/Investiments",
     "Projects",
-    "DevSkills/dev-backend-nodejs/SKILL.md",
-    "DevSkills/dev-backend-golang/agents/openai.yaml",
-    "DevSkills/dev-backend-golang/agents"
+    "DevSkills/dev-backend-golang/agents/openai.yaml"
   ]
 }

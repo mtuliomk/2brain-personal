@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1787749581372-ti5b6q8n7",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787749581414-qnqdl8f",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1787749581364-bpcmqri",
+      "timestamp": 1787749581364,
+      "rawDisplayText": "dentro da pasta DevSkills, crie uma nova skill, baseada no formato das existentes.\n\nnome: doc-product\n\nela deve analisar os arquivos de um determinado repositorio de codigo (1 ou mais repo), e no final, documentar a visão de produto dessa aplicação. Considere que uma aplicação é a composição de todos os repos dentro da workspace.\n\nessa aplicação pode ter 1 ou mais produtos. a skill deve identificar esses produtos e documentar todos eleso",
+      "canonicalText": "dentro da pasta DevSkills, crie uma nova skill, baseada no formato das existentes.\n\nnome: doc-product\n\nela deve analisar os arquivos de um determinado repositorio de codigo (1 ou mais repo), e no final, documentar a visão de produto dessa aplicação. Considere que uma aplicação é a composição de todos os repos dentro da workspace.\n\nessa aplicação pode ter 1 ou mais produtos. a skill deve identificar esses produtos e documentar todos eleso",
+      "images": [],
+      "contentDigest": "1c5074c643a4e94f5c6a29dd8e535dc5549714637c561764ab4b5680968bb013",
+      "providerUserMessageId": "01a03e2d-d5d9-7612-8c35-d73d051cec50",
+      "providerAssistantMessageId": "msg_0bdab1dc2732b1a9016a8ee4fa484c87d28abd8d045bc7cecb"
+    }
+  ]
+}
