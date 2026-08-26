@@ -13,6 +13,14 @@ O resultado é destinado a uma pessoa de Produto e servirá futuramente como con
 
 Não altere código, configurações, dados ou documentação existente, salvo quando o usuário pedir expressamente. O objetivo é retratar o produto atual com base em evidências e no contexto recebido, não propor estratégia, *roadmap* ou implementação futura.
 
+## Execução autônoma
+
+Execute a análise integralmente de forma autônoma, dentro das permissões e ferramentas disponíveis. Não apresente plano de trabalho, não peça confirmação para iniciar ou continuar e não aguarde validação humana entre etapas. Inicie a investigação, tome as decisões necessárias com base nas evidências e entregue a documentação final.
+
+Quando faltar informação, houver ambiguidade, conflito entre fontes, repositório inacessível ou evidência insuficiente, prossiga com o que estiver disponível. Registre a limitação, a premissa e a decisão no documento; use `Não identificado` quando aplicável. A única regra de destino é: grave o documento se o prompt informar um caminho; caso contrário, apresente-o integralmente no output. Não solicite o caminho de saída.
+
+Um plano interno pode orientar a execução, mas não deve ser exposto ao usuário nem condicionar o início ou a conclusão da análise.
+
 ## Fontes e investigação
 
 Use, em conjunto, os dados e instruções fornecidos no prompt, o contexto em que a skill foi invocada e os artefatos dos repositórios. Trate dados explícitos de produto — como público, objetivos, terminologia, posicionamento, restrições e métricas — como fontes relevantes. Quando houver ambiguidade ou conflito entre documentos, dados de contexto e o código, priorize o comportamento demonstrado pelo código como representação do estado atual da aplicação; registre a divergência, a decisão e as evidências em `## Premissas e Decisões`.

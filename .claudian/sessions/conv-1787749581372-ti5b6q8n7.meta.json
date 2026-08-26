@@ -4,7 +4,7 @@
   "title": "dentro da pasta DevSkills, crie uma nova skill, ba...",
   "titleGenerationStatus": "failed",
   "createdAt": 1787749581380,
-  "lastActivityAt": 1787753726037,
+  "lastActivityAt": 1787754576880,
   "sessionId": "01a03e2d-c6bf-7451-8d87-b72880936b3a",
   "selectedModel": "gpt-5.6-terra",
   "providerState": {
@@ -15,12 +15,12 @@
     "workspaceDependencyToolVersion": 1
   },
   "usage": {
-    "inputTokens": 53114,
+    "inputTokens": 54263,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 50944,
+    "cacheReadInputTokens": 52992,
     "contextWindow": 258400,
     "contextWindowIsAuthoritative": true,
-    "contextTokens": 53114,
+    "contextTokens": 54263,
     "percentage": 21,
     "model": "gpt-5.6-terra"
   }
