@@ -13,6 +13,14 @@ O resultado é destinado a arquitetos e líderes de tecnologia e servirá futura
 
 Não altere código, configurações, infraestrutura, dados ou documentação existente, salvo quando o usuário pedir expressamente. O objetivo é retratar a arquitetura atual com base em evidências.
 
+## Execução autônoma
+
+Execute a análise integralmente de forma autônoma, dentro das permissões e ferramentas disponíveis. Não apresente plano de trabalho, não peça confirmação para iniciar ou continuar e não aguarde validação humana entre etapas. Inicie a investigação, tome as decisões necessárias com base nas evidências e entregue a documentação final.
+
+Quando faltar informação, houver ambiguidade, conflito entre fontes, repositório inacessível ou evidência insuficiente, prossiga com o que estiver disponível. Registre a limitação, a premissa e a decisão no documento; use `Não identificado` quando aplicável. A única regra de destino é: grave o documento se o prompt informar um caminho; caso contrário, apresente-o integralmente no output. Não solicite o caminho de saída.
+
+Um plano interno pode orientar a execução, mas não deve ser exposto ao usuário nem condicionar o início ou a conclusão da análise.
+
 ## Fontes e investigação
 
 Use em conjunto os dados e instruções do prompt, o contexto em que a skill foi invocada e os artefatos dos repositórios. Delimite primeiro a aplicação e inventarie todos os repositórios analisados. Para cada um, investigue, conforme existirem, `README`, manifestos, código-fonte, módulos de entrada, rotas, contratos, clientes, modelos, migrações, configurações, variáveis de ambiente, infraestrutura como código, pipelines, testes, telemetria, filas, *jobs*, eventos e documentação.
