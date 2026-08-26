@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevSkills/doc-architecture/SKILL.md",
+                "file": "DevSkills/doc-security-compliance/SKILL.md",
                 "mode": "source",
                 "source": false
               },
@@ -202,8 +202,10 @@
   },
   "active": "bdd9956fcb88793f",
   "lastOpenFiles": [
-    "DevSkills/doc-product/SKILL.md",
     "DevSkills/doc-architecture/SKILL.md",
+    "DevSkills/doc-security-compliance/SKILL.md",
+    "DevSkills/doc-security-compliance",
+    "DevSkills/doc-product/SKILL.md",
     "DevSkills/doc-architecture",
     "DevSkills/dev-fast-commit/SKILL.md",
     "DevSkills/doc-product",
@@ -234,9 +236,7 @@
     "Projects/Investments/posicao-2026-04.md",
     "Projects/Investments/posicao-2026-08.md",
     "Projects/Investments/posicao-2026-03.md",
-    "Projects/Investments/posicao-2026-02.md",
     "Projects/Investments",
-    "Projects/Investiments",
-    "Projects"
+    "Projects/Investiments"
   ]
 }
