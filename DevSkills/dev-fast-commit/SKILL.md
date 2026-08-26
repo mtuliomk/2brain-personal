@@ -1,12 +1,12 @@
 ---
-name: dev-commit
-description: Convenções e fluxo seguro para revisar alterações, organizar staging e criar mensagens de commit claras e consistentes. Use ao preparar, revisar, corrigir ou criar commits Git em qualquer projeto; segue Conventional Commits quando o repositório não definir outro padrão e evita incluir arquivos ou dados indevidos.
+name: dev-fast-commit
+description: Commit rápido na branch atual, seguido de push. Convenções e fluxo seguro para revisar alterações, organizar staging e criar mensagens de commit claras e consistentes. Use ao preparar, revisar, corrigir ou criar commits Git em qualquer projeto; segue Conventional Commits quando o repositório não definir outro padrão e evita incluir arquivos ou dados indevidos.
 ---
 # Convenções de commit
 
 Aplicar estas convenções ao revisar alterações e criar commits Git. Seguir primeiro o padrão documentado no repositório, no histórico recente e nas configurações existentes; usar as regras abaixo como padrão quando não houver convenção explícita.
 
-Esta skill trata da preparação, revisão, agrupamento e mensagem de commits. Não define estratégia de branching, processo de release ou política de pull request.
+Esta skill trata da preparação, revisão, agrupamento, mensagem e publicação do commit na branch atual. Não define estratégia de branching, processo de release ou política de pull request.
 
 ## Checklist antes de criar o commit
 
@@ -95,14 +95,16 @@ Refs: #123
 - [ ] Não há segredo, dado pessoal ou arquivo sensível no commit.
 - [ ] O commit não combina correção funcional com refatoração ou formatação sem relação.
 - [ ] Após criar o commit, confirmar o resultado com `git show --stat --oneline HEAD` e `git status --short`.
-- [ ] Ao final do commit, perguntar sempre se o usuário deseja fazer `push`; nunca executar o push sem confirmação.
-- [ ] Se o usuário quiser fazer push, perguntar se deseja publicar na branch atual ou em outra branch com abertura de pull request.
+- [ ] Confirmar a branch atual e o remoto configurado antes de publicar.
+- [ ] Ao final, executar `git push` para publicar o commit na branch atual.
+- [ ] Confirmar a publicação com `git status --short --branch`.
 
-## Segurança operacional
+## Publicação e segurança operacional
 
-- Nunca publicar, fazer push, alterar histórico remoto ou criar tag apenas por iniciativa própria; depois de todo commit, solicitar a decisão do usuário sobre o push.
-- Se o usuário escolher a branch atual, confirmar a branch e o remoto antes de executar o push.
-- Se o usuário escolher outra branch com pull request, confirmar o nome da nova branch, criar ou trocar para ela conforme necessário, publicar a branch e abrir o pull request somente após confirmar o destino e o título/descrição quando aplicável.
+- Após um commit criado com sucesso, publicar automaticamente na branch atual com `git push`. Não perguntar novamente se o usuário deseja fazer push.
+- Antes do push, verificar a branch atual com `git branch --show-current` e o remoto upstream com `git status --short --branch` ou `git remote -v`.
+- Se a branch não tiver upstream, publicar usando `git push -u origin <branch-atual>` somente quando `origin` existir e for o remoto apropriado; caso contrário, informar o bloqueio e solicitar orientação do usuário.
+- Não criar, trocar ou publicar em outra branch, nem abrir pull request, salvo pedido explícito do usuário.
 - Antes de `--amend`, rebase, reset ou force-push, verificar o histórico e confirmar o escopo da operação.
 - Se o commit falhar por hook, corrigir a causa e tentar novamente; não ignorar o hook automaticamente.
 - Se houver conflito entre esta skill e a documentação do projeto, seguir a documentação local e registrar a exceção quando relevante.

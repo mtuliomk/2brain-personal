@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tailoren Agents/coding/AGENTS.md",
+                "file": "DevSkills/dev-fast-commit/SKILL.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "AGENTS"
+              "title": "SKILL"
             }
           }
         ]
@@ -202,12 +202,12 @@
   },
   "active": "bdd9956fcb88793f",
   "lastOpenFiles": [
+    "Tailoren Agents/coding/AGENTS.md",
     "Tailoren Agents/spec technical/AGENTS.md",
     "Tailoren Agents/spec funcional/AGENTS.md",
     "Tailoren Agents/spec funcional/prompt.md",
     "Tailoren Agents/spec technical/prompt.md",
     "Tailoren Agents/coding/prompt.md",
-    "Tailoren Agents/coding/AGENTS.md",
     "Tailoren Agents/README.md",
     "DevSkills/dev-backend-golang/SKILL.md",
     "Tailoren Agents/coding",
@@ -216,7 +216,7 @@
     "Tailoren Agents/spec funcional",
     "Tailoren Agents",
     "DevSkills/spec-userstory/SKILL.md",
-    "DevSkills/dev-commit/SKILL.md",
+    "DevSkills/dev-fast-commit/SKILL.md",
     "DevSkills/plan-tak/SKILL.md",
     "DevSkills/spec-userstory",
     "Profile/Maya Onese.md",

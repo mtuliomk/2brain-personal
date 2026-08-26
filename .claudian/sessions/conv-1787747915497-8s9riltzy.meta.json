@@ -1,0 +1,28 @@
+{
+  "id": "conv-1787747915497-8s9riltzy",
+  "providerId": "codex",
+  "title": "revise essa skil de commit",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1787747915522,
+  "lastActivityAt": 1787748003794,
+  "sessionId": "01a03e14-5b12-77d2-8660-41be93628d63",
+  "selectedModel": "gpt-5.6-terra",
+  "providerState": {
+    "threadId": "01a03e14-5b12-77d2-8660-41be93628d63",
+    "nativeConversationContextEstablished": true,
+    "sessionFilePath": "/home/tulio/.codex/sessions/2026/08/26/rollout-2026-08-26T09-38-36-01a03e14-5b12-77d2-8660-41be93628d63.jsonl",
+    "transcriptRootPath": "/home/tulio/.codex/sessions",
+    "workspaceDependencyToolVersion": 1
+  },
+  "currentNote": "DevSkills/dev-fast-commit/SKILL.md",
+  "usage": {
+    "inputTokens": 17403,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 16128,
+    "contextWindow": 258400,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 17403,
+    "percentage": 7,
+    "model": "gpt-5.6-terra"
+  }
+}
