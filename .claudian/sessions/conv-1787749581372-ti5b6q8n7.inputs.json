@@ -309,6 +309,20 @@
       "contentDigest": "8e7f6209bc33f3de4c56027e3da747ecadf8509acc608ef9ac6550bd69b89fbd",
       "providerUserMessageId": "01a03f25-c171-7950-8f4b-638191455f03",
       "providerAssistantMessageId": "msg_0bdab1dc2732b1a9016a8f244e0aa487d2a4a4b7fab20bd0a5"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787766375414-9d8813s",
+      "userTurnOrdinal": 23,
+      "state": "accepted",
+      "localMessageId": "msg-1787766375389-6tbacwm",
+      "timestamp": 1787766375389,
+      "rawDisplayText": "se eu tenho 1 agente, chamando 2 outros agentes, como fica os 3 contextos",
+      "canonicalText": "se eu tenho 1 agente, chamando 2 outros agentes, como fica os 3 contextos",
+      "images": [],
+      "contentDigest": "ed8d626fc9dae5ed122c618661e3ea142e3f92f287029ff57363d8d289b2376c",
+      "providerUserMessageId": "01a03f2e-06be-7a72-80b7-86b4dfbb3308",
+      "providerAssistantMessageId": "msg_0bdab1dc2732b1a9016a8f26760bd487d2ab3bb5915e959f01"
     }
   ]
 }
