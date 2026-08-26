@@ -183,6 +183,34 @@
       "contentDigest": "252a646cfb41abbf528802d089684fbb71c2444da9c29c8c4fe08228eb32d103",
       "providerUserMessageId": "01a03f17-6d7e-7b40-a4ac-326af6768e6d",
       "providerAssistantMessageId": "msg_0bdab1dc2732b1a9016a8f20b13c9c87d2a36d988960b34efb"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787765077479-72d9njo",
+      "userTurnOrdinal": 14,
+      "state": "accepted",
+      "localMessageId": "msg-1787765077461-d7hpmuw",
+      "timestamp": 1787765077461,
+      "rawDisplayText": "é possivel definir o model de cada um dos subagentes?",
+      "canonicalText": "é possivel definir o model de cada um dos subagentes?",
+      "images": [],
+      "contentDigest": "a09b0a80cf7e7691c6786ca430d4403611748d9e4196c251ad396b3506f3df86",
+      "providerUserMessageId": "01a03f1a-36ee-7a23-a2d6-42215f82bcba",
+      "providerAssistantMessageId": "msg_0bdab1dc2732b1a9016a8f215a73ac87d2b7a2f93f5677291f"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787765122422-ymps5im",
+      "userTurnOrdinal": 15,
+      "state": "accepted",
+      "localMessageId": "msg-1787765122405-dt331bq",
+      "timestamp": 1787765122405,
+      "rawDisplayText": "consigo criar agente customizado no config.tom?",
+      "canonicalText": "consigo criar agente customizado no config.tom?",
+      "images": [],
+      "contentDigest": "edd338fe52f60d6f6df038d766326d3efdf469877643f8f44c78b7775191d27b",
+      "providerUserMessageId": "01a03f1a-e8a4-7742-af49-aefd496b5e84",
+      "providerAssistantMessageId": "msg_0bdab1dc2732b1a9016a8f21891cf887d2a57591e6c5cca05b"
     }
   ]
 }
