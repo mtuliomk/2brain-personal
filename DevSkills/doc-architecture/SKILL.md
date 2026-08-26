@@ -1,6 +1,6 @@
 ---
 name: doc-architecture
-description: Analisar um ou mais repositórios que compõem uma aplicação e produzir documentação de arquitetura macro e C4 nos níveis de Contexto e Contêineres, incluindo obrigatoriamente as relações entre repositórios. Usar para documentar a arquitetura atual para arquitetos e líderes de tecnologia; não usar para projetar mudanças ou implementar.
+description: Analisar um ou mais repositórios que compõem uma aplicação e produzir um assessment de arquitetura macro e C4 nos níveis de Contexto e Contêineres, incluindo obrigatoriamente as relações entre repositórios e uma síntese do estado atual para agentes de desenvolvimento. Usar para documentar a arquitetura atual para arquitetos e líderes de tecnologia; não usar para implementar.
 ---
 
 # Documentação de arquitetura
@@ -9,7 +9,7 @@ Produza a documentação de arquitetura no **caminho e nome de arquivo definidos
 
 Uma aplicação é a composição de todos os repositórios presentes na workspace ou explicitamente indicados pelo prompt e pelo contexto. Analise a aplicação como um todo, documentando sua arquitetura macro e os dois primeiros níveis do modelo C4: **Contexto do Sistema** (nível 1) e **Contêineres** (nível 2). Use “contêiner” no sentido do C4 — aplicação, serviço, banco de dados, fila ou armazenamento executável/deployável — e não como sinônimo exclusivo de Docker.
 
-O resultado é destinado a arquitetos e líderes de tecnologia e servirá futuramente como contexto para agentes de desenvolvimento autônomo com IA. Seja autocontido, preciso e rastreável. Descreva responsabilidades, limites, comunicações, dados, dependências e riscos arquiteturais com o nível de detalhe necessário para compreender o estado atual e tomar decisões informadas. Não proponha uma arquitetura futura, *roadmap* ou implementação detalhada não solicitada. As recomendações obrigatórias devem ser macro, derivadas das evidências e dos riscos observados, e não podem inventar requisitos.
+O resultado é destinado a arquitetos e líderes de tecnologia e servirá futuramente como contexto para agentes de desenvolvimento autônomo com IA. Mantenha o tom de um **assessment de arquitetura**: seja autocontido, preciso, rastreável e analítico. Descreva responsabilidades, limites, comunicações, dados, dependências, riscos e recomendações arquiteturais com o nível de detalhe necessário para compreender o estado atual e tomar decisões informadas. Além do assessment, inclua uma síntese explícita do estado atual para orientar manutenções futuras por agentes. Não proponha uma arquitetura futura, *roadmap* ou implementação detalhada não solicitada. As recomendações obrigatórias devem ser macro, derivadas das evidências e dos riscos observados, e não podem inventar requisitos.
 
 Não altere código, configurações, infraestrutura, dados ou documentação existente, salvo quando o usuário pedir expressamente. O objetivo é retratar a arquitetura atual com base em evidências.
 
@@ -131,6 +131,27 @@ flowchart LR
 
 <Inclua recomendações somente quando sustentadas pelas evidências e pelos riscos ou limites observados. Priorize pelo impacto potencial, urgência, exposição e abrangência; explique a classificação. Não detalhe plano de implementação, tecnologias obrigatórias ou cronograma. Escreva `Nenhuma recomendação identificada` quando não houver evidência suficiente.>
 
+## Estado Atual da Arquitetura
+
+<Esta seção é a síntese operacional do assessment, destinada ao contexto de agentes de desenvolvimento. Descreva o estado atual, e não o estado desejado. Use os identificadores das seções anteriores e registre `Não identificado` onde necessário.>
+
+### Composição e Responsabilidades Vigentes
+- <Sistemas, contêineres, componentes e repositórios `REP-xx`/`CTR-xx` relevantes, com suas responsabilidades e fronteiras.>
+
+### Relações e Fluxos a Preservar
+- <Relações entre repositórios, integrações e fluxos `FL-xx` que a manutenção não deve alterar implicitamente, incluindo direção, dados e sincronismo.>
+
+### Dados, Operação e Dependências Vigentes
+- **Dados e propriedade:** <fontes, fronteiras e responsáveis, ou `Não identificado`>.
+- **Operação:** <implantação, observabilidade, confiabilidade e dependências operacionais relevantes, ou `Não identificado`>.
+- **Dependências externas:** <elementos `EXT-xx` e condições de integração, ou `Nenhuma identificada`>.
+
+### Restrições de Manutenção
+- <Invariantes arquiteturais, contratos, compatibilidades e limites observados que devem ser considerados por agentes ao alterar a aplicação.>
+
+### Questões Conhecidas para Consideração Futura
+- <RSK-xx, REC-xx ou `Nenhuma identificada`>.
+
 ## Evidências e Rastreabilidade
 | Elemento ou conclusão | Fonte | Interpretação |
 | --- | --- | --- |
@@ -153,8 +174,8 @@ Use identificadores estáveis `REP-xx`, `EXT-xx`, `CTR-xx`, `CMP-xx`, `FL-xx`, `
 
 Não interrompa a análise por ausência, ambiguidade ou conflito de informações. Para conclusões sobre o estado atual, priorize comportamento e configuração efetivamente demonstrados pelo código; depois, use dados explícitos do prompt, contexto e documentação. Quando fontes não técnicas divergirem do código, documente a divergência e o impacto, sem alterar silenciosamente a conclusão.
 
-Declare explicitamente fatos não identificados, lacunas, limites, dependências, suposições e relações ausentes. Não deixe relações arquiteturais ou fronteiras relevantes implícitas. Para habilitar o uso futuro por agentes, explique o propósito e a responsabilidade de cada elemento, não apenas sua tecnologia ou nome técnico. Relacione cada recomendação aos riscos, limites ou evidências que a sustentam e mantenha sua prioridade como sugestão, não como fato observado.
+Mantenha o assessment e sua análise de riscos e recomendações; a seção `## Estado Atual da Arquitetura` deve sintetizar seus fatos para manutenção, sem substituir o diagnóstico. Declare explicitamente fatos não identificados, lacunas, limites, dependências, suposições e relações ausentes. Não deixe relações arquiteturais ou fronteiras relevantes implícitas. Para habilitar o uso futuro por agentes, explique o propósito e a responsabilidade de cada elemento, não apenas sua tecnologia ou nome técnico. Relacione cada recomendação aos riscos, limites ou evidências que a sustentam e mantenha sua prioridade como sugestão, não como fato observado.
 
 ## Critérios de conclusão
 
-Considere a documentação concluída somente quando estiver gravada no caminho definido pelo prompt ou, quando ele não existir, apresentada integralmente no output; estiver escrita em português e orientada a arquitetos e líderes de tecnologia; delimitar todos os repositórios como uma única aplicação; incluir arquitetura macro, C4 de Contexto e C4 de Contêineres com diagramas consistentes; relacionar obrigatoriamente todos os repositórios analisados; documentar fluxos, dados, segurança e operação quando evidenciados; incluir recomendações macro priorizadas e justificadas por evidências; registrar divergências com prevalência explícita do código; ser autocontida, rastreável e utilizável como contexto por agentes de desenvolvimento autônomo; e manter `## Controle de Versão` como última seção.
+Considere a documentação concluída somente quando estiver gravada no caminho definido pelo prompt ou, quando ele não existir, apresentada integralmente no output; estiver escrita em português e orientada a arquitetos e líderes de tecnologia; delimitar todos os repositórios como uma única aplicação; incluir arquitetura macro, C4 de Contexto e C4 de Contêineres com diagramas consistentes; relacionar obrigatoriamente todos os repositórios analisados; documentar fluxos, dados, segurança e operação quando evidenciados; incluir recomendações macro priorizadas e justificadas por evidências; incluir uma seção final de estado atual da arquitetura orientada à manutenção por agentes; registrar divergências com prevalência explícita do código; ser autocontida, rastreável e utilizável como contexto por agentes de desenvolvimento autônomo; e manter `## Controle de Versão` como última seção.
