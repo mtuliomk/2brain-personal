@@ -155,6 +155,34 @@
       "contentDigest": "ca0d63866bdb6c5477ecdfebb80c66567af2f3ebf5b29af1195aec9687adfce0",
       "providerUserMessageId": "01a03f12-4ea8-7822-a0e3-f1e25f0c40a5",
       "providerAssistantMessageId": "msg_0bdab1dc2732b1a9016a8f1f6aee3487d2bac1c95e09683e37"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787764784400-lj4ep8v",
+      "userTurnOrdinal": 12,
+      "state": "accepted",
+      "localMessageId": "msg-1787764784383-5qi4bel",
+      "timestamp": 1787764784383,
+      "rawDisplayText": "me tira uma duvida sobre o codex. estou no vscode, e gostaria de executar uma tarefa em 2 agentes paralelos. como eu faço isso?",
+      "canonicalText": "me tira uma duvida sobre o codex. estou no vscode, e gostaria de executar uma tarefa em 2 agentes paralelos. como eu faço isso?",
+      "images": [],
+      "contentDigest": "b717fefd322476d49803e2e118b2d1e431451731bf4141ddc1fa607fe216ce8f",
+      "providerUserMessageId": "01a03f15-c07d-7710-90c8-75068ab125d4",
+      "providerAssistantMessageId": "msg_0bdab1dc2732b1a9016a8f207c49d487d2b6ad501917ad749a"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1787764894830-sjngq4n",
+      "userTurnOrdinal": 13,
+      "state": "accepted",
+      "localMessageId": "msg-1787764894813-5izcq38",
+      "timestamp": 1787764894813,
+      "rawDisplayText": "quero dois agentes locais. eles nao vao mudar codigo, apenas analisar",
+      "canonicalText": "quero dois agentes locais. eles nao vao mudar codigo, apenas analisar",
+      "images": [],
+      "contentDigest": "252a646cfb41abbf528802d089684fbb71c2444da9c29c8c4fe08228eb32d103",
+      "providerUserMessageId": "01a03f17-6d7e-7b40-a4ac-326af6768e6d",
+      "providerAssistantMessageId": "msg_0bdab1dc2732b1a9016a8f20b13c9c87d2a36d988960b34efb"
     }
   ]
 }
