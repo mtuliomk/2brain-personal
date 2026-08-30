@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1788096080611-gd5y1b6a3",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788096080743-tqexekn",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1788096080582-2a6hffb",
+      "timestamp": 1788096080582,
+      "rawDisplayText": "dentro de DevSkills, quero criar um conjunto de skills para suportar um dev no seu fluxo de desenvolvimento local.\nsiga o mesmo padrão de construção de skills utilizado para as demais.\n\nquero as seguintes skills novas:\n- local-explorer (Troca de ideias e investigação aberta sobre um problema, com ou sem plano de execução ao final. Use quando o pedido for exploratório, sem escopo de arquivo definido, ou quando o usuário sinalizar que ainda está decidindo se vai executar algo.)\n- local-feature (Ciclo completo de planejamento, execução e validação autônoma para features novas ou modificações de fluxo existente. Use quando o pedido introduzir comportamento novo, tocar mais de um módulo, ou exigir decisão de design com critério de sucesso verificável.)\n- local-bug (Correção direta de comportamento divergente do esperado, com adição de teste de regressão quando justificável. Use quando a causa raiz for conhecida ou localizável em um módulo e a correção não introduzir comportamento novo.)\n- local-documentation (Auditoria e atualização de documentos do repositório contra o estado atual do código. Use quando o pedido for revisar, atualizar ou verificar consistência de documentação sem alterar código de produção.)",
+      "canonicalText": "dentro de DevSkills, quero criar um conjunto de skills para suportar um dev no seu fluxo de desenvolvimento local.\nsiga o mesmo padrão de construção de skills utilizado para as demais.\n\nquero as seguintes skills novas:\n- local-explorer (Troca de ideias e investigação aberta sobre um problema, com ou sem plano de execução ao final. Use quando o pedido for exploratório, sem escopo de arquivo definido, ou quando o usuário sinalizar que ainda está decidindo se vai executar algo.)\n- local-feature (Ciclo completo de planejamento, execução e validação autônoma para features novas ou modificações de fluxo existente. Use quando o pedido introduzir comportamento novo, tocar mais de um módulo, ou exigir decisão de design com critério de sucesso verificável.)\n- local-bug (Correção direta de comportamento divergente do esperado, com adição de teste de regressão quando justificável. Use quando a causa raiz for conhecida ou localizável em um módulo e a correção não introduzir comportamento novo.)\n- local-documentation (Auditoria e atualização de documentos do repositório contra o estado atual do código. Use quando o pedido for revisar, atualizar ou verificar consistência de documentação sem alterar código de produção.)",
+      "images": [],
+      "contentDigest": "29f2b1a89fe2b6eed59ff403782398f4eaadf207a4ae1f6e4040bcf6ceebe659",
+      "providerUserMessageId": "01a052d4-fc57-7b91-840d-7a6b55ab7a5d",
+      "providerAssistantMessageId": "msg_099c9efd1e7660e2016a942e8dba0887d291dffea601bb8271"
+    }
+  ]
+}
