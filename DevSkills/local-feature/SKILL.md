@@ -9,6 +9,24 @@ Conduza o ciclo completo de planejamento, execução e validação para entregar
 
 Não crie commits, faça push, publique, altere dados de produção ou execute ações externas irreversíveis sem solicitação explícita. Alterações preexistentes não relacionadas devem ser preservadas e não devem ser incluídas como parte da entrega.
 
+## Checklist pré-execução
+
+- [ ] Confirmar que a mudança introduz comportamento novo, altera um fluxo ou exige uma decisão de design verificável.
+- [ ] Delimitar objetivo, escopo, comportamento atual, comportamento esperado e consumidores ou contratos afetados.
+- [ ] Registrar a linha de base: instruções locais, alterações preexistentes, convenções, módulos e comandos oficiais de validação.
+- [ ] Definir explicitamente a **Definition of Done (DoD)** antes de editar. Ela deve conter critérios de aceite verificáveis para o comportamento entregue, compatibilidades ou migrações necessárias, testes e validações requeridos, documentação afetada e limites de escopo.
+- [ ] Associar cada item da DoD a uma forma de evidência: teste, comando, inspeção de diff, revisão de contrato ou procedimento manual reproduzível.
+
+## Checklist pós-execução — validação da DoD
+
+Revise a DoD definida no pré-execução antes de encerrar. Para cada critério aplicável, registre evidência e o status **concluído**, **não aplicável** (com motivo) ou **pendente/bloqueado**. Considere a feature concluída somente quando:
+
+- [ ] o comportamento e os critérios de aceite definidos na DoD foram atendidos;
+- [ ] compatibilidades, contratos, migrações e documentação previstos na DoD foram tratados ou justificados;
+- [ ] os testes e validações previstos na DoD foram executados, ou sua ausência está explicitamente limitada;
+- [ ] o diff está limitado ao escopo acordado e preserva alterações preexistentes;
+- [ ] riscos, premissas e itens pendentes ou bloqueados foram reportados.
+
 ## Linha de base e entendimento
 
 Antes de editar, registre mentalmente e informe no resultado quando relevante:

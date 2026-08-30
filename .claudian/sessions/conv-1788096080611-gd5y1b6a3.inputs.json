@@ -15,6 +15,20 @@
       "contentDigest": "29f2b1a89fe2b6eed59ff403782398f4eaadf207a4ae1f6e4040bcf6ceebe659",
       "providerUserMessageId": "01a052d4-fc57-7b91-840d-7a6b55ab7a5d",
       "providerAssistantMessageId": "msg_099c9efd1e7660e2016a942e8dba0887d291dffea601bb8271"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788096329893-gwr2uxb",
+      "userTurnOrdinal": 2,
+      "state": "accepted",
+      "localMessageId": "msg-1788096329886-a5q9mqx",
+      "timestamp": 1788096329886,
+      "rawDisplayText": "para todas essas skills criadas, (local), quero que elas tenham um checklist pre e pos execução\n\no pos, precisa ser baseado no criterio de aceite (dod). a definicao do dod precisa estar no pre",
+      "canonicalText": "para todas essas skills criadas, (local), quero que elas tenham um checklist pre e pos execução\n\no pos, precisa ser baseado no criterio de aceite (dod). a definicao do dod precisa estar no pre",
+      "images": [],
+      "contentDigest": "ad36d8fdc071fe4af2ab0ae262f5499e90af2b11ca731f24e162451f4c5047c7",
+      "providerUserMessageId": "01a052d8-bcb5-7f82-8b82-7ee0af923e5a",
+      "providerAssistantMessageId": "msg_099c9efd1e7660e2016a942f72489087d2ba5922681d629da1"
     }
   ]
 }

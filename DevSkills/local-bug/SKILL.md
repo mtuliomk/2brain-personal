@@ -9,6 +9,24 @@ Corrija a menor causa raiz que explique a divergência observada, preservando co
 
 Não crie commits, faça push, publique, altere dados de produção ou execute ações externas irreversíveis sem solicitação explícita. Preserve alterações preexistentes e não as atribua ao bug sem evidência.
 
+## Checklist pré-execução
+
+- [ ] Confirmar que o trabalho restaura comportamento esperado, sem introduzir comportamento novo ou exigir redesign amplo.
+- [ ] Delimitar comportamento esperado, divergência observada, impacto conhecido e cenário de reprodução ou evidência estática disponível.
+- [ ] Localizar a causa raiz provável, o módulo responsável, contratos próximos e alterações preexistentes que devem ser preservadas.
+- [ ] Definir explicitamente a **Definition of Done (DoD)** antes de editar. Ela deve conter critérios de aceite verificáveis para a correção, comportamento que não pode regredir, necessidade ou justificativa de teste de regressão e validações obrigatórias do módulo.
+- [ ] Associar cada item da DoD a uma evidência: reprodução do cenário, teste automatizado, comando oficial, inspeção de contrato ou procedimento manual reproduzível.
+
+## Checklist pós-execução — validação da DoD
+
+Revise a DoD definida no pré-execução antes de encerrar. Para cada critério aplicável, registre evidência e o status **concluído**, **não aplicável** (com motivo) ou **pendente/bloqueado**. Considere o bug corrigido somente quando:
+
+- [ ] a causa raiz e o comportamento esperado definidos na DoD foram comprovadamente tratados;
+- [ ] a correção não introduz comportamento novo nem altera contratos fora do escopo;
+- [ ] o teste de regressão previsto foi adicionado e passou, ou sua ausência tem justificativa concreta registrada;
+- [ ] as validações previstas na DoD foram executadas, ou a limitação foi explicitamente reportada;
+- [ ] riscos residuais, falhas preexistentes e itens pendentes ou bloqueados foram reportados.
+
 ## Diagnóstico
 
 Antes de editar, confirme o comportamento esperado, o comportamento atual e a origem provável da divergência. Examine o módulo afetado, seus chamadores, contratos, validações, configuração e testes próximos. Reproduza o problema quando houver meio local seguro e proporcional; quando não for possível, use evidência estática e declare a limitação.

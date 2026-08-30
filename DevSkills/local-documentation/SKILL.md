@@ -9,6 +9,24 @@ Audite a documentação solicitada contra o comportamento atual demonstrado pelo
 
 Não altere código de produção, testes, configurações funcionais, infraestrutura, dependências, dados ou Git sem solicitação explícita. Preserve mudanças preexistentes e não as sobrescreva para padronizar o texto.
 
+## Checklist pré-execução
+
+- [ ] Confirmar que o pedido é de auditoria ou atualização documental, sem alteração de código de produção.
+- [ ] Delimitar documentos, tópicos, público e fontes técnicas que servirão de evidência.
+- [ ] Registrar convenções de escrita, estrutura, links, exemplos, comandos e alterações preexistentes relevantes.
+- [ ] Definir explicitamente a **Definition of Done (DoD)** antes de editar. Ela deve conter critérios de aceite verificáveis para cada documento: afirmações que precisam estar alinhadas ao código, lacunas a declarar, links ou exemplos a verificar, documentação fora do escopo e garantia de não alteração de código de produção.
+- [ ] Associar cada item da DoD a uma fonte técnica ou procedimento de verificação aplicável.
+
+## Checklist pós-execução — validação da DoD
+
+Revise a DoD definida no pré-execução antes de encerrar. Para cada critério aplicável, registre evidência e o status **concluído**, **não aplicável** (com motivo) ou **pendente/bloqueado**. Considere a atualização documental concluída somente quando:
+
+- [ ] as afirmações e lacunas definidas na DoD estão alinhadas às evidências técnicas ou explicitamente qualificadas;
+- [ ] links, referências, comandos e exemplos previstos na DoD foram verificados ou tiveram suas limitações informadas;
+- [ ] as alterações estão restritas aos documentos necessários e preservam suas convenções;
+- [ ] nenhum código de produção, teste, configuração funcional, infraestrutura, dependência, dado ou Git foi alterado;
+- [ ] itens não confirmados, fora do escopo, pendentes ou bloqueados foram reportados.
+
 ## Auditoria baseada em evidências
 
 Delimite os documentos e tópicos solicitados. Para cada afirmação relevante, procure as fontes técnicas mais próximas: código de entrada, contratos, configuração, manifestos, comandos, testes, exemplos e automações. Dê precedência ao comportamento efetivamente demonstrado por código e configuração; quando a evidência for insuficiente, preserve a incerteza em vez de inventar detalhes.

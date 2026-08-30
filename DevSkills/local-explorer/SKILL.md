@@ -7,6 +7,24 @@ description: Conduzir troca de ideias e investigação aberta sobre um problema 
 
 Use esta skill para transformar uma dúvida, hipótese ou oportunidade em entendimento técnico útil, sem pressupor que haverá implementação. Preserve o caráter exploratório do pedido: investigar e propor opções não autoriza alterar código, configuração, dados, dependências, documentação ou Git.
 
+## Checklist pré-execução
+
+- [ ] Confirmar que o pedido é exploratório e que não há autorização para implementar ou alterar artefatos.
+- [ ] Delimitar a pergunta, hipótese, decisão ou oportunidade a investigar e os limites conhecidos.
+- [ ] Identificar o contexto técnico inicial, as fontes de evidência e eventuais alterações preexistentes que não devem ser tocadas.
+- [ ] Definir explicitamente a **Definition of Done (DoD)** da exploração, com critérios verificáveis e proporcionais ao pedido. Ela deve incluir, quando aplicável: hipóteses investigadas, evidências mínimas, incertezas que precisam ser declaradas, opções ou recomendação esperada e se há necessidade de um plano breve.
+- [ ] Confirmar que cada critério da DoD pode ser verificado sem confundir fato observado com inferência.
+
+## Checklist pós-execução — validação da DoD
+
+Revise a DoD definida no pré-execução antes de encerrar. Para cada critério aplicável, registre evidência e o status **concluído**, **não aplicável** (com motivo) ou **pendente/bloqueado**. Considere a exploração concluída somente quando:
+
+- [ ] as hipóteses e o escopo definidos na DoD foram investigados até o nível de evidência acordado;
+- [ ] fatos, inferências, lacunas e riscos estão distinguidos;
+- [ ] opções, recomendação ou plano breve previstos na DoD foram entregues;
+- [ ] nenhuma alteração de código, configuração, documentação, dados ou Git foi realizada;
+- [ ] itens pendentes ou bloqueados foram explicitamente reportados.
+
 ## Condução da investigação
 
 Comece pelo objetivo, pelo comportamento ou pela hipótese trazida pelo usuário. Quando o contexto estiver incompleto, faça uma investigação inicial de baixo risco no repositório antes de pedir esclarecimentos. Inspecione somente os módulos, padrões, configurações, testes e documentação que possam confirmar ou refutar as hipóteses relevantes.
