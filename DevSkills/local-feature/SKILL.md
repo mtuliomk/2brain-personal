@@ -14,6 +14,7 @@ Não crie commits, faça push, publique, altere dados de produção ou execute a
 - [ ] Confirmar que a mudança introduz comportamento novo, altera um fluxo ou exige uma decisão de design verificável.
 - [ ] Delimitar objetivo, escopo, comportamento atual, comportamento esperado e consumidores ou contratos afetados.
 - [ ] Registrar a linha de base: instruções locais, alterações preexistentes, convenções, módulos e comandos oficiais de validação.
+- [ ] Levantar componentes, serviços, *helpers*, contratos, validações e padrões preexistentes que possam ser reutilizados; identificar os que precisam ser ajustados para reuso antes de criar uma implementação nova.
 - [ ] Declarar em uma linha o **critério de sucesso** antes de planejar. Se ele não estiver claro e depender de informação que somente o usuário possui, pedir esclarecimento antes de prosseguir; não assumi-lo silenciosamente.
 - [ ] Definir explicitamente a **Definition of Done (DoD)** antes de editar, alinhada ao critério de sucesso. Ela deve conter critérios de aceite verificáveis para o comportamento entregue, compatibilidades ou migrações necessárias, testes e validações requeridos, documentação afetada e limites de escopo.
 - [ ] Associar cada item da DoD a uma forma de evidência: teste, comando, inspeção de diff, revisão de contrato ou procedimento manual reproduzível.
@@ -27,6 +28,7 @@ Revise a DoD definida no pré-execução antes de encerrar. Para cada critério 
 - [ ] compatibilidades, contratos, migrações e documentação previstos na DoD foram tratados ou justificados;
 - [ ] os testes e validações previstos na DoD foram executados, ou sua ausência está explicitamente limitada;
 - [ ] o critério de sucesso declarado antes do plano foi validado por evidências, e não por impressão geral de que a alteração parece correta;
+- [ ] os componentes preexistentes identificados foram reutilizados ou evoluídos quando adequado, e componentes novos têm responsabilidade coesa e possibilidade real de reuso;
 - [ ] o diff está limitado ao escopo acordado e preserva alterações preexistentes;
 - [ ] riscos, premissas, decisões assumidas e itens pendentes ou bloqueados foram reportados.
 
@@ -37,6 +39,7 @@ Antes de editar, registre mentalmente e informe no resultado quando relevante:
 - estado do repositório e alterações preexistentes;
 - instruções locais, convenções, arquitetura e módulos afetados;
 - comportamento atual, comportamento esperado e critérios verificáveis de sucesso;
+- componentes, contratos, *helpers*, serviços e padrões relacionados que podem ser reutilizados ou evoluídos para reuso;
 - comandos oficiais de teste, qualidade, *typecheck*, *build* e execução local;
 - contratos, migrações, integrações, dados, permissões ou compatibilidades que a mudança possa afetar.
 
@@ -44,13 +47,13 @@ Use código, testes e configurações como fonte principal do comportamento atua
 
 ## Planejamento
 
-Antes de modificar o código, declare em uma linha o critério de sucesso e formule um plano de execução proporcional à complexidade. Para cada etapa, identifique os arquivos ou módulos afetados, a alteração de comportamento, a ordem de execução, as dependências entre etapas e como ela será validada por teste automatizado, *build* ou verificação manual pontual. Para mudanças de design, compare alternativas somente até haver uma decisão justificada pelo critério de sucesso, pelos padrões do repositório e pelo menor impacto compatível.
+Antes de modificar o código, declare em uma linha o critério de sucesso e formule um plano de execução proporcional à complexidade. Para cada etapa, identifique os arquivos ou módulos afetados, a alteração de comportamento, a ordem de execução, as dependências entre etapas, os componentes existentes a reutilizar ou evoluir e como ela será validada por teste automatizado, *build* ou verificação manual pontual. Para mudanças de design, compare alternativas somente até haver uma decisão justificada pelo critério de sucesso, pelos padrões do repositório e pelo menor impacto compatível.
 
 Apresente o plano ao usuário antes de iniciar a execução, sem solicitar aprovação ou aguardar validação humana entre as iterações. Não crie documentos de planejamento no repositório sem solicitação explícita.
 
 ## Implementação
 
-Implemente o menor conjunto coeso de mudanças necessário. Reutilize componentes, padrões, abstrações, contratos e validações existentes antes de criar novos. Mantenha a compatibilidade dos consumidores existentes, a menos que uma quebra seja requisito explícito.
+Implemente o menor conjunto coeso de mudanças necessário, priorizando componentização e reuso. Reutilize componentes, padrões, abstrações, contratos e validações existentes antes de criar novos; quando um componente existente estiver próximo da necessidade, evolua-o para reuso sem quebrar consumidores. Crie um componente novo quando ele tiver responsabilidade clara, interface adequada e possibilidade real de reuso, evitando duplicação de lógica. Não extraia abstrações artificiais nem faça refatorações fora do escopo apenas para aumentar a componentização. Mantenha a compatibilidade dos consumidores existentes, a menos que uma quebra seja requisito explícito.
 
 Aplique as skills de desenvolvimento correspondentes à tecnologia e ao tipo de alteração. Atualize testes que representem o comportamento observável e inclua cobertura para novos fluxos, falhas e limites relevantes. Atualize documentação apenas quando ela for afetada pelo comportamento implementado; use `local-documentation` quando a tarefa for exclusivamente documental.
 
@@ -66,6 +69,7 @@ Ao concluir, responda em português com:
 
 - critério de sucesso declarado, DoD e evidências que comprovam seus itens;
 - plano apresentado e sua execução, incluindo arquivos ou módulos alterados e o motivo;
+- componentes reutilizados, evoluídos ou criados para reuso, com a justificativa relevante;
 - testes e validações executados, seus resultados e iterações realizadas após falhas;
 - decisões de design ou escopo assumidas autonomamente, cada uma com a fonte usada na hierarquia (`decisions.md`, `product.md`/`glossary.md`, precedente em outra *task* ou raciocínio próprio);
 - limitações, riscos, obstáculos, premissas e validações não executadas;
