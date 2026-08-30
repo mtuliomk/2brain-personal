@@ -1,58 +1,113 @@
 ---
 name: local-documentation
-description: Auditar e atualizar documentação do repositório contra o estado atual do código, sem alterar código de produção. Use quando o pedido for revisar, atualizar ou verificar a consistência de documentação. Não use para implementar comportamento, corrigir defeito funcional ou decidir uma mudança de produto.
+description: Produzir uma extração factual e compartilhada do código para fluxos de documentação, reutilizável por agentes que auditarão documentos depois. Use para mapear estrutura, interfaces, fluxos e dependências de um repositório sem viés de documento específico. Não use para auditar, comparar ou editar documentação existente.
 ---
 
-# Documentação local
+# Extração compartilhada para documentação
 
-Audite a documentação solicitada contra o comportamento atual demonstrado pelo repositório e atualize somente os documentos necessários. O objetivo é reduzir divergências entre documentação e código, sem transformar a revisão documental em implementação ou redesign técnico.
+Produza uma única leitura factual do repositório, reutilizável por todos os agentes de documentação de uma mesma rodada. O artefato reduz leituras redundantes e garante que os consumidores trabalhem sobre o mesmo *snapshot* de código. Esta skill extrai evidências genéricas do repositório; documentos relacionados ao assunto são contexto de investigação, não fonte de fatos sobre o comportamento atual do código.
 
-Não altere código de produção, testes, configurações funcionais, infraestrutura, dependências, dados ou Git sem solicitação explícita. Preserve mudanças preexistentes e não as sobrescreva para padronizar o texto.
+Não interprete se documentação existente está correta, desatualizada ou incompleta. Não sugira edições nem compare o código com qualquer documentação. O único arquivo que esta skill pode criar ou atualizar é o artefato único de evidências solicitado; não altere código de produção, testes, configuração funcional, infraestrutura, dependências, dados ou Git.
 
 ## Checklist pré-execução
 
-- [ ] Confirmar que o pedido é de auditoria ou atualização documental, sem alteração de código de produção.
-- [ ] Delimitar documentos, tópicos, público e fontes técnicas que servirão de evidência.
-- [ ] Registrar convenções de escrita, estrutura, links, exemplos, comandos e alterações preexistentes relevantes.
-- [ ] Definir explicitamente a **Definition of Done (DoD)** antes de editar. Ela deve conter critérios de aceite verificáveis para cada documento: afirmações que precisam estar alinhadas ao código, lacunas a declarar, links ou exemplos a verificar, documentação fora do escopo e garantia de não alteração de código de produção.
-- [ ] Associar cada item da DoD a uma fonte técnica ou procedimento de verificação aplicável.
+- [ ] Confirmar que o objetivo é produzir evidência genérica e compartilhada, não auditar ou atualizar um documento específico.
+- [ ] Registrar o *snapshot* inicial: repositório, `HEAD` ou revisão disponível, branch, estado do *worktree* e arquivos preexistentes relevantes.
+- [ ] Definir o destino do artefato de evidências quando ele for informado. Sem um destino, apresentar um único artefato completo no resultado e não gravar arquivos.
+- [ ] Antes de extrair, pesquisar na *workspace* documentos relacionados ao assunto do pedido por caminhos, nomes e termos relevantes; registrar os arquivos encontrados ou a ausência deles.
+- [ ] Considerar os documentos encontrados como contexto para terminologia, escopo de investigação e pontos técnicos a verificar, sem usá-los como evidência do estado atual do código.
+- [ ] Delimitar as fontes técnicas de evidência: árvore de código, manifestos, configurações, módulos de entrada, contratos, testes e automações.
+- [ ] Definir explicitamente a **Definition of Done (DoD)** antes de extrair. Ela deve conter a cobertura verificável de estrutura, interfaces públicas, fluxos observáveis, dependências e limitações estáticas, além da consistência com o *snapshot* registrado.
+- [ ] Associar cada item da DoD a evidências factuais com caminhos, símbolos, configurações ou comandos observados.
 
 ## Checklist pós-execução — validação da DoD
 
-Revise a DoD definida no pré-execução antes de encerrar. Para cada critério aplicável, registre evidência e o status **concluído**, **não aplicável** (com motivo) ou **pendente/bloqueado**. Considere a atualização documental concluída somente quando:
+Revise a DoD definida no pré-execução antes de encerrar. Para cada critério aplicável, registre evidência e o status **concluído**, **não aplicável** (com motivo) ou **pendente/bloqueado**. Considere a extração concluída somente quando:
 
-- [ ] as afirmações e lacunas definidas na DoD estão alinhadas às evidências técnicas ou explicitamente qualificadas;
-- [ ] links, referências, comandos e exemplos previstos na DoD foram verificados ou tiveram suas limitações informadas;
-- [ ] as alterações estão restritas aos documentos necessários e preservam suas convenções;
-- [ ] nenhum código de produção, teste, configuração funcional, infraestrutura, dependência, dado ou Git foi alterado;
-- [ ] itens não confirmados, fora do escopo, pendentes ou bloqueados foram reportados.
+- [ ] estrutura, interfaces, fluxos e dependências definidos na DoD foram extraídos por categoria;
+- [ ] cada registro contém uma referência factual ao código ou à configuração que o sustenta;
+- [ ] documentos relacionados ao assunto foram pesquisados na *workspace*, considerados como contexto e registrados sem serem tratados como evidência de código;
+- [ ] o artefato não contém comparação com documentação, opinião, recomendação ou proposta de edição;
+- [ ] limitações de inferência estática foram omitidas ou marcadas como incertas;
+- [ ] o *snapshot* permanece consistente. Se a revisão ou arquivos relevantes mudarem durante a extração, a leitura foi reiniciada ou a divergência foi registrada;
+- [ ] nenhum arquivo fora do artefato de evidências foi alterado.
 
-## Auditoria baseada em evidências
+## Protocolo de extração
 
-Delimite os documentos e tópicos solicitados. Para cada afirmação relevante, procure as fontes técnicas mais próximas: código de entrada, contratos, configuração, manifestos, comandos, testes, exemplos e automações. Dê precedência ao comportamento efetivamente demonstrado por código e configuração; quando a evidência for insuficiente, preserve a incerteza em vez de inventar detalhes.
+### 0. Descoberta de documentos de contexto
 
-Classifique os achados como:
+Antes de analisar o código, use os termos do pedido, os nomes de módulos e a organização da *workspace* para localizar documentos relacionados ao assunto. Considere-os para alinhar terminologia, delimitar o que investigar e identificar interfaces ou fluxos que exigem verificação no código. Registre cada caminho consultado no artefato como contexto documental, ou registre `Nenhum identificado`.
 
-- documentação correta e mantida;
-- informação ausente, desatualizada, ambígua ou contraditória;
-- afirmação não confirmável com as evidências disponíveis.
+Não extraia fatos de código a partir desses documentos, não avalie sua correção e não os compare com os resultados. Todo fato nas categorias técnicas deve ter evidência própria em código, configuração, manifesto, teste ou automação.
 
-Ao encontrar contradição entre documentos, resolva-a conforme o estado atual do código e registre a limitação se o código também não for conclusivo. Não corrija documentação fora do escopo apenas por estilo, salvo se for necessária para tornar a seção alterada consistente.
+### 1. Estrutura
 
-## Atualização
+Mapeie módulos, pacotes, pontos de entrada e organização de diretórios que sejam relevantes para entender a arquitetura. Registre caminhos e símbolos observados; não converta esse inventário em avaliação arquitetural.
 
-Escreva em conformidade com o idioma, tom, estrutura, links e convenções já adotados pelo repositório. Seja específico sobre pré-requisitos, comandos, interfaces, variáveis, fluxos e limitações somente quando houver evidência. Mantenha exemplos executáveis e marque valores sensíveis como placeholders seguros; nunca introduza credenciais, tokens ou dados pessoais.
+### 2. Interfaces públicas
 
-Preserve a navegação e os links existentes. Após editar, verifique links e referências internas afetadas, nomes de arquivos, comandos, blocos de código, âncoras e exemplos contra seus alvos. Não alegue que um procedimento foi executado se a evidência apenas permitiu revisão estática.
+Extraia, conforme existirem, APIs expostas, rotas, contratos entre módulos, esquemas, comandos de CLI e outros pontos públicos de integração. Inclua a origem, a interface, o destino ou consumidor identificável e a evidência correspondente.
+
+### 3. Fluxos observáveis
+
+Extraia como dados e chamadas percorrem os módulos mapeados, somente na medida em que isso for observável ou inferível estaticamente. Informe origem, destino, mecanismo, dados ou chamada e grau de certeza. Não preencha lacunas com comportamento suposto de ambiente, runtime ou dependência externa.
+
+### 4. Dependências e configuração
+
+Extraia bibliotecas externas e versões, integrações com serviços externos, variáveis de ambiente e configurações que afetem o comportamento. Registre de onde cada informação foi obtida e marque como incerto o impacto que não puder ser inferido apenas pelo repositório.
+
+## Artefato de evidências
+
+Estruture a saída em um único documento factual. Use tabelas, listas e referências técnicas; evite prosa interpretativa. Preserve esta estrutura, omitindo categorias sem evidência apenas quando registrar o motivo:
+
+```markdown
+# Evidências Compartilhadas — <repositório>
+
+## Snapshot
+- **Revisão:** `<hash ou Não identificado>`
+- **Branch:** `<nome ou Não identificado>`
+- **Estado do worktree:** `<limpo / alterações preexistentes>`
+- **Momento da extração:** `<data e hora>`
+
+## Documentos de Contexto Consultados
+| Caminho | Relação com o assunto | Uso na investigação |
+| --- | --- | --- |
+
+<Registre `Nenhum identificado` quando aplicável. Estes documentos não são evidência de comportamento do código.>
+
+## Estrutura
+| Caminho ou módulo | Tipo | Ponto de entrada ou símbolo | Evidência |
+| --- | --- | --- | --- |
+
+## Interfaces Públicas
+| Origem | Interface | Destino ou consumidor | Tipo | Evidência |
+| --- | --- | --- | --- | --- |
+
+## Fluxos Observáveis
+| Origem | Destino | Mecanismo ou chamada | Dados ou evento | Certeza estática | Evidência |
+| --- | --- | --- | --- | --- | --- |
+
+## Dependências e Configuração
+| Elemento | Versão ou valor observado | Finalidade observada | Origem da evidência | Certeza estática |
+| --- | --- | --- | --- | --- |
+
+## Limitações e Incertezas Estáticas
+| Parte não inferida | Motivo | Tratamento |
+| --- | --- | --- |
+```
+
+Não introduza recomendações, qualificação de qualidade, comparação com documentos ou linguagem que conclua intenção não sustentada pelas evidências. A responsabilidade de interpretar e comparar os registros para cada documento é do agente consumidor.
+
+## Decisões assumidas
+
+Ao final do artefato, registre as partes do código que não puderam ser inferidas estaticamente com confiança — por exemplo, fluxos dependentes de configuração externa não versionada. Marque-as como omitidas ou incertas e informe a fonte da limitação. Não transforme uma lacuna em hipótese para completar a evidência.
 
 ## Resultado
 
 Ao concluir, responda em português com:
 
-- documentos auditados e fontes técnicas consultadas;
-- alterações realizadas e as divergências que elas corrigem;
-- verificações executadas, incluindo links, comandos ou exemplos quando aplicável;
-- pontos não confirmados, lacunas e documentação deliberadamente não alterada;
-- confirmação de que código de produção não foi modificado.
-
-A tarefa está concluída quando a documentação solicitada estiver alinhada às evidências disponíveis, as afirmações não verificáveis estiverem explicitamente tratadas e as mudanças estiverem limitadas aos documentos necessários.
+- identificação do *snapshot* e destino do artefato;
+- categorias extraídas e fontes técnicas percorridas;
+- documentos relacionados ao assunto encontrados na *workspace* e como foram considerados como contexto, sem avaliá-los ou editá-los;
+- limitações e incertezas estáticas registradas;
+- confirmação de que nenhum arquivo fora do artefato de evidências foi modificado.
