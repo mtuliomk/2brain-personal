@@ -29,6 +29,20 @@
       "contentDigest": "ad36d8fdc071fe4af2ab0ae262f5499e90af2b11ca731f24e162451f4c5047c7",
       "providerUserMessageId": "01a052d8-bcb5-7f82-8b82-7ee0af923e5a",
       "providerAssistantMessageId": "msg_099c9efd1e7660e2016a942f72489087d2ba5922681d629da1"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788096763924-odqfuql",
+      "userTurnOrdinal": 3,
+      "state": "accepted",
+      "localMessageId": "msg-1788096763920-7egmx1v",
+      "timestamp": 1788096763920,
+      "rawDisplayText": "na skill de bug, considere o escopo de teste de regressao os testes unitarios. nao é pra construir teste de regressao de forma integrada (com dependencias externas).",
+      "canonicalText": "na skill de bug, considere o escopo de teste de regressao os testes unitarios. nao é pra construir teste de regressao de forma integrada (com dependencias externas).",
+      "images": [],
+      "contentDigest": "614fd223c08c4e6a53425679459223b7cb906507ab26da5014e2c4e9980a14d0",
+      "providerUserMessageId": "01a052df-5a76-7bf0-adb3-24129a854e37",
+      "providerAssistantMessageId": "msg_099c9efd1e7660e2016a94310ee97487d2bff0c9253c0a715b"
     }
   ]
 }
