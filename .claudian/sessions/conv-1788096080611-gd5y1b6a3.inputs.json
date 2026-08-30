@@ -139,7 +139,8 @@
       "canonicalText": "nessa skill, quero que ela antes de iniciar, procure na workspace se já existem documentos referentes ao assunto e considere esses documentos na analise",
       "images": [],
       "contentDigest": "3bf9a9efb768d1b2774b7c3fcf85d660542f3eb16e5a41834a8ad3f5556f866c",
-      "providerUserMessageId": "01a052f7-605b-75c3-bc57-03ef2d32aab1"
+      "providerUserMessageId": "01a052f7-605b-75c3-bc57-03ef2d32aab1",
+      "providerAssistantMessageId": "msg_099c9efd1e7660e2016a943746124487d2934f279c542b73c0"
     }
   ]
 }

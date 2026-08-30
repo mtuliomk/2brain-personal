@@ -4,7 +4,7 @@
   "title": "dentro de DevSkills, quero criar um conjunto de sk...",
   "titleGenerationStatus": "failed",
   "createdAt": 1788096080689,
-  "lastActivityAt": 1788098337915,
+  "lastActivityAt": 1788098375816,
   "sessionId": "01a052d4-f009-7da2-b315-eb752b361e70",
   "selectedModel": "gpt-5.6-terra",
   "providerState": {
@@ -15,13 +15,13 @@
     "workspaceDependencyToolVersion": 1
   },
   "usage": {
-    "inputTokens": 78267,
+    "inputTokens": 87682,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 77568,
+    "cacheReadInputTokens": 85760,
     "contextWindow": 258400,
     "contextWindowIsAuthoritative": true,
-    "contextTokens": 78267,
-    "percentage": 30,
+    "contextTokens": 87682,
+    "percentage": 34,
     "model": "gpt-5.6-terra"
   }
 }
