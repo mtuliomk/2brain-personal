@@ -43,6 +43,20 @@
       "contentDigest": "614fd223c08c4e6a53425679459223b7cb906507ab26da5014e2c4e9980a14d0",
       "providerUserMessageId": "01a052df-5a76-7bf0-adb3-24129a854e37",
       "providerAssistantMessageId": "msg_099c9efd1e7660e2016a94310ee97487d2bff0c9253c0a715b"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788097083739-3xlt437",
+      "userTurnOrdinal": 4,
+      "state": "accepted",
+      "localMessageId": "msg-1788097083731-c5ofg3l",
+      "timestamp": 1788097083731,
+      "rawDisplayText": "Modo Bug\nObjetivo\n\nCorrigir divergência entre comportamento atual e esperado de forma simples e direta, decidindo caso a caso se a correção justifica um teste de regressão.\n\nProtocolo\nConfirmar a causa raiz antes de corrigir. Reproduzir ou localizar precisamente a origem do comportamento incorreto. Se a causa raiz não for localizável após inspeção inicial, ou exigir tocar mais de um módulo, ou exigir decisão de design, escalar para feature e informar a reclassificação.\nAplicar a correção mínima que resolve a causa raiz, sem aproveitar a oportunidade para refatorar ou introduzir melhorias não solicitadas.\nDecidir sobre teste de regressão. Adicionar teste unitário cobrindo o caso corrigido quando: o bug já ocorreu uma vez (risco de recorrência), a lógica afetada é facilmente testável de forma isolada, ou o módulo tem cobertura de teste pré-existente que a mudança deveria manter. Não adicionar teste apenas para preencher checklist quando o custo de manutenção do teste supera o risco real de regressão; registrar a decisão de não testar como suposição assumida.\nValidar que o comportamento esperado agora ocorre e que a suíte de testes existente continua passando.\n\n\nveja se a skill contempla as regras acima, minimamente",
+      "canonicalText": "Modo Bug\nObjetivo\n\nCorrigir divergência entre comportamento atual e esperado de forma simples e direta, decidindo caso a caso se a correção justifica um teste de regressão.\n\nProtocolo\nConfirmar a causa raiz antes de corrigir. Reproduzir ou localizar precisamente a origem do comportamento incorreto. Se a causa raiz não for localizável após inspeção inicial, ou exigir tocar mais de um módulo, ou exigir decisão de design, escalar para feature e informar a reclassificação.\nAplicar a correção mínima que resolve a causa raiz, sem aproveitar a oportunidade para refatorar ou introduzir melhorias não solicitadas.\nDecidir sobre teste de regressão. Adicionar teste unitário cobrindo o caso corrigido quando: o bug já ocorreu uma vez (risco de recorrência), a lógica afetada é facilmente testável de forma isolada, ou o módulo tem cobertura de teste pré-existente que a mudança deveria manter. Não adicionar teste apenas para preencher checklist quando o custo de manutenção do teste supera o risco real de regressão; registrar a decisão de não testar como suposição assumida.\nValidar que o comportamento esperado agora ocorre e que a suíte de testes existente continua passando.\n\n\nveja se a skill contempla as regras acima, minimamente",
+      "images": [],
+      "contentDigest": "08ebffa873c0f2f986d7c9bc822edd2fbcda5aabc87b188cc5cfdcc638841ba0",
+      "providerUserMessageId": "01a052e4-3d93-7112-8bd4-852c2d469450",
+      "providerAssistantMessageId": "msg_099c9efd1e7660e2016a9432578ebc87d2bf23e1ebde1cc681"
     }
   ]
 }
