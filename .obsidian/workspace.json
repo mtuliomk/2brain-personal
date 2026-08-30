@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevSkills/local-bug/SKILL.md",
+                "file": "DevSkills/local-feature/SKILL.md",
                 "mode": "source",
                 "source": false
               },
@@ -202,10 +202,10 @@
   },
   "active": "82fdc9a51a50e6e7",
   "lastOpenFiles": [
-    "DevSkills/doc-security-compliance/SKILL.md",
     "DevSkills/local-documentation/SKILL.md",
-    "DevSkills/local-documentation",
     "DevSkills/local-bug/SKILL.md",
+    "DevSkills/doc-security-compliance/SKILL.md",
+    "DevSkills/local-documentation",
     "DevSkills/local-bug",
     "DevSkills/local-feature/SKILL.md",
     "DevSkills/local-feature",
