@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1788288368404-irfhkzkis",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788288368447-boapd4l",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1788288368396-7qby9qy",
+      "timestamp": 1788288368396,
+      "rawDisplayText": "na pasta Tailoren Agents, quero que voce crie uma nova pasta chamada uat\n\nnela, quero o AGENTS.md e prompt.md para o agente de uat, seguindo o mesmo padrao das outras pastas. leia e atualize o README.md\n\no objetivo do agente de uat é mais simples. ele deverá receber instruções de um usuário durante os testes de UAT. essas instrucoes podem ser de duvidas ou pedidos para alterar codigo e corrigir bugs durante esse processo.\n\no agente precisa atender todos esses pedidos e executar as alteracoes necessárias, usando as skills presentes e todos os documentos .md dentro da workspace.\n\nno fundo, é um assistente do usuário que está fazendo os testes de uat",
+      "canonicalText": "na pasta Tailoren Agents, quero que voce crie uma nova pasta chamada uat\n\nnela, quero o AGENTS.md e prompt.md para o agente de uat, seguindo o mesmo padrao das outras pastas. leia e atualize o README.md\n\no objetivo do agente de uat é mais simples. ele deverá receber instruções de um usuário durante os testes de UAT. essas instrucoes podem ser de duvidas ou pedidos para alterar codigo e corrigir bugs durante esse processo.\n\no agente precisa atender todos esses pedidos e executar as alteracoes necessárias, usando as skills presentes e todos os documentos .md dentro da workspace.\n\nno fundo, é um assistente do usuário que está fazendo os testes de uat",
+      "images": [],
+      "contentDigest": "6c9fd2a6976fd896a1178beacff9bcc17c709ccc2a778e169ecd855523f0a1a3",
+      "providerUserMessageId": "01a05e4b-12f8-7692-b89c-278905cfd535",
+      "providerAssistantMessageId": "msg_0b3ceb36ae355f79016a971dd87e6c87d2ab273f42f9e56cf7"
+    }
+  ]
+}

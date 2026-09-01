@@ -4,7 +4,8 @@ Esta pasta reúne os artefatos de configuração usados para iniciar os agentes 
 
 1. especificação funcional;
 2. especificação técnica;
-3. implementação (*coding*).
+3. implementação (*coding*);
+4. atendimento de UAT (*uat*).
 
 Cada subpasta representa uma etapa. Nela, os arquivos `AGENTS.md` e `prompt.md` têm funções complementares e devem ser enviados ao agente da etapa correspondente.
 
@@ -48,7 +49,10 @@ Tailoren Agents/
 ├── spec technical/
 │   ├── AGENTS.md
 │   └── prompt.md
-└── coding/
+├── coding/
+│   ├── AGENTS.md
+│   └── prompt.md
+└── uat/
     ├── AGENTS.md
     └── prompt.md
 ```
@@ -118,6 +122,19 @@ A `functional-spec.md` é a fonte principal do escopo. Caso ela não esteja no h
 - **Conteúdo mínimo dos artefatos:** plano rastreável de itens de implementação, validações e commits; e resultado com status da implementação, escopo realizado, repositórios e commits locais, arquivos alterados, validações, premissas, divergências e limitações.
 - **Validação dos artefatos:** crie o diretório da task se necessário e execute `test -s "/workspace/tasks/{{task_id}}/implementation-plan.md"` antes de codificar e `test -s "/workspace/tasks/{{task_id}}/implementation-result.md"` antes de concluir.
 
+### 4. `uat`
+
+**Finalidade:** atuar como assistente da pessoa que executa os testes de aceitação, atendendo dúvidas sobre o comportamento do sistema e implementando correções de bugs ou alterações de código solicitadas durante o UAT.
+
+- **Instruções fixas:** `uat/AGENTS.md` exige a leitura de todos os documentos Markdown do workspace, das skills disponíveis e do código relevante antes de responder ou alterar código.
+- **Prompt de início:** `uat/prompt.md` fornece os dados da task e a instrução recebida durante o UAT por meio de `{{uat_instruction}}`.
+- **Entradas principais:** todos os documentos `.md` do workspace, skills disponíveis, histórico, contexto da aplicação e repositórios montados.
+- **Dúvidas:** devem ser respondidas com evidências do contexto e do código; não exigem alteração de código ou commit.
+- **Bugs e alterações:** devem ser investigados, implementados no menor escopo necessário, validados pelos comandos aplicáveis e registrados com os commits locais necessários, sem *push*.
+- **Resposta obrigatória:** cada atendimento informa a solicitação, tipo, resultado, evidências, arquivos alterados, validações, commits, limitações, skills utilizadas e documentos Markdown usados.
+
+O agente de UAT é autônomo e atende a cada instrução recebida no contexto dos testes, preservando alterações preexistentes e sem ultrapassar o pedido ativo.
+
 ## Fluxo e dependências
 
 ```text
@@ -131,6 +148,9 @@ spec technical ──► technical-spec.md
              │
              ▼
 coding ──────────► implementation-plan.md → código validado + commits + implementation-result.md
+             │
+             ▼
+uat ─────────────► dúvidas respondidas ou código corrigido/alterado e validado
 ```
 
-Em qualquer etapa, o agente deve preservar o contexto/histórico como leitura, não inventar informações ausentes e validar o artefato final antes de encerrar a execução. As referências entre etapas devem respeitar o escopo já definido: a especificação técnica não modifica silenciosamente a funcional e a implementação não deve ultrapassar a especificação técnica disponível.
+Em qualquer etapa, o agente deve preservar o contexto/histórico como leitura, não inventar informações ausentes e validar o artefato final antes de encerrar a execução. As referências entre etapas devem respeitar o escopo já definido: a especificação técnica não modifica silenciosamente a funcional e a implementação não deve ultrapassar a especificação técnica disponível. Durante o UAT, o agente atende a instrução ativa da pessoa testadora com base em todos os documentos Markdown do workspace, nas skills e nas evidências do código.

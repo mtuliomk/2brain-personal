@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevSkills/local-documentation/SKILL.md",
+                "file": "Tailoren Agents/uat/AGENTS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SKILL"
+              "title": "AGENTS"
             }
           }
         ]
@@ -202,9 +202,14 @@
   },
   "active": "82fdc9a51a50e6e7",
   "lastOpenFiles": [
+    "Tailoren Agents/README.md",
+    "Tailoren Agents/uat/prompt.md",
+    "Tailoren Agents/uat/AGENTS.md",
+    "Tailoren Agents/uat",
+    "Tailoren Agents/spec funcional/AGENTS.md",
+    "DevSkills/local-documentation/SKILL.md",
     "DevSkills/local-explorer/SKILL.md",
     "DevSkills/local-feature/SKILL.md",
-    "DevSkills/local-documentation/SKILL.md",
     "DevSkills/local-bug/SKILL.md",
     "DevSkills/doc-security-compliance/SKILL.md",
     "DevSkills/local-documentation",
@@ -219,24 +224,19 @@
     "DevSkills/doc-product",
     "Tailoren Agents/coding/AGENTS.md",
     "Tailoren Agents/spec technical/AGENTS.md",
-    "Tailoren Agents/spec funcional/AGENTS.md",
     "Tailoren Agents/spec funcional/prompt.md",
     "Tailoren Agents/spec technical/prompt.md",
     "Tailoren Agents/coding/prompt.md",
-    "Tailoren Agents/README.md",
     "DevSkills/dev-backend-golang/SKILL.md",
     "Tailoren Agents/coding",
     "Tailoren Agents/spec technical",
     "DevSkills/spec-functional/SKILL.md",
-    "Tailoren Agents/spec funcional",
     "DevSkills/spec-userstory/SKILL.md",
     "DevSkills/plan-tak/SKILL.md",
     "Profile/Maya Onese.md",
     "Projects/Investments/resumo.md",
     "Projects/Investments/posicao-2026-08-14.md",
     "Projects/Investments/posicao-2025.md",
-    "Projects/Investments/movimentacao-2026-08-14.md",
-    "Projects/Investments/posicao-2026-05.md",
-    "Projects/Investments/posicao-2026-07.md"
+    "Projects/Investments/movimentacao-2026-08-14.md"
   ]
 }

@@ -1,0 +1,27 @@
+{
+  "id": "conv-1788288368404-irfhkzkis",
+  "providerId": "codex",
+  "title": "na pasta Tailoren Agents, quero que voce crie uma ...",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1788288368423,
+  "lastActivityAt": 1788288474730,
+  "sessionId": "01a05e4b-0436-7731-bec5-4c7f30cd7bb1",
+  "selectedModel": "gpt-5.6-terra",
+  "providerState": {
+    "threadId": "01a05e4b-0436-7731-bec5-4c7f30cd7bb1",
+    "nativeConversationContextEstablished": true,
+    "sessionFilePath": "/home/tulio/.codex/sessions/2026/09/01/rollout-2026-09-01T15-46-09-01a05e4b-0436-7731-bec5-4c7f30cd7bb1.jsonl",
+    "transcriptRootPath": "/home/tulio/.codex/sessions",
+    "workspaceDependencyToolVersion": 1
+  },
+  "usage": {
+    "inputTokens": 40247,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 38656,
+    "contextWindow": 258400,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 40247,
+    "percentage": 16,
+    "model": "gpt-5.6-terra"
+  }
+}
