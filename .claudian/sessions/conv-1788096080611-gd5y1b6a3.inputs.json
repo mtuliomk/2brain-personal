@@ -13,7 +13,7 @@
       "canonicalText": "dentro de DevSkills, quero criar um conjunto de skills para suportar um dev no seu fluxo de desenvolvimento local.\nsiga o mesmo padrão de construção de skills utilizado para as demais.\n\nquero as seguintes skills novas:\n- local-explorer (Troca de ideias e investigação aberta sobre um problema, com ou sem plano de execução ao final. Use quando o pedido for exploratório, sem escopo de arquivo definido, ou quando o usuário sinalizar que ainda está decidindo se vai executar algo.)\n- local-feature (Ciclo completo de planejamento, execução e validação autônoma para features novas ou modificações de fluxo existente. Use quando o pedido introduzir comportamento novo, tocar mais de um módulo, ou exigir decisão de design com critério de sucesso verificável.)\n- local-bug (Correção direta de comportamento divergente do esperado, com adição de teste de regressão quando justificável. Use quando a causa raiz for conhecida ou localizável em um módulo e a correção não introduzir comportamento novo.)\n- local-documentation (Auditoria e atualização de documentos do repositório contra o estado atual do código. Use quando o pedido for revisar, atualizar ou verificar consistência de documentação sem alterar código de produção.)",
       "images": [],
       "contentDigest": "29f2b1a89fe2b6eed59ff403782398f4eaadf207a4ae1f6e4040bcf6ceebe659",
-      "providerUserMessageId": "01a052d4-fc57-7b91-840d-7a6b55ab7a5d",
+      "providerUserMessageId": "01a052d4-f0e8-7da1-9627-e2146e6ca138",
       "providerAssistantMessageId": "msg_099c9efd1e7660e2016a942e8dba0887d291dffea601bb8271"
     },
     {
@@ -27,7 +27,7 @@
       "canonicalText": "para todas essas skills criadas, (local), quero que elas tenham um checklist pre e pos execução\n\no pos, precisa ser baseado no criterio de aceite (dod). a definicao do dod precisa estar no pre",
       "images": [],
       "contentDigest": "ad36d8fdc071fe4af2ab0ae262f5499e90af2b11ca731f24e162451f4c5047c7",
-      "providerUserMessageId": "01a052d8-bcb5-7f82-8b82-7ee0af923e5a",
+      "providerUserMessageId": "01a052d8-b922-7cb0-9c3f-82e3d48bc3f0",
       "providerAssistantMessageId": "msg_099c9efd1e7660e2016a942f72489087d2ba5922681d629da1"
     },
     {
@@ -41,7 +41,7 @@
       "canonicalText": "na skill de bug, considere o escopo de teste de regressao os testes unitarios. nao é pra construir teste de regressao de forma integrada (com dependencias externas).",
       "images": [],
       "contentDigest": "614fd223c08c4e6a53425679459223b7cb906507ab26da5014e2c4e9980a14d0",
-      "providerUserMessageId": "01a052df-5a76-7bf0-adb3-24129a854e37",
+      "providerUserMessageId": "01a052df-5860-73f2-8ba1-5f6b53723c36",
       "providerAssistantMessageId": "msg_099c9efd1e7660e2016a94310ee97487d2bff0c9253c0a715b"
     },
     {
@@ -55,7 +55,7 @@
       "canonicalText": "Modo Bug\nObjetivo\n\nCorrigir divergência entre comportamento atual e esperado de forma simples e direta, decidindo caso a caso se a correção justifica um teste de regressão.\n\nProtocolo\nConfirmar a causa raiz antes de corrigir. Reproduzir ou localizar precisamente a origem do comportamento incorreto. Se a causa raiz não for localizável após inspeção inicial, ou exigir tocar mais de um módulo, ou exigir decisão de design, escalar para feature e informar a reclassificação.\nAplicar a correção mínima que resolve a causa raiz, sem aproveitar a oportunidade para refatorar ou introduzir melhorias não solicitadas.\nDecidir sobre teste de regressão. Adicionar teste unitário cobrindo o caso corrigido quando: o bug já ocorreu uma vez (risco de recorrência), a lógica afetada é facilmente testável de forma isolada, ou o módulo tem cobertura de teste pré-existente que a mudança deveria manter. Não adicionar teste apenas para preencher checklist quando o custo de manutenção do teste supera o risco real de regressão; registrar a decisão de não testar como suposição assumida.\nValidar que o comportamento esperado agora ocorre e que a suíte de testes existente continua passando.\n\n\nveja se a skill contempla as regras acima, minimamente",
       "images": [],
       "contentDigest": "08ebffa873c0f2f986d7c9bc822edd2fbcda5aabc87b188cc5cfdcc638841ba0",
-      "providerUserMessageId": "01a052e4-3d93-7112-8bd4-852c2d469450",
+      "providerUserMessageId": "01a052e4-39e0-7b30-97c6-010fdc916673",
       "providerAssistantMessageId": "msg_099c9efd1e7660e2016a9432578ebc87d2bf23e1ebde1cc681"
     },
     {
@@ -69,7 +69,7 @@
       "canonicalText": "Modo Feature\nObjetivo\n\nExecutar mudanças não triviais de forma autônoma, com plano declarado antes da execução e validação verificável ao final, sem exigir aprovação humana a cada iteração do ciclo.\n\nProtocolo\nDeclarar critério de sucesso em uma linha antes de planejar. Se o pedido não deixar claro o que conta como sucesso, perguntar antes de prosseguir; não assumir critério em silêncio quando a informação só o usuário possui.\nMontar o plano com: escopo de arquivos/módulos afetados, ordem de execução, dependências entre etapas, e como cada etapa será validada (teste automatizado, build, verificação manual pontual). Apresentar o plano antes de iniciar a execução.\nExecutar o plano.\nValidar contra o critério declarado no passo 1, não contra impressão geral de \"parece certo\". Rodar os testes e verificações definidas no plano.\nIterar até passar. Quando a validação falhar, diagnosticar a causa, corrigir e validar novamente. Repetir até o critério de sucesso ser atendido ou até esgotar as abordagens razoáveis; neste caso, parar e reportar o obstáculo em vez de insistir indefinidamente.\nNão bloquear em ambiguidade menor durante a execução. Resolver usando a hierarquia decisions.md → product.md/glossary.md → precedente em outras tasks → raciocínio próprio, e registrar a resolução.\nDecisões assumidas\n\nRegistrar ao final: toda suposição de design ou escopo resolvida autonomamente durante o ciclo, com a fonte da hierarquia usada para resolvê-la.\n\nagora, revise a skill de local-feature de acordo com o texto acima. ela precisa minimamente enderecar esses pontos",
       "images": [],
       "contentDigest": "692d30fb24394b3ab87d134eef034b6739bdb76770a1ddb119a57381af78cd56",
-      "providerUserMessageId": "01a052ed-0eb8-7af1-8bef-389dcaee8198",
+      "providerUserMessageId": "01a052ed-0c59-7ce1-b332-76bd264e6250",
       "providerAssistantMessageId": "msg_099c9efd1e7660e2016a9434a2c0a487d2bc6ba9053610f3cb"
     },
     {
@@ -83,7 +83,7 @@
       "canonicalText": "no checklst pre-execucao, é importante levantar componentes pre-existentes a serem reutilizados ou pelo menos alterados para reuso\n\nessa skill precisa priorizar a componentização. desenvolvendo pensando no reuso, e reutiizando o que jã existe",
       "images": [],
       "contentDigest": "6e3e5477c1f7c09b7a70d4dea5361d6781bb690d779a37a1e0e8e13630cf0f7e",
-      "providerUserMessageId": "01a052f0-9175-7910-bd6a-45c259352202",
+      "providerUserMessageId": "01a052f0-903f-7fe1-a803-dcba8dc6218d",
       "providerAssistantMessageId": "msg_099c9efd1e7660e2016a94357809d887d28fcfca965e1eaf61"
     },
     {
@@ -97,7 +97,7 @@
       "canonicalText": "Modo Explorer\nObjetivo\n\nAjudar o usuário a pensar sobre um problema antes de comprometer código. O resultado pode ser apenas clareza, ou pode ser um plano de execução que sirva de ponto de entrada para o modo feature-normal.\n\nProtocolo\nEntender o problema antes de propor solução. Fazer perguntas objetivas sobre restrição, motivação e critério de sucesso quando esses elementos não estiverem claros no pedido. Não pular para implementação.\nExplorar o código relevante com acesso somente leitura. Usar read, grep e glob para entender o estado atual antes de opinar. Não escrever nem editar arquivos neste modo.\nApresentar alternativas com trade-off explícito, não uma única direção disfarçada de análise. Quando houver posição preferida, declarar qual é e por quê.\nDecidir junto com o usuário se a conversa termina em plano ou não. Nem toda sessão exploratória precisa terminar em execução; forçar um plano ao final de uma discussão que ainda não amadureceu é o erro oposto ao de não planejar quando necessário.\nSe terminar em plano, estruturar como entrada para feature-normal: escopo, critério de validação, módulos afetados. Não executar a partir daqui; a execução pertence ao modo feature-normal.\nDecisões assumidas\n\nRegistrar ao final: suposições sobre escopo ou prioridade que não foram confirmadas explicitamente pelo usuário durante a exploração.\n\nfaca a mesma revisao para a skill local-explorer baseada no texto acima",
       "images": [],
       "contentDigest": "6b01941047f00ea02fce92d080f01133e7bcb8c98096bcdfcfee4cfc53d7fc47",
-      "providerUserMessageId": "01a052f3-4ac9-7273-8606-f843e151245a",
+      "providerUserMessageId": "01a052f3-497f-7032-a6f6-ebc72ef208aa",
       "providerAssistantMessageId": "msg_099c9efd1e7660e2016a94363445dc87d29091b97188f9fae4"
     },
     {
@@ -111,7 +111,7 @@
       "canonicalText": "quero que essa skill use diagramas mermaid para explicar a solução final, quando pertinente",
       "images": [],
       "contentDigest": "11f4189c6c83526eaed1a885afcb698b20a59c68b97f2c39b313b386ffb844a6",
-      "providerUserMessageId": "01a052f5-2fbf-7ca2-bbe1-ccbdf287ec24",
+      "providerUserMessageId": "01a052f5-2c47-7071-baf3-ae7b37cfb806",
       "providerAssistantMessageId": "msg_099c9efd1e7660e2016a9436a77be887d2ac17862f1f8ea1e3"
     },
     {
@@ -125,7 +125,7 @@
       "canonicalText": "Extração Compartilhada (fluxo de Documentação)\nObjetivo\n\nProduzir uma única leitura factual do código, reaproveitável por todos os agentes de documento de uma mesma rodada, evitando leitura redundante e evitando que dois agentes trabalhem contra snapshots de código sutilmente diferentes.\n\nEscopo\n\nEste agente não sabe quais documentos serão auditados nem quais skills serão usadas depois dele. Ele produz evidência genérica sobre o repositório, não evidência recortada para um documento específico. Recorte por documento é responsabilidade do agente que consome a evidência, não desta etapa.\n\nProtocolo\nMapear a estrutura do repositório: módulos, pacotes, pontos de entrada, organização de diretórios relevante para entendimento arquitetural.\nExtrair interfaces públicas: APIs expostas, contratos entre módulos, rotas, schemas, comandos de CLI, conforme o que existir no repositório.\nExtrair fluxos observáveis no código: como dados e chamadas se movem entre os módulos mapeados no passo 1, na medida em que isso for inferível estaticamente.\nExtrair dependências: bibliotecas externas, versões, integrações com serviços externos, variáveis de ambiente e configuração que afetam comportamento.\nEstruturar a saída em documento único de evidência, organizado por categoria (estrutura, interfaces, fluxos, dependências), sem prosa interpretativa e sem comparação contra nenhum arquivo de company-docs. Interpretação e comparação pertencem aos agentes de documento, não a esta etapa.\nNão fazer\n\nNão emitir opinião sobre se a documentação existente está correta ou desatualizada. Não sugerir edições. Não ler company-docs/ para influenciar o que é extraído; a evidência deve ser neutra em relação a qualquer documento específico, para que o mesmo artefato sirva a architecture, product, security e qualquer skill futura sem viés de recorte.\n\nDecisões assumidas\n\nRegistrar ao final: partes do código que não puderam ser inferidas estaticamente com confiança (por exemplo, fluxos que dependem de configuração externa não versionada) e foram, por isso, omitidas ou marcadas como incertas na evidência.\n\nagora revise a skill local-documentation de acordo com o texto acima",
       "images": [],
       "contentDigest": "74c7ba54b3267d3410374b14ece5dc932781bf789d90e1e784bfb70e41f7605c",
-      "providerUserMessageId": "01a052f6-1015-7b02-94dd-69ffd63459d1",
+      "providerUserMessageId": "01a052f6-0f13-7571-abcc-b91dcbde129a",
       "providerAssistantMessageId": "msg_099c9efd1e7660e2016a9436fdf74487d299dd6d0ffb626fb6"
     },
     {
@@ -139,7 +139,7 @@
       "canonicalText": "nessa skill, quero que ela antes de iniciar, procure na workspace se já existem documentos referentes ao assunto e considere esses documentos na analise",
       "images": [],
       "contentDigest": "3bf9a9efb768d1b2774b7c3fcf85d660542f3eb16e5a41834a8ad3f5556f866c",
-      "providerUserMessageId": "01a052f7-605b-75c3-bc57-03ef2d32aab1",
+      "providerUserMessageId": "01a052f7-5c99-7b81-bcd1-8e224eaf00dc",
       "providerAssistantMessageId": "msg_099c9efd1e7660e2016a943746124487d2934f279c542b73c0"
     }
   ]
