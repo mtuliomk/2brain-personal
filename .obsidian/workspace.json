@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tailoren Agents/uat/AGENTS.md",
+                "file": "Tailoren Agents/uat/prompt.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "AGENTS"
+              "title": "prompt"
             }
           }
         ]
@@ -202,9 +202,9 @@
   },
   "active": "82fdc9a51a50e6e7",
   "lastOpenFiles": [
+    "Tailoren Agents/uat/AGENTS.md",
     "Tailoren Agents/README.md",
     "Tailoren Agents/uat/prompt.md",
-    "Tailoren Agents/uat/AGENTS.md",
     "Tailoren Agents/uat",
     "Tailoren Agents/spec funcional/AGENTS.md",
     "DevSkills/local-documentation/SKILL.md",
