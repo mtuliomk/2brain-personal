@@ -40,7 +40,23 @@
       "rawDisplayText": "porque a arquitetura tera o contexto e containers? nao deveria ter componentes tambem?",
       "canonicalText": "porque a arquitetura tera o contexto e containers? nao deveria ter componentes tambem?",
       "images": [],
-      "contentDigest": "a5e8f0003506e279fe32cba93a1518fe75034f727029ae1a357fd84eb73101e1"
+      "contentDigest": "a5e8f0003506e279fe32cba93a1518fe75034f727029ae1a357fd84eb73101e1",
+      "providerUserMessageId": "01a078ee-aa28-76f1-9dbe-2e62b9595ce2",
+      "providerAssistantMessageId": "msg_0b3ceb36ae355f79016a9def51f10487d2a8d55e3e938ff8ec"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788735391841-2ed7z2p",
+      "userTurnOrdinal": 4,
+      "state": "accepted",
+      "localMessageId": "msg-1788735391837-7soj3nu",
+      "timestamp": 1788735391837,
+      "rawDisplayText": "os subagentes precisam executar em paralelo",
+      "canonicalText": "os subagentes precisam executar em paralelo",
+      "images": [],
+      "contentDigest": "e983d781f49da12addf8eb1a1d89f821f8b3d15fa375e8b9e54d1ffcee528fd4",
+      "providerUserMessageId": "01a078f0-08c0-73e2-83df-3e52b9a4608f",
+      "providerAssistantMessageId": "msg_0b3ceb36ae355f79016a9defb6a3b087d2b1fd1eccc19e228e"
     }
   ]
 }

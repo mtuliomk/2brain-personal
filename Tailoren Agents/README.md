@@ -146,7 +146,7 @@ O agente de UAT é autônomo e atende a cada instrução recebida no contexto do
 
 **Finalidade:** analisar os repositórios e o contexto disponível para produzir uma visão factual consolidada da arquitetura, dos produtos e de segurança/compliance atuais, sem alterar código.
 
-- **Instruções fixas:** `document/AGENTS.md` exige que o agente principal orquestre os subagentes `architecture`, `product` e `security_compliance`, avalie suas entregas e consolide os resultados.
+- **Instruções fixas:** `document/AGENTS.md` exige que o agente principal inicie em paralelo os subagentes `architecture`, `product` e `security_compliance`, avalie suas entregas e consolide os resultados.
 - **Prompt de início:** `document/prompt.md` fornece os campos da task e reforça a orquestração obrigatória.
 - **Entradas principais:** documentos de contexto, histórico, skills e todos os repositórios montados — o mesmo ambiente disponível para `spec technical`.
 - **Saídas obrigatórias:** `/workspace/tasks/{{task_id}}/ARCHITECTURE.md`, `/workspace/tasks/{{task_id}}/PRODUCT.md` e `/workspace/tasks/{{task_id}}/SECURITY-COMPLIANCE.md`.
@@ -174,7 +174,7 @@ Contexto + repositórios + skills
              │
              ▼
 document ────────► ARCHITECTURE.md + PRODUCT.md + SECURITY-COMPLIANCE.md
-                     (consolidação de 3 subagentes)
+                     (consolidação de 3 subagentes em paralelo)
 ```
 
-Em qualquer etapa, o agente deve preservar o contexto/histórico como leitura, não inventar informações ausentes e validar o artefato final antes de encerrar a execução. As referências entre etapas devem respeitar o escopo já definido: a especificação técnica não modifica silenciosamente a funcional e a implementação não deve ultrapassar a especificação técnica disponível. Durante o UAT, o agente atende a instrução ativa da pessoa testadora com base em todos os documentos Markdown do workspace, nas skills e nas evidências do código. A etapa `document` é independente do encadeamento de implementação e consolida obrigatoriamente as análises de três subagentes antes de gerar seus documentos finais.
+Em qualquer etapa, o agente deve preservar o contexto/histórico como leitura, não inventar informações ausentes e validar o artefato final antes de encerrar a execução. As referências entre etapas devem respeitar o escopo já definido: a especificação técnica não modifica silenciosamente a funcional e a implementação não deve ultrapassar a especificação técnica disponível. Durante o UAT, o agente atende a instrução ativa da pessoa testadora com base em todos os documentos Markdown do workspace, nas skills e nas evidências do código. A etapa `document` é independente do encadeamento de implementação e consolida obrigatoriamente as análises de três subagentes executados em paralelo antes de gerar seus documentos finais.

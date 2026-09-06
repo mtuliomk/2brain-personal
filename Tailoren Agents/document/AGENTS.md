@@ -20,7 +20,7 @@ Todo o conteúdo textual deve ser escrito em português. Mantenha em inglês som
 
 ## Orquestração obrigatória de subagentes
 
-A produção dos documentos é obrigatoriamente delegada a três subagentes independentes. Crie-os por meio do mecanismo de subagentes disponibilizado no ambiente e atribua-lhes, respectivamente, as responsabilidades abaixo:
+A produção dos documentos é obrigatoriamente delegada a três subagentes independentes, executados em paralelo. Crie os três na mesma etapa de orquestração, por meio do mecanismo de subagentes disponibilizado no ambiente; não inicie, aguarde ou conclua um subagente antes de criar os demais. Atribua-lhes, respectivamente, as responsabilidades abaixo:
 
 | Subagente | Responsabilidade exclusiva | Entrega ao agente principal |
 | --- | --- | --- |
@@ -28,9 +28,9 @@ A produção dos documentos é obrigatoriamente delegada a três subagentes inde
 | `product` | Investigar os produtos existentes e redigir o conteúdo de `PRODUCT.md`. | Rascunho completo, evidências e limitações. |
 | `security_compliance` | Investigar segurança e compliance e redigir o conteúdo de `SECURITY-COMPLIANCE.md`. | Rascunho completo, evidências e limitações. |
 
-Inicie os três subagentes após o levantamento inicial do workspace. Forneça a cada um o objetivo, os *guardrails*, os caminhos do workspace, as skills aplicáveis e a sua responsabilidade exclusiva. Cada subagente deve investigar os documentos e os repositórios relevantes, produzir o conteúdo integral de sua entrega e devolver ao agente principal as evidências, premissas e limitações utilizadas.
+Inicie os três subagentes em paralelo após o levantamento inicial do workspace. Forneça a cada um o objetivo, os *guardrails*, os caminhos do workspace, as skills aplicáveis e a sua responsabilidade exclusiva. Cada subagente deve investigar os documentos e os repositórios relevantes, produzir o conteúdo integral de sua entrega e devolver ao agente principal as evidências, premissas e limitações utilizadas.
 
-O agente principal deve aguardar as três entregas, avaliá-las contra o contexto e o código disponível, resolver inconsistências sem inventar fatos e consolidar o conteúdo nos três arquivos finais. A consolidação é responsabilidade exclusiva do agente principal: não copie cegamente rascunhos e não permita que os subagentes gravem ou substituam os documentos finais. Não conclua a etapa sem receber e consolidar as três entregas; se um subagente falhar, inicie um subagente substituto com a mesma responsabilidade e registre a falha e a medida adotada no documento afetado e na resposta final.
+Enquanto os subagentes executam em paralelo, o agente principal pode preparar o diretório de saída e revisar o contexto já levantado, mas não pode consolidar nem gerar os arquivos finais até receber as três entregas. Após a conclusão de todos, avalie-as contra o contexto e o código disponível, resolva inconsistências sem inventar fatos e consolide o conteúdo nos três arquivos finais. A consolidação é responsabilidade exclusiva do agente principal: não copie cegamente rascunhos e não permita que os subagentes gravem ou substituam os documentos finais. Não conclua a etapa sem receber e consolidar as três entregas; se um subagente falhar, inicie um subagente substituto com a mesma responsabilidade e registre a falha e a medida adotada no documento afetado e na resposta final.
 
 ## Skills
 
