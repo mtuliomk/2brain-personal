@@ -26,7 +26,21 @@
       "rawDisplayText": "dentro da pasta Tailoren Agents, quero um novo agente na pasta document\n\no objetivo desse agente é analisar os repositorios da workspace (ele terá uma workspace igual a do agente de spec technical) e criar os seguintes documentos:\n- ARCHITECTURE.md\n- PRODUCT.md\n- SECURITY-COMPLIANCE.md\n\npara isso, ele pode usar as skills presentes na workspace\n\no agente deverá orquestrar subagentes. cada subagente deverá gerar o conteudo de cada um dos documentos acima, e o agente principal deverá consolidar esses conteudos nos arquivos finais.\n\nsiga o mesmo padrão dos demais agentes que estão nessa pasta",
       "canonicalText": "dentro da pasta Tailoren Agents, quero um novo agente na pasta document\n\no objetivo desse agente é analisar os repositorios da workspace (ele terá uma workspace igual a do agente de spec technical) e criar os seguintes documentos:\n- ARCHITECTURE.md\n- PRODUCT.md\n- SECURITY-COMPLIANCE.md\n\npara isso, ele pode usar as skills presentes na workspace\n\no agente deverá orquestrar subagentes. cada subagente deverá gerar o conteudo de cada um dos documentos acima, e o agente principal deverá consolidar esses conteudos nos arquivos finais.\n\nsiga o mesmo padrão dos demais agentes que estão nessa pasta",
       "images": [],
-      "contentDigest": "349532f9ffa12d6969919a5358501d14ddfb5a952f26cda78379e329f859fad6"
+      "contentDigest": "349532f9ffa12d6969919a5358501d14ddfb5a952f26cda78379e329f859fad6",
+      "providerUserMessageId": "01a078ea-1711-7da0-ae1d-86c035a0edc2",
+      "providerAssistantMessageId": "msg_0b3ceb36ae355f79016a9dee77b87c87d2892be99a9c28b63e"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788735300978-igdr0kg",
+      "userTurnOrdinal": 3,
+      "state": "accepted",
+      "localMessageId": "msg-1788735300968-h3xx54s",
+      "timestamp": 1788735300968,
+      "rawDisplayText": "porque a arquitetura tera o contexto e containers? nao deveria ter componentes tambem?",
+      "canonicalText": "porque a arquitetura tera o contexto e containers? nao deveria ter componentes tambem?",
+      "images": [],
+      "contentDigest": "a5e8f0003506e279fe32cba93a1518fe75034f727029ae1a357fd84eb73101e1"
     }
   ]
 }

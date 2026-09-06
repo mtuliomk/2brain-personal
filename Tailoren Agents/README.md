@@ -5,7 +5,8 @@ Esta pasta reúne os artefatos de configuração usados para iniciar os agentes 
 1. especificação funcional;
 2. especificação técnica;
 3. implementação (*coding*);
-4. atendimento de UAT (*uat*).
+4. atendimento de UAT (*uat*);
+5. documentação da aplicação (*document*).
 
 Cada subpasta representa uma etapa. Nela, os arquivos `AGENTS.md` e `prompt.md` têm funções complementares e devem ser enviados ao agente da etapa correspondente.
 
@@ -33,6 +34,9 @@ Todos os artefatos finais devem ter o conteúdo textual escrito em português. M
 | `technical-spec.md` | Português, exceto nomes de arquivos e elementos de código. |
 | `implementation-plan.md` | Português, exceto nomes de arquivos e elementos de código. |
 | `implementation-result.md` | Português, exceto nomes de arquivos e elementos de código. |
+| `ARCHITECTURE.md` | Português, exceto nomes de arquivos e elementos de código. |
+| `PRODUCT.md` | Português, exceto nomes de arquivos e elementos de código. |
+| `SECURITY-COMPLIANCE.md` | Português, exceto nomes de arquivos e elementos de código. |
 
 ## Tratamento de incertezas
 
@@ -52,7 +56,10 @@ Tailoren Agents/
 ├── coding/
 │   ├── AGENTS.md
 │   └── prompt.md
-└── uat/
+├── uat/
+│   ├── AGENTS.md
+│   └── prompt.md
+└── document/
     ├── AGENTS.md
     └── prompt.md
 ```
@@ -69,7 +76,7 @@ Todas as etapas recebem documentos de apoio e histórico; esses materiais são s
 | Skills                | `/workspace/.taloren-docs-skills`              | Instruções especializadas que se aplicam à tarefa.                                                                                           |
 | Repositórios          | `/workspace/repositories/<repository-id>`      | Código, configurações, testes e contratos da aplicação.                                                                                      |
 
-A etapa **spec funcional** não possui código no workspace e, portanto, não deve depender de inspeção de código-fonte. Ela pode usar os documentos opcionais de contexto dos repositórios quando existirem. As etapas **spec technical** e **coding** possuem repositórios montados e devem usar tanto seus documentos de contexto quanto o código relevante à tarefa.
+A etapa **spec funcional** não possui código no workspace e, portanto, não deve depender de inspeção de código-fonte. Ela pode usar os documentos opcionais de contexto dos repositórios quando existirem. As etapas **spec technical**, **coding** e **document** possuem repositórios montados e devem usar tanto seus documentos de contexto quanto o código relevante à tarefa. A etapa **document** analisa o estado atual e não altera os repositórios.
 
 ## Contrato de transição entre etapas
 
@@ -135,6 +142,17 @@ A `functional-spec.md` é a fonte principal do escopo. Caso ela não esteja no h
 
 O agente de UAT é autônomo e atende a cada instrução recebida no contexto dos testes, preservando alterações preexistentes e sem ultrapassar o pedido ativo.
 
+### 5. `document`
+
+**Finalidade:** analisar os repositórios e o contexto disponível para produzir uma visão factual consolidada da arquitetura, dos produtos e de segurança/compliance atuais, sem alterar código.
+
+- **Instruções fixas:** `document/AGENTS.md` exige que o agente principal orquestre os subagentes `architecture`, `product` e `security_compliance`, avalie suas entregas e consolide os resultados.
+- **Prompt de início:** `document/prompt.md` fornece os campos da task e reforça a orquestração obrigatória.
+- **Entradas principais:** documentos de contexto, histórico, skills e todos os repositórios montados — o mesmo ambiente disponível para `spec technical`.
+- **Saídas obrigatórias:** `/workspace/tasks/{{task_id}}/ARCHITECTURE.md`, `/workspace/tasks/{{task_id}}/PRODUCT.md` e `/workspace/tasks/{{task_id}}/SECURITY-COMPLIANCE.md`.
+- **Skills especializadas:** quando disponíveis, `doc-architecture`, `doc-product` e `doc-security-compliance` orientam os subagentes correspondentes.
+- **Validação:** os três arquivos devem existir e não estar vazios; o agente principal não pode encerrar antes de consolidar as três entregas dos subagentes.
+
 ## Fluxo e dependências
 
 ```text
@@ -151,6 +169,12 @@ coding ──────────► implementation-plan.md → código vali
              │
              ▼
 uat ─────────────► dúvidas respondidas ou código corrigido/alterado e validado
+
+Contexto + repositórios + skills
+             │
+             ▼
+document ────────► ARCHITECTURE.md + PRODUCT.md + SECURITY-COMPLIANCE.md
+                     (consolidação de 3 subagentes)
 ```
 
-Em qualquer etapa, o agente deve preservar o contexto/histórico como leitura, não inventar informações ausentes e validar o artefato final antes de encerrar a execução. As referências entre etapas devem respeitar o escopo já definido: a especificação técnica não modifica silenciosamente a funcional e a implementação não deve ultrapassar a especificação técnica disponível. Durante o UAT, o agente atende a instrução ativa da pessoa testadora com base em todos os documentos Markdown do workspace, nas skills e nas evidências do código.
+Em qualquer etapa, o agente deve preservar o contexto/histórico como leitura, não inventar informações ausentes e validar o artefato final antes de encerrar a execução. As referências entre etapas devem respeitar o escopo já definido: a especificação técnica não modifica silenciosamente a funcional e a implementação não deve ultrapassar a especificação técnica disponível. Durante o UAT, o agente atende a instrução ativa da pessoa testadora com base em todos os documentos Markdown do workspace, nas skills e nas evidências do código. A etapa `document` é independente do encadeamento de implementação e consolida obrigatoriamente as análises de três subagentes antes de gerar seus documentos finais.

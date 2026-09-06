@@ -4,7 +4,7 @@
   "title": "na pasta Tailoren Agents, quero que voce crie uma ...",
   "titleGenerationStatus": "failed",
   "createdAt": 1788288368423,
-  "lastActivityAt": 1788734996163,
+  "lastActivityAt": 1788735300968,
   "sessionId": "01a05e4b-0436-7731-bec5-4c7f30cd7bb1",
   "selectedModel": "gpt-5.6-terra",
   "providerState": {
@@ -15,13 +15,13 @@
     "workspaceDependencyToolVersion": 1
   },
   "usage": {
-    "inputTokens": 40247,
+    "inputTokens": 56184,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 38656,
+    "cacheReadInputTokens": 54016,
     "contextWindow": 258400,
     "contextWindowIsAuthoritative": true,
-    "contextTokens": 40247,
-    "percentage": 16,
+    "contextTokens": 56184,
+    "percentage": 22,
     "model": "gpt-5.6-terra"
   }
 }
