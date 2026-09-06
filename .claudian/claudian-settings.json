@@ -49,7 +49,7 @@
         {
           "model": "gpt-5.6-sol",
           "displayName": "GPT-5.6-Sol",
-          "description": "Latest frontier agentic coding model.",
+          "description": "Reliable agentic workhorse for everyday tasks.",
           "supportedReasoningEfforts": [
             {
               "value": "low",
@@ -180,7 +180,7 @@
         {
           "model": "gpt-5.5",
           "displayName": "GPT-5.5",
-          "description": "Frontier model for complex coding, research, and real-world work.",
+          "description": "Proven previous-generation model for coding and general work.",
           "supportedReasoningEfforts": [
             {
               "value": "low",
@@ -200,43 +200,6 @@
             }
           ],
           "defaultReasoningEffort": "xhigh",
-          "serviceTiers": [
-            {
-              "id": "priority",
-              "name": "Fast",
-              "description": "1.5x speed, increased usage"
-            }
-          ],
-          "defaultServiceTier": "priority",
-          "inputModalities": [
-            "text",
-            "image"
-          ],
-          "isDefault": false
-        },
-        {
-          "model": "gpt-5.4",
-          "displayName": "GPT-5.4",
-          "description": "Strong model for everyday coding.",
-          "supportedReasoningEfforts": [
-            {
-              "value": "low",
-              "description": "Fast responses with lighter reasoning"
-            },
-            {
-              "value": "medium",
-              "description": "Balances speed and reasoning depth for everyday tasks"
-            },
-            {
-              "value": "high",
-              "description": "Greater reasoning depth for complex problems"
-            },
-            {
-              "value": "xhigh",
-              "description": "Extra high reasoning depth for complex problems"
-            }
-          ],
-          "defaultReasoningEffort": "medium",
           "serviceTiers": [
             {
               "id": "priority",
@@ -292,7 +255,7 @@
       "reasoningSummary": "concise",
       "environmentVariables": "",
       "environmentHash": "",
-      "catalogTimestamp": 1788288190073,
+      "catalogTimestamp": 1788734704617,
       "catalogFingerprint": "2:9c5203dd3fc238234f89ef2c81ed9c46e730773c2403cf5ae8e6bbcd5c9184a2",
       "installationMethodsByHost": {},
       "wslDistroOverridesByHost": {}
