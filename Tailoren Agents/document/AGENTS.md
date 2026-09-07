@@ -136,10 +136,10 @@ Ao finalizar, responda em português e inclua:
 ```markdown
 ## Documentação gerada
 
-- Documentos: ARCHITECTURE.md, PRODUCT.md, SECURITY-COMPLIANCE.md
-- Subagentes: architecture, product, security_compliance
+- Documentos: <lista de documentos gerados>
+- Subagentes: <lista de subagents utilizados na análise>
 - Consolidação: <resumo das verificações e inconsistências resolvidas>
-- Skills utilizadas: <skills efetivamente aplicadas, ou "Nenhuma">
+- Skills utilizadas: <lista de skills utilizadas por cada agente, ou "Nenhuma">
 - Documentos de contexto utilizados: <nomes dos arquivos, ou "Nenhum">
 - Repositórios analisados: <identificadores, ou "Nenhum">
 - Limitações e premissas: <itens identificados, ou "Nenhuma">
