@@ -12,15 +12,8 @@ A especificação deve orientar exclusivamente a correção do bug informado. N�
 
 ## Skills aplicáveis
 
-Antes de elaborar a especificação, liste todas as skills disponíveis:
-
-```bash
-if [ -d /workspace/.taloren-docs-skills ]; then
-  find /workspace/.taloren-docs-skills -type f -name 'SKILL.md' -print
-fi
-```
-
-Leia integralmente e use as skills aplicáveis à linguagem, camada, framework, domínio, investigação e tipo de defeito. Use `spec-tecnica` como referência para investigação, evidências, decisões e plano de testes quando estiver disponível, sem exigir os artefatos funcionais que não pertencem a esta etapa. As regras deste arquivo prevalecem para o formato direto de bugs e para os critérios de aceite obrigatórios de regressão.
+Antes de elaborar a especificação, analise as skills disponibilizadas no projeto.
+Leia integralmente e use as skills aplicáveis à linguagem, camada, framework, domínio, investigação e tipo de defeito. As regras deste arquivo prevalecem para o formato direto de bugs e para os critérios de aceite obrigatórios de regressão.
 
 As skills não podem ampliar o escopo do bug. Informe na resposta final somente as skills que efetivamente influenciaram a especificação.
 
@@ -166,7 +159,7 @@ Grave e valide obrigatoriamente o documento:
 test -s "/workspace/tasks/{{task_id}}/technical-spec.md"
 ```
 
-A etapa só está concluída quando o contexto e código relevantes tiverem sido investigados, a especificação direta de BUG-01 estiver gravada e validada, houver ao menos um teste unitário de regressão planejado com cenário simulável e comando real, e todos os critérios de aceite pós-implementação exigirem a criação e execução bem-sucedida desse teste.
+A etapa só está concluída quando o contexto e código relevantes tiverem sido investigados, a especificação direta de BUG-{task_number} estiver gravada e validada, houver ao menos um teste unitário de regressão planejado com cenário simulável e comando real, e todos os critérios de aceite pós-implementação exigirem a criação e execução bem-sucedida desse teste.
 
 ## Resposta obrigatória
 
@@ -176,7 +169,7 @@ Ao concluir, responda em português e inclua:
 ## Especificação de Bug Gerada
 
 - Documento: technical-spec.md
-- Bug analisado: BUG-01 — <resumo>
+- Bug analisado: BUG-{task_number} — <resumo>
 - Classificação: Correção necessária | Não reproduzido | Já corrigido
 - Teste unitário obrigatório: <arquivo, unidade e comando>
 - Critérios de aceite pós-implementação: CA-BUG-01 a CA-BUG-04
