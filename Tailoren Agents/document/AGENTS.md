@@ -1,5 +1,9 @@
 Este arquivo define o contexto operacional do agente responsável por documentar a aplicação a partir dos repositórios montados no workspace. Esta etapa não altera código: produz a documentação factual consolidada da aplicação.
 
+## Variáveis fornecidas no prompt
+
+Além destas instruções, o agente receberá no prompt os dados de execução necessários, como `task_id` e, quando aplicável, os caminhos do workspace, dos repositórios, dos contextos e do diretório de saída. Use os valores fornecidos como fonte de verdade ao executar comandos e interpolar caminhos; não os suponha nem invente valores ausentes.
+
 ## Objetivo e entregas
 
 Gere obrigatoriamente os seguintes documentos finais no diretório da task:
@@ -20,28 +24,13 @@ Todo o conteúdo textual deve ser escrito em português. Mantenha em inglês som
 
 ## Preparação obrigatória das skills
 
-**Antes de especificar ou criar qualquer subagente**, o agente principal deve listar as skills disponíveis, identificar as aplicáveis e ler integralmente seus `SKILL.md`. Essa preparação antecede o levantamento do workspace e a orquestração, pois define os *guardrails* que serão repassados aos subagentes.
+**Antes de especificar ou criar qualquer subagente**, o agente principal deve identificar as skills instaladas nos locais padrão do ambiente, avaliar quais são aplicáveis à tarefa e ler integralmente os respectivos `SKILL.md`. Essa preparação antecede o levantamento do workspace e a orquestração, pois define os *guardrails* que serão repassados aos subagentes.
 
-```bash
-if [ -d /workspace/.taloren-docs-skills ]; then
-  find /workspace/.taloren-docs-skills -type f -name 'SKILL.md' -print
-fi
-```
+Considere exclusivamente as skills instaladas e disponibilizadas pelo ambiente, incluindo as fornecidas por plugins instalados. **Não considere, liste, leia ou use** a pasta `/workspace/.taloren-docs-skills` nem qualquer `SKILL.md` nela contido.
 
-Para esta etapa, o agente principal deve resolver e carregar explicitamente as três skills abaixo **somente a partir da estrutura do workspace**. Não use caminhos absolutos externos ao workspace nem presuma caminhos de outra máquina:
+Com base na lista de skills disponibilizada pelo ambiente e no objetivo desta etapa, o agente principal deve identificar, no mínimo, as skills aplicáveis à investigação de arquitetura, produto e segurança/compliance, quando estiverem instaladas. Deve também considerar outras skills pertinentes ao código, domínio ou tecnologias identificados no levantamento inicial. Para cada skill selecionada, registre o nome, o caminho resolvido informado pelo ambiente e a justificativa de aplicabilidade; então, leia integralmente seu `SKILL.md` antes de delegar trabalho.
 
-```bash
-skills_root="/workspace/.taloren-docs-skills"
-architecture_skill="$(find "$skills_root" -type f -path '*/doc-architecture/SKILL.md' -print -quit)"
-product_skill="$(find "$skills_root" -type f -path '*/doc-product/SKILL.md' -print -quit)"
-security_compliance_skill="$(find "$skills_root" -type f -path '*/doc-security-compliance/SKILL.md' -print -quit)"
-
-test -n "$architecture_skill" && cat "$architecture_skill"
-test -n "$product_skill" && cat "$product_skill"
-test -n "$security_compliance_skill" && cat "$security_compliance_skill"
-```
-
-Ele deve também ler quaisquer outras skills pertinentes ao código, domínio ou tecnologia identificados. A ausência de uma skill não bloqueia a entrega: registre o erro real e siga com evidências verificáveis. Somente após essa leitura o agente principal pode montar as mensagens de delegação, interpolando o caminho resolvido na mensagem de cada subagente; cada subagente deve reler a sua skill atribuída antes de iniciar a própria investigação.
+A ausência de uma skill adequada não bloqueia a entrega: registre o erro ou a ausência real e siga com evidências verificáveis. Somente após essa análise o agente principal pode montar as mensagens de delegação. Cada subagente deve receber apenas as skills aplicáveis à sua responsabilidade exclusiva e reler integralmente os respectivos `SKILL.md` antes de iniciar a própria investigação.
 
 ## Orquestração obrigatória de subagentes
 
@@ -57,15 +46,15 @@ Inicie os três subagentes em paralelo somente após a preparação obrigatória
 
 ### Instruções obrigatórias de skill por subagente
 
-Na mensagem de criação de cada subagente, o agente principal deve incluir explicitamente a instrução abaixo, substituindo a variável pelo caminho completo resolvido dentro de `/workspace/.taloren-docs-skills`. O subagente deve ler integralmente o respectivo `SKILL.md` **antes** de iniciar a investigação e seguir suas orientações na redação. Não basta citar a skill na mensagem ou no relatório final.
+Na mensagem de criação de cada subagente, o agente principal deve indicar explicitamente as skills aplicáveis que selecionou, com seus caminhos completos informados pelo ambiente. O subagente deve ler integralmente cada `SKILL.md` recebido **antes** de iniciar a investigação e seguir suas orientações na redação. Não basta citar a skill na mensagem ou no relatório final.
 
 | Subagente | Instrução obrigatória a enviar |
 | --- | --- |
-| `architecture` | `Leia integralmente e aplique a skill de arquitetura antes de investigar ou redigir: ${architecture_skill}. Sua responsabilidade exclusiva é investigar a arquitetura atual e devolver um rascunho completo de ARCHITECTURE.md, com evidências e limitações.` |
-| `product` | `Leia integralmente e aplique a skill de produto antes de investigar ou redigir: ${product_skill}. Sua responsabilidade exclusiva é investigar os produtos existentes e devolver um rascunho completo de PRODUCT.md, com evidências e limitações.` |
-| `security_compliance` | `Leia integralmente e aplique a skill de segurança e compliance antes de investigar ou redigir: ${security_compliance_skill}. Sua responsabilidade exclusiva é investigar segurança e compliance e devolver um rascunho completo de SECURITY-COMPLIANCE.md, com evidências e limitações.` |
+| `architecture` | `Antes de investigar ou redigir, leia integralmente e aplique as skills aplicáveis à arquitetura indicadas abaixo: <lista de caminhos completos informados pelo ambiente>. Não use a pasta /workspace/.taloren-docs-skills. Sua responsabilidade exclusiva é investigar a arquitetura atual e devolver um rascunho completo de ARCHITECTURE.md, com evidências e limitações.` |
+| `product` | `Antes de investigar ou redigir, leia integralmente e aplique as skills aplicáveis a produto indicadas abaixo: <lista de caminhos completos informados pelo ambiente>. Não use a pasta /workspace/.taloren-docs-skills. Sua responsabilidade exclusiva é investigar os produtos existentes e devolver um rascunho completo de PRODUCT.md, com evidências e limitações.` |
+| `security_compliance` | `Antes de investigar ou redigir, leia integralmente e aplique as skills aplicáveis a segurança e compliance indicadas abaixo: <lista de caminhos completos informados pelo ambiente>. Não use a pasta /workspace/.taloren-docs-skills. Sua responsabilidade exclusiva é investigar segurança e compliance e devolver um rascunho completo de SECURITY-COMPLIANCE.md, com evidências e limitações.` |
 
-O agente principal deve confirmar, antes da consolidação, que cada subagente leu e aplicou a skill atribuída. Caso a skill não possa ser aberta, deve registrar o erro real, informar a limitação na entrega afetada e usar as evidências verificáveis disponíveis; não deve declarar a skill como utilizada.
+Se não houver skill aplicável para uma responsabilidade, a mensagem ao respectivo subagente deve declarar essa ausência e proibir a indicação de skill como utilizada. O agente principal deve confirmar, antes da consolidação, que cada subagente leu e aplicou as skills atribuídas. Caso uma skill selecionada não possa ser aberta, deve registrar o erro real, informar a limitação na entrega afetada e usar as evidências verificáveis disponíveis; não deve declarar a skill como utilizada.
 
 Enquanto os subagentes executam em paralelo, o agente principal pode preparar o diretório de saída e revisar o contexto já levantado, mas não pode consolidar nem gerar os arquivos finais até receber as três entregas. Após a conclusão de todos, avalie-as contra o contexto e o código disponível, resolva inconsistências sem inventar fatos e consolide o conteúdo nos três arquivos finais. A consolidação é responsabilidade exclusiva do agente principal: não copie cegamente rascunhos e não permita que os subagentes gravem ou substituam os documentos finais. Não conclua a etapa sem receber e consolidar as três entregas; se um subagente falhar, inicie um subagente substituto com a mesma responsabilidade e registre a falha e a medida adotada no documento afetado e na resposta final.
 

@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1788805516537-7rjenvdj9",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788805516610-e7vh51n",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1788805516534-pz9udou",
+      "timestamp": 1788805516534,
+      "rawDisplayText": "revise esse agents.md\n\nno item das skills, quero que ele identifique entre as skills instaladas, as que poderão ser utilizada nessa tarefa pelos subagentes. considere skills instaladas nos locais padrões. nao considere mais a pasta taloren-docs-skills",
+      "canonicalText": "revise esse agents.md\n\nno item das skills, quero que ele identifique entre as skills instaladas, as que poderão ser utilizada nessa tarefa pelos subagentes. considere skills instaladas nos locais padrões. nao considere mais a pasta taloren-docs-skills",
+      "context": {
+        "currentNote": {
+          "path": "Tailoren Agents/document/AGENTS.md"
+        }
+      },
+      "images": [],
+      "contentDigest": "508d3d6b765b50567e78a3a4c10e9e39160a62f44c63b60c96d5afd1ecb5e7db",
+      "providerUserMessageId": "01a07d1e-23f9-7e20-bb00-2bf2b9e9d723",
+      "providerAssistantMessageId": "msg_0dabaeb122bbfea0016a9f01bc233887d293fca84b17a97e8f"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788805662330-24bj6ed",
+      "userTurnOrdinal": 2,
+      "state": "accepted",
+      "localMessageId": "msg-1788805662317-jkj7fw5",
+      "timestamp": 1788805662317,
+      "rawDisplayText": "como as skills estarao em pastas padroes, precisa fazer esse find manual?",
+      "canonicalText": "como as skills estarao em pastas padroes, precisa fazer esse find manual?",
+      "images": [],
+      "contentDigest": "d98a0e99c060d8d9b09819820b6e655b48159d1827bfaf5466df465a74e113f0",
+      "providerUserMessageId": "01a07d20-4704-7443-81f8-90ca226588a9",
+      "providerAssistantMessageId": "msg_0dabaeb122bbfea0016a9f022389a087d29c613494a2c27049"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788805681030-sc4ds8o",
+      "userTurnOrdinal": 3,
+      "state": "accepted",
+      "localMessageId": "msg-1788805681026-qwnaucq",
+      "timestamp": 1788805681026,
+      "rawDisplayText": "remova",
+      "canonicalText": "remova",
+      "images": [],
+      "contentDigest": "cc596db3a30592c851d34704fee2f9aff6f7e7b2eb2aa5c7082e562e0eec8eb7",
+      "providerUserMessageId": "01a07d20-92d3-7793-a3fb-3576488b3df4",
+      "providerAssistantMessageId": "msg_0dabaeb122bbfea0016a9f02471c9c87d2b551e4caa3b8274b"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788805714155-gincq75",
+      "userTurnOrdinal": 4,
+      "state": "accepted",
+      "localMessageId": "msg-1788805714145-bhboo7y",
+      "timestamp": 1788805714145,
+      "rawDisplayText": "informe que o agent recebera no prompt dados de variaveis como task_id, etc",
+      "canonicalText": "informe que o agent recebera no prompt dados de variaveis como task_id, etc",
+      "images": [],
+      "contentDigest": "d63b62d76e2dea887e7109b3bf7681f5a49d43b179cf8b6a5affec0011c55fba",
+      "providerUserMessageId": "01a07d21-1156-7d00-97ce-20f25d516763",
+      "providerAssistantMessageId": "msg_0dabaeb122bbfea0016a9f025b527087d295035297b508f9ea"
+    }
+  ]
+}
