@@ -62,6 +62,34 @@
       "contentDigest": "d63b62d76e2dea887e7109b3bf7681f5a49d43b179cf8b6a5affec0011c55fba",
       "providerUserMessageId": "01a07d21-1156-7d00-97ce-20f25d516763",
       "providerAssistantMessageId": "msg_0dabaeb122bbfea0016a9f025b527087d295035297b508f9ea"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788805789869-8hmdctg",
+      "userTurnOrdinal": 5,
+      "state": "accepted",
+      "localMessageId": "msg-1788805789859-z94jqda",
+      "timestamp": 1788805789859,
+      "rawDisplayText": "vale a pena o agente indicar aos subagentes quais skills ele deveria dar preferencia de utilizar?",
+      "canonicalText": "vale a pena o agente indicar aos subagentes quais skills ele deveria dar preferencia de utilizar?",
+      "images": [],
+      "contentDigest": "15d36a2eb839ec3a3bfeedc9c74fe1c003099054bf438bb994c81a50f2d988b2",
+      "providerUserMessageId": "01a07d22-3915-7f22-a7f8-6826fb2a0b8b",
+      "providerAssistantMessageId": "msg_0dabaeb122bbfea0016a9f02a6ac1887d2bc7d13b9aa8645af"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788805830175-83hwn2r",
+      "userTurnOrdinal": 6,
+      "state": "accepted",
+      "localMessageId": "msg-1788805830166-3htvd4e",
+      "timestamp": 1788805830166,
+      "rawDisplayText": "faca essa alteracao",
+      "canonicalText": "faca essa alteracao",
+      "images": [],
+      "contentDigest": "c54c04adc4b2dc647f8ed5b654ab2ec483dd733e5e4d2e0ae0ec37befac8356d",
+      "providerUserMessageId": "01a07d22-d69b-7300-8c93-9067ae588008",
+      "providerAssistantMessageId": "msg_0dabaeb122bbfea0016a9f02d970a487d29f20ee0b1a38feb4"
     }
   ]
 }

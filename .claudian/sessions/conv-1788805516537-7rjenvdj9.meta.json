@@ -4,7 +4,7 @@
   "title": "revise esse agents",
   "titleGenerationStatus": "failed",
   "createdAt": 1788805516586,
-  "lastActivityAt": 1788805724438,
+  "lastActivityAt": 1788805850910,
   "sessionId": "01a07d1e-1134-7200-9fbb-a31920d71ba8",
   "selectedModel": "gpt-5.6-terra",
   "providerState": {
@@ -16,13 +16,13 @@
   },
   "currentNote": "Tailoren Agents/document/AGENTS.md",
   "usage": {
-    "inputTokens": 32015,
+    "inputTokens": 34725,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 30464,
+    "cacheReadInputTokens": 33536,
     "contextWindow": 258400,
     "contextWindowIsAuthoritative": true,
-    "contextTokens": 32015,
-    "percentage": 12,
+    "contextTokens": 34725,
+    "percentage": 13,
     "model": "gpt-5.6-terra"
   }
 }
