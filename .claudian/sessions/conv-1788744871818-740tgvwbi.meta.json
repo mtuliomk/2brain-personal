@@ -4,7 +4,7 @@
   "title": "considerando essa instrucao, as skills mensionadas...",
   "titleGenerationStatus": "failed",
   "createdAt": 1788744871869,
-  "lastActivityAt": 1788746248906,
+  "lastActivityAt": 1788746394272,
   "sessionId": "01a07980-b38f-76b2-b627-f75d2a5ccfd0",
   "selectedModel": "gpt-5.6-terra",
   "providerState": {
@@ -16,13 +16,13 @@
   },
   "currentNote": "Tailoren Agents/document/AGENTS.md",
   "usage": {
-    "inputTokens": 22394,
+    "inputTokens": 28661,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 19200,
+    "cacheReadInputTokens": 26368,
     "contextWindow": 258400,
     "contextWindowIsAuthoritative": true,
-    "contextTokens": 22394,
-    "percentage": 9,
+    "contextTokens": 28661,
+    "percentage": 11,
     "model": "gpt-5.6-terra"
   }
 }

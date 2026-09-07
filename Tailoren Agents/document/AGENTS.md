@@ -18,6 +18,31 @@ Os documentos devem descrever somente o estado atual comprovado nos repositório
 
 Todo o conteúdo textual deve ser escrito em português. Mantenha em inglês somente nomes de arquivos, caminhos, módulos, classes, funções, rotas, contratos, comandos, identificadores, hashes, tecnologias e demais elementos de código existentes.
 
+## Preparação obrigatória das skills
+
+**Antes de especificar ou criar qualquer subagente**, o agente principal deve listar as skills disponíveis, identificar as aplicáveis e ler integralmente seus `SKILL.md`. Essa preparação antecede o levantamento do workspace e a orquestração, pois define os *guardrails* que serão repassados aos subagentes.
+
+```bash
+if [ -d /workspace/.taloren-docs-skills ]; then
+  find /workspace/.taloren-docs-skills -type f -name 'SKILL.md' -print
+fi
+```
+
+Para esta etapa, o agente principal deve resolver e carregar explicitamente as três skills abaixo **somente a partir da estrutura do workspace**. Não use caminhos absolutos externos ao workspace nem presuma caminhos de outra máquina:
+
+```bash
+skills_root="/workspace/.taloren-docs-skills"
+architecture_skill="$(find "$skills_root" -type f -path '*/doc-architecture/SKILL.md' -print -quit)"
+product_skill="$(find "$skills_root" -type f -path '*/doc-product/SKILL.md' -print -quit)"
+security_compliance_skill="$(find "$skills_root" -type f -path '*/doc-security-compliance/SKILL.md' -print -quit)"
+
+test -n "$architecture_skill" && cat "$architecture_skill"
+test -n "$product_skill" && cat "$product_skill"
+test -n "$security_compliance_skill" && cat "$security_compliance_skill"
+```
+
+Ele deve também ler quaisquer outras skills pertinentes ao código, domínio ou tecnologia identificados. A ausência de uma skill não bloqueia a entrega: registre o erro real e siga com evidências verificáveis. Somente após essa leitura o agente principal pode montar as mensagens de delegação, interpolando o caminho resolvido na mensagem de cada subagente; cada subagente deve reler a sua skill atribuída antes de iniciar a própria investigação.
+
 ## Orquestração obrigatória de subagentes
 
 A produção dos documentos é obrigatoriamente delegada a três subagentes independentes, executados em paralelo. Crie os três na mesma etapa de orquestração, por meio do mecanismo de subagentes disponibilizado no ambiente; não inicie, aguarde ou conclua um subagente antes de criar os demais. Atribua-lhes, respectivamente, as responsabilidades abaixo:
@@ -28,33 +53,21 @@ A produção dos documentos é obrigatoriamente delegada a três subagentes inde
 | `product` | Investigar os produtos existentes e redigir o conteúdo de `PRODUCT.md`. | Rascunho completo, evidências e limitações. |
 | `security_compliance` | Investigar segurança e compliance e redigir o conteúdo de `SECURITY-COMPLIANCE.md`. | Rascunho completo, evidências e limitações. |
 
-Inicie os três subagentes em paralelo após o levantamento inicial do workspace. Forneça a cada um o objetivo, os *guardrails*, os caminhos do workspace, as skills aplicáveis e a sua responsabilidade exclusiva. Cada subagente deve investigar os documentos e os repositórios relevantes, produzir o conteúdo integral de sua entrega e devolver ao agente principal as evidências, premissas e limitações utilizadas.
+Inicie os três subagentes em paralelo somente após a preparação obrigatória das skills e o levantamento inicial do workspace. Forneça a cada um o objetivo, os *guardrails*, os caminhos do workspace, as skills aplicáveis e a sua responsabilidade exclusiva. Cada subagente deve investigar os documentos e os repositórios relevantes, produzir o conteúdo integral de sua entrega e devolver ao agente principal as evidências, premissas e limitações utilizadas.
 
 ### Instruções obrigatórias de skill por subagente
 
-Na mensagem de criação de cada subagente, o agente principal deve incluir explicitamente a instrução abaixo, com o caminho completo da skill. O subagente deve ler integralmente o respectivo `SKILL.md` **antes** de iniciar a investigação e seguir suas orientações na redação. Não basta citar a skill na mensagem ou no relatório final.
+Na mensagem de criação de cada subagente, o agente principal deve incluir explicitamente a instrução abaixo, substituindo a variável pelo caminho completo resolvido dentro de `/workspace/.taloren-docs-skills`. O subagente deve ler integralmente o respectivo `SKILL.md` **antes** de iniciar a investigação e seguir suas orientações na redação. Não basta citar a skill na mensagem ou no relatório final.
 
 | Subagente | Instrução obrigatória a enviar |
 | --- | --- |
-| `architecture` | `Leia integralmente e aplique a skill de arquitetura antes de investigar ou redigir: /home/tulio/.codex/skills/DevSkills/doc-architecture/SKILL.md. Sua responsabilidade exclusiva é investigar a arquitetura atual e devolver um rascunho completo de ARCHITECTURE.md, com evidências e limitações.` |
-| `product` | `Leia integralmente e aplique a skill de produto antes de investigar ou redigir: /home/tulio/.codex/skills/DevSkills/doc-product/SKILL.md. Sua responsabilidade exclusiva é investigar os produtos existentes e devolver um rascunho completo de PRODUCT.md, com evidências e limitações.` |
-| `security_compliance` | `Leia integralmente e aplique a skill de segurança e compliance antes de investigar ou redigir: /home/tulio/.codex/skills/DevSkills/doc-security-compliance/SKILL.md. Sua responsabilidade exclusiva é investigar segurança e compliance e devolver um rascunho completo de SECURITY-COMPLIANCE.md, com evidências e limitações.` |
+| `architecture` | `Leia integralmente e aplique a skill de arquitetura antes de investigar ou redigir: ${architecture_skill}. Sua responsabilidade exclusiva é investigar a arquitetura atual e devolver um rascunho completo de ARCHITECTURE.md, com evidências e limitações.` |
+| `product` | `Leia integralmente e aplique a skill de produto antes de investigar ou redigir: ${product_skill}. Sua responsabilidade exclusiva é investigar os produtos existentes e devolver um rascunho completo de PRODUCT.md, com evidências e limitações.` |
+| `security_compliance` | `Leia integralmente e aplique a skill de segurança e compliance antes de investigar ou redigir: ${security_compliance_skill}. Sua responsabilidade exclusiva é investigar segurança e compliance e devolver um rascunho completo de SECURITY-COMPLIANCE.md, com evidências e limitações.` |
 
 O agente principal deve confirmar, antes da consolidação, que cada subagente leu e aplicou a skill atribuída. Caso a skill não possa ser aberta, deve registrar o erro real, informar a limitação na entrega afetada e usar as evidências verificáveis disponíveis; não deve declarar a skill como utilizada.
 
 Enquanto os subagentes executam em paralelo, o agente principal pode preparar o diretório de saída e revisar o contexto já levantado, mas não pode consolidar nem gerar os arquivos finais até receber as três entregas. Após a conclusão de todos, avalie-as contra o contexto e o código disponível, resolva inconsistências sem inventar fatos e consolide o conteúdo nos três arquivos finais. A consolidação é responsabilidade exclusiva do agente principal: não copie cegamente rascunhos e não permita que os subagentes gravem ou substituam os documentos finais. Não conclua a etapa sem receber e consolidar as três entregas; se um subagente falhar, inicie um subagente substituto com a mesma responsabilidade e registre a falha e a medida adotada no documento afetado e na resposta final.
-
-## Skills
-
-Antes de criar os subagentes, liste todas as skills disponíveis:
-
-```bash
-if [ -d /workspace/.taloren-docs-skills ]; then
-  find /workspace/.taloren-docs-skills -type f -name 'SKILL.md' -print
-fi
-```
-
-Leia integralmente todas as skills relevantes à documentação. Quando estiverem disponíveis, as skills `doc-architecture`, `doc-product` e `doc-security-compliance` devem ser usadas, respectivamente, pelos subagentes `architecture`, `product` e `security_compliance`; elas orientam estrutura, escopo, evidências e limites de cada documento. Use também quaisquer outras skills pertinentes ao código, domínio ou tecnologia identificados. A ausência de uma skill não bloqueia a entrega: siga com evidências verificáveis e registre a limitação.
 
 ## Contexto da aplicação e histórico
 
