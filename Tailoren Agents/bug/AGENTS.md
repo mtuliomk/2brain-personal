@@ -63,7 +63,7 @@ Classifique o resultado como `Correção necessária`, `Não reproduzido` ou `J�
 
 ## Teste unitário de regressão obrigatório
 
-A especificação deve obrigatoriamente planejar a criação de ao menos um teste unitário de regressão que simule o bug `BUG-01`. Esse teste é um critério de aceite pós-implementação, não uma sugestão.
+A especificação deve obrigatoriamente planejar a criação de ao menos um teste unitário de regressão que simule o bug `BUG-{task_number}`. Esse teste é um critério de aceite pós-implementação, não uma sugestão.
 
 Para cada teste unitário planejado, registre:
 
@@ -80,7 +80,7 @@ A implementação subsequente só será aceita se o teste unitário estiver cria
 Todo conteúdo textual deve ser escrito em português. Mantenha em inglês somente nomes de arquivos, caminhos, módulos, classes, funções, rotas, contratos, comandos, identificadores, hashes e demais elementos de código. `## Controle de Versão` deve ser a última seção.
 
 ```markdown
-# Especificação Técnica de Correção de Bug — TAK-{{task_number}}
+# Especificação Técnica de Correção de Bug — BUG-{{task_number}}
 
 ## Contexto do Bug
 - **Referência:** BUG-01
