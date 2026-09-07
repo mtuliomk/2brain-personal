@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "conversationId": "conv-1788744871818-740tgvwbi",
+  "records": [
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788744871892-hn43u6a",
+      "userTurnOrdinal": 1,
+      "state": "accepted",
+      "localMessageId": "msg-1788744871782-vfr9qix",
+      "timestamp": 1788744871782,
+      "rawDisplayText": "considerando essa instrucao, as skills mensionadas serao utilizadas pelo agente princiapl ou subagentes?",
+      "canonicalText": "considerando essa instrucao, as skills mensionadas serao utilizadas pelo agente princiapl ou subagentes?",
+      "context": {
+        "currentNote": {
+          "path": "Tailoren Agents/document/AGENTS.md"
+        }
+      },
+      "images": [],
+      "contentDigest": "b8d6d61438cc0be32d59e0af09e0dc5941f8c1415668e3d9dce9cbfe2e1799ce",
+      "providerUserMessageId": "01a07980-bf7b-73d2-af6c-f87fd7e9e678",
+      "providerAssistantMessageId": "msg_01f7b70206151596016a9e14b2262c87d29f4dc4b0657ff61f"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "conv-1788744871818-740tgvwbi",
+  "providerId": "codex",
+  "title": "considerando essa instrucao, as skills mensionadas...",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1788744871869,
+  "lastActivityAt": 1788744884786,
+  "sessionId": "01a07980-b38f-76b2-b627-f75d2a5ccfd0",
+  "selectedModel": "gpt-5.6-terra",
+  "providerState": {
+    "threadId": "01a07980-b38f-76b2-b627-f75d2a5ccfd0",
+    "nativeConversationContextEstablished": true,
+    "sessionFilePath": "/home/tulio/.codex/sessions/2026/09/06/rollout-2026-09-06T22-34-32-01a07980-b38f-76b2-b627-f75d2a5ccfd0.jsonl",
+    "transcriptRootPath": "/home/tulio/.codex/sessions",
+    "workspaceDependencyToolVersion": 1
+  },
+  "currentNote": "Tailoren Agents/document/AGENTS.md",
+  "usage": {
+    "inputTokens": 18613,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 16128,
+    "contextWindow": 258400,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 18613,
+    "percentage": 7,
+    "model": "gpt-5.6-terra"
+  }
+}
