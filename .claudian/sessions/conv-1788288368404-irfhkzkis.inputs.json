@@ -57,6 +57,19 @@
       "contentDigest": "e983d781f49da12addf8eb1a1d89f821f8b3d15fa375e8b9e54d1ffcee528fd4",
       "providerUserMessageId": "01a078f0-08c0-73e2-83df-3e52b9a4608f",
       "providerAssistantMessageId": "msg_0b3ceb36ae355f79016a9defb6a3b087d2b1fd1eccc19e228e"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "msg-1788741490441-ovdlkmj",
+      "userTurnOrdinal": 5,
+      "state": "accepted",
+      "localMessageId": "msg-1788741490421-fwjev0s",
+      "timestamp": 1788741490421,
+      "rawDisplayText": "usando o mesmo padrao, crie o agente de bug\n\na ideia é ele trabalhar numa workspace com os repos (mesmo padrão da workspace de espec tecnica), mas suas ações serão\n- criar uma spec tecnica para resolução do bug\nessa spec deve ser mais direta, pois nao tem requisito funcional\nobrigatoriamente, ela deve contemplar a criaçãod e testes unitarios que simulem esse bug e eles devem ser utilizados como criterio de aceite pos-implementação",
+      "canonicalText": "usando o mesmo padrao, crie o agente de bug\n\na ideia é ele trabalhar numa workspace com os repos (mesmo padrão da workspace de espec tecnica), mas suas ações serão\n- criar uma spec tecnica para resolução do bug\nessa spec deve ser mais direta, pois nao tem requisito funcional\nobrigatoriamente, ela deve contemplar a criaçãod e testes unitarios que simulem esse bug e eles devem ser utilizados como criterio de aceite pos-implementação",
+      "images": [],
+      "contentDigest": "6c1e5f565274eadef2103a879e49080b46bb45f13026024a18dc4b91c44f9ce9",
+      "providerUserMessageId": "01a0794d-1ce9-71b1-a23d-655261414137"
     }
   ]
 }
