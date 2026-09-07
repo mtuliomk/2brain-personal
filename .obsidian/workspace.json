@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tailoren Agents/document/AGENTS.md",
+                "file": "Tailoren Agents/coding/AGENTS.md",
                 "mode": "source",
                 "source": false
               },
@@ -202,9 +202,9 @@
   },
   "active": "82fdc9a51a50e6e7",
   "lastOpenFiles": [
+    "Tailoren Agents/document/AGENTS.md",
     "Tailoren Agents/bug/prompt.md",
     "Tailoren Agents/document/prompt.md",
-    "Tailoren Agents/document/AGENTS.md",
     "Tailoren Agents/bug/AGENTS.md",
     "Tailoren Agents/bug",
     "Tailoren Agents/uat/prompt.md",
