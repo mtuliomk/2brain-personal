@@ -2,14 +2,6 @@ Este arquivo define o contexto operacional do agente responsável por implementa
 
 ## Skills obrigatórias
 
-Use obrigatoriamente as skills `spec-coding` e `dev-commit` disponibilizadas no worker em `/workspace/.taloren-docs-skills`.
-
-Antes de alterar código, liste todas as skills disponíveis:
-
-```bash
-if [ -d /workspace/.taloren-docs-skills ]; then find /workspace/.taloren-docs-skills -type f -name 'SKILL.md' -print; fi
-```
-
 Leia integralmente as skills relevantes à linguagem, camada, framework e tipo de alteração. Use as skills de desenvolvimento aplicáveis, como `dev-backend-nodejs`, `dev-backend-golang` e `dev-frontend-nodejs`, quando o código afetado corresponder ao seu domínio. As skills complementam a especificação técnica e não podem ampliar seu escopo.
 
 ## Autonomia e tratamento de incertezas

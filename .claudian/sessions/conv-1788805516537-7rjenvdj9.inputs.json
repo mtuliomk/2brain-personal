@@ -18,7 +18,7 @@
       },
       "images": [],
       "contentDigest": "508d3d6b765b50567e78a3a4c10e9e39160a62f44c63b60c96d5afd1ecb5e7db",
-      "providerUserMessageId": "01a07d1e-23f9-7e20-bb00-2bf2b9e9d723",
+      "providerUserMessageId": "01a07d1e-11f0-7ee2-9069-f62965e618dd",
       "providerAssistantMessageId": "msg_0dabaeb122bbfea0016a9f01bc233887d293fca84b17a97e8f"
     },
     {
@@ -32,7 +32,7 @@
       "canonicalText": "como as skills estarao em pastas padroes, precisa fazer esse find manual?",
       "images": [],
       "contentDigest": "d98a0e99c060d8d9b09819820b6e655b48159d1827bfaf5466df465a74e113f0",
-      "providerUserMessageId": "01a07d20-4704-7443-81f8-90ca226588a9",
+      "providerUserMessageId": "01a07d20-469e-74e3-8bd2-c270e1a7867e",
       "providerAssistantMessageId": "msg_0dabaeb122bbfea0016a9f022389a087d29c613494a2c27049"
     },
     {
@@ -46,7 +46,7 @@
       "canonicalText": "remova",
       "images": [],
       "contentDigest": "cc596db3a30592c851d34704fee2f9aff6f7e7b2eb2aa5c7082e562e0eec8eb7",
-      "providerUserMessageId": "01a07d20-92d3-7793-a3fb-3576488b3df4",
+      "providerUserMessageId": "01a07d20-8f99-7bb2-82d7-4554305c6ffa",
       "providerAssistantMessageId": "msg_0dabaeb122bbfea0016a9f02471c9c87d2b551e4caa3b8274b"
     },
     {
@@ -60,7 +60,7 @@
       "canonicalText": "informe que o agent recebera no prompt dados de variaveis como task_id, etc",
       "images": [],
       "contentDigest": "d63b62d76e2dea887e7109b3bf7681f5a49d43b179cf8b6a5affec0011c55fba",
-      "providerUserMessageId": "01a07d21-1156-7d00-97ce-20f25d516763",
+      "providerUserMessageId": "01a07d21-10fb-7682-8548-cc426620d2f2",
       "providerAssistantMessageId": "msg_0dabaeb122bbfea0016a9f025b527087d295035297b508f9ea"
     },
     {
@@ -74,7 +74,7 @@
       "canonicalText": "vale a pena o agente indicar aos subagentes quais skills ele deveria dar preferencia de utilizar?",
       "images": [],
       "contentDigest": "15d36a2eb839ec3a3bfeedc9c74fe1c003099054bf438bb994c81a50f2d988b2",
-      "providerUserMessageId": "01a07d22-3915-7f22-a7f8-6826fb2a0b8b",
+      "providerUserMessageId": "01a07d22-38b9-76f0-8173-b77e6604afdb",
       "providerAssistantMessageId": "msg_0dabaeb122bbfea0016a9f02a6ac1887d2bc7d13b9aa8645af"
     },
     {
@@ -88,7 +88,7 @@
       "canonicalText": "faca essa alteracao",
       "images": [],
       "contentDigest": "c54c04adc4b2dc647f8ed5b654ab2ec483dd733e5e4d2e0ae0ec37befac8356d",
-      "providerUserMessageId": "01a07d22-d69b-7300-8c93-9067ae588008",
+      "providerUserMessageId": "01a07d22-d639-7ce2-a1e5-1acdd14e7ff8",
       "providerAssistantMessageId": "msg_0dabaeb122bbfea0016a9f02d970a487d29f20ee0b1a38feb4"
     }
   ]
