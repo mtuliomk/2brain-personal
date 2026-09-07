@@ -69,7 +69,8 @@
       "canonicalText": "usando o mesmo padrao, crie o agente de bug\n\na ideia é ele trabalhar numa workspace com os repos (mesmo padrão da workspace de espec tecnica), mas suas ações serão\n- criar uma spec tecnica para resolução do bug\nessa spec deve ser mais direta, pois nao tem requisito funcional\nobrigatoriamente, ela deve contemplar a criaçãod e testes unitarios que simulem esse bug e eles devem ser utilizados como criterio de aceite pos-implementação",
       "images": [],
       "contentDigest": "6c1e5f565274eadef2103a879e49080b46bb45f13026024a18dc4b91c44f9ce9",
-      "providerUserMessageId": "01a0794d-1ce9-71b1-a23d-655261414137"
+      "providerUserMessageId": "01a0794d-1ce9-71b1-a23d-655261414137",
+      "providerAssistantMessageId": "msg_0b3ceb36ae355f79016a9e07c6370487d2ac1d29041d553a59"
     }
   ]
 }

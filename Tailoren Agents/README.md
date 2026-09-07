@@ -6,7 +6,8 @@ Esta pasta reúne os artefatos de configuração usados para iniciar os agentes 
 2. especificação técnica;
 3. implementação (*coding*);
 4. atendimento de UAT (*uat*);
-5. documentação da aplicação (*document*).
+5. documentação da aplicação (*document*);
+6. especificação técnica para correção de bugs (*bug*).
 
 Cada subpasta representa uma etapa. Nela, os arquivos `AGENTS.md` e `prompt.md` têm funções complementares e devem ser enviados ao agente da etapa correspondente.
 
@@ -59,7 +60,10 @@ Tailoren Agents/
 ├── uat/
 │   ├── AGENTS.md
 │   └── prompt.md
-└── document/
+├── document/
+│   ├── AGENTS.md
+│   └── prompt.md
+└── bug/
     ├── AGENTS.md
     └── prompt.md
 ```
@@ -76,7 +80,7 @@ Todas as etapas recebem documentos de apoio e histórico; esses materiais são s
 | Skills                | `/workspace/.taloren-docs-skills`              | Instruções especializadas que se aplicam à tarefa.                                                                                           |
 | Repositórios          | `/workspace/repositories/<repository-id>`      | Código, configurações, testes e contratos da aplicação.                                                                                      |
 
-A etapa **spec funcional** não possui código no workspace e, portanto, não deve depender de inspeção de código-fonte. Ela pode usar os documentos opcionais de contexto dos repositórios quando existirem. As etapas **spec technical**, **coding** e **document** possuem repositórios montados e devem usar tanto seus documentos de contexto quanto o código relevante à tarefa. A etapa **document** analisa o estado atual e não altera os repositórios.
+A etapa **spec funcional** não possui código no workspace e, portanto, não deve depender de inspeção de código-fonte. Ela pode usar os documentos opcionais de contexto dos repositórios quando existirem. As etapas **spec technical**, **coding**, **document** e **bug** possuem repositórios montados e devem usar tanto seus documentos de contexto quanto o código relevante à tarefa. A etapa **document** analisa o estado atual e não altera os repositórios.
 
 ## Contrato de transição entre etapas
 
@@ -153,6 +157,18 @@ O agente de UAT é autônomo e atende a cada instrução recebida no contexto do
 - **Skills especializadas:** quando disponíveis, `doc-architecture`, `doc-product` e `doc-security-compliance` orientam os subagentes correspondentes.
 - **Validação:** os três arquivos devem existir e não estar vazios; o agente principal não pode encerrar antes de consolidar as três entregas dos subagentes.
 
+### 6. `bug`
+
+**Finalidade:** investigar um bug diretamente no contexto e nos repositórios montados e produzir uma especificação técnica objetiva para sua correção, sem depender de requisito funcional e sem alterar código.
+
+- **Instruções fixas:** `bug/AGENTS.md` exige investigação do código e das evidências do defeito, além de uma especificação limitada ao menor delta necessário para `BUG-01`.
+- **Prompt de início:** `bug/prompt.md` fornece os dados da task e reforça o teste unitário de regressão obrigatório.
+- **Entradas principais:** relato do bug, contexto da aplicação, histórico disponível, skills aplicáveis e repositórios montados — o mesmo ambiente disponível para `spec technical`.
+- **Saída obrigatória:** `/workspace/tasks/{{task_id}}/technical-spec.md`.
+- **Teste obrigatório:** a especificação deve definir ao menos um teste unitário que simule o bug, suas asserções e o comando real de execução.
+- **Critérios de aceite:** a implementação posterior só é aceita se criar/atualizar o teste, executá-lo com sucesso após a correção e aprovar a suíte unitária aplicável.
+- **Validação:** `technical-spec.md` deve existir e não estar vazio antes da conclusão. Esta etapa não implementa código ou testes.
+
 ## Fluxo e dependências
 
 ```text
@@ -175,6 +191,14 @@ Contexto + repositórios + skills
              ▼
 document ────────► ARCHITECTURE.md + PRODUCT.md + SECURITY-COMPLIANCE.md
                      (consolidação de 3 subagentes em paralelo)
+
+Relato de bug + contexto + repositórios + skills
+             │
+             ▼
+bug ─────────────► technical-spec.md com teste unitário de regressão + critérios de aceite
+             │
+             ▼
+coding ──────────► correção implementada e teste unitário aprovado
 ```
 
-Em qualquer etapa, o agente deve preservar o contexto/histórico como leitura, não inventar informações ausentes e validar o artefato final antes de encerrar a execução. As referências entre etapas devem respeitar o escopo já definido: a especificação técnica não modifica silenciosamente a funcional e a implementação não deve ultrapassar a especificação técnica disponível. Durante o UAT, o agente atende a instrução ativa da pessoa testadora com base em todos os documentos Markdown do workspace, nas skills e nas evidências do código. A etapa `document` é independente do encadeamento de implementação e consolida obrigatoriamente as análises de três subagentes executados em paralelo antes de gerar seus documentos finais.
+Em qualquer etapa, o agente deve preservar o contexto/histórico como leitura, não inventar informações ausentes e validar o artefato final antes de encerrar a execução. As referências entre etapas devem respeitar o escopo já definido: a especificação técnica não modifica silenciosamente a funcional e a implementação não deve ultrapassar a especificação técnica disponível. Durante o UAT, o agente atende a instrução ativa da pessoa testadora com base em todos os documentos Markdown do workspace, nas skills e nas evidências do código. A etapa `document` é independente do encadeamento de implementação e consolida obrigatoriamente as análises de três subagentes executados em paralelo antes de gerar seus documentos finais. A etapa `bug` também é independente do fluxo funcional e produz uma especificação técnica direta cuja implementação posterior deve cumprir os critérios de aceite de teste unitário de regressão.
