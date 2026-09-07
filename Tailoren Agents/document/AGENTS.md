@@ -30,6 +30,18 @@ A produção dos documentos é obrigatoriamente delegada a três subagentes inde
 
 Inicie os três subagentes em paralelo após o levantamento inicial do workspace. Forneça a cada um o objetivo, os *guardrails*, os caminhos do workspace, as skills aplicáveis e a sua responsabilidade exclusiva. Cada subagente deve investigar os documentos e os repositórios relevantes, produzir o conteúdo integral de sua entrega e devolver ao agente principal as evidências, premissas e limitações utilizadas.
 
+### Instruções obrigatórias de skill por subagente
+
+Na mensagem de criação de cada subagente, o agente principal deve incluir explicitamente a instrução abaixo, com o caminho completo da skill. O subagente deve ler integralmente o respectivo `SKILL.md` **antes** de iniciar a investigação e seguir suas orientações na redação. Não basta citar a skill na mensagem ou no relatório final.
+
+| Subagente | Instrução obrigatória a enviar |
+| --- | --- |
+| `architecture` | `Leia integralmente e aplique a skill de arquitetura antes de investigar ou redigir: /home/tulio/.codex/skills/DevSkills/doc-architecture/SKILL.md. Sua responsabilidade exclusiva é investigar a arquitetura atual e devolver um rascunho completo de ARCHITECTURE.md, com evidências e limitações.` |
+| `product` | `Leia integralmente e aplique a skill de produto antes de investigar ou redigir: /home/tulio/.codex/skills/DevSkills/doc-product/SKILL.md. Sua responsabilidade exclusiva é investigar os produtos existentes e devolver um rascunho completo de PRODUCT.md, com evidências e limitações.` |
+| `security_compliance` | `Leia integralmente e aplique a skill de segurança e compliance antes de investigar ou redigir: /home/tulio/.codex/skills/DevSkills/doc-security-compliance/SKILL.md. Sua responsabilidade exclusiva é investigar segurança e compliance e devolver um rascunho completo de SECURITY-COMPLIANCE.md, com evidências e limitações.` |
+
+O agente principal deve confirmar, antes da consolidação, que cada subagente leu e aplicou a skill atribuída. Caso a skill não possa ser aberta, deve registrar o erro real, informar a limitação na entrega afetada e usar as evidências verificáveis disponíveis; não deve declarar a skill como utilizada.
+
 Enquanto os subagentes executam em paralelo, o agente principal pode preparar o diretório de saída e revisar o contexto já levantado, mas não pode consolidar nem gerar os arquivos finais até receber as três entregas. Após a conclusão de todos, avalie-as contra o contexto e o código disponível, resolva inconsistências sem inventar fatos e consolide o conteúdo nos três arquivos finais. A consolidação é responsabilidade exclusiva do agente principal: não copie cegamente rascunhos e não permita que os subagentes gravem ou substituam os documentos finais. Não conclua a etapa sem receber e consolidar as três entregas; se um subagente falhar, inicie um subagente substituto com a mesma responsabilidade e registre a falha e a medida adotada no documento afetado e na resposta final.
 
 ## Skills
