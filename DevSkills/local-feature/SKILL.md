@@ -14,6 +14,7 @@ Não crie commits, faça push, publique, altere dados de produção ou execute a
 - [ ] Confirmar que a mudança introduz comportamento novo, altera um fluxo ou exige uma decisão de design verificável.
 - [ ] Delimitar objetivo, escopo, comportamento atual, comportamento esperado e consumidores ou contratos afetados.
 - [ ] Registrar a linha de base: instruções locais, alterações preexistentes, convenções, módulos e comandos oficiais de validação.
+- [ ] Procurar *features* semelhantes no repositório antes de iniciar a execução e registrar os padrões que possam ser reutilizados. Em mudanças de frontend, examinar *features* na mesma página e, quando necessário, em outras páginas, levantando suas características de navegabilidade, interface visual e arquitetura.
 - [ ] Levantar componentes, serviços, *helpers*, contratos, validações e padrões preexistentes que possam ser reutilizados; identificar os que precisam ser ajustados para reuso antes de criar uma implementação nova.
 - [ ] Declarar em uma linha o **critério de sucesso** antes de planejar. Se ele não estiver claro e depender de informação que somente o usuário possui, pedir esclarecimento antes de prosseguir; não assumi-lo silenciosamente.
 - [ ] Definir explicitamente a **Definition of Done (DoD)** antes de editar, alinhada ao critério de sucesso. Ela deve conter critérios de aceite verificáveis para o comportamento entregue, compatibilidades ou migrações necessárias, testes e validações requeridos, documentação afetada e limites de escopo.
@@ -40,6 +41,7 @@ Antes de editar, registre mentalmente e informe no resultado quando relevante:
 - instruções locais, convenções, arquitetura e módulos afetados;
 - comportamento atual, comportamento esperado e critérios verificáveis de sucesso;
 - componentes, contratos, *helpers*, serviços e padrões relacionados que podem ser reutilizados ou evoluídos para reuso;
+- *features* semelhantes encontradas e, em frontend, seus padrões de navegabilidade, interface visual e arquitetura que devem orientar a mudança;
 - comandos oficiais de teste, qualidade, *typecheck*, *build* e execução local;
 - contratos, migrações, integrações, dados, permissões ou compatibilidades que a mudança possa afetar.
 
@@ -47,7 +49,7 @@ Use código, testes e configurações como fonte principal do comportamento atua
 
 ## Planejamento
 
-Antes de modificar o código, declare em uma linha o critério de sucesso e formule um plano de execução proporcional à complexidade. Para cada etapa, identifique os arquivos ou módulos afetados, a alteração de comportamento, a ordem de execução, as dependências entre etapas, os componentes existentes a reutilizar ou evoluir e como ela será validada por teste automatizado, *build* ou verificação manual pontual. Para mudanças de design, compare alternativas somente até haver uma decisão justificada pelo critério de sucesso, pelos padrões do repositório e pelo menor impacto compatível.
+Antes de modificar o código, declare em uma linha o critério de sucesso e formule um plano de execução proporcional à complexidade. Para cada etapa, identifique os arquivos ou módulos afetados, a alteração de comportamento, a ordem de execução, as dependências entre etapas, os componentes existentes a reutilizar ou evoluir e como ela será validada por teste automatizado, *build* ou verificação manual pontual. No planejamento de frontend, siga os critérios de navegação e a identidade visual das *features* semelhantes já existentes, salvo quando o requisito justificar uma diferença explícita. Para mudanças de design, compare alternativas somente até haver uma decisão justificada pelo critério de sucesso, pelos padrões do repositório e pelo menor impacto compatível.
 
 Apresente o plano ao usuário antes de iniciar a execução, sem solicitar aprovação ou aguardar validação humana entre as iterações. Não crie documentos de planejamento no repositório sem solicitação explícita.
 

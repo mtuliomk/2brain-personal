@@ -1,0 +1,28 @@
+{
+  "id": "conv-1788876690201-xx8oo2slm",
+  "providerId": "codex",
+  "title": "na skill de local-feature, adicione a diretriz de",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1788876690208,
+  "lastActivityAt": 1788876714767,
+  "sessionId": "01a0815c-174a-7d91-966f-d9772e219ed6",
+  "selectedModel": "gpt-5.6-terra",
+  "providerState": {
+    "threadId": "01a0815c-174a-7d91-966f-d9772e219ed6",
+    "nativeConversationContextEstablished": true,
+    "sessionFilePath": "/home/tulio/.codex/sessions/2026/09/08/rollout-2026-09-08T11-11-31-01a0815c-174a-7d91-966f-d9772e219ed6.jsonl",
+    "transcriptRootPath": "/home/tulio/.codex/sessions",
+    "workspaceDependencyToolVersion": 1
+  },
+  "currentNote": "DevSkills/local-feature/SKILL.md",
+  "usage": {
+    "inputTokens": 20336,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 19200,
+    "contextWindow": 258400,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 20336,
+    "percentage": 8,
+    "model": "gpt-5.6-terra"
+  }
+}
