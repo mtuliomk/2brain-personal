@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevSkills/local-feature/SKILL.md",
+                "file": "DevSkills/doc-architecture/SKILL.md",
                 "mode": "source",
                 "source": false
               },
@@ -202,6 +202,7 @@
   },
   "active": "82fdc9a51a50e6e7",
   "lastOpenFiles": [
+    "DevSkills/local-feature/SKILL.md",
     "Tailoren Agents/coding/AGENTS.md",
     "Tailoren Agents/bug/AGENTS.md",
     "Tailoren Agents/document/AGENTS.md",
@@ -217,7 +218,6 @@
     "Tailoren Agents/uat",
     "DevSkills/local-documentation/SKILL.md",
     "DevSkills/local-explorer/SKILL.md",
-    "DevSkills/local-feature/SKILL.md",
     "DevSkills/local-bug/SKILL.md",
     "DevSkills/doc-security-compliance/SKILL.md",
     "DevSkills/local-documentation",
