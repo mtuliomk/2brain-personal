@@ -60,10 +60,12 @@ Consulte [Exemplos de código](examples.md#tipagem-e-componentes) para referênc
 
 - Mantenha estado no menor escopo possível: local para interação isolada, compartilhado apenas quando houver necessidade real.
 - Separe estado de servidor/cache de estado efêmero da interface e use a solução já adotada pelo projeto.
+- Mantenha na URL filtros, busca, paginação, ordenação e outros estados que precisem ser compartilhados, recuperados no reload ou navegados pelo histórico, conforme o roteador do projeto.
 - Não dispare efeitos assíncronos durante o render. Limpe subscriptions, timers e listeners no teardown/unmount.
 - Cancele ou ignore respostas obsoletas para evitar race conditions quando parâmetros mudarem rapidamente.
 - Evite waterfalls: carregue em paralelo dados independentes e use cache/deduplicação quando disponível.
 - Não esconda erros assíncronos. Exiba feedback acionável e permita retry quando apropriado.
+- Use atualizações otimistas somente quando o contrato suportar a operação e houver rollback, tratamento de concorrência e feedback em caso de falha.
 - Evite chamadas HTTP diretamente em muitos componentes; reutilize o cliente e os hooks/composables existentes.
 
 ## Formulários e dados externos
@@ -79,10 +81,19 @@ Consulte [Exemplos de código](examples.md#tipagem-e-componentes) para referênc
 
 - Use elementos HTML semânticos e controles nativos antes de criar widgets customizados.
 - Garanta nome acessível, foco visível, navegação por teclado, ordem de foco e mensagens de erro anunciáveis.
+- Ao abrir ou fechar dialogs, drawers e fluxos que mudem o contexto, mova e devolva o foco segundo o padrão já adotado pelo componente ou biblioteca do projeto.
 - Associe `label` a inputs e forneça texto alternativo significativo para imagens informativas; use alt vazio para imagens decorativas.
 - Não comunique estado apenas por cor. Respeite contraste, zoom, reduced motion e tamanhos de toque.
 - Mantenha layouts responsivos e evite depender de dimensões fixas que quebrem em telas menores.
 - Use ARIA apenas quando a semântica nativa não for suficiente e siga o padrão do componente.
+
+## Qualidade visual e responsividade
+
+- Siga o design system do projeto: tokens semânticos de cor, escala de espaçamento, tipografia, bordas, elevação e componentes existentes. Não introduza valores, estilos ou padrões visuais arbitrários.
+- Priorize a informação e a tarefa do usuário. Evite layouts, gradientes, sombras, arredondamentos, grids de cards e textos genéricos que não tenham função ou precedente no produto.
+- Preserve a hierarquia de conteúdo: use headings para títulos reais, não pule níveis sem motivo e mantenha uma `h1` de página quando aplicável.
+- Projete primeiro para telas menores e amplie o layout conforme os breakpoints já definidos. Se o projeto não os definir, valide ao menos 320px, 768px, 1024px e 1440px.
+- Para estados de carregamento, vazio e erro, ofereça contexto e a próxima ação possível; não apresente telas em branco ou feedback sem recuperação quando houver uma ação viável.
 
 ## Estilo, performance e organização
 
@@ -110,7 +121,9 @@ Consulte [Exemplos de código](examples.md#tipagem-e-componentes) para referênc
 - [ ] Efeitos têm cleanup e não permitem respostas obsoletas ou submits duplicados.
 - [ ] Estados de loading, vazio, erro e retry foram considerados quando aplicável.
 - [ ] Formulários validam entradas e exibem erros acessíveis.
-- [ ] A interface funciona por teclado, tem semântica adequada e é responsiva.
+- [ ] A interface funciona por teclado, tem semântica adequada, foco gerenciado em mudanças de contexto e layout validado nos breakpoints aplicáveis.
+- [ ] A hierarquia visual segue o design system, usa conteúdo realista e não introduz estética genérica sem precedente no produto.
 - [ ] Nenhum segredo ou dado sensível foi exposto no bundle, DOM ou logs.
 - [ ] Testes cobrem comportamento relevante e não foram ignorados sem justificativa.
+- [ ] Navegação por teclado, zoom e reduced motion foram verificados; execute `axe-core` ou a ferramenta equivalente quando estiver disponível no projeto.
 - [ ] ESLint, typecheck, testes e build foram executados quando disponíveis.

@@ -1,0 +1,28 @@
+{
+  "id": "conv-1789480010853-bmy7h4rfb",
+  "providerId": "codex",
+  "title": "analise essa skill de dev-frontend-nodejs",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1789480010888,
+  "lastActivityAt": 1789480107008,
+  "sessionId": "01a0a552-0600-7293-ba0f-1c4a1cdf5d18",
+  "selectedModel": "gpt-5.6-terra",
+  "providerState": {
+    "threadId": "01a0a552-0600-7293-ba0f-1c4a1cdf5d18",
+    "nativeConversationContextEstablished": true,
+    "sessionFilePath": "/home/tulio/.codex/sessions/2026/09/15/rollout-2026-09-15T10-46-51-01a0a552-0600-7293-ba0f-1c4a1cdf5d18.jsonl",
+    "transcriptRootPath": "/home/tulio/.codex/sessions",
+    "workspaceDependencyToolVersion": 1
+  },
+  "currentNote": "DevSkills/dev-frontend-nodejs/SKILL.md",
+  "usage": {
+    "inputTokens": 47509,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 45824,
+    "contextWindow": 258400,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 47509,
+    "percentage": 18,
+    "model": "gpt-5.6-terra"
+  }
+}

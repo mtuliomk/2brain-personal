@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "5ec0d88424a5e13c",
+        "id": "2d50a6286fa454af",
         "type": "tabs",
         "children": [
           {
-            "id": "82fdc9a51a50e6e7",
+            "id": "173244b1b3e15cb7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevSkills/doc-architecture/SKILL.md",
+                "file": "DevSkills/dev-frontend-nodejs/SKILL.md",
                 "mode": "source",
                 "source": false
               },
@@ -200,8 +200,11 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "82fdc9a51a50e6e7",
+  "active": "173244b1b3e15cb7",
   "lastOpenFiles": [
+    "DevSkills/dev-frontend-nodejs/examples.md",
+    "DevSkills/dev-frontend-nodejs/SKILL.md",
+    "DevSkills/doc-architecture/SKILL.md",
     "DevSkills/local-feature/SKILL.md",
     "Tailoren Agents/coding/AGENTS.md",
     "Tailoren Agents/bug/AGENTS.md",
@@ -224,7 +227,6 @@
     "DevSkills/local-bug",
     "DevSkills/local-feature",
     "DevSkills/local-explorer",
-    "DevSkills/doc-architecture/SKILL.md",
     "DevSkills/doc-security-compliance",
     "DevSkills/doc-product/SKILL.md",
     "DevSkills/doc-architecture",
@@ -235,8 +237,6 @@
     "Tailoren Agents/spec technical/prompt.md",
     "DevSkills/dev-backend-golang/SKILL.md",
     "DevSkills/spec-functional/SKILL.md",
-    "DevSkills/spec-userstory/SKILL.md",
-    "DevSkills/plan-tak/SKILL.md",
-    "Profile/Maya Onese.md"
+    "DevSkills/spec-userstory/SKILL.md"
   ]
 }
