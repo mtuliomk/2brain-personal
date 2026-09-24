@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevSkills/dev-frontend-nodejs/SKILL.md",
+                "file": "Tailoren Agents/uat/AGENTS.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SKILL"
+              "title": "AGENTS"
             }
           }
         ]
@@ -202,8 +202,8 @@
   },
   "active": "173244b1b3e15cb7",
   "lastOpenFiles": [
-    "DevSkills/dev-frontend-nodejs/examples.md",
     "DevSkills/dev-frontend-nodejs/SKILL.md",
+    "DevSkills/dev-frontend-nodejs/examples.md",
     "DevSkills/doc-architecture/SKILL.md",
     "DevSkills/local-feature/SKILL.md",
     "Tailoren Agents/coding/AGENTS.md",
